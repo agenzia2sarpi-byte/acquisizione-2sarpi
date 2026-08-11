@@ -69,10 +69,12 @@ function render() {
   </div>
 
   <div class="scheda nostampa"><div class="bottoniera" style="margin:0">
-    <button class="azione" data-az="nuovoAmm">+ Amministratore</button>
+    <button class="azione" data-az="cercaAmministratori">Cerca amministratori a Milano</button>
+    <button class="azione vuota" data-az="nuovoAmm">+ Amministratore</button>
     <button class="azione vuota" data-az="nuovoCondominio">+ Condominio</button>
     ${candidati.length ? `<button class="azione grigia" data-az="daAnnunci">Prendi ${candidati.length} indirizzi dagli annunci</button>` : ""}
     <button class="azione grigia" data-az="parametri">Parametri del calcolo</button>
+    <button class="azione grigia" data-az="aggiornaAmm">Aggiorna dal radar</button>
     <button class="azione grigia" data-az="esportaCensimento">Esporta</button>
   </div></div>
 
@@ -185,6 +187,7 @@ function apriCond(id, idAmm, pre) {
 }
 
 Object.assign(AZIONI, {
+  aggiornaAmm: async () => { await aggiornaAmministratoriDalFeed(false); render(); },
   nuovoAmm: () => apriAmm(null),
   apriAmm: el => apriAmm(el.dataset.id),
   eliminaAmm: el => {
@@ -252,3 +255,32 @@ Object.assign(AZIONI, {
 });
 
 avviaPagina(render);
+aggiornaAmministratoriDalFeed(true).then(e => { if (e && (e.nuovi || e.aggiornati)) render(); });
+
+/* ---------------- raccolta automatica degli amministratori ---------------- */
+Object.assign(AZIONI, {
+  cercaAmministratori: () => {
+    if (!tokenApify()) return apriFinestra("Serve la chiave Apify",
+      `<p style="font-family:var(--serif);font-size:14.5px">Il censimento automatico degli studi di amministrazione passa da Apify. Serve una chiave, si crea una volta sola e si incolla nella pagina <b>Dati</b>.</p>
+       <div class="bottoniera"><a class="azione" href="dati.html" style="text-decoration:none">Vai alla pagina Dati</a></div>`, null);
+    apriFinestra("Cerca amministratori a Milano", `
+      <p style="font-family:var(--serif);font-size:14.5px">Cerco gli studi di amministrazione condominiale zona per zona e ne prendo <b>nome, indirizzo, telefono e sito</b>. Sono schede pubbliche di attivita': dati d'impresa, non di persone. L'attribuzione dei singoli stabili resta il tuo lavoro sul campo — quella non e' pubblica per nessuno.</p>
+      <div class="griglia g3">${ZONE_RICERCA.map((z, i) => `<label class="spunta" style="border:0;padding:3px 0"><input type="checkbox" data-zona="${esc(z)}" ${i < 6 ? "checked" : ""}><span class="testo">${esc(z)}</span></label>`).join("")}</div>
+      ${campo("Quanti studi per zona", `<input type="number" id="perZona" value="12" min="3" max="60">`)}
+      <div class="avviso"><b>Quanto costa</b>Circa 0,01 € per studio trovato, sul tuo credito Apify.</div>
+      <div id="avanz2" style="font-family:var(--serif);font-size:14px;color:var(--grigio)"></div>`,
+      async () => {
+        const zone = [...document.querySelectorAll("[data-zona]")].filter(c => c.checked).map(c => c.dataset.zona);
+        if (!zone.length) return alert("Non hai scelto nessuna zona.");
+        const n = Math.max(3, Math.min(60, num($("#perZona").value) || 12));
+        const av = $("#avanz2");
+        document.querySelector("#finestra [data-az=conferma]").disabled = true;
+        try {
+          const e = await raccogliAmministratori(zone, n, m => av.textContent = m);
+          chiudiFinestra(); render();
+          alert(`Trovati ${e.nuovi} studi nuovi, ${e.aggiornati} aggiornati.`);
+        } catch (err) { av.textContent = "Errore: " + err.message; }
+        finally { const b = document.querySelector("#finestra [data-az=conferma]"); if (b) b.disabled = false; }
+      }, "Cerca adesso");
+  }
+});

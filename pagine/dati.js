@@ -37,6 +37,22 @@ function render() {
     ${campo("Nomi degli operatori (separati da virgola)", `<input data-d="operatoriTxt" value="${esc(S.operatori.join(", "))}">`)}
   </div></div>
 
+  <div class="scheda"><h3>Raccolta automatica dai portali <span class="etichetta">chiave Apify</span></h3>
+    <p style="font-family:var(--serif);font-size:14.5px">Con una chiave Apify l'applicazione va a prendere <b>da sola</b> gli annunci dei privati su Milano e gli studi di amministrazione condominiale, e te li mette dentro gia' deduplicati. I dati passano da Apify direttamente a questo dispositivo: non toccano nessun nostro server e non finiscono sulla pagina pubblica. La chiave resta qui, nel browser di questo dispositivo.</p>
+    <ol style="font-family:var(--serif);font-size:14.5px;padding-left:20px;line-height:1.75">
+      <li>Apri <a href="https://console.apify.com/sign-up" target="_blank" rel="noopener">console.apify.com</a> e registrati: il piano gratuito include <b>5 $ di credito al mese</b>, che bastano per una raccolta al giorno.</li>
+      <li>Vai in <b>Settings → API &amp; Integrations</b> e copia il <i>Personal API token</i>.</li>
+      <li>Incollalo qui sotto. Poi, dalla pagina <b>Annunci</b>, premi «Aggiorna dai portali»; dalla pagina <b>Amministratori</b>, «Cerca amministratori a Milano».</li>
+    </ol>
+    ${campo("Chiave Apify di questo dispositivo", `<input type="password" id="tokApify" value="${esc(tokenApify())}" placeholder="apify_api_…" autocomplete="off">`)}
+    <div class="bottoniera">
+      <button class="azione" data-az="salvaToken">Salva la chiave</button>
+      <button class="azione grigia" data-az="provaToken">Prova che funzioni</button>
+      <span class="conteggio" id="esitoToken">${tokenApify() ? "chiave presente su questo dispositivo" : "nessuna chiave impostata"}</span>
+    </div>
+    <div class="avviso" style="margin-top:12px"><b>Quanto costa davvero</b>Circa 0,005 € per annuncio raccolto e 0,01 € per studio trovato. Una raccolta quotidiana da 80 annunci costa intorno ai 0,40 € al giorno: dentro il credito gratuito per i primi giorni, poi qualche euro al mese. E' l'unica voce a pagamento di tutto il sistema, ed e' opzionale: senza chiave restano il tasto «Prendi annuncio» e il copia-incolla, che costano zero.</div>
+  </div>
+
   <div class="scheda"><h3>Il tasto «Prendi annuncio» <span class="etichetta">il modo piu' veloce di alimentare il radar</span></h3>
     <p style="font-family:var(--serif);font-size:14.5px">Un segnalibro nella barra del browser. Quando sei su un annuncio — immobiliare.it, idealista, casa.it, wikicasa, subito, e in generale qualsiasi portale — <b>clicchi e l'immobile arriva nel radar</b> con indirizzo, prezzo, metratura, foto di anteprima e recapito, gia' compilati. Non raccoglie niente da solo: legge la pagina che stai guardando tu, esattamente come la stai guardando.</p>
     <ol style="font-family:var(--serif);font-size:14.5px;padding-left:20px;line-height:1.75">
@@ -120,6 +136,17 @@ document.addEventListener("input", ev => {
 });
 
 Object.assign(AZIONI, {
+  salvaToken: () => { salvaToken($("#tokApify").value); $("#esitoToken").textContent = "chiave salvata su questo dispositivo"; },
+  provaToken: async () => {
+    salvaToken($("#tokApify").value);
+    const e = $("#esitoToken"); e.textContent = "verifico…";
+    try {
+      const r = await fetch("https://api.apify.com/v2/users/me?token=" + encodeURIComponent(tokenApify()));
+      if (!r.ok) throw new Error("chiave rifiutata (" + r.status + ")");
+      const u = (await r.json()).data;
+      e.textContent = "funziona — collegato come " + (u.username || u.id);
+    } catch (err) { e.textContent = "non funziona: " + err.message; }
+  },
   aggiornaFeed: async () => { await aggiornaDalFeed(false); render(); },
   esporta: () => {
     const b = new Blob([JSON.stringify(S, null, 2)], { type: "application/json" });

@@ -288,3 +288,31 @@ async function aggiornaDalFeed(silenzioso) {
     return null;
   }
 }
+
+/* ---------------- feed degli amministratori ---------------- */
+/* Anche questo file lo riscrive il radar quotidiano. Non tocca mai il tuo lavoro:
+   stato della relazione, «dati per primo» e note restano come li hai lasciati. */
+async function aggiornaAmministratoriDalFeed(silenzioso) {
+  try {
+    const r = await fetch("dati/amministratori.json?t=" + Date.now(), { cache: "no-store" });
+    if (!r.ok) throw new Error("non disponibile");
+    const d = await r.json();
+    if (!d || !Array.isArray(d.amministratori)) throw new Error("vuoto");
+    S.feedAmm = S.feedAmm || {};
+    if (d.id && d.id === S.feedAmm.ultimoId) { if (!silenzioso) alert("Nessun amministratore nuovo."); return { nuovi: 0, aggiornati: 0 }; }
+    let nuovi = 0, aggiornati = 0;
+    d.amministratori.forEach(x => {
+      const tel = (x.telefono || "").replace(/\D/g, "");
+      const e = S.amministratori.find(a => a.nome === x.nome || (tel && (a.telefono || "").replace(/\D/g, "") === tel));
+      if (e) { ["telefono", "sito", "indirizzo", "via", "cap", "quartiere", "municipio", "voto", "recensioni", "schedaMaps", "fonte"].forEach(k => { if (x[k] !== "" && x[k] != null) e[k] = x[k]; }); aggiornati++; }
+      else { S.amministratori.push(Object.assign({ id: uid(), relazione: "Da contattare", passi: 0 }, x)); nuovi++; }
+    });
+    S.feedAmm = { ultimoId: d.id, ultimaLettura: new Date().toISOString() };
+    salva();
+    if (!silenzioso) alert(`Amministratori aggiornati: ${nuovi} nuovi, ${aggiornati} aggiornati.`);
+    return { nuovi, aggiornati };
+  } catch (e) {
+    if (!silenzioso) alert("Nessun aggiornamento disponibile sugli amministratori.");
+    return null;
+  }
+}

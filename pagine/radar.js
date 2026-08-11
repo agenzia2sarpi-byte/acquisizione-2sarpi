@@ -30,12 +30,14 @@ function gruppiOrdinati() {
 function cartaAnnuncio(g) {
   const a = g.capo, p = g.p.punti;
   const emq = num(a.mq) ? Math.round(num(a.prezzo) / num(a.mq)) : null;
-  const foto = a.foto ? `<img src="${esc(a.foto)}" alt="" loading="lazy" onerror="this.style.display='none'">`
-    : `<div class="segno">nessuna foto</div>`;
+  const foto = a.foto
+    ? `<img src="${esc(a.foto)}" alt="" loading="lazy" onerror="this.closest('.foto').classList.add('senza')">`
+    : "";
   const rif = riferimentoEmq(a);
   const sc = rif && emq ? (emq - rif.valore) / rif.valore * 100 : null;
   return `<a class="annuncio" href="annuncio.html?id=${encodeURIComponent(a.id)}">
-    <div class="foto">${foto}
+    <div class="foto${a.foto ? "" : " senza"}">${foto}
+      <div class="segno"><b>${esc(a.tipologia || (num(a.locali) ? num(a.locali) + " locali" : "immobile"))}</b><span>${esc(a.quartiere || a.municipio || "Milano")}</span></div>
       <div class="angolo">
         ${a.privato !== false ? `<span class="badge privato">privato</span>` : `<span class="badge">agenzia</span>`}
         ${g.portali.length > 1 ? `<span class="badge portali">${g.portali.length} portali</span>` : ""}
@@ -82,8 +84,9 @@ function render() {
 
   <div class="scheda nostampa">
     <div class="bottoniera" style="margin:0 0 12px">
-      <button class="azione" data-az="incolla">Incolla un annuncio</button>
+      <button class="azione vuota" data-az="incolla">Incolla un annuncio</button>
       <button class="azione vuota" data-az="nuovoAnnuncio">Inserisci a mano</button>
+      <button class="azione" data-az="aggiornaPortali">Aggiorna dai portali</button>
       <button class="azione grigia" data-az="aggiornaFeed">Aggiorna dal radar</button>
       <button class="azione grigia" data-az="importaFile">Importa file</button>
       <button class="azione grigia" data-az="esportaAnnunci">Esporta</button>
@@ -256,3 +259,31 @@ function daSegnalibro() {
 avviaPagina(render);
 daSegnalibro();
 aggiornaDalFeed(true).then(e => { if (e && (e.nuovi || e.aggiornati)) render(); });
+
+/* ---------------- raccolta automatica dai portali ---------------- */
+Object.assign(AZIONI, {
+  aggiornaPortali: () => {
+    if (!tokenApify()) return apriFinestra("Serve la chiave Apify",
+      `<p style="font-family:var(--serif);font-size:14.5px">La raccolta automatica dai portali passa da Apify, che fa il lavoro sporco al posto tuo. Serve una chiave, si crea una volta sola e si incolla nella pagina <b>Dati</b>. Costa pochi centesimi a raccolta e il piano gratuito basta per cominciare.</p>
+       <div class="bottoniera"><a class="azione" href="dati.html" style="text-decoration:none">Vai alla pagina Dati</a></div>`, null);
+    apriFinestra("Aggiorna dai portali", `
+      <p style="font-family:var(--serif);font-size:14.5px">Scelgo io le ricerche giuste — <b>Milano, solo privati</b> — e scarico gli annunci nuovi. Gli indirizzi mancanti li ricavo dalle coordinate con OpenStreetMap, gratis. I doppioni fra portali li tolgo dopo, come sempre.</p>
+      ${SORGENTI.map(s => `<div class="spunta"><input type="checkbox" data-src="${s.id}" checked><div class="testo">${esc(s.n)}</div></div>`).join("")}
+      ${campo("Quanti annunci per ricerca", `<input type="number" id="quanti" value="40" min="5" max="200">`)}
+      <div class="avviso"><b>Quanto costa</b><span id="stima">circa 0,60 € in tutto</span> — pagati sul tuo credito Apify. Il piano gratuito include 5 $ al mese, che bastano per una raccolta al giorno di questa dimensione.</div>
+      <div id="avanz" style="font-family:var(--serif);font-size:14px;color:var(--grigio)"></div>`,
+      async () => {
+        const scelte = [...document.querySelectorAll("[data-src]")].filter(c => c.checked).map(c => c.dataset.src);
+        if (!scelte.length) return alert("Non hai scelto nessuna ricerca.");
+        const n = Math.max(5, Math.min(200, num($("#quanti").value) || 40));
+        const av = $("#avanz");
+        document.querySelector("#finestra [data-az=conferma]").disabled = true;
+        try {
+          const e = await aggiornaDaiPortali(scelte, n, m => av.textContent = m);
+          chiudiFinestra(); render();
+          alert(`Fatto: ${e.nuovi} immobili nuovi, ${e.aggiornati} aggiornati, su ${e.letti} annunci letti.`);
+        } catch (err) { av.textContent = "Errore: " + err.message; }
+        finally { const b = document.querySelector("#finestra [data-az=conferma]"); if (b) b.disabled = false; }
+      }, "Raccogli adesso");
+  }
+});

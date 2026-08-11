@@ -160,8 +160,12 @@ details.blocco .corpo li{margin:0 0 5px}
 .annuncio:hover{box-shadow:0 6px 20px rgba(26,25,23,.10);transform:translateY(-2px)}
 .annuncio .foto{position:relative;aspect-ratio:4/3;background:var(--tenue);overflow:hidden}
 .annuncio .foto img{width:100%;height:100%;object-fit:cover;display:block}
-.annuncio .foto .segno{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-  color:#B9B2A4;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;text-align:center;padding:12px}
+.annuncio .foto .segno{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;
+  gap:5px;text-align:center;padding:12px;background:linear-gradient(150deg,#EFE9DC,#E3DBCB)}
+.annuncio .foto.senza .segno{display:flex}
+.annuncio .foto.senza img{display:none}
+.annuncio .foto .segno b{font-size:16px;font-weight:800;color:#8A8071;letter-spacing:-.3px}
+.annuncio .foto .segno span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#ABA294}
 .annuncio .foto .angolo{position:absolute;top:9px;left:9px;display:flex;gap:5px;flex-wrap:wrap}
 .annuncio .foto .punti{position:absolute;top:9px;right:9px;background:rgba(26,25,23,.82);color:#fff;
   border-radius:8px;padding:4px 8px;font-size:15px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
