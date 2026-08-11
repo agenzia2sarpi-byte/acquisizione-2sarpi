@@ -22,7 +22,7 @@ function vistaKpi() {
     ["Tentativi di contatto proprietario", sommaSettimana("tentativi"), t.tentativiSett, teM, t.tentativiMese, "L'unico numero davvero sotto il tuo controllo"],
     ["Contatti riusciti", sommaSettimana("contatti"), t.contattiSett, coM, t.contattiMese, "Misura la qualita' della lista, non lo sforzo"],
     ["Valutazioni fatte in casa", sommaSettimana("valutazioni"), t.valutazioniSett, vM, t.valutazioniMese, "Il vero motore: se cala, in 6 settimane cala il fatturato"],
-    ["Mandati firmati", sommaSettimana("mandati"), t.mandatiSett, nMandati, t.mandatiMese, "Il risultato"],
+    ["Mandati firmati", Math.max(sommaSettimana("mandati"), S.mandati.filter(x => (x.dataFirma || "") >= lunedi(oggiISO())).length), t.mandatiSett, nMandati, t.mandatiMese, "Il risultato"],
     ["Lettere scritte a mano", sommaSettimana("lettere"), Math.round(t.lettereMese / 4), sommaMese("lettere"), t.lettereMese, "L'unica voce che aumenta scendendo di budget"]
   ];
   if (t.contattiFisiciSett) righe.push(["Contatti fisici sul territorio", sommaSettimana("fisici"), t.contattiFisiciSett, sommaMese("fisici"), t.contattiFisiciSett * 4, "Il sostituto diretto del budget che non hai"]);
