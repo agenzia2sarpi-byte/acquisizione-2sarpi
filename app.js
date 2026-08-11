@@ -5,7 +5,7 @@ const CHIAVE = "ag2sarpi.acquisizione.v1";
 
 const VUOTO = {
   v: 1, piano: "500", operatore: "Gaetano",
-  operatori: ["Gaetano", "Papa'"],
+  operatori: ["Gaetano", "Ciro"],
   telefono: "340 000 0000",
   lead: [], mandati: [], rete: [], gestione: [], attivita: [], optout: [],
   conformita: {}, piano90: {}, recensioni: [], spesa: {},
@@ -18,7 +18,13 @@ let vista = "oggi";
 function carica() {
   try {
     const g = JSON.parse(localStorage.getItem(CHIAVE));
-    if (g && typeof g === "object") return Object.assign(JSON.parse(JSON.stringify(VUOTO)), g);
+    if (g && typeof g === "object") {
+      const s = Object.assign(JSON.parse(JSON.stringify(VUOTO)), g);
+      // i nomi degli operatori sono Gaetano e Ciro
+      s.operatori = (s.operatori || []).map(n => n === "Papa'" || n === "Papà" ? "Ciro" : n);
+      if (s.operatore === "Papa'" || s.operatore === "Papà") s.operatore = "Ciro";
+      return s;
+    }
   } catch (e) { console.warn("dati illeggibili", e); }
   return JSON.parse(JSON.stringify(VUOTO));
 }
