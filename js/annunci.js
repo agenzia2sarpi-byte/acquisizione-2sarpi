@@ -395,3 +395,14 @@ Nel suo caso l'annuncio ha visto ${num(x.ribassi)} ribassi in ${x.giorniOnline |
 
 Se le va, glielo guardo e le dico cosa cambierei. Venti minuti, senza impegno. Se preferisce non essere contattato me lo dica pure e non la disturbo oltre.`;
 }
+
+/* Le immagini di Subito senza regola di ritaglio rispondono 400: le sistemo all'avvio,
+   cosi' anche le schede raccolte prima della correzione tornano a mostrare la foto. */
+(function sistemaFoto() {
+  const R = "?rule=vertical-mini-card-2x-auto";
+  let toccate = 0;
+  (S.annunci || []).forEach(a => ["foto", "foto2", "foto3"].forEach(k => {
+    if (a[k] && a[k].includes("images.sbito.it") && !a[k].includes("rule=")) { a[k] += R; toccate++; }
+  }));
+  if (toccate) salva();
+})();
