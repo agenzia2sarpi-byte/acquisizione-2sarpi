@@ -27,7 +27,7 @@ Se preferisce non essere contattato me lo dica pure e non la disturbo piu'.`;
   }
   return `Buongiorno, sono Gaetano dell'Agenzia 2 Sarpi.
 
-Non le scrivo per propormi: ho notato il suo annuncio in ${via} e le volevo segnalare un dato. Nell'ultimo trimestre, in quell'isolato, le chiusure sono avvenute intorno a ${P} €/mq${sc !== null ? `, e il suo posizionamento e' circa ${Math.abs(sc).toFixed(0)}% ${sc >= 0 ? "sopra" : "sotto"}` : ""}: puo' essere del tutto voluto, ma se le fa comodo le mando il dettaglio scritto delle tre comparabili.${gg > 45 ? `
+Non le scrivo per propormi: ho notato il suo annuncio in ${via} e le volevo segnalare un dato. Nell'ultimo trimestre, in quell'isolato, le chiusure sono avvenute intorno a ${P} €/mq${sc !== null && Math.abs(sc) >= 3 ? `, e il suo posizionamento e' circa ${Math.abs(sc).toFixed(0)}% ${sc > 0 ? "sopra" : "sotto"}` : ""}: ${sc !== null && Math.abs(sc) >= 3 ? "puo' essere del tutto voluto, ma s" : "s"}e le fa comodo le mando il dettaglio scritto delle tre comparabili.${gg > 45 ? `
 
 Le scrivo adesso perche' l'annuncio e' online da ${gg} giorni: e' il momento in cui, di solito, vale la pena rivedere insieme non tanto il prezzo quanto il modo in cui l'immobile viene filtrato.` : ""}
 
