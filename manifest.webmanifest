@@ -1,0 +1,30 @@
+{
+  "name": "Acquisizione 2 Sarpi",
+  "short_name": "2S Acquisizione",
+  "description": "Cruscotto operativo di acquisizione immobiliare — Agenzia 2 Sarpi, Milano citta'.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F7F5F0",
+  "theme_color": "#B01F1F",
+  "lang": "it-IT",
+  "icons": [
+    {
+      "src": "icone/icona-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "icone/icona-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icone/icona-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
