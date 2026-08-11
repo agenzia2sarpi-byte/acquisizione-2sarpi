@@ -338,7 +338,7 @@ La prima: con un contratto a canone concordato 3+2 nel Comune di Milano si acced
 
 La seconda: la parte che fa perdere piu' tempo non e' trovare l'inquilino, e' filtrarlo. Se le fa comodo le mando per iscritto come lo verifichiamo noi, senza impegno.
 
-Se preferisce non essere contattato me lo dica pure e non la disturbo piu'.`;
+Il suo recapito l'ho preso dal suo annuncio: lo uso solo per questo contatto e, se mi dice di no, lo cancello e non la disturbo piu'.`;
   }
   return `Buongiorno, sono Gaetano dell'Agenzia 2 Sarpi.
 
@@ -346,7 +346,7 @@ Non le scrivo per propormi: ho notato il suo annuncio in ${via} e le volevo segn
 
 Le scrivo adesso perche' l'annuncio e' online da ${gg} giorni: e' il momento in cui, di solito, vale la pena rivedere insieme non tanto il prezzo quanto il modo in cui l'immobile viene filtrato.` : ""}
 
-Se preferisce non essere contattato me lo dica pure e non la disturbo piu'.`;
+Il suo recapito l'ho preso dal suo annuncio: lo uso solo per questo contatto e, se mi dice di no, lo cancello e non la disturbo piu'.`;
 }
 
 /* WhatsApp vuole il numero in formato internazionale, senza «+» e senza spazi. */
@@ -436,3 +436,33 @@ function freschezza(a) {
   if (g <= 3) return { t: `verificato ${g} giorni fa`, cl: "" };
   return { t: `da riverificare (${g} giorni)`, cl: "ambra" };
 }
+
+
+/* ---------------- la lista «non contattare» ---------------- */
+/* Chi ti ha detto di no non deve piu' comparire: non e' una cortesia, e' l'unica cosa
+   che ti protegge davvero, e costa zero. Il confronto e' su telefono, email e nome. */
+function inOptOut(a) {
+  if (!S.optout || !S.optout.length) return false;
+  const tel = (a.telefono || "").replace(/\D/g, "").slice(-9);
+  const mail = (a.email || "").toLowerCase().trim();
+  const nome = (a.inserzionista || "").toLowerCase().trim();
+  return S.optout.some(o => {
+    const v = String(o.valore || "").trim();
+    if (!v) return false;
+    const vTel = v.replace(/\D/g, "").slice(-9);
+    if (vTel.length >= 8 && tel && vTel === tel) return true;
+    const vl = v.toLowerCase();
+    if (mail && vl === mail) return true;
+    if (nome && vl === nome && nome.length > 3) return true;
+    return false;
+  });
+}
+/* Quando aggiungi qualcuno alla lista, sparisce subito da tutto l'archivio. */
+function applicaOptOut() {
+  let n = 0;
+  (S.annunci || []).forEach(a => { if (inOptOut(a) && a.esito !== "Non contattare") { a.esito = "Non contattare"; n++; } });
+  (S.scaduti || []).forEach(x => { if (inOptOut(x) && x.esito !== "Non contattare") { x.esito = "Non contattare"; n++; } });
+  if (n) salva();
+  return n;
+}
+applicaOptOut();

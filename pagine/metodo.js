@@ -81,7 +81,13 @@ Object.assign(AZIONI, {
   sez: el => { sezione = el.dataset.s; render(); window.scrollTo({ top: 0 }); },
   p90: el => { const k = el.dataset.k90; S.piano90[k] = !S.piano90[k]; salva(); render(); },
   conf: el => { const k = el.dataset.cid; S.conformita[k] = !S.conformita[k]; salva(); render(); },
-  addOptout: () => { const v = document.getElementById("ooVal").value.trim(); if (!v) return; S.optout.push({ id: uid(), valore: v, data: oggiISO() }); salva(); render(); },
+  addOptout: () => {
+    const v = document.getElementById("ooVal").value.trim(); if (!v) return;
+    S.optout.push({ id: uid(), valore: v, data: oggiISO() }); salva();
+    const n = (typeof applicaOptOut === "function") ? applicaOptOut() : 0;
+    render();
+    alert(n ? `Aggiunto. ${n} scheda/e in archivio sono state marcate «Non contattare» e non compaiono piu' nel radar.` : "Aggiunto alla lista.");
+  },
   delOptout: el => { const id = el.dataset.id; S.optout = S.optout.filter(o => o.id !== id); salva(); render(); }
 });
 avviaPagina(render);

@@ -16,6 +16,8 @@ function annunciFiltrati() {
   let l = S.annunci.slice();
   // gli immobili non piu' online non si chiamano: si guardano solo se li chiedi
   if (!F.mostraSpariti) l = l.filter(eOnline);
+  // chi ti ha detto di no non compare mai, in nessun filtro
+  l = l.filter(a => !inOptOut(a));
   if (F.chi === "privati") l = l.filter(a => a.privato !== false);
   if (F.chi === "agenzie") l = l.filter(a => a.privato === false);
   if (F.tipo) l = l.filter(a => a.tipo === F.tipo);
