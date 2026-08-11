@@ -7,32 +7,7 @@ function gruppoDi(id) {
   return tutti.find(g => g.membri.some(m => m.id === id));
 }
 
-function messaggioPrimoContatto(a, g) {
-  const rif = riferimentoEmq(a);
-  const emq = num(a.mq) ? num(a.prezzo) / num(a.mq) : null;
-  const sc = rif && emq ? ((emq - rif.valore) / rif.valore * 100) : null;
-  const via = (a.via || "[via]").replace(/,?\s*\d+[a-zA-Z]?\s*$/, "");
-  const P = rif ? Math.round(rif.valore).toLocaleString("it-IT") : "[€/mq]";
-  const gg = g ? g.giorniOnline : (giorniDa(a.pubblicato) ?? 0);
-  if (a.tipo === "Locazione") {
-    return `Buongiorno, sono Gaetano dell'Agenzia 2 Sarpi.
-
-Non le scrivo per propormi: ho visto che affitta il suo immobile in ${via} da solo e le volevo segnalare due cose che forse le sono utili.
-
-La prima: con un contratto a canone concordato 3+2 nel Comune di Milano si accede alla cedolare secca al 10% invece del 21%, piu' riduzioni IMU. Su un canone come il suo sono oltre mille euro l'anno di tasse risparmiate, ogni anno.
-
-La seconda: la parte che fa perdere piu' tempo non e' trovare l'inquilino, e' filtrarlo. Se le fa comodo le mando per iscritto come lo verifichiamo noi, senza impegno.
-
-Se preferisce non essere contattato me lo dica pure e non la disturbo piu'.`;
-  }
-  return `Buongiorno, sono Gaetano dell'Agenzia 2 Sarpi.
-
-Non le scrivo per propormi: ho notato il suo annuncio in ${via} e le volevo segnalare un dato. Nell'ultimo trimestre, in quell'isolato, le chiusure sono avvenute intorno a ${P} €/mq${sc !== null && Math.abs(sc) >= 3 ? `, e il suo posizionamento e' circa ${Math.abs(sc).toFixed(0)}% ${sc > 0 ? "sopra" : "sotto"}` : ""}: ${sc !== null && Math.abs(sc) >= 3 ? "puo' essere del tutto voluto, ma s" : "s"}e le fa comodo le mando il dettaglio scritto delle tre comparabili.${gg > 45 ? `
-
-Le scrivo adesso perche' l'annuncio e' online da ${gg} giorni: e' il momento in cui, di solito, vale la pena rivedere insieme non tanto il prezzo quanto il modo in cui l'immobile viene filtrato.` : ""}
-
-Se preferisce non essere contattato me lo dica pure e non la disturbo piu'.`;
-}
+const messaggioPrimoContatto = (a, g) => messaggioPortale(a, g);
 
 function render() {
   const a = S.annunci.find(x => x.id === ID);
@@ -71,7 +46,7 @@ function render() {
   <div class="scheda"><h3>Contatto</h3>
     ${tel || a.email ? `<div class="contatto">
       ${tel ? `<a href="tel:${esc(tel)}">Chiama ${esc(a.telefono)}</a>` : ""}
-      ${tel ? `<a class="vuoto" href="https://wa.me/${esc(tel.replace(/^\+/, "").replace(/^0/, "39"))}" target="_blank" rel="noopener">WhatsApp</a>` : ""}
+      ${tel ? `<a class="vuoto" href="https://wa.me/${esc(waNumero(a.telefono))}" target="_blank" rel="noopener">WhatsApp</a>` : ""}
       ${a.email ? `<a class="vuoto" href="mailto:${esc(a.email)}">${esc(a.email)}</a>` : ""}
       ${a.url ? `<a class="vuoto" href="${esc(a.url)}" target="_blank" rel="noopener">Apri l'annuncio</a>` : ""}
     </div>` : `<p style="font-family:var(--serif)">Nessun recapito registrato. ${a.url ? `Il primo contatto va comunque fatto <b>dal modulo del portale</b>: e' piu' difendibile sul piano normativo e converte meglio. <a href="${esc(a.url)}" target="_blank" rel="noopener">Apri l'annuncio</a>.` : ""}</p>`}

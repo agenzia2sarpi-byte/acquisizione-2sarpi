@@ -214,3 +214,28 @@ details.blocco .corpo li{margin:0 0 5px}
   .foglio{border:0;border-radius:0;padding:0}
   @page{size:A4;margin:14mm}
 }
+
+/* ---------- avanzamento sugli annunci ---------- */
+.passi{display:flex;gap:4px;border-top:1px solid var(--linea);padding-top:8px;margin-top:6px}
+.passi button{flex:1;font-family:var(--sans);font-size:11px;font-weight:700;padding:6px 4px;border-radius:7px;
+  border:1px solid var(--linea);background:var(--carta);color:var(--grigio);cursor:pointer;white-space:nowrap}
+.passi button:hover{border-color:var(--grigio)}
+.passi button.att{background:var(--inchiostro);color:#fff;border-color:var(--inchiostro)}
+.passi button.att.v{background:var(--verde);border-color:var(--verde)}
+.passi button.att.r{background:var(--rosso);border-color:var(--rosso)}
+.annuncio.chiuso{opacity:.62}
+.annuncio.chiuso .foto img{filter:grayscale(1)}
+.stati{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}
+.stati button{font-family:var(--sans);font-size:12.5px;font-weight:700;padding:7px 12px;border-radius:20px;
+  border:1px solid var(--linea);background:var(--carta);color:var(--grigio);cursor:pointer}
+.stati button.att{background:var(--rosso);color:#fff;border-color:var(--rosso)}
+.stati button b{font-variant-numeric:tabular-nums}
+.riga-storico{display:flex;gap:8px;font-size:12.5px;padding:5px 0;border-bottom:1px solid var(--linea)}
+
+.annuncio .apri{cursor:pointer;display:flex;flex-direction:column;flex:1}
+.contatti-rapidi{display:flex;gap:5px;flex-wrap:wrap;padding:9px 12px;border-top:1px solid var(--linea);background:var(--tenue)}
+.contatti-rapidi a,.contatti-rapidi button{font-family:var(--sans);font-size:11.5px;font-weight:700;padding:6px 10px;
+  border-radius:7px;text-decoration:none;background:var(--rosso);color:#fff;border:1px solid var(--rosso);cursor:pointer}
+.contatti-rapidi a.verde{background:#1FA855;border-color:#1FA855}
+.contatti-rapidi a.vuoto,.contatti-rapidi button.vuoto{background:var(--carta);color:var(--inchiostro);border-color:var(--linea)}
+.contatti-rapidi .senza-tel{font-size:11.5px;color:var(--grigio);align-self:center;font-style:italic}

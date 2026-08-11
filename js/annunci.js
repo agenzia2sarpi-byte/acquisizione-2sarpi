@@ -316,3 +316,41 @@ async function aggiornaAmministratoriDalFeed(silenzioso) {
     return null;
   }
 }
+
+/* ---------------- il messaggio di primo contatto ---------------- */
+/* Va bene sia per il modulo del portale sia per WhatsApp: da' informazione prima di chiedere,
+   non usa la parola «esclusiva», non svaluta la scelta di vendere da solo, mette l'opt-out in chiaro. */
+function messaggioPortale(a, gruppo) {
+  const rif = riferimentoEmq(a);
+  const emq = num(a.mq) ? num(a.prezzo) / num(a.mq) : null;
+  const sc = rif && emq ? ((emq - rif.valore) / rif.valore * 100) : null;
+  const via = (a.via || "").replace(/,?\s*\d+[a-zA-Z]?\s*$/, "") || "zona";
+  const P = rif ? Math.round(rif.valore).toLocaleString("it-IT") : null;
+  const gg = gruppo ? gruppo.giorniOnline : (giorniDa(a.pubblicato) ?? 0);
+  if (a.tipo === "Locazione") {
+    return `Buongiorno, sono Gaetano dell'Agenzia 2 Sarpi.
+
+Non le scrivo per propormi: ho visto che affitta il suo immobile in ${via} da solo e le volevo segnalare due cose che forse le sono utili.
+
+La prima: con un contratto a canone concordato 3+2 nel Comune di Milano si accede alla cedolare secca al 10% invece del 21%, piu' riduzioni IMU. Su un canone come il suo sono oltre mille euro l'anno di tasse risparmiate, ogni anno.
+
+La seconda: la parte che fa perdere piu' tempo non e' trovare l'inquilino, e' filtrarlo. Se le fa comodo le mando per iscritto come lo verifichiamo noi, senza impegno.
+
+Se preferisce non essere contattato me lo dica pure e non la disturbo piu'.`;
+  }
+  return `Buongiorno, sono Gaetano dell'Agenzia 2 Sarpi.
+
+Non le scrivo per propormi: ho notato il suo annuncio in ${via} e le volevo segnalare un dato.${P ? ` Nell'ultimo trimestre, in quell'isolato, le chiusure sono avvenute intorno a ${P} €/mq${sc !== null && Math.abs(sc) >= 3 ? `, e il suo posizionamento e' circa ${Math.abs(sc).toFixed(0)}% ${sc > 0 ? "sopra" : "sotto"}` : ""}.` : ""} Se le fa comodo le mando il dettaglio scritto delle tre comparabili della sua via.${gg > 45 ? `
+
+Le scrivo adesso perche' l'annuncio e' online da ${gg} giorni: e' il momento in cui, di solito, vale la pena rivedere insieme non tanto il prezzo quanto il modo in cui l'immobile viene filtrato.` : ""}
+
+Se preferisce non essere contattato me lo dica pure e non la disturbo piu'.`;
+}
+
+/* WhatsApp vuole il numero in formato internazionale, senza «+» e senza spazi. */
+function waNumero(tel) {
+  let n = String(tel || "").replace(/[^\d+]/g, "").replace(/^\+/, "").replace(/^00/, "");
+  if (!n) return "";
+  if (n.startsWith("39") && n.length >= 11) return n;      // ha gia' il prefisso
+  return "39" + n.replace(/^0+/, "");                       // numero italiano nudo
+}

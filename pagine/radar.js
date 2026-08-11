@@ -1,6 +1,16 @@
 /* Pagina Annunci — la vetrina del radar, con deduplica fra portali. */
 
-let F = { q: "", tipo: "", portale: "", municipio: "", esito: "", chi: "privati", ordine: "punteggio", soloNuovi: false };
+let F = { q: "", tipo: "", portale: "", municipio: "", esito: "", chi: "privati", ordine: "punteggio", soloNuovi: false, soloTel: false, gruppo: "dafare" };
+
+/* Tre stati che contano davvero, piu' il dettaglio fine nel menu «Esito». */
+const GRUPPI = {
+  dafare:   { t: "Da fare",    e: ["Da lavorare"] },
+  incorso:  { t: "In corso",   e: ["Contattato", "In sequenza", "Appuntamento", "Valutazione fatta"] },
+  chiusi:   { t: "Chiusi",     e: ["Mandato", "Scartato", "Non contattare"] },
+  tutti:    { t: "Tutti",      e: null }
+};
+const statoDi = a => a.esito || "Da lavorare";
+const gruppoDiEsito = e => Object.keys(GRUPPI).find(k => GRUPPI[k].e && GRUPPI[k].e.includes(e)) || "dafare";
 
 function annunciFiltrati() {
   let l = S.annunci.slice();
@@ -9,8 +19,10 @@ function annunciFiltrati() {
   if (F.tipo) l = l.filter(a => a.tipo === F.tipo);
   if (F.portale) l = l.filter(a => a.portale === F.portale);
   if (F.municipio) l = l.filter(a => a.municipio === F.municipio);
-  if (F.esito) l = l.filter(a => (a.esito || "Da lavorare") === F.esito);
+  if (F.esito) l = l.filter(a => statoDi(a) === F.esito);
+  if (F.gruppo && GRUPPI[F.gruppo] && GRUPPI[F.gruppo].e) l = l.filter(a => GRUPPI[F.gruppo].e.includes(statoDi(a)));
   if (F.soloNuovi) l = l.filter(a => (giorniDa(a.visto) ?? 99) <= 1);
+  if (F.soloTel) l = l.filter(a => a.telefono);
   if (F.q) { const q = F.q.toLowerCase(); l = l.filter(a => (a.via + " " + a.titolo + " " + a.quartiere + " " + a.note + " " + a.descrizione).toLowerCase().includes(q)); }
   return l;
 }
@@ -35,7 +47,9 @@ function cartaAnnuncio(g) {
     : "";
   const rif = riferimentoEmq(a);
   const sc = rif && emq ? (emq - rif.valore) / rif.valore * 100 : null;
-  return `<a class="annuncio" href="annuncio.html?id=${encodeURIComponent(a.id)}">
+  const tel = (a.telefono || "").replace(/[^\d+]/g, "");
+  return `<div class="annuncio${GRUPPI.chiusi.e.includes(statoDi(a)) ? " chiuso" : ""}">
+    <div class="apri" data-az="apriScheda" data-id="${esc(a.id)}">
     <div class="foto${a.foto ? "" : " senza"}">${foto}
       <div class="segno"><b>${esc(a.tipologia || (num(a.locali) ? num(a.locali) + " locali" : "immobile"))}</b><span>${esc(a.quartiere || a.municipio || "Milano")}</span></div>
       <div class="angolo">
@@ -57,11 +71,25 @@ function cartaAnnuncio(g) {
         <span><b>${g.giorniOnline}</b> gg online</span>
         ${num(a.ribassi) ? `<span style="color:var(--ambra)"><b>${num(a.ribassi)}</b> ribassi</span>` : ""}
       </div>
-      <div class="fonti">${g.portali.map(x => `<span class="chip-portale att">${esc(nomePortale(x))}</span>`).join("")}
-        ${a.telefono ? `<span class="chip-portale">tel.</span>` : ""}${a.email ? `<span class="chip-portale">email</span>` : ""}</div>
-      ${(a.esito && a.esito !== "Da lavorare") ? `<div><span class="tag ${a.esito === "Mandato" ? "verde" : "ambra"}">${esc(a.esito)}</span></div>` : ""}
+      <div class="fonti">${g.portali.map(x => `<span class="chip-portale att">${esc(nomePortale(x))}</span>`).join("")}</div>
     </div>
-  </a>`;
+    <div class="contatti-rapidi">
+      ${tel ? `<a href="tel:${esc(tel)}" title="${esc(a.telefono)}">Chiama</a>
+               <a class="verde" href="https://wa.me/${esc(waNumero(a.telefono))}" target="_blank" rel="noopener">WhatsApp</a>`
+            : `<span class="senza-tel">telefono non pubblicato</span>`}
+      ${a.url ? `<a class="vuoto" href="${esc(a.url)}" target="_blank" rel="noopener">Scrivi sul portale</a>` : ""}
+      <button class="vuoto" data-az="copiaMsg" data-id="${esc(a.id)}">Copia messaggio</button>
+    </div>
+    <div class="corpo" style="padding-top:0">
+      ${a.ultimoContatto ? `<div style="font-size:11.5px;color:var(--grigio)">ultimo passo: <b>${esc(statoDi(a))}</b> il ${dataIt(a.ultimoContatto)}${a.operatore ? " · " + esc(a.operatore) : ""}</div>` : ""}
+      <div class="passi">
+        <button data-az="passo" data-id="${a.id}" data-e="Da lavorare" class="${statoDi(a) === "Da lavorare" ? "att" : ""}">da fare</button>
+        <button data-az="passo" data-id="${a.id}" data-e="Contattato" class="${statoDi(a) === "Contattato" ? "att v" : ""}">contattato</button>
+        <button data-az="passo" data-id="${a.id}" data-e="Appuntamento" class="${statoDi(a) === "Appuntamento" ? "att v" : ""}">appuntam.</button>
+        <button data-az="passo" data-id="${a.id}" data-e="Scartato" class="${statoDi(a) === "Scartato" ? "att r" : ""}">scarta</button>
+      </div>
+    </div>
+  </div>`;
 }
 
 function render() {
@@ -79,8 +107,14 @@ function render() {
     <div class="dato"><div class="titolo">Immobili unici</div><div class="valore">${gTutti.length}</div><div class="sotto">da ${tutti} annunci raccolti</div></div>
     <div class="dato ${doppioni ? "verde" : ""}"><div class="titolo">Doppioni tolti</div><div class="valore">${doppioni}</div><div class="sotto">stesso immobile, piu' portali</div></div>
     <div class="dato"><div class="titolo">Da privato</div><div class="valore">${privati}</div><div class="sotto">${tutti ? Math.round(privati / tutti * 100) : 0}% del raccolto</div></div>
-    <div class="dato ${daLavorare > 0 ? "ambra" : ""}"><div class="titolo">Ancora da lavorare</div><div class="valore">${daLavorare}</div><div class="sotto">nel filtro attuale</div></div>
+    <div class="dato"><div class="titolo">Con telefono</div><div class="valore">${S.annunci.filter(a => a.telefono).length}</div><div class="sotto">gli altri si contattano dal portale</div></div>
   </div>
+
+  <div class="stati nostampa">${Object.entries(GRUPPI).map(([k, g]) => {
+      const n = g.e ? S.annunci.filter(a => a.privato !== false && g.e.includes(statoDi(a))).length
+                    : S.annunci.filter(a => a.privato !== false).length;
+      return `<button data-az="gruppo" data-g="${k}" class="${F.gruppo === k ? "att" : ""}">${esc(g.t)} <b>${n}</b></button>`;
+    }).join("")}</div>
 
   <div class="scheda nostampa">
     <div class="bottoniera" style="margin:0 0 12px">
@@ -104,6 +138,8 @@ function render() {
     <div class="bottoniera">
       <label style="display:flex;align-items:center;gap:7px;font-size:13px">
         <input type="checkbox" id="fnuovi" ${F.soloNuovi ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--rosso)"> solo novita' di oggi</label>
+      <label style="display:flex;align-items:center;gap:7px;font-size:13px">
+        <input type="checkbox" id="ftel" ${F.soloTel ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--rosso)"> solo con telefono</label>
       <button class="azione grigia" data-az="azzeraFiltri">Azzera filtri</button>
       <span class="conteggio">${gruppi.length} immobili nel filtro</span>
     </div>
@@ -120,12 +156,12 @@ function render() {
       <tr><td><b>4. Importa file</b></td><td>Un CSV o un JSON esportato da un gestionale, o il file di scambio con l'altro dispositivo.</td></tr>
       </tbody></table></div>`}`;
 
-  ["fq", "fchi", "ftipo", "fportale", "fmunicipio", "fesito", "fordine", "fnuovi"].forEach(id => {
+  ["fq", "fchi", "ftipo", "fportale", "fmunicipio", "fesito", "fordine", "fnuovi", "ftel"].forEach(id => {
     const el = document.getElementById(id); if (!el) return;
     el.addEventListener(el.type === "search" ? "input" : "change", () => {
       F = {
         q: $("#fq").value, chi: $("#fchi").value, tipo: $("#ftipo").value, portale: $("#fportale").value,
-        municipio: $("#fmunicipio").value, esito: $("#fesito").value, ordine: $("#fordine").value, soloNuovi: $("#fnuovi").checked
+        municipio: $("#fmunicipio").value, esito: $("#fesito").value, ordine: $("#fordine").value, soloNuovi: $("#fnuovi").checked, soloTel: $("#ftel").checked, gruppo: F.gruppo
       };
       const pos = id === "fq" ? $("#fq").selectionStart : null;
       render();
@@ -181,7 +217,24 @@ function apriAnnuncioForm(a, titolo) {
 
 /* ---------------- azioni ---------------- */
 Object.assign(AZIONI, {
-  azzeraFiltri: () => { F = { q: "", tipo: "", portale: "", municipio: "", esito: "", chi: "privati", ordine: "punteggio", soloNuovi: false }; render(); },
+  apriScheda: el => { location.href = "annuncio.html?id=" + encodeURIComponent(el.dataset.id); },
+  copiaMsg: el => {
+    const a = S.annunci.find(x => x.id === el.dataset.id); if (!a) return;
+    copiaTesto(messaggioPortale(a), "Messaggio copiato. Ora apri l'annuncio e incollalo nel modulo del portale.");
+  },
+  gruppo: el => { F.gruppo = el.dataset.g; F.esito = ""; render(); window.scrollTo({ top: 0 }); },
+  passo: el => {
+    const a = S.annunci.find(x => x.id === el.dataset.id); if (!a) return;
+    const nuovo = el.dataset.e;
+    if (statoDi(a) === nuovo) return;
+    a.esito = nuovo; a.ultimoContatto = oggiISO(); a.operatore = S.operatore;
+    a.storicoEsiti = (a.storicoEsiti || []).concat([{ data: oggiISO(), esito: nuovo, chi: S.operatore }]);
+    // un contatto vero e' un tentativo: entra nei numeri della giornata senza che tu debba ricordartene
+    if (nuovo === "Contattato") { const t = attivitaDi(oggiISO()); t.tentativi = num(t.tentativi) + 1; }
+    if (nuovo === "Appuntamento") { const t = attivitaDi(oggiISO()); t.contatti = num(t.contatti) + 1; }
+    salva(); render();
+  },
+  azzeraFiltri: () => { F = { q: "", tipo: "", portale: "", municipio: "", esito: "", chi: "privati", ordine: "punteggio", soloNuovi: false, gruppo: "tutti" }; render(); },
   nuovoAnnuncio: () => apriAnnuncioForm({ id: uid(), tipo: "Vendita", privato: true, pubblicato: oggiISO() }, "Nuovo annuncio"),
   incolla: () => {
     apriFinestra("Incolla un annuncio", `
