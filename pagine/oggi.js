@@ -1,0 +1,113 @@
+/* Pagina Oggi — generata dal nucleo condiviso. */
+
+/* ---------------- vista: OGGI ---------------- */
+function vistaOggi() {
+  const t = T(), a = attivitaDi(oggiISO());
+  const seq = scadenzeSequenza().filter(x => x.data <= oggiISO());
+  const gra = scadenzeGrappolo().filter(x => x.data <= oggiISO());
+  const reteDaFare = S.rete.filter(r => !r.incontro).length;
+  const tentGiorno = Math.round(t.tentativiSett / 5);
+
+  const contatori = CONTATORI.map(c => `
+    <div class="contatore">
+      <button data-az="meno" data-c="${c.k}">−</button>
+      <div class="n">${num(a[c.k])}</div>
+      <div class="et"><b>${c.t}</b><br><span style="color:var(--grigio)">${c.s}</span></div>
+      <button class="piu" data-az="piu" data-c="${c.k}">+</button>
+    </div>`).join("");
+
+  const barraTent = Math.min(100, num(a.tentativi) / tentGiorno * 100);
+
+  return testa("La giornata", "Oggi — " + new Date().toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" }),
+    `<b>L'ora d'oro, 9:30–11:00, cinque giorni su sette, telefono in mano e porta chiusa.</b> Con 1.000 € al mese saltarla ti costa dei risultati. Con 500 €, saltarla azzera il piano — perche' non c'e' budget che compensi.`) + `
+
+  <div class="scheda">
+    <h3>Tentativi di contatto di oggi <span class="etichetta">obiettivo ${tentGiorno}/giorno · ${t.tentativiSett}/settimana</span></h3>
+    <div style="display:flex;align-items:baseline;gap:10px">
+      <span style="font-size:34px;font-weight:800;letter-spacing:-1px">${num(a.tentativi)}</span>
+      <span style="color:var(--grigio)">su ${tentGiorno} — settimana: ${sommaSettimana("tentativi")} / ${t.tentativiSett}</span>
+    </div>
+    <div class="barra"><i class="${barraTent >= 100 ? "v" : barraTent >= 70 ? "a" : ""}" style="width:${barraTent}%"></i></div>
+    <div class="griglia g2" style="margin-top:12px">${contatori}</div>
+    <div class="bottoniera"><span style="font-size:12px;color:var(--grigio)">Registrato a nome di <b>${esc(S.operatore)}</b>. I contatori sono del giorno; il cruscotto somma settimana e mese.</span></div>
+  </div>
+
+  <div class="griglia g2">
+    <div class="scheda">
+      <h3>Da fare adesso <span class="etichetta">${seq.length + gra.length} scadenze</span></h3>
+      ${seq.length || gra.length ? `
+        ${seq.map(x => `<div class="spunta">
+          <input type="checkbox" data-az="fattoSeq" data-id="${x.lead.id}" data-g="${x.passo.g}">
+          <div class="testo"><b>${esc(x.lead.nome || x.lead.via || "Lead")}</b> — giorno ${x.passo.g}: ${esc(x.passo.contenuto)}
+          <small>${esc(x.passo.canale)} · previsto ${dataIt(x.data)} ${x.data < oggiISO() ? "· <b style='color:var(--rosso)'>in ritardo</b>" : ""}</small></div>
+        </div>`).join("")}
+        ${gra.map(x => `<div class="spunta">
+          <input type="checkbox" data-az="fattoGrappolo" data-id="${x.mandato.id}" data-i="${x.idx}">
+          <div class="testo"><b>Grappolo — ${esc(x.mandato.indirizzo || "mandato")}</b>: ${esc(x.voce.t)}
+          <small>giorno ${esc(x.voce.g)} · ${esc(x.voce.chi)}</small></div>
+        </div>`).join("")}
+      ` : `<div class="vuoto">Nessuna scadenza aperta. Se e' davvero cosi', l'ora d'oro va usata sul radar: apri <b>Radar lead</b> e aggiungi i privati di oggi.</div>`}
+    </div>
+
+    <div>
+      <div class="scheda">
+        <h3>L'agenda della giornata</h3>
+        <table><tbody>${AGENDA.map(f => `<tr>
+          <td style="white-space:nowrap;font-weight:700;${f.oro ? "color:var(--rosso)" : ""}">${esc(f.fascia)}</td>
+          <td>${f.oro ? "<b>" : ""}${esc(f.cosa)}${f.oro ? "</b>" : ""}<br><small style="color:var(--grigio)">${esc(f.perche)}</small></td>
+        </tr>`).join("")}</tbody></table>
+        <div class="avviso" style="margin:12px 0 0"><b>Accorgimento logistico</b>Non accettare mai due sopralluoghi in quadranti opposti nello stesso pomeriggio. Raggruppa per macro-area: chi non lo fa perde il 20% del proprio tempo utile.</div>
+      </div>
+      <div class="scheda">
+        <h3>Le cinque cose che non si toccano</h3>
+        ${INTOCCABILI.map((v, i) => `<div class="spunta"><span style="color:var(--rosso);font-weight:800">${i + 1}</span><div class="testo">${esc(v)}</div></div>`).join("")}
+      </div>
+    </div>
+  </div>
+
+  <div class="scheda">
+    <h3>Stato del sistema</h3>
+    <div class="griglia g4">
+      <div class="dato"><div class="titolo">Lead in sequenza</div><div class="valore">${S.lead.filter(l => l.stato === "In sequenza" || l.stato === "Da contattare").length}</div></div>
+      <div class="dato"><div class="titolo">Mandati attivi</div><div class="valore">${S.mandati.length}</div></div>
+      <div class="dato"><div class="titolo">Immobili in gestione</div><div class="valore">${S.gestione.length}</div><div class="sotto">obiettivo +2/mese</div></div>
+      <div class="dato ${reteDaFare > 0 ? "ambra" : "verde"}"><div class="titolo">Rete da incontrare</div><div class="valore">${reteDaFare}</div><div class="sotto">su ${S.rete.length} inseriti / 20</div></div>
+    </div>
+  </div>`;
+}
+
+/* La lista del radar, in cima: e' con questa che si apre l'ora d'oro. */
+function bloccoRadar() {
+  if (!S.annunci.length) return `<div class="scheda"><h3>Il radar e' vuoto</h3>
+    <p style="font-family:var(--serif);font-size:14.5px">L'ora d'oro senza lista e' un'ora persa. Vai su <a href="radar.html">Annunci</a> e alimenta il radar: bastano il tasto «Prendi annuncio» o un copia-incolla.</p>
+    <div class="bottoniera"><a class="azione" href="radar.html" style="text-decoration:none">Apri il radar</a></div></div>`;
+  const g = raggruppaAnnunci(S.annunci.filter(a => a.privato !== false));
+  g.forEach(x => x.p = punteggioAnnuncio(x.capo, x));
+  const daFare = g.filter(x => (x.capo.esito || "Da lavorare") === "Da lavorare").sort((a, b) => b.p.punti - a.p.punti);
+  const nuovi = g.filter(x => (giorniDa(x.capo.visto) ?? 99) <= 1).length;
+  const quota = Math.round(T().tentativiSett / 5);
+  return `<div class="scheda">
+    <h3>Chi chiamare oggi <span class="etichetta">${daFare.length} immobili da lavorare · ${nuovi} novita'</span></h3>
+    ${daFare.length ? daFare.slice(0, Math.max(quota, 8)).map(x => {
+      const a = x.capo, emq = num(a.mq) ? Math.round(num(a.prezzo) / num(a.mq)) : null;
+      return `<a href="annuncio.html?id=${encodeURIComponent(a.id)}" style="display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--linea);text-decoration:none;color:inherit">
+        <span style="flex:0 0 38px;height:38px;border-radius:8px;background:${a.foto ? `url('${esc(a.foto)}') center/cover` : "var(--tenue)"};"></span>
+        <span style="flex:1;min-width:0">
+          <b style="font-size:14px">${esc(a.via || a.titolo || "senza indirizzo")}</b>
+          <small style="display:block;color:var(--grigio);font-size:11.5px">${a.prezzo ? eur(num(a.prezzo)) : "prezzo n.d."}${emq ? " · " + emq.toLocaleString("it-IT") + " €/mq" : ""} · ${x.giorniOnline} gg online${x.portali.length > 1 ? " · " + x.portali.length + " portali" : ""}${a.telefono ? " · telefono" : ""}</small>
+        </span>
+        <b style="flex:0 0 auto;font-size:17px;color:${x.p.punti >= 70 ? "var(--verde)" : x.p.punti >= 45 ? "var(--ambra)" : "var(--grigio)"}">${x.p.punti}</b>
+      </a>`;
+    }).join("") : `<div class="vuoto">Nessun immobile da lavorare: tutti gia' presi in carico.</div>`}
+    <div class="bottoniera"><a class="azione vuota" href="radar.html" style="text-decoration:none">Tutti gli annunci</a>
+      <span style="align-self:center;font-size:12px;color:var(--grigio)">La quota di oggi e' ${quota} tentativi: parti dall'alto e scendi.</span></div>
+  </div>`;
+}
+function render() { $("#vista").innerHTML = bloccoRadar() + vistaOggi(); }
+Object.assign(AZIONI, {
+  piu: el => { const a = attivitaDi(oggiISO()); a[el.dataset.c] = num(a[el.dataset.c]) + 1; salva(); render(); },
+  meno: el => { const a = attivitaDi(oggiISO()); a[el.dataset.c] = Math.max(0, num(a[el.dataset.c]) - 1); salva(); render(); },
+  fattoSeq: el => { const l = S.lead.find(x => x.id === el.dataset.id); if (!l) return; l.seq = l.seq || {}; l.seq[el.dataset.g] = true; if (l.stato === "Da contattare") l.stato = "In sequenza"; salva(); render(); },
+  fattoGrappolo: el => { const m = S.mandati.find(x => x.id === el.dataset.id); if (!m) return; m.grappolo = m.grappolo || {}; m.grappolo[el.dataset.i] = !m.grappolo[el.dataset.i]; salva(); render(); }
+});
+avviaPagina(render);

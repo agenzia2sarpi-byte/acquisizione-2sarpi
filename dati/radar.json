@@ -1,0 +1,6 @@
+{
+  "id": "vuoto",
+  "generato": null,
+  "nota": "Questo file lo riscrive il radar programmato ogni mattina alle 7:00, leggendo gli avvisi email delle ricerche salvate dei portali. Finche' le ricerche salvate non sono attive, resta vuoto: il radar si alimenta col tasto «Prendi annuncio» e con «Incolla un annuncio».",
+  "annunci": []
+}
