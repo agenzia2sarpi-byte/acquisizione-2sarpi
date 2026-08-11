@@ -354,3 +354,44 @@ function waNumero(tel) {
   if (n.startsWith("39") && n.length >= 11) return n;      // ha gia' il prefisso
   return "39" + n.replace(/^0+/, "");                       // numero italiano nudo
 }
+
+/* ---------------- annunci spariti: la fonte a conversione piu' alta ---------------- */
+/* Il radar tiene ogni giorno l'elenco degli annunci di agenzia. Quando uno sparisce e non risulta
+   venduto, il proprietario e' gia' motivato e gia' deluso: e' il momento esatto in cui chiamare. */
+async function aggiornaScadutiDalFeed(silenzioso) {
+  try {
+    const r = await fetch("dati/scaduti.json?t=" + Date.now(), { cache: "no-store" });
+    if (!r.ok) throw new Error("non disponibile");
+    const d = await r.json();
+    if (!d || !Array.isArray(d.scaduti)) throw new Error("vuoto");
+    S.scaduti = S.scaduti || [];
+    S.feedScaduti = S.feedScaduti || {};
+    let nuovi = 0, aggiornati = 0;
+    d.scaduti.forEach(x => {
+      const e = S.scaduti.find(y => y.url === x.url);
+      if (e) { Object.keys(x).forEach(k => { if (k !== "esito" && k !== "note") e[k] = x[k]; }); aggiornati++; }
+      else { S.scaduti.push(Object.assign({ id: uid(), esito: "Da lavorare", note: "" }, x)); nuovi++; }
+    });
+    S.feedScaduti = { ultimoId: d.id, ultimaLettura: new Date().toISOString() };
+    salva();
+    if (!silenzioso) alert(`Scaduti: ${nuovi} nuovi, ${aggiornati} aggiornati.`);
+    return { nuovi, aggiornati };
+  } catch (e) {
+    if (!silenzioso) alert("Nessun aggiornamento sugli annunci scaduti.\nIl radar comincia a produrli dopo qualche giorno di osservazione.");
+    return null;
+  }
+}
+
+/* Il messaggio per chi ha ritirato l'annuncio senza vendere. */
+function messaggioScaduto(x) {
+  const via = (x.via || x.indirizzo || "").replace(/,?\s*\d+[a-zA-Z]?\s*$/, "") || "quella via";
+  return `Buongiorno, sono Gaetano dell'Agenzia 2 Sarpi.
+
+Ho notato che l'immobile in ${via} non e' piu' online. Se ha venduto, complimenti sinceri e la saluto qui.
+
+Se invece l'ha ritirato, le lascio un dato: in quella via, nell'ultimo trimestre, si e' chiuso intorno ai valori che le riporto scritti, con tempi medi che le posso documentare. Nella grande maggioranza dei casi che vedo, il problema non e' stato il prezzo ma il modo in cui l'immobile e' stato presentato e filtrato.${num(x.ribassi) ? `
+
+Nel suo caso l'annuncio ha visto ${num(x.ribassi)} ribassi in ${x.giorniOnline || "diversi"} giorni: e' il segnale tipico di un immobile presentato bene ma proposto al pubblico sbagliato.` : ""}
+
+Se le va, glielo guardo e le dico cosa cambierei. Venti minuti, senza impegno. Se preferisce non essere contattato me lo dica pure e non la disturbo oltre.`;
+}

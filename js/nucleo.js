@@ -172,6 +172,7 @@ function copiaTesto(testo, messaggio = "Copiato negli appunti.") {
 const PAGINE = [
   { f: "index.html", t: "Oggi" },
   { f: "radar.html", t: "Annunci" },
+  { f: "scaduti.html", t: "Scaduti" },
   { f: "condomini.html", t: "Amministratori" },
   { sep: 1 },
   { f: "pipeline.html", t: "Trattative" },
