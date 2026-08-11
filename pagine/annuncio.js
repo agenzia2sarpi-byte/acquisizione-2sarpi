@@ -43,6 +43,8 @@ function render() {
       <div class="sotto">${a.tipo === "Locazione" ? "intermediazione + gestione, primo anno" : "3% sul prezzo richiesto"}</div></div>
   </div>
 
+  ${!eOnline(a) ? `<div class="avviso rosso"><b>Non piu' online</b>Questo annuncio e' sparito dal portale il ${dataIt(a.sparito)}. Quasi sempre significa che l'immobile e' stato venduto o affittato: <b>non chiamare per proporti</b>. Se vuoi comunque provarci, l'unico messaggio che regge e' quello degli annunci scaduti — parte da «se ha venduto, complimenti sinceri».</div>` : `<div style="font-size:12.5px;color:var(--grigio);margin:0 0 12px">${esc(freschezza(a).t)} — il radar ricontrolla ogni giorno che l'annuncio sia ancora pubblicato.</div>`}
+
   <div class="scheda"><h3>Contatto</h3>
     ${tel || a.email ? `<div class="contatto">
       ${tel ? `<a href="tel:${esc(tel)}">Chiama ${esc(a.telefono)}</a>` : ""}

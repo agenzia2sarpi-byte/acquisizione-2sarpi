@@ -279,9 +279,11 @@ async function aggiornaDalFeed(silenzioso) {
     if (!d || !Array.isArray(d.annunci)) throw new Error("feed vuoto");
     if (d.id && d.id === S.feed.ultimoId) { if (!silenzioso) alert("Il radar non ha nulla di nuovo dall'ultimo aggiornamento."); return { nuovi: 0, aggiornati: 0 }; }
     const e = importaAnnunci(d.annunci, "radar");
+    const s = segnaSpariti(d.spariti || [], d.verificati || []);
+    e.spariti = s;
     S.feed = { ultimoId: d.id || null, ultimaLettura: new Date().toISOString(), generato: d.generato || null };
     salva();
-    if (!silenzioso) alert(`Radar aggiornato: ${e.nuovi} nuovi, ${e.aggiornati} aggiornati.`);
+    if (!silenzioso) alert(`Radar aggiornato: ${e.nuovi} nuovi, ${e.aggiornati} aggiornati` + (e.spariti ? `, ${e.spariti} non piu' online.` : "."));
     return e;
   } catch (e) {
     if (!silenzioso) alert("Nessun aggiornamento disponibile dal radar.\n(" + e.message + ")");
@@ -406,3 +408,31 @@ Se le va, glielo guardo e le dico cosa cambierei. Venti minuti, senza impegno. S
   }));
   if (toccate) salva();
 })();
+
+
+/* ---------------- immobili non piu' online ---------------- */
+/* Il radar ricontrolla ogni giorno gli annunci gia' in archivio andando sulla loro pagina.
+   Quelli che non rispondono piu' arrivano qui e spariscono dalla lista delle chiamate:
+   e' il modo per non telefonare a chi ha gia' venduto o gia' affittato. */
+function segnaSpariti(urlSpariti, urlVerificati) {
+  let n = 0;
+  const spariti = new Set(urlSpariti);
+  const verificati = new Set(urlVerificati);
+  S.annunci.forEach(a => {
+    if (verificati.has(a.url)) { a.verificato = oggiISO(); if (a.online === false) { a.online = true; a.sparito = ""; } }
+    if (spariti.has(a.url) && a.online !== false) {
+      a.online = false; a.sparito = oggiISO(); a.verificato = oggiISO(); n++;
+    }
+  });
+  if (n) salva();
+  return n;
+}
+const eOnline = a => a.online !== false;
+/* Quanto e' vecchia l'ultima verifica: sotto le 48 ore il dato e' affidabile. */
+function freschezza(a) {
+  const g = giorniDa(a.verificato || a.visto);
+  if (g === null) return { t: "mai verificato", cl: "ambra" };
+  if (g <= 1) return { t: "verificato oggi", cl: "verde" };
+  if (g <= 3) return { t: `verificato ${g} giorni fa`, cl: "" };
+  return { t: `da riverificare (${g} giorni)`, cl: "ambra" };
+}

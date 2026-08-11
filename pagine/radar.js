@@ -1,6 +1,6 @@
 /* Pagina Annunci — la vetrina del radar, con deduplica fra portali. */
 
-let F = { q: "", tipo: "", portale: "", municipio: "", esito: "", chi: "privati", ordine: "punteggio", soloNuovi: false, soloTel: false, gruppo: "dafare" };
+let F = { q: "", tipo: "", portale: "", municipio: "", esito: "", chi: "privati", ordine: "punteggio", soloNuovi: false, soloTel: false, mostraSpariti: false, gruppo: "dafare" };
 
 /* Tre stati che contano davvero, piu' il dettaglio fine nel menu «Esito». */
 const GRUPPI = {
@@ -14,6 +14,8 @@ const gruppoDiEsito = e => Object.keys(GRUPPI).find(k => GRUPPI[k].e && GRUPPI[k
 
 function annunciFiltrati() {
   let l = S.annunci.slice();
+  // gli immobili non piu' online non si chiamano: si guardano solo se li chiedi
+  if (!F.mostraSpariti) l = l.filter(eOnline);
   if (F.chi === "privati") l = l.filter(a => a.privato !== false);
   if (F.chi === "agenzie") l = l.filter(a => a.privato === false);
   if (F.tipo) l = l.filter(a => a.tipo === F.tipo);
@@ -48,12 +50,14 @@ function cartaAnnuncio(g) {
   const rif = riferimentoEmq(a);
   const sc = rif && emq ? (emq - rif.valore) / rif.valore * 100 : null;
   const tel = (a.telefono || "").replace(/[^\d+]/g, "");
-  return `<div class="annuncio${GRUPPI.chiusi.e.includes(statoDi(a)) ? " chiuso" : ""}">
+  const fr = freschezza(a);
+  return `<div class="annuncio${GRUPPI.chiusi.e.includes(statoDi(a)) || !eOnline(a) ? " chiuso" : ""}">
     <div class="apri" data-az="apriScheda" data-id="${esc(a.id)}">
     <div class="foto${a.foto ? "" : " senza"}">${foto}
       <div class="segno"><b>${esc(a.tipologia || (num(a.locali) ? num(a.locali) + " locali" : "immobile"))}</b><span>${esc(a.quartiere || a.municipio || "Milano")}</span></div>
       <div class="angolo">
-        ${a.privato !== false ? `<span class="badge privato">privato</span>` : `<span class="badge">agenzia</span>`}
+        ${eOnline(a) ? (a.privato !== false ? `<span class="badge privato">privato</span>` : `<span class="badge">agenzia</span>`)
+                      : `<span class="badge sparito">non piu' online</span>`}
         ${g.portali.length > 1 ? `<span class="badge portali">${g.portali.length} portali</span>` : ""}
       </div>
       <div class="punti">${p}<small>PUNTI</small></div>
@@ -81,6 +85,7 @@ function cartaAnnuncio(g) {
       <button class="vuoto" data-az="copiaMsg" data-id="${esc(a.id)}">Copia messaggio</button>
     </div>
     <div class="corpo" style="padding-top:0">
+      <div style="font-size:11px;color:${fr.cl === "verde" ? "var(--verde)" : fr.cl === "ambra" ? "var(--ambra)" : "var(--grigio)"}">${eOnline(a) ? esc(fr.t) : "sparito dal portale il " + dataIt(a.sparito)}</div>
       ${a.ultimoContatto ? `<div style="font-size:11.5px;color:var(--grigio)">ultimo passo: <b>${esc(statoDi(a))}</b> il ${dataIt(a.ultimoContatto)}${a.operatore ? " · " + esc(a.operatore) : ""}</div>` : ""}
       <div class="passi">
         <button data-az="passo" data-id="${a.id}" data-e="Da lavorare" class="${statoDi(a) === "Da lavorare" ? "att" : ""}">da fare</button>
@@ -107,6 +112,7 @@ function render() {
     <div class="dato"><div class="titolo">Immobili unici</div><div class="valore">${gTutti.length}</div><div class="sotto">da ${tutti} annunci raccolti</div></div>
     <div class="dato ${doppioni ? "verde" : ""}"><div class="titolo">Doppioni tolti</div><div class="valore">${doppioni}</div><div class="sotto">stesso immobile, piu' portali</div></div>
     <div class="dato"><div class="titolo">Da privato</div><div class="valore">${privati}</div><div class="sotto">${tutti ? Math.round(privati / tutti * 100) : 0}% del raccolto</div></div>
+    <div class="dato"><div class="titolo">Non piu' online</div><div class="valore">${S.annunci.filter(a => !eOnline(a)).length}</div><div class="sotto">tolti dalle chiamate</div></div>
     <div class="dato"><div class="titolo">Con telefono</div><div class="valore">${S.annunci.filter(a => a.telefono).length}</div><div class="sotto">gli altri si contattano dal portale</div></div>
   </div>
 
@@ -140,6 +146,8 @@ function render() {
         <input type="checkbox" id="fnuovi" ${F.soloNuovi ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--rosso)"> solo novita' di oggi</label>
       <label style="display:flex;align-items:center;gap:7px;font-size:13px">
         <input type="checkbox" id="ftel" ${F.soloTel ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--rosso)"> solo con telefono</label>
+      <label style="display:flex;align-items:center;gap:7px;font-size:13px">
+        <input type="checkbox" id="fspar" ${F.mostraSpariti ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--grigio)"> mostra anche i spariti</label>
       <button class="azione grigia" data-az="azzeraFiltri">Azzera filtri</button>
       <span class="conteggio">${gruppi.length} immobili nel filtro</span>
     </div>
@@ -156,12 +164,12 @@ function render() {
       <tr><td><b>4. Importa file</b></td><td>Un CSV o un JSON esportato da un gestionale, o il file di scambio con l'altro dispositivo.</td></tr>
       </tbody></table></div>`}`;
 
-  ["fq", "fchi", "ftipo", "fportale", "fmunicipio", "fesito", "fordine", "fnuovi", "ftel"].forEach(id => {
+  ["fq", "fchi", "ftipo", "fportale", "fmunicipio", "fesito", "fordine", "fnuovi", "ftel", "fspar"].forEach(id => {
     const el = document.getElementById(id); if (!el) return;
     el.addEventListener(el.type === "search" ? "input" : "change", () => {
       F = {
         q: $("#fq").value, chi: $("#fchi").value, tipo: $("#ftipo").value, portale: $("#fportale").value,
-        municipio: $("#fmunicipio").value, esito: $("#fesito").value, ordine: $("#fordine").value, soloNuovi: $("#fnuovi").checked, soloTel: $("#ftel").checked, gruppo: F.gruppo
+        municipio: $("#fmunicipio").value, esito: $("#fesito").value, ordine: $("#fordine").value, soloNuovi: $("#fnuovi").checked, soloTel: $("#ftel").checked, mostraSpariti: $("#fspar").checked, gruppo: F.gruppo
       };
       const pos = id === "fq" ? $("#fq").selectionStart : null;
       render();
