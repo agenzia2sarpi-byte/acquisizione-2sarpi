@@ -111,3 +111,6 @@ Object.assign(AZIONI, {
   fattoGrappolo: el => { const m = S.mandati.find(x => x.id === el.dataset.id); if (!m) return; m.grappolo = m.grappolo || {}; m.grappolo[el.dataset.i] = !m.grappolo[el.dataset.i]; salva(); render(); }
 });
 avviaPagina(render);
+/* Anche la home legge il radar pubblicato: un dispositivo nuovo si riempie da solo,
+   senza dover passare prima dalla pagina Annunci. */
+aggiornaDalFeed(true).then(e => { if (e && (e.nuovi || e.aggiornati)) render(); });

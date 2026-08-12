@@ -241,3 +241,12 @@ details.blocco .corpo li{margin:0 0 5px}
 .contatti-rapidi .senza-tel{font-size:11.5px;color:var(--grigio);align-self:center;font-style:italic}
 
 .badge.sparito{background:#6B6862;color:#fff}
+
+/* segnale dello swipe: compare un istante quando il gesto viene riconosciuto */
+.gesto{position:fixed;top:50%;margin-top:-24px;width:48px;height:48px;border-radius:50%;
+  background:rgba(0,0,0,.62);color:#fff;font-size:30px;line-height:46px;text-align:center;
+  z-index:60;opacity:0;pointer-events:none;transition:opacity .16s ease,transform .16s ease}
+.gesto.sx{left:10px;transform:translateX(-14px)}
+.gesto.dx{right:10px;transform:translateX(14px)}
+.gesto.on{opacity:1;transform:translateX(0)}
+@media print{.gesto{display:none}}

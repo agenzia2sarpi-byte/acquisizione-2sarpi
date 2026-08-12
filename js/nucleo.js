@@ -236,10 +236,77 @@ document.addEventListener("click", ev => {
   f(el, ev);
 });
 
+/* ---------------- gesti sul telefono ---------------- */
+/* Aggiunto a mano perche' l'app sulla schermata Home non ha la barra di Safari:
+   niente freccia indietro e niente swipe dal bordo. Qui lo swipe verso destra
+   torna indietro, quello verso sinistra va avanti. Su una finestra aperta il
+   verso destra la chiude, che e' quello che il pollice si aspetta. */
+const SWIPE = { minimo: 72, rapporto: 2, tempoMax: 700 };
+
+function scorreDaSolo(el) {
+  for (let n = el; n && n !== document.body; n = n.parentElement) {
+    if (n.scrollWidth > n.clientWidth + 4) {
+      const o = getComputedStyle(n).overflowX;
+      if (o === "auto" || o === "scroll") return true;
+    }
+  }
+  return false;
+}
+
+function segnaleGesto(verso) {
+  let s = $("#gesto");
+  if (!s) { s = document.createElement("div"); s.id = "gesto"; s.className = "gesto"; document.body.appendChild(s); }
+  s.textContent = verso === "indietro" ? "‹" : "›";
+  s.className = "gesto " + (verso === "indietro" ? "sx" : "dx");
+  requestAnimationFrame(() => s.classList.add("on"));
+  clearTimeout(s._t);
+  s._t = setTimeout(() => s.classList.remove("on"), 320);
+}
+
+function indietro() {
+  const v = $("#velo");
+  if (v && v.classList.contains("on")) { chiudiFinestra(); return; }
+  segnaleGesto("indietro");
+  const qui = location.pathname.split("/").pop() || "index.html";
+  const daDentro = document.referrer && document.referrer.indexOf(location.origin) === 0;
+  if (daDentro) history.back();
+  else if (qui !== "index.html") location.href = "index.html";
+}
+
+function avanti() {
+  const v = $("#velo");
+  if (v && v.classList.contains("on")) return;
+  segnaleGesto("avanti");
+  history.forward();
+}
+
+function attivaGesti() {
+  if (!("ontouchstart" in window) || window._gestiAttivi) return;
+  window._gestiAttivi = true;
+  let x0 = 0, y0 = 0, t0 = 0, valido = false;
+  document.addEventListener("touchstart", e => {
+    valido = false;
+    if (e.touches.length !== 1) return;
+    const b = e.target;
+    if (b.closest("input, textarea, select, [contenteditable]")) return;
+    if (scorreDaSolo(b)) return;
+    x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; t0 = Date.now(); valido = true;
+  }, { passive: true });
+  document.addEventListener("touchend", e => {
+    if (!valido || e.changedTouches.length !== 1) return;
+    valido = false;
+    if (Date.now() - t0 > SWIPE.tempoMax) return;
+    const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+    if (Math.abs(dx) < SWIPE.minimo || Math.abs(dx) < Math.abs(dy) * SWIPE.rapporto) return;
+    if (dx > 0) indietro(); else avanti();
+  }, { passive: true });
+}
+
 /* avvio comune: ogni pagina chiama avviaPagina() */
 function avviaPagina(renderFn) {
   guscio();
   window.render = () => { renderFn(); };
   render();
   piedino();
+  attivaGesti();
 }
