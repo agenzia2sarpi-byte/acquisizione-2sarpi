@@ -33,7 +33,8 @@
    "descrizione": "Vendesi trilocale di circa 95 mq in Sarpi , Via Signorelli. 1 piano, Milano centro.\nLo stabile è costituito da Ingresso, cucina abitabile, sala, zona notte costituita da bagno, locale lavanderia separato due camere matrimoniali, ampia cabina armadio. Presente cantina.\nPresente Agenzia",
    "pubblicato": "2026-08-13",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-zona-affori-milano-657157325.htm",
@@ -64,7 +65,8 @@
    "descrizione": "Vendo in buone condizioni generali con soppalco bagno cucine e sala da pranzo e salone",
    "pubblicato": "2026-08-13",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/loft-tucidide-ortica-ex-fabbriche-ginori-milano-657142649.htm",
@@ -96,7 +98,8 @@
    "pubblicato": "2026-08-13",
    "privato": true,
    "ribassi": 1,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": true
   },
   {
    "url": "https://www.subito.it/appartamenti/trilocale-arredato-di-tutto-milano-657051037.htm",
@@ -126,7 +129,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/fb/fb7d9e14-38f8-4263-8510-2b18fa15a48d?rule=vertical-mini-card-2x-auto",
    "descrizione": "AFFITTO trilocale arredato di tutto, due camere, due bagni, due sale, cucina a vista, porta blindata, due balconcini, molto bello e silenzioso in contesto condominiale di poche persone, portineria e controllo , affitto solo a referenziati e con busta paga, appartamento per massimo 3 persone, l'affitto è COMPRENSIVO DI TUTTE LE SPESE ( tranne le bollette)",
    "pubblicato": "2026-08-12",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-arredato-milano-don-gnocchi-milano-657106137.htm",
@@ -157,7 +161,8 @@
    "descrizione": "Luminoso monolocale al piano terra di fronte allo stadio, appena ristrutturato a nuovo e completamente arredato. Riscaldamento centralizzato. Servitissimo da mezzi pubblici e negozi nelle immediate vicinanze. Disponibilità immediata.\nCanone di 900 euro mensili comprensivo di spese condominiali. Resta esclusa solo la luce a consumo. Si offre contratto transitorio riservato esclusivamente a non residenti con referenze. Contattare in privato per informazioni.",
    "pubblicato": "2026-08-12",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-in-zona-c-so-sempione-m5-milano-650782438.htm",
@@ -187,7 +192,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/56/56775337-72ce-40a3-89a4-d6b6f1ccb663?rule=vertical-mini-card-2x-auto",
    "descrizione": "VIA PIERO DELLA FRANCESCA 8\nIn uno dei quartieri più vivaci e centrali di Milano, ricco di servizi ed ottimamente servito dalla Metro Lilla M5, proponiamo SPLENDIDO APPARTAMENTO di ca. 55mq. all'interno di una palazzina di ringhiera milanese con videosorveglianza condominiale.\nL'ampio bilocale, ristrutturato a nuovo, è così composto: ingresso, soggiorno con cucina a vista, disimpegno e camera matrimoniale con bagno finestrato en-suite. Doppia esposizione con affaccio interno, molto silenzioso e riservato.\nAlimentato esclusivamente da energia elettrica, questo immobile costituisce un solido investimento di sicuro interesse. Libero subito!",
    "pubblicato": "2026-08-11",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/panoramica-e-luminosa-suite-milano-656960859.htm",
@@ -217,7 +223,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d5/d54552b7-5db0-44c3-b173-a6374189e1a8?rule=vertical-mini-card-2x-auto",
    "descrizione": "Suite al piano 6° panoramica, ristrutturata e mai abitata in residence zona piazzale Istria (7 minuti a piedi dalla fermata Istria M5). Finiture di pregio con controsoffitti a led e pavimento in gres effetto legno. L'appartamento è composto da 2 licali: zona living con cucina a vista e zona relax con divano. Compresi nel prezzo l'arredamento realizzato su misura con  elettrodomestici da incasso(lavastoviglie e lavatrice). Di pertinenza una comoda cantina al piano strada con finestra per rimessare anche bici o monopattino. Condominio con giardino e portiere diurno. No agenzie.",
    "pubblicato": "2026-08-11",
-   "privato": true
+   "privato": true,
+   "noAgenzie": true
   },
   {
    "url": "https://www.subito.it/appartamenti/ampio-appartamento-arredato-in-centro-milano-649203296.htm",
@@ -248,7 +255,8 @@
    "descrizione": "Salone con terrazzo, ingresso, camera matrimoniale, bagno con antibagno, cucina abitabile con terazzino, finemente arredato, in stabile signorile con portineria, doppia esposizione su doppio cortile interno, silenzioso e luminoso.\nContratto transitorio mensile/12 o 18 mesi.\nSpese condominiali (portineria e riscaldamento a pavimento): 300 euro al mese\n Libero AGOSTO",
    "pubblicato": "2026-08-11",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/trilocale-arredato-e-corredato-con-doppi-servizi-milano-647284771.htm",
@@ -278,7 +286,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/28/287e6833-2804-43ab-a290-51a9b2c17130?rule=vertical-mini-card-2x-auto",
    "descrizione": "Affittasi splendido e luminoso trilocale, completamente arredato e corredato con cura, situato al secondo piano di una casa indipendente composta da sole due unità abitative. Una soluzione ideale per chi cerca la massima tranquillità e privacy . Il meglio per professionisti o referenziati fuori sede\n\nL'appartamento gode di finiture di alto livello ed è così distribuito:\nZona giorno: Ampio e accogliente soggiorno con cucina a vista moderna, completamente equipaggiata (inclusa lavastoviglie).\nZona notte: Due camere da letto spaziose e confortevoli, rifinite con un elegante pavimento in parquet.\nServizi: Due bagni completi, preceduti da un pratico antibagno e disimpegno. È presente una zona lavanderia dotata di lavatrice e asciugatrice.\nSpazi esterni: Due splendidi balconi che garantiscono un'ottima luminosità e un piacevole sfogo esterno.\nComfort e dotazioni tecnologiche:\nL'appartamento è ",
    "pubblicato": "2026-08-11",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-p-loreto-c-b-aires-m1-m2-sotto-sotto-casa-milano-623016455.htm",
@@ -309,7 +318,8 @@
    "descrizione": "AFFITTASI AMPIO BILOCALE SITUATO TRA PIAZZALE LORETO C B AIRES , RISTRUTTURATO , DISPONIBILE DA SUBITO - AFFITTASI A LAVORATORI O STUDENTI /SSE REFERENZIATI - -BILOCALE CORSO BUENOS AIRES - P LORETO , MM1 MM2 ROSSA E VERDE SOTTO CASA,. DUOMO 7 min CON METRO ROSSA . DISPONIBILE DA SUBITO accogliente Bilocale appena ristrutturato e completo di ogni comfort. Composto da luminosa zona living con cucina ,bagno e camera matrimoniale. Situato proprio sopra la fermata della M1-M2 linea ROSSA E VERDE , metroGIALLA (stazione centrale ) 6 minuti a piedi ,ideale per raggiungere ogni zona di Milano con i mezzi pubblici.\nL'appartamento è LIBERO DA SUBITO Si richiedono referenze . Costo mensile 1500 , condominio 200. SI CHIEDE CORTESEMENTE DI NON CONTATTARE SE INTERESSATI AD EFFETTUARE UN SUBAFFITTO O AFFITTO BREVE . Grazie",
    "pubblicato": "2026-08-11",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-arredato-nuovo-a-milano-citta-studi-milano-656951694.htm",
@@ -339,7 +349,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/1a/1adcaf2f-dbaf-4f15-8cb6-8d7faf021d4e?rule=vertical-mini-card-2x-auto",
    "descrizione": "Privato affitta un interessante e luminoso bilocale arredato, completo di impianto di climatizzazione, a Milano in via Vallazze 87 in zona Città Studi. \n\nL'appartamento, mai abitato fino ad ora, è stato appena ristrutturato ed arredato da un Architetto.\n\nE'composto da: un soggiorno con cucina, tavolo allungabile e divano, una grande camera con due letti con contenitore e due scrivanie, un bagno con doccia.\n\nDispone di un bel balcone e di una ampia finestra da dove si osserva, sullo sfondo, lo skyline. \n\nL'appartamento si trova al quarto piano in un condominio con riscaldamento a pannelli radianti, ascensore e servizio di portineria. \n \nE'situato in una zona strategica di Milano Est. \n\nNelle immediate vicinanze ci sono, oltre ad alcuni supermercati, importanti Istituti Universitari, due linee della metropolitana e di bus, la Tangenziale Est e la Stazione Ferroviaria di Lambrate.\n\nIl canon",
    "pubblicato": "2026-08-11",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/bocconi-bilocale-50-mq-arredato-a-200m-universita-milano-656005328.htm",
@@ -369,7 +380,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/90/90425393-7d6b-48f5-b1c9-aa1b50882c2e?rule=vertical-mini-card-2x-auto",
    "descrizione": "BOCCONI APPARTAMENTO 50 mq ARREDATO A 200 M. UNIVERSITA'\n\nDA PRIVATO SUBITO DISPONIBILE in affitto intero ottimo bilocale da 50 mq in esclusiva zona Università Bocconi-Navigli (Viale Bligny 64, Milano), completamente arredato, attrezzato e ristrutturato nuovo in bellissimo palazzo d'epoca del '900, con soggiorno,camera da letto con armadiature,cucinotto,ripostiglio e bagno finestrato,il tutto ben disposto. \n\nIdeale per max 2 brave studentesse/i universitarie/i BOCCONI, NABA,CATTOLICA, IED,IULM, preferibilmente del 1° anno Triennale o di Specialistica Biennale (appartamento con 2 letti + 2 scrivanie), a soli 200 metri dall'Università Bocconi e dalla zona Navigli-Porta Romana. Posto al 4° piano alto con ascensore, luminoso, con vista favolosa. \n\nMolto bello con servizio portineria,sicuro, comodo e completo di tutto (con elettrodomestici nuovi, lavatrice,TV,predisposizione Internet in fibra",
    "pubblicato": "2026-08-11",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/ampio-bilocale-ca-granda-milano-656350466.htm",
@@ -399,7 +411,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/fd/fd87be17-0cfd-4c12-b7c6-5b86d887c10d?rule=vertical-mini-card-2x-auto",
    "descrizione": "Affittasi bellissimo bilocale con balcone vicinissimo la fermata della metro lilla Ca' Granda, aria condizionata, video-sorvegliato e dotato di portineria. \nZona tranquillissima e fornita di ogni comfort, supermercati, farmacia e ospedale Niguarda nelle immediate vicinanze. \nZona davvero strategica in quanto i quartieri Isola, Zara e il centro sono raggiungibili in pochi minuti. \nOttimo per chi studia all'Università degli Studi di Milano-Bicocca. \n\nDisponibile da subito \n\nIl costo è di 1100 euro (condominio compreso) più consumi \n\nPer qualsiasi informazione o per visionare l'appartamento, potete contattarmi al seguente numero 3282617562 \n\nNO AGENZIE",
    "pubblicato": "2026-08-11",
-   "privato": true
+   "privato": true,
+   "noAgenzie": true
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-su-due-livelli-v-le-monza-pasteur-m1-milano-651970613.htm",
@@ -429,7 +442,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/76/76b6faa5-5cc8-429b-944e-fdaec0acf124?rule=vertical-mini-card-2x-auto",
    "descrizione": "Grazioso bilocale su due livelli completamente ristrutturato e arredato - Adiacenze Piazzale Loreto / Viale Monza MM Pasteur linea rossa \n\nDisponibile da subito, luminoso e accogliente bilocale su due livelli situato all'ultimo piano di uno stabile con ascensore, in posizione strategica nelle immediate adiacenze di **Piazzale Loreto** e **Viale Monza**.\n\nL'appartamento è stato **completamente ristrutturato** e viene proposto **completamente arredato**, pronto da abitare. Dotato di ogni comfort: infissi nuovi ad alta efficienza, aria condizionata, lavasciuga e finiture moderne che garantiscono funzionalità e benessere.\n\nOttimamente collegato con il centro città grazie alle fermate della **metropolitana Linea Rossa Pasteur e Rovereto**, entrambe raggiungibili a piedi in pochi minuti. Sotto casa sono presenti supermercati, bar, ristoranti e tutti i principali servizi.\n\n**Canone mensile:** ?",
    "pubblicato": "2026-08-11",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-arredato-via-vodice-zona-fieramilanocity-milano-651037411.htm",
@@ -459,7 +473,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/36/367c70e1-f8bd-4660-b1de-4aac51d94842?rule=vertical-mini-card-2x-auto",
    "descrizione": "L'appartamento dispone di: ampio ingresso (utilizzabile come studio), bagno, sala, cucina, ripostiglio e camera da letto.\n\nIl bagno è fornito di cabina doccia, lavatrice e mobiletti.\n\nLa sala è arredata con un tavolo allungabile da 4/6 posti, libreria con una televisione fornita in dotazione, divano a due posti, due mobiletti e armadio letto per un ospite.\n\nLa cucina, separata dalla sala, è dotata di forno e cucina a induzione, forno a microonde e scaldabagno elettrico.\n\nLa camera da letto ha il parquet in legno. È presente un letto matrimoniale trasformabile in due letti singoli, tre armadi e una cassettiera. Su una parete è stato piazzato un supporto per televisione con prese per Internet e l'antenna televisiva. È presente un climatizzatore fisso (raffreddamento coeff. A++/riscaldamento coeff. A+++).\n\nL'appartamento ha due balconi e doppia esposizione: interna sul cortile ed esterna ve",
    "pubblicato": "2026-08-11",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-con-terrazzo-stabile-signorile-55mq-milano-650096373.htm",
@@ -491,7 +506,8 @@
    "pubblicato": "2026-08-11",
    "privato": true,
    "ribassi": 1,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-appena-ristrutturato-milano-656971995.htm",
@@ -521,7 +537,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/e7/e724bc27-092f-4056-b52f-b61d39c8a01c?rule=vertical-mini-card-2x-auto",
    "descrizione": "In affitto appartamento arredato in Via Luigi Annoni 19, Milano, zona semicentrale tra Primaticcio e Bande Nere, in contesto ben servito dai mezzi pubblici e con servizio di portineria. L'immobile si distingue per la doppia esposizione che lo rende particolarmente luminoso e accogliente.\n\nLa casa è ideale per studenti fuori sede o coppie ed è completa di ogni comfort: climatizzatore, lavastoviglie, forno, frigorifero, lavatrice e asciugatrice. La cucina è funzionale e moderna, collegata a una zona pranzo arredata con tavolo e sedie; la camera da letto matrimoniale è spaziosa e luminosa. Il bagno è dotato di vasca e lavatrice.\n\nIl servizio di portineria garantisce maggiore sicurezza e praticità nella gestione quotidiana dell'edificio.\n\nPerfetta soluzione \"chiavi in mano\" in una zona tranquilla ma ben collegata, vicino a tutti i servizi principali. Contattaci per fissare una visita e scopr",
    "pubblicato": "2026-08-11",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/luminoso-monolocale-soppalcato-milano-656743577.htm",
@@ -551,7 +568,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/c7/c7ffcd50-7772-417a-92d0-6b9c2a1caf00?rule=vertical-mini-card-2x-auto",
    "descrizione": "In zona Certosa, ben collegato al centro dal passante e dal tram 12, a poca distanza dal Politecnico Bovisa e dall'ospedale Sacco.\nArredato, completo di elettrodomestici, stoviglie, wi-fi, bagno con finestra. Il soppalco consente una utile separazione della zona notte. Affaccio interno\nIl prezzo include tutte le spese tranne il consumo elettrico",
    "pubblicato": "2026-08-11",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/splendido-monolocale-milano-649684563.htm",
@@ -581,7 +599,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d9/d9b8444c-e1cd-4616-b93e-ff63126ba52e?rule=vertical-mini-card-2x-auto",
    "descrizione": "AFFITTO MONOLOCALE 40 MQ IN ZONA FORZE ARMATE (VIA SELLA NUOVA 10/2) - (METROPOLITANA BISCEGLIE A 200 METRI, RAGGIUNGIBILE A PIEDI E CHE PORTA IN CENTRO CITTà IN 20 MINUTI).\nARREDATO BENE, ACCESSORIATO CON LAVATRICE, ARIA CONDIZIONATA, BAGNO CON BOX DOCCIA GRANDE, FORNO A MICROONDE, FRIGORIFERO COMBINATO. \nQUARTO PIANO CON ASCENSORE. \nCOMPOSTO DA INGRESSO CON PORTA BLINDATA, CAMERA/SOGGIORNO, CUCININO, BAGNO, RIPOSTIGLIO, BALCONE E CANTINA. \nL'APPARTAMENTO è SILENZIOSO, IN UNO STABILE TRANQUILLO CON PARCO DAVANTI A CASA.\nNEL GIRO DI 100 METRI CI SONO NEGOZI DI PRIMA NECESSITà E ESSELUNGA \nFERMATA MEZZI PUBBLICI DI SUPERFICIE A 50 METRI \nRAGGIUNGIUBILE A PIEDI C'è LA SPLENDIDA OASI NATURALE DEL PARCO DELLE CAVE, DOVE SI Può FARE JOGGING, ANDARE IN BICICLETTA E PRENDERE IL SOLE.\nCLASSE ENERGETICA E\nL'APPARTAMENTO è ADATTO PER 1 PERSONA O SALTUARIAMENTE PER UNA COPPIA\nNO AGENZIE \nDISPONIBIL",
    "pubblicato": "2026-08-11",
-   "privato": true
+   "privato": true,
+   "noAgenzie": true
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-ristrutturato-adiacenze-p-zza-udine-milano-657042487.htm",
@@ -611,7 +630,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b0/b04140f6-2034-4ab1-b24c-bb5b32af6c38?rule=vertical-mini-card-2x-auto",
    "descrizione": "Proprietario offre in affitto nelle adiacenze di Piazza Udine a cinque minuti a piedi dalla fermata della Metropolitana, grazioso bilocale completamente ristrutturato e arredato. Completo di elettrodomestici e condizionamento.\nRiscaldamento centralizzato. cantina. porta blindata e tapparelle di sicurezza.\nL'unità si trova al piano rialzato con affaccio tramite quattro ampi serramenti sul cortile/ giardino interno. Silenzioso.\nPalazzina molto ben tenuta.\nSpese Condominiali € 109 mensili\nContratto a lungo temine. Libero subito.\nSolo per candidati con contratti di lavoro a tempo indeterminato o studenti con garante. No permesso di soggiorno.",
    "pubblicato": "2026-08-11",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/open-space-con-giardino-privato-di-100-mq-milano-657033933.htm",
@@ -642,7 +662,8 @@
    "descrizione": "In zona Gorla, propongo in affitto appartamento open space a uso abitativo, situato al piano seminterrato e dotato di ampio giardino privato di circa 100 mq.\nL'appartamento è composto da un ampio ambiente open space, organizzabile tra zona giorno e zona notte, oltre a cucina e bagno.\nL'immobile si trova in zona Gorla, quartiere ben servito da negozi, supermercati e mezzi pubblici, con la metropolitana M1 comodamente raggiungibile a piedi. La posizione è inoltre comoda per raggiungere le principali università milanesi.\nCanone mensile: € 800\nSpese condominiali: circa € 170/mese\nUtenze e TARI escluse.\nSi propone esclusivamente con contratto di locazione transitorio, ideale per studenti o lavoratori fuori sede.\nPaolo",
    "pubblicato": "2026-08-11",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-a-milano-in-zona-via-rizzoli-milano-657024174.htm",
@@ -673,7 +694,8 @@
    "descrizione": "Vendesi bilocale in via Francesco Rubino, angolo via Rizzoli, completamente ristrutturato da un paio di settimane, due balconi che si affacciano in lati opposti, con ottima areazione, in un condominio signorile e con servizio di portineria, e con all'interno del cortile vi è un negozio \"promo\" che tratta articoli di scambio merce pubblicitari che offre alimentari, articoli di abbigliamento e oggetti per la casa. ottimo per famiglia e coppie. Per maggiori informazioni potete contattarmi al numero 345/6319424 / Massimo",
    "pubblicato": "2026-08-11",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-in-zona-certosa-q-oggiaro-bovisa-milano-657012642.htm",
@@ -703,7 +725,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f8/f883555a-509a-4ba0-9fec-1d7fb29b887d?rule=vertical-mini-card-2x-auto",
    "descrizione": "In zona ottimamente servita dai mezzi pubblici urbani, ferroviari e tangenziale milanese, proponiamo in vendita SPLENDIDO APPARTAMENTO di ca. 50 mq. all'interno di una palazzina costruita nell'anno 2009 di n° 12 appartamenti con videosorveglianza condominiale.\nNonostante la recente costruzione, esso è ristrutturato a nuovo ed è così composto: ingresso con cucina a vista dotata di doppia esposizione, una delle quali da accesso ad un panoramico balcone coperto, una camera matrimoniale, bagno con antibagno. Riscaldamento autonomo, predisposizione di condizionamento e tapparelle motorizzate. In opzione è corredabile di un comodo box auto nello stesso condominio.",
    "pubblicato": "2026-08-11",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/milano-city-life-viale-duilio-milano-642846212.htm",
@@ -733,7 +756,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d5/d57f0138-b4bf-4b7d-ad85-0e3cbf39d21a?rule=vertical-mini-card-2x-auto",
    "descrizione": "Appartamento di 170 mq più terrazzi, situato al primo piano e composto da ingresso, ampio soggiorno con sala da pranzo e accesso al primo terrazzo, cucina nuova abitabile con secondo terrazzino, tre ampie camere da letto servite da un bagno grande e zona di servizio con camera e bagno. \n\nAria condizionata, impianto di riscaldamento centralizzato a caloriferi, parquet. Tripla esposizione. Nell'immobile sono stati recentemente eseguiti alcuni lavori di ristrutturazione come l'installazione di una nuova cucina, la realizzazione del bagno di servizio, la sostituzione di tutti gli infissi e infine l'imbiancatura totale.\n\nVi è la possibilità di affittare l'appartamento con gli arredi oppure con la cucina e alcuni arredi fissi, le spese condominiali ammontano a 500/Euro/mese.\n\nContratto in cedolare secca transitorio 12 mesi rinnovabile o 4+4.",
    "pubblicato": "2026-08-10",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-di-pregio-a-corso-como-milano-653930091.htm",
@@ -763,7 +787,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b5/b5e87f92-6506-4dd0-9f30-3544421675b7?rule=vertical-mini-card-2x-auto",
    "descrizione": "Libero a partire da settembre 2026 delizioso bi-locale design appena ristrutturato, dotato di ogni confort, arredato, bi esposto, luminosissimo, provvisto di terrazzo, arredi su misura, terzo piano con ascensore, palazzo di pregio in una via tranquilla a due passi da Corso Como, da Brera e dalla Fondazione Feltrinelli, a pochi passi dalla fermata Garibaldi della metro linea verde. Cucina provvista di tutto il necessario, aria condizionata caldo/freddo, riscaldamento autonomo, lavatrice e lavastoviglie, camera da letto con letto matrimoniale + divano letto doppio nel soggiorno, ideale per una persona o coppia. No agenzie, no intermediari, solo privati.",
    "pubblicato": "2026-08-10",
-   "privato": true
+   "privato": true,
+   "noAgenzie": true
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-bilocale-milano-656863949.htm",
@@ -793,7 +818,8 @@
    "foto3": "",
    "descrizione": "affittasi appartamento bilocale 50mq in via Piero della Francesca, per subentro nel contratto.\n\nContratto di locazione transitorio di 18 mesi.\n\nL'affitto viene gestito tramite agenzia immobiliare.\n\nRequisiti:\n\n• Solo persone con redditi dimostrabili.\n\n• Contratto di lavoro a tempo indeterminato.\n\n• Non sono ammessi animali.\n\n• Disponibile dal 01/09/2026 \n\nPer favore, contattare solo se si è realmente interessati e se si è in possesso di tutti i requisiti richiesti. \n\nNo perditempo.\n\nPer maggiori informazioni, scrivetemi in privato.",
    "pubblicato": "2026-08-10",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-milano-656896381.htm",
@@ -823,7 +849,8 @@
    "foto3": "",
    "descrizione": "Certo — breve e adatto ai gruppi Facebook:\n\nCiao a tutti! Siamo due studenti e lavoratori e cerchiamo un appartamento in affitto. Io lavoro come pizzaiolo e il mio amico lavora in un’agenzia immobiliare. Abbiamo entrambi un contratto a tempo indeterminato. Cerchiamo preferibilmente nelle zone Milano Centro, Porta Venezia, Repubblica, Città Studi o Centrale. Siamo persone serie, tranquille e affidabili. Grazie!",
    "pubblicato": "2026-08-10",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/bilo-ristrutturato-metro-lilla-ippodromo-a-5-min-milano-656861933.htm",
@@ -853,7 +880,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/69/69fa8bd9-77d9-4687-8dac-247bcffbf3b6?rule=vertical-mini-card-2x-auto",
    "descrizione": "Affittasi con contratto 3+2 dal 1 ottobre 2026 a referenziati, indicare tipologia contratto di lavoro e societa nel messaggio con il quale mi contattate, bilocale in zona San siro, traversa di via rembrandrlt, via capecelatro 36. L'immobile e' stato totalmente ristrutturato e ha climatizzatore, infissi in pvc doppio vetro, si trova al 3 piano di un condominio signorile. L' appartamento e' composto da cucinotto, soggiorno, camera da letto, bagno e balcone e cantina. Metro ippodromo a 5 minuti a piedi, autobus 49 sotto casa che porta alla rossa lotto, in alternativa 63 o 80 alla metro rossa De angeli.\n1350 compreso spese condominiali.",
    "pubblicato": "2026-08-10",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/premium-loft-di-design-terrazzo-posto-auto-gym-milano-656390457.htm",
@@ -883,7 +911,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/e4/e4bc3b61-14f5-4062-b061-84bac5ab1ac3?rule=vertical-mini-card-2x-auto",
    "descrizione": "NO AGENZIE - PRIVATO AFFITTA\n\nPropongo in affitto il mio stupendo loft dal design unico (stile industrial chic), recentemente ristrutturato a nuovo e curato in ogni minimo dettaglio. L'appartamento viene consegnato completamente arredato con mobili di altissimo pregio.\n\nL'APPARTAMENTO:\n\n* Cucina su misura \"Made in Italy\" realizzata da mobilificio con tutti gli elettrodomestici\n* Luminosa zona living con divano/letto matrimoniale in pelle fatto a mano in Italia.\n* Spaziosa camera da letto soppalcata con letto matrimoniale contenitore di design.\n* Ampia armadiatura e comodo ripostiglio.\n* Bagno finestrato dal design moderno con ampia cabina doccia walk-in.\n* Terrazzo spazioso e godibile, interamente pavimentato in legno e arredato per momenti di relax o cene all'aperto.\n\nI SERVIZI INCLUSI (IL CONDOMINIO):\nIl canone include benefit esclusivi e rari per la città di Milano:\n\n* Posto auto priv",
    "pubblicato": "2026-08-10",
-   "privato": true
+   "privato": true,
+   "noAgenzie": true
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-arredato-cimiano-milano-656872989.htm",
@@ -913,7 +942,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f5/f5caf78c-1754-4e9a-a649-559c5c9cfd46?rule=vertical-mini-card-2x-auto",
    "descrizione": "In contesto signorile Affittasi bilocale arredato in Zona MM2 Cimiano, luminoso e completamente arredato, libero da subito.\nL'appartamento si trova in una posizione strategica, a soli 5 minuti a piedi dalla fermata della metropolitana MM2 Cimiano (Linea Verde) e con fermata dell'autobus sotto casa.\nLa zona è servita con tutti i principali servizi nelle immediate vicinanze: supermercati, bar, ristoranti, farmacie, negozi e aree verdi. Prezzo 1050€ escluse spese",
    "pubblicato": "2026-08-10",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-per-studenti-milano-650830083.htm",
@@ -943,7 +973,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/70/709716bd-6976-4725-8d62-0eae597d8d57?rule=vertical-mini-card-2x-auto",
    "descrizione": "Monolocale recentemente ristrutturato a 300 m dal politecnico disponibile dalla prima/seconda di settembre 2026. Nel canone di 1.000 € sono comprese le spese per il riscaldamento centralizzato , split aria calda/fredda portineria tutto il giorno . Non lo sono le spese per il gas ( scaldabagno istantaneo ) , quelle elettriche e la tari.\nPs agenzie e intermediari per cortesia non contattatemi",
    "pubblicato": "2026-08-10",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-con-box-e-cantina-bicocca-greco-pirelli-milano-656114245.htm",
@@ -973,7 +1004,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/62/625a396c-8460-4020-987b-1d44b2b23be9?rule=vertical-mini-card-2x-auto",
    "descrizione": "Libero dal 1° agosto a Milano\nMONOLOCALE CON BOX IN BICOCCA/GRECO PIRELLI/METRO LILLA\n\nPrivato affitta (NO SPESE DI AGENZIA), in viale Piero e Alberto Pirelli al n.16\naccogliente e luminoso monolocale di circa 50 mq catastali al 3° piano con doppio ascensore, in complesso signorile\ndotato di portineria con servizio ricezione corriere.\nL'appartamento arredato è composto da:\no Ingresso\no Bagno con box doccia\no Ampia Zona giorno/notte con comodo letto matrimoniale e armadio\no Cucina attrezzata con piano a induzione lavastoviglie e forno\nPresenti:\no Tele riscaldamento - teleraffrescamento\no Videocitofono\no Smart TV\no Porta blíndate\no Lava-asciuga\no Frigorifero\nCanone mensile compreso di box e cantina: €1000 a canone concordato\nle spese condominiali, legate ai consumi, ammontano a circa 100/150€ mensili Escluse: luce, TARI, internet(cavo fibra già presente)\nCauzione: 3 mensilità\nscrivetemi pe",
    "pubblicato": "2026-08-10",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-appena-ristrutturato-milano-637422263.htm",
@@ -1003,7 +1035,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/8c/8cf9b12e-92b9-4e57-aee2-1d18918ec13a?rule=vertical-mini-card-2x-auto",
    "descrizione": "DISPONIBILE. In affitto Via Caccialepori 19: Loft di Recente Ristrutturazione - 40 mq su Due Livelli ( soppalco dove ci si sta in piedi)\nSituato in una zona tranquilla e ben servita, proponiamo in affitto un elegante loft di 40 mq, distribuito su due livelli, recentemente ristrutturato con materiali di alta qualità.\n\nCaratteristiche principali:\nZona Giorno: Ampio e luminoso open space che ospita la cucina/soggiorno, dotato di piano cottura a induzione, forno, frigo e congelatore. La zona è arricchita da ampie finestre che garantiscono luce naturale durante tutta la giornata.\nBagno: Elegante e funzionale, con tutti i sanitari e una moderna doccia con soffione.\nZona Notte Soppalcata: Al piano superiore si trova una zona notte intima e accogliente, con un letto matrimoniale, scrivania con sedia e armadi.\nDotato di termosifoni, condizionatore/deumidificatore e lavatrice.\n\nL'immobile situato ",
    "pubblicato": "2026-08-10",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/open-space-in-una-casa-di-corte-di-milano-milano-649244484.htm",
@@ -1033,7 +1066,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/1f/1f23abee-3d15-4e99-9ac3-02fd88e8c068?rule=vertical-mini-card-2x-auto",
    "descrizione": "Appartamento IN AFFITTO con soppalco, circa 50mq. \nRistrutturato nel 2021.\nL'appartamento è un openspace:\nal piano terra si trova la sala, la cucina e il bagno. Sopra nel soppalco la zona notte e la cabina armadio. \n\nL'ingresso dell'appartamento si trova all'interno di una casa di corte.\n\nLa casa ha il riscaldamento autonomo. Impianto di condizionamento caldo/freddo installato a Marzo 2026.\n\nLa casa è ideale per single professionisti o studenti o coppie.\nNO FAMIGLIE E NO BAMBINI. \n\nLa zona è ben fornita dai mezzi pubblici ATM (67/63/58) e le metro più vicine sono Bisceglie e Bande Nere. \nNella stessa via, a 100 metri si trova il Carrefour e inoltre ci sono molti negozi di alimentari e di ogni genere. \nA pochi metri si trova uno dei parchi più grandi di Milano con il laghetto. Il parco delle Cave che è connesso al Parco di Trenno e collegato a San Siro. \n\nL'affitto è compreso di spese con",
    "pubblicato": "2026-08-10",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-arredato-mm-bande-nere-milano-656896184.htm",
@@ -1063,7 +1097,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/5a/5ad9af29-dca9-4ebd-bcd1-84c685d06cfb?rule=vertical-mini-card-2x-auto",
    "descrizione": "Privato affitta a MILANO Via Privata Giuseppe Padulli 17 ampio monolocale al piano seminterrato composto da cucina attrezzata, tavolo con 4 sedie, letto matrimoniale, bagno con doccia idromassaggio, lavatrice. Aria condizionata con inverter caldo/freddo. Ideale per una coppia. LIBERO SUBITO. Euro 850,00 + spese condominiali e luce. 3 mesi cauzione e buste paga. Cell. 3498329408",
    "pubblicato": "2026-08-10",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/ampio-monolocale-arredato-milano-656906962.htm",
@@ -1093,7 +1128,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/e9/e940e53c-9428-4365-ae47-9093a66b9053?rule=vertical-mini-card-2x-auto",
    "descrizione": "In zona Bovisa, comodo per il Politecnico, vicino a mezzi pubblici, negozi e supermercati, in un condominio del 2001, con servizio di portineria e giardini, si propone in affitto ampio monolocale arredato (ideale per 1 o 2 persone): soggiorno/notte, cucina a vista, antibagno e bagno finestrato, ripostiglio, cantina. Disponibile subito. Euro 1.000 mensili comprese spese condominiali (riscaldamento, acqua calda/fredda, portineria, ecc.). Per informazioni e visite telefonare 335/6899121 agente immobiliare incaricato",
    "pubblicato": "2026-08-10",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-certosa-milano-656918700.htm",
@@ -1123,7 +1159,8 @@
    "foto3": "",
    "descrizione": "Appartamento via salvator rosa con cucina separata",
    "pubblicato": "2026-08-10",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/caratteristico-monolocale-in-garibaldi-milano-656914951.htm",
@@ -1153,7 +1190,8 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/1b/1b5eb1ae-03f2-4315-8f7b-09710efacaf7?rule=vertical-mini-card-2x-auto",
    "descrizione": "grazioso monolocale in zona Garibaldi, via Pastrengo, a 3 minuti a piedi dalla stazione ferroviaria Garibaldi, dalla metro linea verde e lilla Garibaldi, a 5 minuti a piedi dal Bosco verticale e Piazza Gae Aulenti. Zona centrale e servita da Esselunga, Feltrinelli, farmacia, panetterie, bar, locali e complesso scuola (infanzia, primaria e secondaria). L'appartamento completamente arredato è composto da ingresso, un locale cucina/sala con lavastoviglie, piano a induzione, microonde, smart tv, divano letto, aria condizionata e un bagno con lavatrice e doccia, più un soppalco alto 140cm con zona notte: letto matrimoniale, armadio e cassettiere. Cortile interno con parcheggio bici. Libero dal 1° settembre 2026.",
    "pubblicato": "2026-08-10",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-da-completare-milano-656778249.htm",
@@ -1183,7 +1221,8 @@
    "foto3": "",
    "descrizione": "Monolocale si 35 mq \nTotalmente da completare \nNo spese condominiali piccolo condominio\nZona ponte Lambro",
    "pubblicato": "2026-08-09",
-   "privato": true
+   "privato": true,
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-vista-mare-a-milano-milano-621052315.htm",
@@ -1214,7 +1253,8 @@
    "descrizione": "Sesto Piano, silenzioso, vista unica su Darsena.\n90 metri quadri con \" vista mare a Milano \", infissi doppi e porte in legno, effetto bastimento.\nUn bagno rosa con zona separata, lavanderia e doccia.\nDue camere da letto, vista mare.\nCucina abitabile e sala, unite.\nBox privato sotto casa, senza pagare area C.\nPortineria mattina e pomeriggio.\nAppartamento per amatori e romantici, aridi senzacuore astenersi.",
    "pubblicato": "2026-08-09",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-ristrutturato-porta-romana-lodi-milano-655262959.htm",
@@ -1245,7 +1285,8 @@
    "descrizione": "Privato affitta in Zona Porta Romana\nPasso Buole a 100 mt dalla fermata M3 Lodi TIBB e 200 da Porta Romana.\nIn stabile d'epoca signorile con ascensore e portineria, terzo piano.\nBilocale completamente ristrutturato e arredato. Ottimo stato. \nL'immobile è composto da soggiorno con cucina a vista, camera da letto matrimoniale con finestra su corte condominiale, bagno finestrato e terrazzo arredato. Termoautonomo, è provvisto di aria condizionata, e completo di elettrodomestici (lavastoviglie, lavatrice, forno e forno a microonde). \nLuminoso, con doppia esposizione: terrazzo privato e finestre sia in zona giorno che in zona notte.\n1200 spese escluse (condominio e utenze).",
    "pubblicato": "2026-08-09",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-zona-naba-iulm-bocconi-milano-656823947.htm",
@@ -1276,7 +1317,8 @@
    "descrizione": "Affitto appartamento luminoso in casa di ringhiera composto da soggiorno con angolo cottura, ampia camera doppia (o matrimoniale), bagno finestrato; esposto su due lati (nord e sud) con ottima disposizione degli spazi, arredato, dotato di riscaldamento autonomo, aria condizionata, lavatrice, piastrelle a induzione, forno, forno a microonde. Situato al terzo piano senza ascensore. Servizio di portineria da lunedì a venerdì (mattina e pomeriggio) e il sabato mattina. \nDistante 10 minuti a piedi dalla Darsena e a 5 minuti dal naviglio Pavese. Posto in viale Tibaldi, di fronte supermercato Esselunga, tutti i servizi in prossimità; a pochi minuti a piedi dal NABA e a pochi minuti di filobus (linea 90-91) dalle università Bocconi, IULM. Collegato a circa 15 minuti di tram da piazza Duomo tramite linea 3 e distante pochi minuti di filobus (linea 90-91) dalla MM2 e passante ferroviario (fermata ",
    "pubblicato": "2026-08-09",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-metro-brenta-milano-656840381.htm",
@@ -1307,7 +1349,8 @@
    "descrizione": "NO AGENZIE!\n\nSi affitta a studenti, praticanti tirocinanti con garante.\n\nNuovo monolocale totalmente ristrutturato .\nA 500m della metropolitana gialla BRENTA (a 4 fermate dal Duomo) e nelle vicinanze della fondazione Prada .\n\nOltre alla metropolitana la zona è molto servita da mezzi di terra, con i quali si può raggiungere il Duomo in pochi minuti e qualsiasi zona di Milano grazie alla sua posizione strategica.\nNelle vicinanze dell'appartamento vi sono negozi di ogni genere e vari supermercati e minimarket.\n\nL'appartamento è composto da angolo cucina, zona giorno/notte e bagno, totalmente autonomo e climatizzato.\nL'appartamento é arredato con cameretta a ponte con 2 letti estraibili, quindi è abitabile anche da due persone.\n\nIl canone di locazione di 850 Euro mensili comprende le spese condominial i e consumo di acqua e Tari\n\nLa durata del contratto sarà valutato in base alle esigenze de",
    "pubblicato": "2026-08-09",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": true
   },
   {
    "url": "https://www.subito.it/appartamenti/casa-arredata-disponibile-da-settembre-milano-656774507.htm",
@@ -1338,7 +1381,8 @@
    "descrizione": "Da settembre si libera un appartamento in Viale Renato Serra, in una zona molto comoda di Milano, ben collegata con il resto della città.\n\nA pochi minuti si trovano la fermata della metropolitana Lotto, la Fiera di Milano, l’Allianz MiCo / Allianz Arena e il quartiere CityLife, oltre a diversi servizi e collegamenti per raggiungere facilmente il centro.\n\nLa casa è già arredata e pronta per essere vissuta, quindi non serve arrivare con mille cose: c’è praticamente tutto quello che può servire nella vita di tutti i giorni (cucina completa di piatti e bicchieri, lavatrice, asciugatrice, phon, Wi-Fi e tutto il necessario).\n\nL’appartamento è organizzato con:\n\n* zona giorno con cucina e soggiorno rialzati\n* zona notte separata\n* bagno indipendente\n\nÈ una soluzione semplice e funzionale, perfetta per chi cerca un posto dove stare a Milano senza dover pensare ad arredare o comprare tutto da zero",
    "pubblicato": "2026-08-08",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-corvetto-rogoredo-milano-656715661.htm",
@@ -1369,7 +1413,8 @@
    "descrizione": "Cercasi lavoratore con regolare contratto di lavoro dimostrabile, per affitto bilocale uso singolo sito a 350 metri dalla metro porto di mare ( linea gialla).\nL'appartamento appena ristrutturato e' così composto:\nCucina abitabile 20 mq antibagno con lavatrice bagno e stanza da letto con armadio , letto una piazza e mezzo.\nRichiesta 600 euro più 300 euro spese comprensive di luce gas, condominio, manutenzione varie.\nAria condizionata \nRiscaldamento a pavimento autonomo.\n2 mensilità di cauzione\nContratto di 6 mesi rinnovabile di volta in volta.\nPs : specifico per i furbetti che l'appartamento e solo per uso singolo .\nChiamare 3489870360.",
    "pubblicato": "2026-08-08",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/splendido-monolocale-nuovo-con-balcone-e-ac-milano-657410884.htm",
@@ -1400,7 +1445,8 @@
    "descrizione": "Milano Cimiano (M2)\nAffittasi luminoso monolocale di circa 30 mq, completamente ristrutturato a nuovo e finemente arredato. L'appartamento si trova al primo piano (con ascensore) di uno stabile signorile, molto ben abitato e dotato di servizio di portineria per l'intera giornata. Un bel balcone vivibile con affaccio sulla tranquilla e silenziosa Via Derna. L'appartamento si trova in Via Derna, una via residenziale tranquilla, a pochissimi minuti a piedi dalla fermata della metropolitana M2 Cimiano (Linea Verde). Canone mensile: 820 euro. Spese condominiali: 130 (incluso riscaldamento e portineria). Libero da subito. Si richiedono massime referenze.",
    "pubblicato": "2026-08-18",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/trilocale-ristrutturato-mai-abitato-milano-657232944.htm",
@@ -1431,7 +1477,8 @@
    "descrizione": "Trilocale appena ristrutturato e mai abitato - vendita da privato, no agenzia. A Milano, in Via Fontanelli, zona Bruzzano, vendesi direttamente da privato, senza provvigioni di agenzia, appartamento appena ultimato, completamente ristrutturato e mai abitato. La casa si sviluppa su due livelli per circa 94 mq complessivi ed e' composta da soggiorno, camera matrimoniale con cabina armadio, nicchia lavanderia, seconda camera al piano superiore e doppi servizi. Tutte le pratiche edilizie sono in regola. L'immobile si trova in una piccola corte vecchia Milano, intima e riservata. Di fronte alla proprieta' si trova il parco. Non voglio essere contattato da agenzie o telemarketing",
    "pubblicato": "2026-08-14",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": true
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-moderno-zona-bovisa-milano-653582665.htm",
@@ -1462,7 +1509,8 @@
    "descrizione": "Privato affitta grazioso monolocale di 35mq completamente ristrutturato e arredato a nuovo. Composto da ingresso, cucina separata semi abitabile, bagno finestrato e zona giorno/notte con un balconcino. Sito al 6 piano con ascensore e gode di affaccio interno molto silenzioso, luminoso e con piacevole vista. Situato vicino al Campus Bovisa del Politecnico di Milano, a due passi dal passante ferroviario Villapizzone, dalla fermata 12 e dal capolinea 19. Canone mensile Euro 750 piu' Euro 100 di spese condominiali (compreso di riscaldamento centralizzato). Solo referenziati, No agenzia. Libero da 01 settembre.",
    "pubblicato": "2026-08-18",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": true
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-bicocca-milano-650215305.htm",
@@ -1493,7 +1541,8 @@
    "descrizione": "Vicinissimo alla Universita' Bicocca, affittasi luminoso trilocale arredato di 80 mq ideale per studenti o giovani professionisti. L'appartamento offre due ampie camere da letto, un bagno, un pratico ripostiglio e una cucina abitabile con balcone, dotata di tutti gli elettrodomestici. Presente fibra ottica e riscaldamento centralizzato. Lo stabile dispone di servizio portineria e locale bici condominiale. A soli 300 metri da M5 Ca' Granda, palestra McFit, supermercati e linee tram. Disponibile da Settembre, con possibilita' di visite dal 23 Agosto. Contratto di locazione registrato di 12 mesi. Il canone mensile e' di 1200 euro piu' 500 di spese condominiali e utenze.",
    "pubblicato": "2026-08-18",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-ristrutturato-milano-657504625.htm",
@@ -1524,7 +1573,8 @@
    "descrizione": "IN SOLUZIONE RESIDENCE MONOLOCALE AD USO DOPPIO, NEL CANONE SONO INCLUSE SIA LE SPESE CHE TUTTE LE UTENZE. SOLO REFERENZIATI. ANGOLO COTTURA BAGNO CON DOCCIA, ARIA CONDIZIONATA LETTO MATRIMONIALE A CIRCA 50 METRI DALLA FERMATA METROPOLITANA LINEA VERDE CIMIANO",
    "pubblicato": "2026-08-18",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-per-studenti-milano-657494347.htm",
@@ -1555,7 +1605,8 @@
    "descrizione": "Appena ristrutturato e arredato, nuovo. Zona piu' bella di Milano fornita di tutto",
    "pubblicato": "2026-08-17",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/milano-grazioso-appartamento-in-via-benevento-milano-657483829.htm",
@@ -1586,7 +1637,8 @@
    "descrizione": "MILANO via Benevento. Affittasi grazioso appartamento di 45 mq, con ampio balcone, in via Benevento, adiacente piazza Miani. Contesto signorile con servizio portineria attivo dal lunedi' al sabato. Completamente ristrutturato e arredato. Riscaldamento a pavimento e aria condizionata con pompa di calore e wifi. Piano a induzione, lavatrice, lavastoviglie. La cucina e' completa di stoviglie. L'appartamento e' comprensivo di pertinenza solaio. Zona molto tranquilla e strategica. Ospedale San Paolo a 5 minuti a piedi, IULM a 1,7km, Universita' Cattolica a 1,7km, NABA a 2,5 km. Contratto annuale o in base alle esigenze. SOLO REFERENZIATI. NO AGENZIE.",
    "pubblicato": "2026-08-17",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": true
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-via-borsi-milano-milano-657481935.htm",
@@ -1617,7 +1669,8 @@
    "descrizione": "Zona Universita' Bocconi, Via Giosue' Borsi, in complesso Condominiale dotato di ascensore al Piano Primo, ampio e luminoso bilocale arredato di mq 52 composto da zona giorno con angolo cottura, camera matrimoniale, bagno, balcone, cantina. Impianto riscaldamento centralizzato, presenza di impianto condizionamento. Attestato prestazione energetica E. Informazioni 329/5983232. Libero subito. Vicinanza fermata metropolitana.",
    "pubblicato": "2026-08-17",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-corso-sempione-adiacenze-piazza-firenze-milano-657323466.htm",
@@ -1648,7 +1701,8 @@
    "descrizione": "In una delle zone piu' apprezzate e ben servite di Milano, a pochi passi da Piazza Firenze e nelle vicinanze del Parco Sempione, propongo in locazione un bilocale arredato. L'appartamento e' composto da soggiorno con balcone, cucinino, disimpegno, bagno e un'ampia camera da letto matrimoniale. La posizione e' particolarmente comoda grazie alla presenza di mezzi pubblici, negozi, servizi di quartiere e aree verdi. Una soluzione ideale per chi desidera vivere in un contesto residenziale, vivace e ben collegato con il centro citta'. All'importo dell'affitto bisogna considerare un costo di 350/mese per le spese condominiali. Classe energetica G",
    "pubblicato": "2026-08-17",
    "privato": true,
-   "verificatoIl": "2026-08-18"
+   "verificatoIl": "2026-08-18",
+   "noAgenzie": false
   }
  ],
  "verificati": [
