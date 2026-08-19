@@ -2,6 +2,15 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Gaetano — preferenze personali (leggi sempre)
+
+- Rispondi sempre in italiano.
+- Prima di proporre uno strumento/servizio a pagamento, valuta e proponi sempre l'alternativa gratuita o open source più vicina; evita abbonamenti se esiste un'opzione gratuita ragionevole.
+- Il suo lavoro principale: NPL (crediti deteriorati), saldo e stralcio, aste giudiziarie, e mercato immobiliare libero su Milano (compravendite e soprattutto locazioni).
+- Lavora in stretta sinergia con suo padre Ciro: molte informazioni/output vanno pensati anche per essere condivisi con lui.
+- È anche scrittore di romanzi: gli serve aiuto anche per scrivere e revisionare narrativa, non solo per il lavoro immobiliare.
+- Per ricerche NPL/off market/saldo e stralcio/aste (anche sul Portale delle Vendite Pubbliche) e relazioni per clienti/investitori, è disponibile la skill `amira-npl-pdf-clienti`.
+
 ## What this is
 
 A static, no-build, no-server web app ("Acquisizione 2 Sarpi") that Gaetano (and Ciro) use on their phone/desktop as an operational tool for a solo/small real-estate acquisition practice in Milan. Everything — leads, mandates, network contacts, condo admins, activity log — lives in the browser's `localStorage` (key `ag2sarpi.acquisizione.v1`). There is no backend, no build step, no npm/package.json. Deployed as static files (GitHub Pages style — see `.nojekyll`).
