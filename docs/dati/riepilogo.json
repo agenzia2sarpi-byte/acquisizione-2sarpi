@@ -1,44 +1,32 @@
 {
- "raccolti": 60,
- "aggiunti": 1,
+ "raccolti": 10,
+ "aggiunti": 0,
  "ribassati": 0,
  "verificati": [
   "https://www.subito.it/appartamenti/panoramica-e-luminosa-suite-milano-656960859.htm",
+  "https://www.subito.it/appartamenti/ampio-appartamento-arredato-in-centro-milano-649203296.htm",
   "https://www.subito.it/appartamenti/trilocale-arredato-e-corredato-con-doppi-servizi-milano-647284771.htm",
   "https://www.subito.it/appartamenti/bilocale-p-loreto-c-b-aires-m1-m2-sotto-sotto-casa-milano-623016455.htm",
   "https://www.subito.it/appartamenti/ampio-bilocale-ca-granda-milano-656350466.htm",
   "https://www.subito.it/appartamenti/bilocale-su-due-livelli-v-le-monza-pasteur-m1-milano-651970613.htm",
   "https://www.subito.it/appartamenti/bilocale-arredato-via-vodice-zona-fieramilanocity-milano-651037411.htm",
+  "https://www.subito.it/appartamenti/appartamento-con-terrazzo-stabile-signorile-55mq-milano-650096373.htm",
   "https://www.subito.it/appartamenti/bilocale-appena-ristrutturato-milano-656971995.htm",
-  "https://www.subito.it/appartamenti/bilocale-ristrutturato-adiacenze-p-zza-udine-milano-657042487.htm",
-  "https://www.subito.it/appartamenti/open-space-con-giardino-privato-di-100-mq-milano-657033933.htm",
-  "https://www.subito.it/appartamenti/bilocale-a-milano-in-zona-via-rizzoli-milano-657024174.htm",
-  "https://www.subito.it/appartamenti/bilocale-in-zona-certosa-q-oggiaro-bovisa-milano-657012642.htm",
-  "https://www.subito.it/appartamenti/trilocale-arredato-di-tutto-milano-657051037.htm",
-  "https://www.subito.it/appartamenti/monolocale-per-studenti-milano-657494347.htm",
-  "https://www.subito.it/appartamenti/milano-grazioso-appartamento-in-via-benevento-milano-657483829.htm",
-  "https://www.subito.it/appartamenti/monolocale-moderno-zona-bovisa-milano-653582665.htm",
-  "https://www.subito.it/appartamenti/appartamento-bicocca-milano-650215305.htm",
-  "https://www.subito.it/appartamenti/monolocale-ristrutturato-milano-657504625.htm",
-  "https://www.subito.it/appartamenti/loft-su-due-livelli-con-terrazzo-a-milano-milano-657606670.htm",
-  "https://www.subito.it/appartamenti/bovisa-politecnico-trilocale-1-500-mese-milano-657597359.htm",
-  "https://www.subito.it/appartamenti/bovisa-milano-653037601.htm",
-  "https://www.subito.it/appartamenti/bilocale-luminoso-milano-658136542.htm",
-  "https://www.subito.it/appartamenti/residenze-nolo-38-bilocale-milano-658133644.htm"
+  "https://www.subito.it/appartamenti/bilocale-ristrutturato-adiacenze-p-zza-udine-milano-657042487.htm"
  ],
  "spariti_nuovi": [],
  "potati": 0,
  "note": [],
- "credito": "1.03 $ consumati su 5.00 $",
+ "credito": "1.44 $ consumati su 5.00 $",
  "tolti_dalla_vista": 0,
- "indirizzi_completati": 1,
+ "indirizzi_completati": 0,
  "inserzionisti": {
   "privato": 80,
   "da verificare": 2,
   "probabile agenzia": 0
  },
  "quartieri_con_mediana": 1,
- "nuovi_in_vista": 1,
+ "nuovi_in_vista": 0,
  "da_chiamare": [
   {
    "priorita": 68,
@@ -241,6 +229,6 @@
    "url": "https://www.subito.it/appartamenti/appartamento-milano-citta-studi-lambrate-milano-658204637.htm"
   }
  ],
- "quando": "2026-08-25T08:50:23+00:00",
+ "quando": "2026-08-25T09:04:46+00:00",
  "origine": "GitHub Actions"
 }
