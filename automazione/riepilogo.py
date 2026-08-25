@@ -7,6 +7,9 @@
 
   riepilogo.py <file-del-radar.json>
 
+Lo usano tutti e due i giri: quello di GitHub Actions e quello locale del lunedi'.
+Con RADAR_ORIGINE si scrive chi l'ha fatto, e la pagina Oggi lo mostra.
+
 Se il file non e' un JSON valido — il giro si e' rotto a meta' — non tocca niente:
 meglio il riepilogo della settimana scorsa che un blocco rotto in cima alla pagina.
 """
