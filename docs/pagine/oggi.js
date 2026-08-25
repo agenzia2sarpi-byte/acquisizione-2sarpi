@@ -99,8 +99,9 @@ function bloccoRadar() {
         <span style="flex:0 0 38px;height:38px;border-radius:8px;background:${a.foto ? `url('${esc(a.foto)}') center/cover` : "var(--tenue)"};"></span>
         <span style="flex:1;min-width:0">
           <b style="font-size:14px">${esc([a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "senza indirizzo")}</b>
+          <span style="font-size:9.5px;font-weight:800;letter-spacing:.07em;padding:1px 5px;border-radius:4px;color:#fff;background:${a.tipo === "Locazione" ? "var(--verde)" : "var(--blu)"}">${a.tipo === "Locazione" ? "AFFITTO" : "VENDITA"}</span>
           ${a.nuovo ? `<span style="font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--verde)">NUOVO</span>` : ""}${a.verdettoInserzionista === "da verificare" ? `<span style="font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--ambra)"> DA VERIFICARE</span>` : ""}
-          <small style="display:block;color:var(--grigio);font-size:11.5px">${esc(a.quartiere || a.municipio || "Milano")} · ${a.prezzo ? eur(num(a.prezzo)) : "prezzo n.d."}${emq ? " · " + emq.toLocaleString("it-IT") + " €/mq" : ""} · ${x.giorniOnline} gg online${x.portali.length > 1 ? " · " + x.portali.length + " portali" : ""}${a.telefono ? " · telefono" : ""}</small>
+          <small style="display:block;color:var(--grigio);font-size:11.5px">${esc(a.quartiere || a.municipio || "Milano")} · ${a.prezzo ? eur(num(a.prezzo)) + (a.tipo === "Locazione" ? "/mese" : "") : "prezzo n.d."}${emq ? " · " + emq.toLocaleString("it-IT") + " €/mq" : ""} · ${x.giorniOnline} gg online${x.portali.length > 1 ? " · " + x.portali.length + " portali" : ""}${a.telefono ? " · telefono" : ""}</small>
         </span>
         <b style="flex:0 0 auto;font-size:17px;color:${x.p.punti >= 70 ? "var(--verde)" : x.p.punti >= 45 ? "var(--ambra)" : "var(--grigio)"}">${x.p.punti}</b>
       </a>`;

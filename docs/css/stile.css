@@ -261,6 +261,9 @@ details.blocco .corpo li{margin:0 0 5px}
 
 .badge.sparito{background:#6B6862;color:#fff}
 .badge.nuovo{background:var(--verde,#2F7A4F);color:#fff;letter-spacing:.06em}
+/* Vendita e affitto si distinguono a colpo d'occhio, prima ancora di leggere il prezzo. */
+.badge.vendita{background:var(--blu);color:#fff;font-weight:800;letter-spacing:.07em}
+.badge.affitto{background:#0F6B57;color:#fff;font-weight:800;letter-spacing:.07em}
 .badge.dubbio{background:var(--ambra,#B8860B);color:#fff}
 
 /* segnale dello swipe: compare un istante quando il gesto viene riconosciuto */

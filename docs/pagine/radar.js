@@ -11,6 +11,13 @@ const VERDETTI = {
   "da verificare":     { t: "da verificare",    cl: "dubbio" },
   "probabile agenzia": { t: "probabile agenzia", cl: "" }
 };
+/* Vendita o affitto, detto subito e in chiaro: e' la prima cosa da sapere davanti a una
+   scheda, e distinguerlo dal prezzo — 900 € al mese contro 900.000 € — non e' immediato
+   quando si scorre in fretta col pollice. */
+const badgeTipo = a => a.tipo === "Locazione"
+  ? `<span class="badge affitto">affitto</span>`
+  : `<span class="badge vendita">vendita</span>`;
+
 function badgeInserzionista(a) {
   const v = VERDETTI[a.verdettoInserzionista || ""] || (a.privato !== false ? VERDETTI["privato"] : { t: "agenzia", cl: "" });
   return `<span class="badge ${v.cl}">${v.t}</span>`;
@@ -80,6 +87,7 @@ function cartaAnnuncio(g) {
     <div class="foto${a.foto ? "" : " senza"}">${foto}
       <div class="segno"><b>${esc(a.tipologia || (num(a.locali) ? num(a.locali) + " locali" : "immobile"))}</b><span>${esc(a.quartiere || a.municipio || "Milano")}</span></div>
       <div class="angolo">
+        ${badgeTipo(a)}
         ${a.nuovo ? `<span class="badge nuovo">nuovo</span>` : ""}
         ${eOnline(a) ? badgeInserzionista(a) : `<span class="badge sparito">non piu' online</span>`}
         ${g.portali.length > 1 ? `<span class="badge portali">${g.portali.length} portali</span>` : ""}
@@ -87,7 +95,7 @@ function cartaAnnuncio(g) {
       <div class="punti">${p}<small>PUNTI</small></div>
     </div>
     <div class="corpo">
-      <div class="prezzo">${a.prezzo ? eur(num(a.prezzo)) : "prezzo non indicato"}${a.tipo === "Locazione" ? `<small> /mese</small>` : ""}
+      <div class="prezzo">${a.prezzo ? eur(num(a.prezzo)) : "prezzo non indicato"}${a.tipo === "Locazione" ? `<small> al mese</small>` : `<small> di vendita</small>`}
         ${emq ? `<small> · ${emq.toLocaleString("it-IT")} €/mq</small>` : ""}</div>
       <div class="indirizzo">${esc([a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "indirizzo non indicato")}</div>
       <div class="zona">${esc([a.quartiere, a.municipio].filter(Boolean).join(" · ") || "zona non indicata")}

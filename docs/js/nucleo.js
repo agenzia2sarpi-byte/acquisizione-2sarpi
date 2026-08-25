@@ -336,8 +336,34 @@ function attivaGesti() {
   }, { passive: true });
 }
 
+/* ---------------- l'app si aggiorna da sola ---------------- */
+/* Sulla schermata Home dell'iPhone non c'e' la barra di Safari: niente tasto ricarica, e la
+   copia della pagina resta li' anche per giorni. Si e' visto — pulsanti nuovi pubblicati e
+   invisibili sul telefono. Allora all'apertura l'app chiede al sito quale sia la versione
+   corrente: se non e' quella che ha in mano, si ricarica da sola con un indirizzo diverso,
+   che e' l'unico modo per costringere iOS a riscaricare davvero. Una volta sola per
+   sessione, se no si rischia il rimbalzo infinito quando qualcosa non torna. */
+async function controllaVersione() {
+  try {
+    const r = await fetch("dati/versione.json?t=" + Date.now(), { cache: "no-store" });
+    if (!r.ok) return;
+    const nuova = (await r.json()).v;
+    const tag = document.querySelector('script[src*="nucleo.js"]');
+    const adesso = tag ? (tag.getAttribute("src").split("v=")[1] || "") : "";
+    if (!nuova || !adesso || String(nuova) === String(adesso)) return;
+    if (sessionStorage.getItem("versioneTentata") === String(nuova)) return;
+    sessionStorage.setItem("versioneTentata", String(nuova));
+    // gli altri parametri vanno tenuti: su annuncio.html c'e' l'id dell'immobile,
+    // e ricaricare senza porterebbe su una scheda vuota
+    const q = new URLSearchParams(location.search);
+    q.set("v", nuova);
+    location.replace(location.pathname + "?" + q.toString() + location.hash);
+  } catch (_) { /* offline: si tiene quello che ha, ed e' giusto cosi' */ }
+}
+
 /* avvio comune: ogni pagina chiama avviaPagina() */
 function avviaPagina(renderFn) {
+  controllaVersione();
   guscio();
   window.render = () => { renderFn(); };
   render();
