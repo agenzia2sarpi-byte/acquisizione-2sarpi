@@ -32,10 +32,15 @@ case "$1" in
     curl -sS --max-time 30 -H "Authorization: Bearer $APIFY_TOKEN" "https://api.apify.com/v2/users/me/limits"
     ;;
   raccogli)
-    attore="${2//\//~}"; input="$3"; tetto="${4:-0.25}"; campi="$5"
+    # La barra dell'attore diventa una tilde: emastra/subito-it-immobili -> emastra~subito-it-immobili.
+    # Con `tr` e non con la sostituzione della shell: bash, in certe versioni, espande la tilde
+    # dentro la sostituzione e ne esce un indirizzo senza senso. Su Ubuntu succedeva, sul Mac no,
+    # e il giro falliva solo su GitHub con un «page-not-found» che non spiegava niente.
+    attore="$(printf '%s' "$2" | tr '/' '~')"; input="$3"; tetto="${4:-0.25}"; campi="$5"
     [ -f "$input" ] || { echo "ERRORE: input non trovato: $input" >&2; exit 4; }
     url="https://api.apify.com/v2/acts/$attore/run-sync-get-dataset-items?maxTotalChargeUsd=$tetto&timeout=300&format=json&clean=true"
     [ -n "$campi" ] && url="$url&fields=$campi"
+    echo "apify: POST ${url%%\?*}" >&2      # nel log resta l'indirizzo, mai la chiave
     curl -sS --max-time 330 -X POST -H "Authorization: Bearer $APIFY_TOKEN" \
       -H 'Content-Type: application/json' --data-binary "@$input" "$url"
     ;;
