@@ -1,6 +1,6 @@
 {
- "id": "radar-202608251035",
- "generato": "2026-08-25T10:35:05",
+ "id": "radar-202608250845",
+ "generato": "2026-08-25T08:45:14",
  "conteggio": 81,
  "fonte": "Subito — soli privati, Milano (via Apify)",
  "annunci": [
@@ -6644,7 +6644,7 @@
    "privato": true,
    "verificatoIl": "2026-08-25",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-25",
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-25",
@@ -6728,7 +6728,7 @@
    "privato": true,
    "verificatoIl": "2026-08-25",
    "noAgenzie": true,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-25",
    "indirizzoTentato": "2026-08-25",
    "zonaFonte": "3.7 km dal Duomo",
@@ -6785,28 +6785,7 @@
    ]
   }
  ],
- "verificati": [
-  "https://www.subito.it/appartamenti/ampio-bilocale-ca-granda-milano-656350466.htm",
-  "https://www.subito.it/appartamenti/appartamento-con-terrazzo-stabile-signorile-55mq-milano-650096373.htm",
-  "https://www.subito.it/appartamenti/bilocale-a-milano-in-zona-via-rizzoli-milano-657024174.htm",
-  "https://www.subito.it/appartamenti/bilocale-appena-ristrutturato-milano-656971995.htm",
-  "https://www.subito.it/appartamenti/bilocale-arredato-via-vodice-zona-fieramilanocity-milano-651037411.htm",
-  "https://www.subito.it/appartamenti/bilocale-corso-sempione-adiacenze-piazza-firenze-milano-657323466.htm",
-  "https://www.subito.it/appartamenti/bilocale-in-zona-certosa-q-oggiaro-bovisa-milano-657012642.htm",
-  "https://www.subito.it/appartamenti/bilocale-p-loreto-c-b-aires-m1-m2-sotto-sotto-casa-milano-623016455.htm",
-  "https://www.subito.it/appartamenti/bilocale-ristrutturato-adiacenze-p-zza-udine-milano-657042487.htm",
-  "https://www.subito.it/appartamenti/bilocale-su-due-livelli-v-le-monza-pasteur-m1-milano-651970613.htm",
-  "https://www.subito.it/appartamenti/bilocale-zona-affori-milano-657157325.htm",
-  "https://www.subito.it/appartamenti/loft-tucidide-ortica-ex-fabbriche-ginori-milano-657142649.htm",
-  "https://www.subito.it/appartamenti/milano-grazioso-appartamento-in-via-benevento-milano-657483829.htm",
-  "https://www.subito.it/appartamenti/monolocale-arredato-milano-don-gnocchi-milano-657106137.htm",
-  "https://www.subito.it/appartamenti/monolocale-per-studenti-milano-657494347.htm",
-  "https://www.subito.it/appartamenti/open-space-con-giardino-privato-di-100-mq-milano-657033933.htm",
-  "https://www.subito.it/appartamenti/panoramica-e-luminosa-suite-milano-656960859.htm",
-  "https://www.subito.it/appartamenti/trilocale-arredato-di-tutto-milano-657051037.htm",
-  "https://www.subito.it/appartamenti/trilocale-arredato-e-corredato-con-doppi-servizi-milano-647284771.htm",
-  "https://www.subito.it/appartamenti/trilocale-in-zona-sarpi-milano-milano-657173402.htm"
- ],
+ "verificati": [],
  "spariti": [
   "https://www.subito.it/appartamenti/appartamento-certosa-milano-656918700.htm",
   "https://www.subito.it/appartamenti/appartamento-milano-656896381.htm",
