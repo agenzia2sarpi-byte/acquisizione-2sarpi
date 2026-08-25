@@ -1,0 +1,63 @@
+# Il giro settimanale del radar, fatto da GitHub e non dal Mac di Gaetano.
+#
+# Serve perche' l'attivita' programmata dentro l'app Claude gira solo a computer acceso e app
+# aperta: se il lunedi' il Mac e' spento, il radar arriva quando lo riaccende. Qui invece la
+# macchina la accende GitHub, ogni lunedi', ovunque sia Gaetano.
+#
+# L'unica cosa da mettere nel repository e' il secret APIFY_TOKEN.
+# Il commit lo fa il token integrato di Actions: nessuna chiave in piu' da custodire.
+
+name: Radar settimanale
+
+on:
+  schedule:
+    # 05:00 UTC del lunedi' = 07:00 in Italia d'estate, 06:00 d'inverno.
+    # GitHub puo' far partire i lavori programmati con un ritardo anche di un'ora quando e'
+    # carico: si parte presto apposta, cosi' alle 9:30 la lista c'e' comunque.
+    - cron: "0 5 * * 1"
+  workflow_dispatch:        # per lanciarlo a mano dalla scheda Actions, quando serve
+
+permissions:
+  contents: write           # solo per riscrivere dati/ e le marche di versione
+
+concurrency:
+  group: radar
+  cancel-in-progress: false # due giri sovrapposti si sovrascriverebbero il file a vicenda
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Il giro del radar
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+        run: |
+          set -o pipefail
+          python3 automazione/radar.py --nuovi 60 --verifiche 60 --giorni 14 --indirizzi 40 \
+            > /tmp/radar.json
+
+      - name: Il riepilogo, nel cruscotto e qui sotto
+        if: always()
+        run: python3 automazione/riepilogo.py /tmp/radar.json >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Pubblica
+        run: |
+          git config user.name  "Radar 2 Sarpi"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dati/
+          if git diff --cached --quiet; then
+            echo "niente di nuovo: nessun commit"
+            exit 0
+          fi
+          sh versione.sh
+          git add -A
+          git commit -m "radar settimanale $(date +%Y-%m-%d)"
+          git push

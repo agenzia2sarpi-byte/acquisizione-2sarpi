@@ -109,7 +109,37 @@ function bloccoRadar() {
       <span style="align-self:center;font-size:12px;color:var(--grigio)">La quota di oggi e' ${quota} tentativi: parti dall'alto e scendi.</span></div>
   </div>`;
 }
-function render() { $("#vista").innerHTML = bloccoRadar() + vistaOggi(); }
+/* ---------------- l'ultimo giro del radar ---------------- */
+/* Quando il giro lo fa GitHub — il lunedi' mattina, anche a Mac spento — nessuno e' li' a
+   raccontare com'e' andata. Il riepilogo se lo scrive da solo in un file, e la pagina Oggi
+   lo mostra in cima: quanti nuovi, quanti usciti, com'e' andata la perlustrazione. */
+let RIEPILOGO = null;
+
+function bloccoRiepilogo() {
+  const r = RIEPILOGO;
+  if (!r) return "";
+  const gg = giorniDa((r.quando || "").slice(0, 10));
+  const quando = gg === 0 ? "stamattina" : gg === 1 ? "ieri" : gg != null ? `${gg} giorni fa` : "";
+  const ins = r.inserzionisti || {};
+  const dubbi = num(ins["da verificare"]), agenzie = num(ins["probabile agenzia"]);
+  const voci = [
+    [num(r.nuovi_in_vista), "immobili nuovi"],
+    [num(r.tolti_dalla_vista), "usciti dai portali"],
+    [num(ins["privato"]), "privati confermati"],
+    [dubbi, "da verificare al telefono"],
+    [agenzie, "agenzie sotto copertura, fuori lista"]
+  ].filter(([n]) => n > 0);
+  return `<div class="scheda">
+    <h3>L'ultimo giro del radar <span class="etichetta">${esc(quando)}${r.origine ? " · " + esc(r.origine) : ""}</span></h3>
+    ${voci.length
+      ? `<div style="font-family:var(--serif);font-size:15px">${voci.map(([n, t]) => `<b>${n}</b> ${esc(t)}`).join(" · ")}.</div>`
+      : `<div style="font-family:var(--serif);font-size:15px">Nessuna novita': i portali non hanno pubblicato niente di nuovo da privati.</div>`}
+    ${(r.note || []).length ? `<div class="avviso" style="margin:10px 0 0">${(r.note).map(esc).join("<br>")}</div>` : ""}
+    ${r.credito ? `<div style="font-size:12px;color:var(--grigio);margin:8px 0 0">Credito del radar: ${esc(r.credito)} questo mese.</div>` : ""}
+  </div>`;
+}
+
+function render() { $("#vista").innerHTML = bloccoRiepilogo() + bloccoRadar() + vistaOggi(); }
 Object.assign(AZIONI, {
   piu: el => { const a = attivitaDi(oggiISO()); a[el.dataset.c] = num(a[el.dataset.c]) + 1; salva(); render(); },
   meno: el => { const a = attivitaDi(oggiISO()); a[el.dataset.c] = Math.max(0, num(a[el.dataset.c]) - 1); salva(); render(); },
@@ -120,3 +150,10 @@ avviaPagina(render);
 /* Anche la home legge il radar pubblicato: un dispositivo nuovo si riempie da solo,
    senza dover passare prima dalla pagina Annunci. */
 aggiornaDalFeed(true).then(e => { if (e && (e.nuovi || e.aggiornati)) render(); });
+
+/* Il riepilogo dell'ultimo giro: se il file non c'e' — perche' il giro non e' ancora mai
+   girato — la pagina resta esattamente com'era, senza avvisi e senza buchi. */
+fetch("dati/riepilogo.json?t=" + Date.now(), { cache: "no-store" })
+  .then(r => r.ok ? r.json() : null)
+  .then(d => { if (d) { RIEPILOGO = d; render(); } })
+  .catch(() => {});
