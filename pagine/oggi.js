@@ -81,20 +81,26 @@ function bloccoRadar() {
   if (!S.annunci.length) return `<div class="scheda"><h3>Il radar e' vuoto</h3>
     <p style="font-family:var(--serif);font-size:14.5px">L'ora d'oro senza lista e' un'ora persa. Vai su <a href="radar.html">Annunci</a> e alimenta il radar: bastano il tasto «Prendi annuncio» o un copia-incolla.</p>
     <div class="bottoniera"><a class="azione" href="radar.html" style="text-decoration:none">Apri il radar</a></div></div>`;
-  const g = raggruppaAnnunci(S.annunci.filter(a => a.privato !== false));
+  // Nella lista delle chiamate entra solo chi si puo' davvero chiamare oggi: un immobile
+  // uscito dai portali e' quasi sempre gia' venduto, e chi ha scritto «no agenzie» ha deciso.
+  const chiamabili = S.annunci.filter(a =>
+    a.privato !== false && eOnline(a) && !inOptOut(a) && !a.noAgenzie);
+  const g = raggruppaAnnunci(chiamabili);
   g.forEach(x => x.p = punteggioAnnuncio(x.capo, x));
   const daFare = g.filter(x => (x.capo.esito || "Da lavorare") === "Da lavorare").sort((a, b) => b.p.punti - a.p.punti);
-  const nuovi = g.filter(x => (giorniDa(x.capo.visto) ?? 99) <= 1).length;
+  const nuovi = g.filter(x => x.capo.nuovo || (giorniDa(x.capo.scoperto || x.capo.visto) ?? 99) <= 1).length;
+  const usciti = S.annunci.filter(a => !eOnline(a)).length;
   const quota = Math.round(T().tentativiSett / 5);
   return `<div class="scheda">
-    <h3>Chi chiamare oggi <span class="etichetta">${daFare.length} immobili da lavorare · ${nuovi} novita'</span></h3>
+    <h3>Chi chiamare oggi <span class="etichetta">${daFare.length} immobili da lavorare · ${nuovi} novita'${usciti ? ` · ${usciti} usciti dai portali, fuori lista` : ""}</span></h3>
     ${daFare.length ? daFare.slice(0, Math.max(quota, 8)).map(x => {
       const a = x.capo, emq = num(a.mq) ? Math.round(num(a.prezzo) / num(a.mq)) : null;
       return `<a href="annuncio.html?id=${encodeURIComponent(a.id)}" style="display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--linea);text-decoration:none;color:inherit">
         <span style="flex:0 0 38px;height:38px;border-radius:8px;background:${a.foto ? `url('${esc(a.foto)}') center/cover` : "var(--tenue)"};"></span>
         <span style="flex:1;min-width:0">
-          <b style="font-size:14px">${esc(a.via || a.titolo || "senza indirizzo")}</b>
-          <small style="display:block;color:var(--grigio);font-size:11.5px">${a.prezzo ? eur(num(a.prezzo)) : "prezzo n.d."}${emq ? " · " + emq.toLocaleString("it-IT") + " €/mq" : ""} · ${x.giorniOnline} gg online${x.portali.length > 1 ? " · " + x.portali.length + " portali" : ""}${a.telefono ? " · telefono" : ""}</small>
+          <b style="font-size:14px">${esc([a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "senza indirizzo")}</b>
+          ${a.nuovo ? `<span style="font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--verde)">NUOVO</span>` : ""}${a.verdettoInserzionista === "da verificare" ? `<span style="font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--ambra)"> DA VERIFICARE</span>` : ""}
+          <small style="display:block;color:var(--grigio);font-size:11.5px">${esc(a.quartiere || a.municipio || "Milano")} · ${a.prezzo ? eur(num(a.prezzo)) : "prezzo n.d."}${emq ? " · " + emq.toLocaleString("it-IT") + " €/mq" : ""} · ${x.giorniOnline} gg online${x.portali.length > 1 ? " · " + x.portali.length + " portali" : ""}${a.telefono ? " · telefono" : ""}</small>
         </span>
         <b style="flex:0 0 auto;font-size:17px;color:${x.p.punti >= 70 ? "var(--verde)" : x.p.punti >= 45 ? "var(--ambra)" : "var(--grigio)"}">${x.p.punti}</b>
       </a>`;

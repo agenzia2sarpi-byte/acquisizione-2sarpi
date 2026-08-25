@@ -241,6 +241,8 @@ details.blocco .corpo li{margin:0 0 5px}
 .contatti-rapidi .senza-tel{font-size:11.5px;color:var(--grigio);align-self:center;font-style:italic}
 
 .badge.sparito{background:#6B6862;color:#fff}
+.badge.nuovo{background:var(--verde,#2F7A4F);color:#fff;letter-spacing:.06em}
+.badge.dubbio{background:var(--ambra,#B8860B);color:#fff}
 
 /* segnale dello swipe: compare un istante quando il gesto viene riconosciuto */
 .gesto{position:fixed;top:50%;margin-top:-24px;width:48px;height:48px;border-radius:50%;

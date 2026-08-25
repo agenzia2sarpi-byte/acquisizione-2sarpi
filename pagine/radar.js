@@ -1,6 +1,27 @@
 /* Pagina Annunci — la vetrina del radar, con deduplica fra portali. */
 
-let F = { q: "", tipo: "", portale: "", municipio: "", esito: "", chi: "privati", ordine: "punteggio", soloNuovi: false, soloTel: false, mostraSpariti: false, gruppo: "dafare" };
+let F = { q: "", tipo: "", portale: "", municipio: "", esito: "", chi: "privati", ordine: "punteggio", soloNuovi: false, soloTel: false, soloPrivatiVeri: false, mostraSpariti: false, gruppo: "dafare" };
+
+/* ---------------- perlustrazione dell'inserzionista ---------------- */
+/* Il radar guarda chi pubblica prima ancora di guardare l'immobile: lo stesso numero su piu'
+   annunci, il lessico da ufficio, il nome che sa di societa'. Non e' una condanna — e' un
+   avviso, e nel dubbio l'immobile resta in lista con il cartellino addosso. */
+const VERDETTI = {
+  "privato":           { t: "privato",          cl: "privato" },
+  "da verificare":     { t: "da verificare",    cl: "dubbio" },
+  "probabile agenzia": { t: "probabile agenzia", cl: "" }
+};
+function badgeInserzionista(a) {
+  const v = VERDETTI[a.verdettoInserzionista || ""] || (a.privato !== false ? VERDETTI["privato"] : { t: "agenzia", cl: "" });
+  return `<span class="badge ${v.cl}">${v.t}</span>`;
+}
+function rigaInserzionista(a) {
+  const v = a.verdettoInserzionista || "";
+  if (v !== "da verificare" && v !== "probabile agenzia") return "";
+  const m = (a.motiviAgenzia || []).slice(0, 3).join(" · ");
+  return `<div style="font-size:11.5px;color:var(--ambra);margin:2px 0 0">
+    <b>${v === "probabile agenzia" ? "Probabilmente non e' un proprietario" : "Da verificare al telefono"}</b>${m ? " — " + esc(m) : ""}</div>`;
+}
 
 /* Tre stati che contano davvero, piu' il dettaglio fine nel menu «Esito». */
 const GRUPPI = {
@@ -25,7 +46,8 @@ function annunciFiltrati() {
   if (F.municipio) l = l.filter(a => a.municipio === F.municipio);
   if (F.esito) l = l.filter(a => statoDi(a) === F.esito);
   if (F.gruppo && GRUPPI[F.gruppo] && GRUPPI[F.gruppo].e) l = l.filter(a => GRUPPI[F.gruppo].e.includes(statoDi(a)));
-  if (F.soloNuovi) l = l.filter(a => (giorniDa(a.visto) ?? 99) <= 1);
+  if (F.soloNuovi) l = l.filter(a => a.nuovo || (giorniDa(a.scoperto || a.visto) ?? 99) <= 1);
+  if (F.soloPrivatiVeri) l = l.filter(a => (a.verdettoInserzionista || "privato") === "privato");
   if (F.soloTel) l = l.filter(a => a.telefono);
   if (F.q) { const q = F.q.toLowerCase(); l = l.filter(a => (a.via + " " + a.titolo + " " + a.quartiere + " " + a.note + " " + a.descrizione).toLowerCase().includes(q)); }
   return l;
@@ -58,8 +80,8 @@ function cartaAnnuncio(g) {
     <div class="foto${a.foto ? "" : " senza"}">${foto}
       <div class="segno"><b>${esc(a.tipologia || (num(a.locali) ? num(a.locali) + " locali" : "immobile"))}</b><span>${esc(a.quartiere || a.municipio || "Milano")}</span></div>
       <div class="angolo">
-        ${eOnline(a) ? (a.privato !== false ? `<span class="badge privato">privato</span>` : `<span class="badge">agenzia</span>`)
-                      : `<span class="badge sparito">non piu' online</span>`}
+        ${a.nuovo ? `<span class="badge nuovo">nuovo</span>` : ""}
+        ${eOnline(a) ? badgeInserzionista(a) : `<span class="badge sparito">non piu' online</span>`}
         ${g.portali.length > 1 ? `<span class="badge portali">${g.portali.length} portali</span>` : ""}
       </div>
       <div class="punti">${p}<small>PUNTI</small></div>
@@ -67,7 +89,7 @@ function cartaAnnuncio(g) {
     <div class="corpo">
       <div class="prezzo">${a.prezzo ? eur(num(a.prezzo)) : "prezzo non indicato"}${a.tipo === "Locazione" ? `<small> /mese</small>` : ""}
         ${emq ? `<small> · ${emq.toLocaleString("it-IT")} €/mq</small>` : ""}</div>
-      <div class="indirizzo">${esc(a.via || a.titolo || "indirizzo non indicato")}</div>
+      <div class="indirizzo">${esc([a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "indirizzo non indicato")}</div>
       <div class="zona">${esc([a.quartiere, a.municipio].filter(Boolean).join(" · ") || "zona non indicata")}
         ${sc !== null ? ` · <b style="color:${sc > 8 ? "var(--ambra)" : "var(--grigio)"}">${sc > 0 ? "+" : ""}${sc.toFixed(0)}% vs zona</b>` : ""}</div>
       <div class="caratteristiche">
@@ -77,6 +99,7 @@ function cartaAnnuncio(g) {
         <span><b>${g.giorniOnline}</b> gg online</span>
         ${num(a.ribassi) ? `<span style="color:var(--ambra)"><b>${num(a.ribassi)}</b> ribassi</span>` : ""}
       </div>
+      ${rigaInserzionista(a)}
       <div class="fonti">${g.portali.map(x => `<span class="chip-portale att">${esc(nomePortale(x))}</span>`).join("")}</div>
     </div>
     <div class="contatti-rapidi">
@@ -145,11 +168,13 @@ function render() {
     </div>
     <div class="bottoniera">
       <label style="display:flex;align-items:center;gap:7px;font-size:13px">
-        <input type="checkbox" id="fnuovi" ${F.soloNuovi ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--rosso)"> solo novita' di oggi</label>
+        <input type="checkbox" id="fnuovi" ${F.soloNuovi ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--rosso)"> solo novita' dell'ultimo giro</label>
+      <label style="display:flex;align-items:center;gap:7px;font-size:13px">
+        <input type="checkbox" id="fpriv" ${F.soloPrivatiVeri ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--rosso)"> solo privati verificati</label>
       <label style="display:flex;align-items:center;gap:7px;font-size:13px">
         <input type="checkbox" id="ftel" ${F.soloTel ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--rosso)"> solo con telefono</label>
       <label style="display:flex;align-items:center;gap:7px;font-size:13px">
-        <input type="checkbox" id="fspar" ${F.mostraSpariti ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--grigio)"> mostra anche i spariti</label>
+        <input type="checkbox" id="fspar" ${F.mostraSpariti ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--grigio)"> mostra anche gli usciti dai portali</label>
       <button class="azione grigia" data-az="azzeraFiltri">Azzera filtri</button>
       <span class="conteggio">${gruppi.length} immobili nel filtro</span>
     </div>
@@ -166,12 +191,12 @@ function render() {
       <tr><td><b>4. Importa file</b></td><td>Un CSV o un JSON esportato da un gestionale, o il file di scambio con l'altro dispositivo.</td></tr>
       </tbody></table></div>`}`;
 
-  ["fq", "fchi", "ftipo", "fportale", "fmunicipio", "fesito", "fordine", "fnuovi", "ftel", "fspar"].forEach(id => {
+  ["fq", "fchi", "ftipo", "fportale", "fmunicipio", "fesito", "fordine", "fnuovi", "fpriv", "ftel", "fspar"].forEach(id => {
     const el = document.getElementById(id); if (!el) return;
     el.addEventListener(el.type === "search" ? "input" : "change", () => {
       F = {
         q: $("#fq").value, chi: $("#fchi").value, tipo: $("#ftipo").value, portale: $("#fportale").value,
-        municipio: $("#fmunicipio").value, esito: $("#fesito").value, ordine: $("#fordine").value, soloNuovi: $("#fnuovi").checked, soloTel: $("#ftel").checked, mostraSpariti: $("#fspar").checked, gruppo: F.gruppo
+        municipio: $("#fmunicipio").value, esito: $("#fesito").value, ordine: $("#fordine").value, soloNuovi: $("#fnuovi").checked, soloPrivatiVeri: $("#fpriv").checked, soloTel: $("#ftel").checked, mostraSpariti: $("#fspar").checked, gruppo: F.gruppo
       };
       const pos = id === "fq" ? $("#fq").selectionStart : null;
       render();
@@ -244,7 +269,7 @@ Object.assign(AZIONI, {
     if (nuovo === "Appuntamento") { const t = attivitaDi(oggiISO()); t.contatti = num(t.contatti) + 1; }
     salva(); render();
   },
-  azzeraFiltri: () => { F = { q: "", tipo: "", portale: "", municipio: "", esito: "", chi: "privati", ordine: "punteggio", soloNuovi: false, gruppo: "tutti" }; render(); },
+  azzeraFiltri: () => { F = { q: "", tipo: "", portale: "", municipio: "", esito: "", chi: "privati", ordine: "punteggio", soloNuovi: false, soloPrivatiVeri: false, soloTel: false, mostraSpariti: false, gruppo: "tutti" }; render(); },
   nuovoAnnuncio: () => apriAnnuncioForm({ id: uid(), tipo: "Vendita", privato: true, pubblicato: oggiISO() }, "Nuovo annuncio"),
   incolla: () => {
     apriFinestra("Incolla un annuncio", `

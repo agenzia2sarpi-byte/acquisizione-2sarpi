@@ -134,8 +134,19 @@ function riferimentoEmq(a) {
 }
 
 /* ---------------- punteggio dell'annuncio ---------------- */
-/* Stessa logica del piano: piu' l'annuncio e' messo male e da tanto, piu' vale come lead. */
+/* Stessa logica del piano: piu' l'annuncio e' messo male e da tanto, piu' vale come lead.
+   Sugli annunci del radar il conto e' gia' fatto a monte, dove si vedono cose che qui non
+   arrivano — quante volte ricorre lo stesso numero di telefono, quante foto aveva davvero
+   l'annuncio, che fascia di mercato e' quell'indirizzo. Il numero mostrato e' uno solo: se
+   il radar l'ha calcolato si usa il suo, altrimenti si calcola qui. */
 function punteggioAnnuncio(a, gruppo) {
+  if (a.priorita !== undefined && a.priorita !== null && a.priorita !== "" && Array.isArray(a.perchePriorita) && a.perchePriorita.length)
+    // Number(), non num(): num() toglie i punti perche' li legge come separatori delle
+    // migliaia, e un +11.8 diventerebbe un +118.
+    return { punti: Math.round(Number(a.priorita)), dettaglio: a.perchePriorita.map(x => [x[0], Number(x[1]) || 0]), fonte: "radar" };
+  return punteggioLocale(a, gruppo);
+}
+function punteggioLocale(a, gruppo) {
   let p = 0; const dett = [];
   const mq = num(a.mq), pr = num(a.prezzo);
   const rif = riferimentoEmq(a);
@@ -219,6 +230,13 @@ function normalizzaAnnuncio(x, origine) {
     pubblicato: (x.pubblicato || oggiISO()).slice(0, 10),
     visto: oggiISO(), origine: origine || "manuale",
     qualitaFoto: x.qualitaFoto || "", qualitaTesto: x.qualitaTesto || "",
+    lat: x.lat ?? null, lon: x.lon ?? null, numeroFoto: num(x.numeroFoto),
+    nuovo: !!x.nuovo, scoperto: x.scoperto || "",
+    sospettoAgenzia: x.sospettoAgenzia ?? null,
+    verdettoInserzionista: x.verdettoInserzionista || "",
+    motiviAgenzia: x.motiviAgenzia || [],
+    qualitaImmobile: x.qualitaImmobile ?? null, percheImmobile: x.percheImmobile || [],
+    priorita: x.priorita ?? null, perchePriorita: x.perchePriorita || [],
     ribassi: num(x.ribassi), esito: x.esito || "Da lavorare", note: x.note || "",
     storicoPrezzi: x.storicoPrezzi || []
   };

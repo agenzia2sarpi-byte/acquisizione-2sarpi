@@ -9,6 +9,28 @@ function gruppoDi(id) {
 
 const messaggioPrimoContatto = (a, g) => messaggioPortale(a, g);
 
+/* ---------------- perlustrazione dell'inserzionista ---------------- */
+/* Prima di spendere una telefonata: dall'altra parte c'e' un proprietario o un collega?
+   Il radar guarda quante volte ricorre lo stesso numero, com'e' scritto l'annuncio e che
+   nome ha chi pubblica. Nel dubbio l'immobile resta in lista, con l'avviso ben visibile. */
+function bloccoInserzionista(a) {
+  const v = a.verdettoInserzionista || "";
+  if (!v) return "";
+  const motivi = a.motiviAgenzia || [];
+  const s = Number(a.sospettoAgenzia) || 0;
+  if (v === "privato")
+    return `<div class="avviso" style="margin:0 0 14px"><b>Perlustrazione: proprietario privato</b>
+      Nessun segnale da agenzia sull'annuncio${motivi.length ? " — " + esc(motivi.join(" · ")) : ""}. Indice di sospetto ${s}/100.
+      Resta comunque il Registro Pubblico delle Opposizioni prima di comporre il numero.</div>`;
+  if (v === "da verificare")
+    return `<div class="avviso" style="margin:0 0 14px;border-left-color:var(--ambra)"><b>Perlustrazione: da verificare — indice ${s}/100</b>
+      ${esc(motivi.join(" · "))}.<br>Non e' un motivo per saltarlo: e' un motivo per aprire con
+      <i>«parlo con il proprietario?»</i>. Se e' un collega lo capisci in dieci secondi e chiudi senza bruciarti nulla.</div>`;
+  return `<div class="avviso rosso" style="margin:0 0 14px"><b>Perlustrazione: probabilmente non e' un proprietario — indice ${s}/100</b>
+    ${esc(motivi.join(" · "))}.<br>E' fuori dalla lista delle chiamate e dai privati. Se lo apri lo stesso,
+    sappi che stai chiamando un'agenzia che si e' pubblicata come privato.</div>`;
+}
+
 function render() {
   const a = S.annunci.find(x => x.id === ID);
   if (!a) { $("#vista").innerHTML = `<div class="vuoto">Immobile non trovato. <a href="radar.html">Torna agli annunci</a></div>`; return; }
@@ -29,7 +51,8 @@ function render() {
 
   <div class="intestazione">
     <span class="occhiello">${esc(a.tipo)} · ${esc(a.privato === false ? "agenzia" : "privato")}</span>
-    <h2>${esc(a.via || a.titolo || "Immobile")}</h2>
+    <h2>${esc([a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "Immobile")}</h2>
+    <div style="font-size:13px;color:var(--grigio)">${esc([a.quartiere, a.municipio, a.zona].filter(Boolean).join(" · ") || "zona non ancora ricavata")}</div>
   </div>
 
   <div class="griglia g4" style="margin:0 0 14px">
@@ -64,13 +87,22 @@ function render() {
     <p style="font-size:12.5px;color:var(--grigio);margin:10px 0 0">Da' informazione prima di chiedere, non usa la parola «esclusiva», non svaluta la scelta di vendere da solo e mette l'opt-out in chiaro. Il rifiuto arriva subito e pulito — il che e' un bene: libera tempo per i si'.</p>
   </div>
 
+  ${bloccoInserzionista(a)}
+
   <div class="griglia g2">
-    <div class="scheda"><h3>Perche' questo punteggio</h3>
+    <div class="scheda"><h3>Perche' questo punteggio${p.fonte === "radar" ? ` <span class="etichetta">calcolato dal radar</span>` : ""}</h3>
       ${p.dettaglio.map(([t, v]) => `<div style="display:flex;gap:10px;font-size:13.5px;padding:6px 0;border-bottom:1px solid var(--linea)">
         <span>${esc(t)}</span><b style="margin-left:auto;color:${v > 0 ? "var(--inchiostro)" : "var(--rosso)"}">${v > 0 ? "+" : ""}${Math.round(v)}</b></div>`).join("")}
       <div style="display:flex;gap:10px;font-size:15px;padding:9px 0 0"><b>Totale</b><b style="margin-left:auto">${p.punti}</b></div>
       ${rif ? `<p style="font-size:12px;color:var(--grigio);margin:8px 0 0">Riferimento di zona: ${Math.round(rif.valore).toLocaleString("it-IT")} €/mq — ${esc(rif.fonte)}.</p>`
       : `<p style="font-size:12px;color:var(--grigio);margin:8px 0 0">Nessun riferimento di zona: servono almeno tre annunci dello stesso quartiere e dello stesso tipo nell'archivio, oppure una fascia impostata a mano.</p>`}
+      ${a.qualitaImmobile !== null && a.qualitaImmobile !== undefined ? `
+        <div style="margin:12px 0 0;padding:10px 0 0;border-top:1px solid var(--linea)">
+          <div style="display:flex;gap:10px;font-size:13.5px"><b>Qualita' dell'immobile</b>
+            <b style="margin-left:auto;color:${Number(a.qualitaImmobile) >= 70 ? "var(--verde)" : Number(a.qualitaImmobile) >= 45 ? "var(--ambra)" : "var(--grigio)"}">${Number(a.qualitaImmobile)}/100</b></div>
+          <div style="font-size:12px;color:var(--grigio);margin:4px 0 0">${(a.percheImmobile || []).map(esc).join(" · ") || "nessun elemento distintivo rilevato"}</div>
+          <p style="font-size:12px;color:var(--grigio);margin:6px 0 0">Non e' il valore del lead: e' quanto vale il mandato <i>una volta preso</i>. Un incarico su una cosa che non si vende non e' un risultato.</p>
+        </div>` : ""}
     </div>
 
     <div class="scheda"><h3>Caratteristiche</h3>
