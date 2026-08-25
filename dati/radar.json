@@ -1,7 +1,7 @@
 {
- "id": "radar-202608250847",
- "generato": "2026-08-25T08:47:46",
- "conteggio": 81,
+ "id": "radar-202608250850",
+ "generato": "2026-08-25T08:50:23",
+ "conteggio": 82,
  "fonte": "Subito — soli privati, Milano (via Apify)",
  "annunci": [
   {
@@ -6783,9 +6783,121 @@
      -30
     ]
    ]
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/bilocale-ristrutturato-studenti-bovisa-politecnico-milano-658237812.htm",
+   "portale": "subito",
+   "riferimento": "658237812",
+   "titolo": "Bilocale ristrutturato studenti Bovisa Politecnico",
+   "via": "Via Francesco Paolo Michetti",
+   "civico": "16",
+   "quartiere": "Derganino",
+   "municipio": "",
+   "tipo": "Locazione",
+   "tipologia": "",
+   "prezzo": 995.0,
+   "mq": 42.0,
+   "locali": 2.0,
+   "bagni": 1.0,
+   "piano": "1",
+   "ascensore": false,
+   "zona": "Fascia media urbana",
+   "lat": 45.5008796,
+   "lon": 9.1660305,
+   "spese": "",
+   "classeEnergetica": "",
+   "statoImmobile": "ottimo---ristrutturato",
+   "telefono": "3793652610",
+   "email": "",
+   "inserzionista": "Mauro",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f2/f26704e3-d3b8-4d6d-857b-084f3eb5bc44?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/74/74ef7b8e-dec7-4e6c-8b3e-356f5c76d1b5?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/ba/bab0ef71-1afa-4e61-858f-62620074ad48?rule=vertical-mini-card-2x-auto",
+   "numeroFoto": 6,
+   "descrizione": "Da privato affittasi a studenti in Bovisa bellissimo e confortevole bilocale recentemente ristrutturato e completamente arredato con ingresso, zona living con cucina, bagno finestrato, camera da letto e balcone, riscaldamento centralizzato con ripartitore di calore. E' sito in via Michetti in bel condominio, vicino al Politecnico, a cinque minuti a piedi da passante ferroviario (9 minuti dal Centro di Milano Cadorna), tram e filobus. Adatto a una o due persone. Bovisa è un quartiere in espansione con i due campus universitari del Politecnico (Design e Ingegneria), sede di uno dei più grandi incubatori d'Europa e al centro del progetto MoLeCoLa.\nDisponibile dal 1 settembre 2026, 995 eur/mese più spese condominiali per circa 150 eur/mese. Solo realmente interessati e no agenzie/perditempo. Primo contatto whatsapp.",
+   "pubblicato": "2026-08-25",
+   "privato": true,
+   "verificatoIl": "2026-08-25",
+   "noAgenzie": true,
+   "nuovo": true,
+   "scoperto": "2026-08-25",
+   "indirizzoTentato": "2026-08-25",
+   "zonaFonte": "4.5 km dal Duomo",
+   "qualitaFoto": "medie",
+   "qualitaTesto": "curato",
+   "sospettoAgenzia": 0,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [
+    "si dichiara proprietario o rifiuta le agenzie"
+   ],
+   "qualitaImmobile": 90,
+   "percheImmobile": [
+    "42 mq: taglio molto richiesto",
+    "2 locali: la domanda sta qui",
+    "ristrutturato o nuovo",
+    "balcone o terrazzo"
+   ],
+   "priorita": 2,
+   "perchePriorita": [
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "0 giorni online",
+     0.0
+    ],
+    [
+     "Foto: medie",
+     6
+    ],
+    [
+     "Testo: curato",
+     1
+    ],
+    [
+     "Provvigione stimata 2.149 €",
+     2.4
+    ],
+    [
+     "Qualita' dell'immobile 90/100",
+     11.2
+    ],
+    [
+     "Telefono pubblicato",
+     5
+    ],
+    [
+     "Ha scritto «no agenzie»: non si chiama",
+     -30
+    ]
+   ]
   }
  ],
- "verificati": [],
+ "verificati": [
+  "https://www.subito.it/appartamenti/ampio-bilocale-ca-granda-milano-656350466.htm",
+  "https://www.subito.it/appartamenti/appartamento-bicocca-milano-650215305.htm",
+  "https://www.subito.it/appartamenti/bilocale-a-milano-in-zona-via-rizzoli-milano-657024174.htm",
+  "https://www.subito.it/appartamenti/bilocale-appena-ristrutturato-milano-656971995.htm",
+  "https://www.subito.it/appartamenti/bilocale-arredato-via-vodice-zona-fieramilanocity-milano-651037411.htm",
+  "https://www.subito.it/appartamenti/bilocale-in-zona-certosa-q-oggiaro-bovisa-milano-657012642.htm",
+  "https://www.subito.it/appartamenti/bilocale-luminoso-milano-658136542.htm",
+  "https://www.subito.it/appartamenti/bilocale-p-loreto-c-b-aires-m1-m2-sotto-sotto-casa-milano-623016455.htm",
+  "https://www.subito.it/appartamenti/bilocale-ristrutturato-adiacenze-p-zza-udine-milano-657042487.htm",
+  "https://www.subito.it/appartamenti/bilocale-su-due-livelli-v-le-monza-pasteur-m1-milano-651970613.htm",
+  "https://www.subito.it/appartamenti/bovisa-milano-653037601.htm",
+  "https://www.subito.it/appartamenti/bovisa-politecnico-trilocale-1-500-mese-milano-657597359.htm",
+  "https://www.subito.it/appartamenti/loft-su-due-livelli-con-terrazzo-a-milano-milano-657606670.htm",
+  "https://www.subito.it/appartamenti/milano-grazioso-appartamento-in-via-benevento-milano-657483829.htm",
+  "https://www.subito.it/appartamenti/monolocale-moderno-zona-bovisa-milano-653582665.htm",
+  "https://www.subito.it/appartamenti/monolocale-per-studenti-milano-657494347.htm",
+  "https://www.subito.it/appartamenti/monolocale-ristrutturato-milano-657504625.htm",
+  "https://www.subito.it/appartamenti/open-space-con-giardino-privato-di-100-mq-milano-657033933.htm",
+  "https://www.subito.it/appartamenti/panoramica-e-luminosa-suite-milano-656960859.htm",
+  "https://www.subito.it/appartamenti/residenze-nolo-38-bilocale-milano-658133644.htm",
+  "https://www.subito.it/appartamenti/trilocale-arredato-di-tutto-milano-657051037.htm",
+  "https://www.subito.it/appartamenti/trilocale-arredato-e-corredato-con-doppi-servizi-milano-647284771.htm"
+ ],
  "spariti": [
   "https://www.subito.it/appartamenti/appartamento-certosa-milano-656918700.htm",
   "https://www.subito.it/appartamenti/appartamento-milano-656896381.htm",
