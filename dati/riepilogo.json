@@ -1,0 +1,244 @@
+{
+ "raccolti": 20,
+ "aggiunti": 2,
+ "ribassati": 0,
+ "verificati": [
+  "https://www.subito.it/appartamenti/panoramica-e-luminosa-suite-milano-656960859.htm",
+  "https://www.subito.it/appartamenti/trilocale-arredato-e-corredato-con-doppi-servizi-milano-647284771.htm",
+  "https://www.subito.it/appartamenti/bilocale-p-loreto-c-b-aires-m1-m2-sotto-sotto-casa-milano-623016455.htm",
+  "https://www.subito.it/appartamenti/ampio-bilocale-ca-granda-milano-656350466.htm",
+  "https://www.subito.it/appartamenti/bilocale-su-due-livelli-v-le-monza-pasteur-m1-milano-651970613.htm",
+  "https://www.subito.it/appartamenti/bilocale-arredato-via-vodice-zona-fieramilanocity-milano-651037411.htm",
+  "https://www.subito.it/appartamenti/appartamento-con-terrazzo-stabile-signorile-55mq-milano-650096373.htm",
+  "https://www.subito.it/appartamenti/bilocale-appena-ristrutturato-milano-656971995.htm",
+  "https://www.subito.it/appartamenti/bilocale-ristrutturato-adiacenze-p-zza-udine-milano-657042487.htm",
+  "https://www.subito.it/appartamenti/open-space-con-giardino-privato-di-100-mq-milano-657033933.htm",
+  "https://www.subito.it/appartamenti/bilocale-a-milano-in-zona-via-rizzoli-milano-657024174.htm",
+  "https://www.subito.it/appartamenti/bilocale-in-zona-certosa-q-oggiaro-bovisa-milano-657012642.htm",
+  "https://www.subito.it/appartamenti/trilocale-arredato-di-tutto-milano-657051037.htm",
+  "https://www.subito.it/appartamenti/monolocale-arredato-milano-don-gnocchi-milano-657106137.htm",
+  "https://www.subito.it/appartamenti/trilocale-in-zona-sarpi-milano-milano-657173402.htm",
+  "https://www.subito.it/appartamenti/bilocale-zona-affori-milano-657157325.htm",
+  "https://www.subito.it/appartamenti/loft-tucidide-ortica-ex-fabbriche-ginori-milano-657142649.htm",
+  "https://www.subito.it/appartamenti/monolocale-per-studenti-milano-657494347.htm",
+  "https://www.subito.it/appartamenti/milano-grazioso-appartamento-in-via-benevento-milano-657483829.htm",
+  "https://www.subito.it/appartamenti/bilocale-corso-sempione-adiacenze-piazza-firenze-milano-657323466.htm"
+ ],
+ "spariti_nuovi": [],
+ "potati": 0,
+ "note": [],
+ "credito": "0.83 $ consumati su 5.00 $",
+ "tolti_dalla_vista": 0,
+ "indirizzi_completati": 2,
+ "inserzionisti": {
+  "privato": 79,
+  "da verificare": 2,
+  "probabile agenzia": 0
+ },
+ "quartieri_con_mediana": 1,
+ "nuovi_in_vista": 2,
+ "da_chiamare": [
+  {
+   "priorita": 68,
+   "via": "Via Luca Signorelli",
+   "civico": "5",
+   "quartiere": "Borgo Ortolani",
+   "zona": "Fascia media urbana",
+   "prezzo": 620000,
+   "mq": 95,
+   "tipo": "Vendita",
+   "giorni": 12,
+   "telefono": "3492610219",
+   "qualitaImmobile": 87,
+   "inserzionista": "privato",
+   "perche": [
+    "Prezzo +24% rispetto alla zona (fascia indicativa Fascia media urbana)",
+    "Provvigione stimata 18.600 €",
+    "Qualita' dell'immobile 87/100"
+   ],
+   "url": "https://www.subito.it/appartamenti/trilocale-in-zona-sarpi-milano-milano-657173402.htm"
+  },
+  {
+   "priorita": 58,
+   "via": "Via Francesco Rubino",
+   "civico": "",
+   "quartiere": "Parco Lambro - Cimiano",
+   "zona": "Fascia accessibile",
+   "prezzo": 228000,
+   "mq": 50,
+   "tipo": "Vendita",
+   "giorni": 14,
+   "telefono": "3456319424",
+   "qualitaImmobile": 96,
+   "inserzionista": "privato",
+   "perche": [
+    "Prezzo +22% rispetto alla zona (fascia indicativa Fascia accessibile)",
+    "Qualita' dell'immobile 96/100",
+    "Provvigione stimata 6.840 €"
+   ],
+   "url": "https://www.subito.it/appartamenti/bilocale-a-milano-in-zona-via-rizzoli-milano-657024174.htm"
+  },
+  {
+   "priorita": 53,
+   "via": "",
+   "civico": "",
+   "quartiere": "Niguarda",
+   "zona": "Periferia esterna",
+   "prezzo": 900.0,
+   "mq": 40.0,
+   "tipo": "Locazione",
+   "giorni": 1,
+   "telefono": "3385656567",
+   "qualitaImmobile": 91,
+   "inserzionista": "privato",
+   "perche": [
+    "Prezzo +23% rispetto alla zona (mediana dell'archivio in Niguarda)",
+    "Qualita' dell'immobile 91/100",
+    "Testo: scarno"
+   ],
+   "url": "https://www.subito.it/appartamenti/bilocale-appena-ristrutturato-milano-657997125.htm"
+  },
+  {
+   "priorita": 48,
+   "via": "Via Terracina",
+   "civico": "64",
+   "quartiere": "",
+   "zona": "Fascia accessibile",
+   "prezzo": 470000.0,
+   "mq": 90.0,
+   "tipo": "Vendita",
+   "giorni": 1,
+   "telefono": "",
+   "qualitaImmobile": 85,
+   "inserzionista": "privato",
+   "perche": [
+    "Prezzo +39% rispetto alla zona (fascia indicativa Fascia accessibile)",
+    "Provvigione stimata 14.100 €",
+    "Qualita' dell'immobile 85/100"
+   ],
+   "url": "https://www.subito.it/appartamenti/quadrilocale-piano-4-5-6-milano-658185332.htm"
+  },
+  {
+   "priorita": 38,
+   "via": "",
+   "civico": "",
+   "quartiere": "Affori",
+   "zona": "Periferia esterna",
+   "prezzo": 140000,
+   "mq": 40,
+   "tipo": "Vendita",
+   "giorni": 12,
+   "telefono": "",
+   "qualitaImmobile": 66,
+   "inserzionista": "privato",
+   "perche": [
+    "Prezzo +40% rispetto alla zona (fascia indicativa Periferia esterna)",
+    "Testo: scarno",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/bilocale-zona-affori-milano-657157325.htm"
+  },
+  {
+   "priorita": 38,
+   "via": "Corso Buenos Aires",
+   "civico": "38",
+   "quartiere": "Nolo",
+   "zona": "Fascia media urbana",
+   "prezzo": 1100.0,
+   "mq": 50.0,
+   "tipo": "Locazione",
+   "giorni": 1,
+   "telefono": "3341410677",
+   "qualitaImmobile": 99,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 99/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/residenze-nolo-38-bilocale-milano-658133644.htm"
+  },
+  {
+   "priorita": 37,
+   "via": "",
+   "civico": "",
+   "quartiere": "Famagosta",
+   "zona": "Fascia media urbana",
+   "prezzo": null,
+   "mq": 45.0,
+   "tipo": "Locazione",
+   "giorni": 1,
+   "telefono": "3471237669",
+   "qualitaImmobile": 72,
+   "inserzionista": "privato",
+   "perche": [
+    "Foto: scarse",
+    "Testo: scarno",
+    "Qualita' dell'immobile 72/100"
+   ],
+   "url": "https://www.subito.it/appartamenti/informazioni-milano-658162227.htm"
+  },
+  {
+   "priorita": 35,
+   "via": "Viale Monza",
+   "civico": "",
+   "quartiere": "Viale Monza",
+   "zona": "Fascia accessibile",
+   "prezzo": 1100,
+   "mq": 40,
+   "tipo": "Locazione",
+   "giorni": 14,
+   "telefono": "3337479074",
+   "qualitaImmobile": 91,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 91/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/bilocale-su-due-livelli-v-le-monza-pasteur-m1-milano-651970613.htm"
+  },
+  {
+   "priorita": 35,
+   "via": "",
+   "civico": "",
+   "quartiere": "",
+   "zona": "",
+   "prezzo": 75000.0,
+   "mq": 70.0,
+   "tipo": "Vendita",
+   "giorni": 5,
+   "telefono": "3282929746",
+   "qualitaImmobile": 76,
+   "inserzionista": "privato",
+   "perche": [
+    "Foto: scarse",
+    "Qualita' dell'immobile 76/100",
+    "Prezzo di zona non confrontabile"
+   ],
+   "url": "https://www.subito.it/appartamenti/appartamento-santa-maria-del-cedro-cs-milano-657708018.htm"
+  },
+  {
+   "priorita": 34,
+   "via": "Via Muzio Scevola",
+   "civico": "11",
+   "quartiere": "La Cappelletta",
+   "zona": "Fascia media urbana",
+   "prezzo": 1250.0,
+   "mq": 65.0,
+   "tipo": "Locazione",
+   "giorni": 0,
+   "telefono": "3356032257",
+   "qualitaImmobile": 97,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 97/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/appartamento-milano-citta-studi-lambrate-milano-658204637.htm"
+  }
+ ],
+ "quando": "2026-08-25T08:35:21+00:00",
+ "origine": "giro a mano dal Mac"
+}
