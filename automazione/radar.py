@@ -141,9 +141,18 @@ def apify(*args):
     if r.returncode != 0:
         raise RuntimeError((r.stderr or r.stdout).strip() or f"apify.sh uscita {r.returncode}")
     try:
-        return json.loads(r.stdout)
+        dati = json.loads(r.stdout)
     except json.JSONDecodeError:
         raise RuntimeError(f"risposta non leggibile da Apify: {r.stdout[:300]}")
+    # Apify risponde 200 anche quando rifiuta: l'errore e' dentro il corpo. Senza questo
+    # controllo il codice tira dritto e si schianta piu' avanti con un messaggio che non
+    # dice niente — ed e' esattamente cosa e' successo al primo giro su GitHub.
+    if isinstance(dati, dict) and dati.get("error"):
+        e = dati["error"]
+        if isinstance(e, dict):
+            raise RuntimeError(f"Apify rifiuta: {e.get('type', '?')} — {e.get('message', '')}".strip(" —"))
+        raise RuntimeError(f"Apify rifiuta: {e}")
+    return dati
 
 
 def credito():
@@ -158,7 +167,11 @@ def chiama(input_dict, tetto_usd):
         json.dump(input_dict, f)
         p = f.name
     try:
-        return apify("raccogli", ATTORE, p, str(tetto_usd), CAMPI)
+        out = apify("raccogli", ATTORE, p, str(tetto_usd), CAMPI)
+        if not isinstance(out, list):
+            raise RuntimeError(f"Apify doveva mandare un elenco e ha mandato "
+                               f"{type(out).__name__}: {str(out)[:300]}")
+        return out
     finally:
         os.unlink(p)
 
