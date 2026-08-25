@@ -19,7 +19,8 @@ import analisi
 # realpath, non abspath: sul Mac lo script si chiama da un collegamento dentro la skill,
 # e va risolto fin dentro il repository — altrimenti la cartella «dati» non si trova.
 QUI = os.path.dirname(os.path.realpath(__file__))
-BASE = os.environ.get("RADAR_BASE") or os.path.dirname(QUI)
+BASE = os.environ.get("RADAR_BASE") or os.path.join(os.path.dirname(QUI), "docs")
+# il sito sta in docs/ — fuori ci sono gli script, che GitHub Pages non pubblica
 RADAR = os.path.join(BASE, "dati", "radar.json")
 APIFY = os.path.join(QUI, "apify.sh")
 ATTORE = "emastra/subito-it-immobili"

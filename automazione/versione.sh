@@ -1,6 +1,6 @@
 #!/bin/sh
 # Aggiorna la marca di versione su tutti i file: costringe i browser a ricaricare CSS e JS.
-cd "$(dirname "$0")"
+cd "$(dirname "$0")/../docs"   # le pagine stanno in docs/, gli script fuori
 V=$(date +%Y%m%d%H%M)
 python3 - "$V" <<'PY'
 import glob, re, sys

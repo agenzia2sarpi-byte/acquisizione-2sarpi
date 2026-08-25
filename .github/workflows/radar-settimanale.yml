@@ -52,12 +52,12 @@ jobs:
         run: |
           git config user.name  "Radar 2 Sarpi"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dati/
+          git add docs/dati/
           if git diff --cached --quiet; then
             echo "niente di nuovo: nessun commit"
             exit 0
           fi
-          sh versione.sh
+          sh automazione/versione.sh
           git add -A
           git commit -m "radar settimanale $(date +%Y-%m-%d)"
           git push

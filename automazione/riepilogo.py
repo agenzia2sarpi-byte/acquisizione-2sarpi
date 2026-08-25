@@ -19,7 +19,8 @@ import os
 import sys
 
 QUI = os.path.dirname(os.path.realpath(__file__))
-BASE = os.environ.get("RADAR_BASE") or os.path.dirname(QUI)
+BASE = os.environ.get("RADAR_BASE") or os.path.join(os.path.dirname(QUI), "docs")
+# il sito sta in docs/ — fuori ci sono gli script, che GitHub Pages non pubblica
 DESTINAZIONE = os.path.join(BASE, "dati", "riepilogo.json")
 
 
