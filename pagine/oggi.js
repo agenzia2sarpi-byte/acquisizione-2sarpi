@@ -115,11 +115,24 @@ function bloccoRadar() {
    lo mostra in cima: quanti nuovi, quanti usciti, com'e' andata la perlustrazione. */
 let RIEPILOGO = null;
 
+/* Il semaforo dell'automatismo. Serve a rispondere a una domanda sola, senza aprire niente
+   altro: «sta girando da solo, si' o no?». Verde se l'ultimo giro e' andato liscio ed e'
+   recente; ambra se ha lasciato delle note; rosso se sono passati piu' di otto giorni, che
+   con una cadenza settimanale vuol dire che un giro e' saltato. */
+function statoAutomatismo(r, gg) {
+  if (gg === null || gg === undefined) return { cl: "var(--grigio)", t: "mai girato" };
+  if (gg > 8) return { cl: "var(--rosso)", t: `fermo da ${gg} giorni — un giro e' saltato` };
+  if ((r.note || []).length) return { cl: "var(--ambra)", t: "girato, ma con qualcosa da guardare" };
+  return { cl: "var(--verde)", t: "sta girando da solo" };
+}
+
 function bloccoRiepilogo() {
   const r = RIEPILOGO;
   if (!r) return "";
   const gg = giorniDa((r.quando || "").slice(0, 10));
   const quando = gg === 0 ? "stamattina" : gg === 1 ? "ieri" : gg != null ? `${gg} giorni fa` : "";
+  const st = statoAutomatismo(r, gg);
+  const daSolo = /github/i.test(r.origine || "");
   const ins = r.inserzionisti || {};
   const dubbi = num(ins["da verificare"]), agenzie = num(ins["probabile agenzia"]);
   const voci = [
@@ -130,7 +143,9 @@ function bloccoRiepilogo() {
     [agenzie, "agenzie sotto copertura, fuori lista"]
   ].filter(([n]) => n > 0);
   return `<div class="scheda">
-    <h3>L'ultimo giro del radar <span class="etichetta">${esc(quando)}${r.origine ? " · " + esc(r.origine) : ""}</span></h3>
+    <h3><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${st.cl};margin-right:7px"></span>L'ultimo giro del radar
+      <span class="etichetta">${esc(quando)}${r.origine ? " · " + esc(r.origine) : ""}</span></h3>
+    <div style="font-size:12.5px;color:${st.cl};font-weight:700;margin:0 0 6px">${esc(st.t)}${daSolo ? " — anche a Mac spento" : " — questo giro l'ha fatto il Mac, non GitHub"}</div>
     ${voci.length
       ? `<div style="font-family:var(--serif);font-size:15px">${voci.map(([n, t]) => `<b>${n}</b> ${esc(t)}`).join(" · ")}.</div>`
       : `<div style="font-family:var(--serif);font-size:15px">Nessuna novita': i portali non hanno pubblicato niente di nuovo da privati.</div>`}
