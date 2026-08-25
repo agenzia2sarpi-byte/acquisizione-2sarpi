@@ -6,11 +6,11 @@
  "spariti_nuovi": [],
  "potati": 0,
  "note": [
-  "raccolta Vendita non riuscita: 'str' object has no attribute 'get'",
-  "raccolta Locazione non riuscita: 'str' object has no attribute 'get'",
-  "verifica del lotto 1 non riuscita: 'str' object has no attribute 'get'",
-  "verifica del lotto 2 non riuscita: 'str' object has no attribute 'get'",
-  "verifica del lotto 3 non riuscita: 'str' object has no attribute 'get'"
+  "raccolta Vendita non riuscita: Apify rifiuta: page-not-found — We have bad news: there is no API endpoint at this URL. Did you specify it correctly?",
+  "raccolta Locazione non riuscita: Apify rifiuta: page-not-found — We have bad news: there is no API endpoint at this URL. Did you specify it correctly?",
+  "verifica del lotto 1 non riuscita: Apify rifiuta: page-not-found — We have bad news: there is no API endpoint at this URL. Did you specify it correctly?",
+  "verifica del lotto 2 non riuscita: Apify rifiuta: page-not-found — We have bad news: there is no API endpoint at this URL. Did you specify it correctly?",
+  "verifica del lotto 3 non riuscita: Apify rifiuta: page-not-found — We have bad news: there is no API endpoint at this URL. Did you specify it correctly?"
  ],
  "credito": "1.03 $ consumati su 5.00 $",
  "tolti_dalla_vista": 0,
@@ -224,6 +224,6 @@
    "url": "https://www.subito.it/appartamenti/appartamento-milano-citta-studi-lambrate-milano-658204637.htm"
   }
  ],
- "quando": "2026-08-25T08:45:14+00:00",
+ "quando": "2026-08-25T08:47:46+00:00",
  "origine": "GitHub Actions"
 }
