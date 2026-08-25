@@ -191,12 +191,14 @@ function guscio() {
     <header class="top">
       <div class="barra"></div>
       <div class="riga">
+        <button class="tondo" id="btIndietro" title="Torna indietro" aria-label="Torna indietro">‹</button>
         <a class="marchio" href="index.html">
           <div class="logo">2S</div>
           <div class="txt"><b>Acquisizione 2 Sarpi</b><span>Milano citta'</span></div>
         </a>
         <div class="spinta">
           <span id="salvato">salvato</span>
+          <button class="tondo" id="btAggiorna" title="Aggiorna i dati" aria-label="Aggiorna">↻</button>
           <select class="mini" id="selOperatore" title="Chi sta lavorando"></select>
           <select class="mini" id="selPiano" title="Piano attivo">
             <option value="500">Piano 500 €</option>
@@ -211,6 +213,8 @@ function guscio() {
   $("#selOperatore").innerHTML = opz(S.operatori, S.operatore);
   $("#selPiano").addEventListener("change", e => { S.piano = e.target.value; salva(); if (typeof render === "function") render(); });
   $("#selOperatore").addEventListener("change", e => { S.operatore = e.target.value; salva(); });
+  $("#btIndietro").addEventListener("click", indietro);
+  $("#btAggiorna").addEventListener("click", aggiornaAdesso);
   const att = document.querySelector("nav.tabs a.attivo");
   if (att) att.scrollIntoView({ inline: "center", block: "nearest" });
 }
@@ -271,6 +275,36 @@ function indietro() {
   const daDentro = document.referrer && document.referrer.indexOf(location.origin) === 0;
   if (daDentro) history.back();
   else if (qui !== "index.html") location.href = "index.html";
+}
+
+/* Il pulsante «aggiorna»: rilegge il radar pubblicato e ridisegna la pagina. Se il file non
+   risponde — o se siamo su una pagina che il radar non alimenta — ricarica e basta, saltando
+   la cache del browser, che e' quello che uno si aspetta premendo una freccia circolare. */
+async function aggiornaAdesso() {
+  const b = $("#btAggiorna");
+  if (!b || b.classList.contains("gira")) return;
+  b.classList.add("gira");
+  try {
+    if (typeof aggiornaDalFeed === "function") {
+      const e = await aggiornaDalFeed(true);
+      if (e) {
+        if (typeof render === "function") render();
+        esito(b, e.nuovi || e.aggiornati || e.spariti ? "fatto" : "gia' aggiornato");
+        return;
+      }
+    }
+    location.href = location.pathname + "?r=" + Date.now();
+  } catch (_) {
+    location.href = location.pathname + "?r=" + Date.now();
+  } finally {
+    b.classList.remove("gira");
+  }
+}
+function esito(b, testo) {
+  const s = $("#salvato");
+  if (!s) return;
+  s.textContent = testo; s.classList.add("on");
+  clearTimeout(s._t); s._t = setTimeout(() => { s.classList.remove("on"); s.textContent = "salvato"; }, 1800);
 }
 
 function avanti() {
