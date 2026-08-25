@@ -16,6 +16,13 @@ on:
     # carico: si parte presto apposta, cosi' alle 9:30 la lista c'e' comunque.
     - cron: "0 5 * * 1"
   workflow_dispatch:        # per lanciarlo a mano dalla scheda Actions, quando serve
+    inputs:
+      nuovi:
+        description: "Quanti annunci nuovi raccogliere (60 e' il giro pieno, ~0,30 $)"
+        default: "60"
+      verifiche:
+        description: "Quanti annunci ricontrollare (60 e' il giro pieno, ~0,30 $)"
+        default: "60"
 
 permissions:
   contents: write           # solo per riscrivere dati/ e le marche di versione
@@ -41,7 +48,9 @@ jobs:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
         run: |
           set -o pipefail
-          python3 automazione/radar.py --nuovi 60 --verifiche 60 --giorni 14 --indirizzi 40 \
+          python3 automazione/radar.py \
+            --nuovi "${{ inputs.nuovi || 60 }}" --verifiche "${{ inputs.verifiche || 60 }}" \
+            --giorni 14 --indirizzi 40 \
             > /tmp/radar.json
 
       - name: Il riepilogo, nel cruscotto e qui sotto
