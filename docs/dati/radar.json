@@ -1,6 +1,6 @@
 {
- "id": "radar-202608261040",
- "generato": "2026-08-26T10:40:36",
+ "id": "radar-202608261052",
+ "generato": "2026-08-26T10:52:37",
  "conteggio": 81,
  "fonte": "Subito — soli privati, Milano (via Apify)",
  "annunci": [
@@ -84,8 +84,8 @@
    "lon": 9.1727368,
    "indirizzoTentato": "2026-08-25",
    "scoperto": "2026-08-13",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/loft-tucidide-ortica-ex-fabbriche-ginori-milano-657142649.htm",
@@ -175,8 +175,8 @@
    ],
    "indirizzoTentato": "2026-08-25",
    "scoperto": "2026-08-13",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/trilocale-arredato-di-tutto-milano-657051037.htm",
@@ -258,8 +258,8 @@
    ],
    "indirizzoTentato": "2026-08-25",
    "scoperto": "2026-08-12",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-arredato-milano-don-gnocchi-milano-657106137.htm",
@@ -339,8 +339,8 @@
    ],
    "indirizzoTentato": "2026-08-25",
    "scoperto": "2026-08-12",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/splendido-monolocale-nuovo-con-balcone-e-ac-milano-657410884.htm",
@@ -422,8 +422,8 @@
    ],
    "indirizzoTentato": "2026-08-25",
    "scoperto": "2026-08-18",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-moderno-zona-bovisa-milano-653582665.htm",
@@ -513,8 +513,8 @@
    "lon": 9.1486016,
    "indirizzoTentato": "2026-08-25",
    "scoperto": "2026-08-18",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-bicocca-milano-650215305.htm",
@@ -599,8 +599,8 @@
    "lon": 9.2122056,
    "indirizzoTentato": "2026-08-25",
    "scoperto": "2026-08-18",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-ristrutturato-milano-657504625.htm",
@@ -681,8 +681,8 @@
    ],
    "indirizzoTentato": "2026-08-25",
    "scoperto": "2026-08-18",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-per-studenti-milano-657494347.htm",
@@ -765,8 +765,8 @@
    ],
    "indirizzoTentato": "2026-08-25",
    "scoperto": "2026-08-17",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/milano-grazioso-appartamento-in-via-benevento-milano-657483829.htm",
@@ -852,8 +852,8 @@
    ],
    "indirizzoTentato": "2026-08-25",
    "scoperto": "2026-08-17",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-corso-sempione-adiacenze-piazza-firenze-milano-657323466.htm",
@@ -936,8 +936,8 @@
    ],
    "indirizzoTentato": "2026-08-25",
    "scoperto": "2026-08-17",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/loft-su-due-livelli-con-terrazzo-a-milano-milano-657606670.htm",
@@ -1022,8 +1022,8 @@
    ],
    "indirizzoTentato": "2026-08-25",
    "scoperto": "2026-08-18",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bovisa-politecnico-trilocale-1-500-mese-milano-657597359.htm",
@@ -1104,8 +1104,8 @@
    ],
    "indirizzoTentato": "2026-08-25",
    "scoperto": "2026-08-18",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bovisa-milano-653037601.htm",
@@ -1193,8 +1193,8 @@
    "lon": 9.1653387,
    "indirizzoTentato": "2026-08-25",
    "scoperto": "2026-08-18",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-trilocale-milano-651857047.htm",
@@ -1276,8 +1276,8 @@
    ],
    "indirizzoTentato": "2026-08-25",
    "scoperto": "2026-08-18",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/design-loft-loreto-milano-611243913.htm",
@@ -1360,8 +1360,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/quadrilocale-piano-4-5-6-milano-658185332.htm",
@@ -1447,8 +1447,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/trilocale-ristrutturato-mai-abitato-milano-658182256.htm",
@@ -1541,8 +1541,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-arredato-milano-658162099.htm",
@@ -1633,8 +1633,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-a-milano-bicocca-niguarda-milano-658139279.htm",
@@ -1722,8 +1722,8 @@
    ],
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/ampio-bilocale-e-servizi-milano-658092410.htm",
@@ -1806,8 +1806,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-milano-658080803.htm",
@@ -1890,8 +1890,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/3-camere-2-bagni-milano-lambrate-milano-658064749.htm",
@@ -1977,8 +1977,8 @@
    ],
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-adiacente-bocconi-via-salasco-7-milano-658043410.htm",
@@ -2064,8 +2064,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/privato-bilocale-arredato-m5-segesta-milano-658023109.htm",
@@ -2153,8 +2153,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-ristrutturato-portello-milano-658011579.htm",
@@ -2242,8 +2242,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-trilocale-ristrutturato-milano-657988470.htm",
@@ -2329,8 +2329,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/quadrilocale-ristrutturato-frati-busto-arsizio-milano-646751940.htm",
@@ -2418,8 +2418,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/doppia-in-condivisione-ristrutt-bocconi-iulm-naba-milano-657844651.htm",
@@ -2503,8 +2503,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-happy-500-metri-da-m1-primaticcio-milano-657815476.htm",
@@ -2590,8 +2590,8 @@
    ],
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-bilocale-milano-milano-657721263.htm",
@@ -2676,8 +2676,8 @@
    ],
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-santa-maria-del-cedro-cs-milano-657708018.htm",
@@ -2760,8 +2760,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-milano-vicino-metro-e-zona-isola-milano-657692513.htm",
@@ -2847,8 +2847,8 @@
    ],
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/privato-appartamento-zona-lancetti-scalo-farini-milano-657541597.htm",
@@ -2941,8 +2941,8 @@
    ],
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-zona-naviglio-grande-milano-657926316.htm",
@@ -3027,8 +3027,8 @@
    ],
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-nuovo-milano-milano-643955231.htm",
@@ -3109,8 +3109,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-zona-nolo-milano-658102612.htm",
@@ -3193,8 +3193,8 @@
    ],
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-milano-citta-studi-lambrate-milano-658204637.htm",
@@ -3279,8 +3279,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/luminoso-open-space-in-casa-di-corte-milanese-milano-649244484.htm",
@@ -3367,8 +3367,8 @@
    ],
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/ampio-bilocale-luminoso-e-silenzioso-milano-658000472.htm",
@@ -3454,8 +3454,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-milano-m3-milano-658193251.htm",
@@ -3542,8 +3542,8 @@
    ],
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-luminoso-via-vespri-siciliani-2-piano-milano-658189909.htm",
@@ -3627,8 +3627,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-milano-658185830.htm",
@@ -3711,8 +3711,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-ad-bocconi-iulm-via-pomponazzi-milano-658170036.htm",
@@ -3796,8 +3796,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-arredato-milano-657977458.htm",
@@ -3888,8 +3888,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/solo-per-trasferta-milano-657702929.htm",
@@ -3971,8 +3971,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-san-siro-milano-ultimo-piano-milano-636952160.htm",
@@ -4058,8 +4058,8 @@
    ],
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/ultimo-piano-luminoso-via-caccialepori-milano-milano-658160652.htm",
@@ -4140,8 +4140,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-arredato-gambara-milano-658158287.htm",
@@ -4226,8 +4226,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-ristrutturato-a-milano-milano-658157503.htm",
@@ -4311,8 +4311,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-luminoso-milano-658136542.htm",
@@ -4395,8 +4395,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/residenze-nolo-38-bilocale-milano-658133644.htm",
@@ -4484,8 +4484,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bel-bilocale-arredato-zona-parco-sempione-moscova-milano-610593377.htm",
@@ -4570,8 +4570,8 @@
      -8
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/senza-agenzia-mm-verde-romolo-milano-655351004.htm",
@@ -4663,8 +4663,8 @@
      -30
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-ristrutturato-studenti-bovisa-politecnico-milano-658237812.htm",
@@ -4754,8 +4754,8 @@
      -30
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-zona-turro-gorla-milano-658356485.htm",
@@ -4842,8 +4842,8 @@
      5
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-metropolitana-blu-milano-658338254.htm",
@@ -4925,8 +4925,8 @@
      -8
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-turro-milano-658330687.htm",
@@ -5009,8 +5009,8 @@
      5
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/ampio-bilicale-a-20m-da-arena-e-parco-sempione-milano-658317399.htm",
@@ -5096,8 +5096,8 @@
      -30
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-ristrutturato-zona-chiesa-rossa-milano-658284475.htm",
@@ -5182,8 +5182,8 @@
      -8
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-zona-chiesarossa-milano-658283397.htm",
@@ -5269,8 +5269,8 @@
      -8
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/luminoso-appartamento-50-mq-milano-658273088.htm",
@@ -5352,8 +5352,8 @@
      -8
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/monolocale-corso-sempione-6-mesi-milano-658259912.htm",
@@ -5435,8 +5435,8 @@
      -8
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-cologno-sud-milano-657850390.htm",
@@ -5521,8 +5521,8 @@
      -30
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/grazioso-bilocale-milano-658354581.htm",
@@ -5606,8 +5606,8 @@
      -8
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/solo-per-studenti-e-studentesse-universitari-milano-658345859.htm",
@@ -5694,8 +5694,8 @@
      -30
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-arredato-nuovo-a-milano-citta-studi-milano-658344610.htm",
@@ -5790,8 +5790,8 @@
      -30
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/design-loft-a-turro-milano-658340361.htm",
@@ -5875,8 +5875,8 @@
      5
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/via-gabbro-milano-658333128.htm",
@@ -5959,8 +5959,8 @@
      5
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/splendido-bilocale-in-zona-brenta-milano-658332854.htm",
@@ -6047,8 +6047,8 @@
      5
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-per-due-persone-arredato-clima-milano-milano-658323402.htm",
@@ -6138,8 +6138,8 @@
      -30
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilo-70-mq-2-camere-nuovo-zona-stazione-milano-657118936.htm",
@@ -6225,8 +6225,8 @@
      5
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/mm2-udine-bilocale-da-privato-no-agenzie-milano-642354383.htm",
@@ -6317,8 +6317,8 @@
      -30
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/ampio-bilocale-milano-isola-milano-658250661.htm",
@@ -6403,8 +6403,8 @@
      -8
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamentino-milano-653700081.htm",
@@ -6483,8 +6483,8 @@
      5
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/grazioso-monolocale-milano-658133918.htm",
@@ -6569,8 +6569,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-con-terrazzo-zona-solari-milano-657632793.htm",
@@ -6656,8 +6656,8 @@
     ]
    ],
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": "LAI"
+   "fotoSospetto": "LAI",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-appena-ristrutturato-milano-657997125.htm",
@@ -6742,8 +6742,8 @@
    ],
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-25",
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": "ANY"
+   "fotoSospetto": "ANY",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/appartamento-per-studenti-o-ricercatori-milano-milano-658335307.htm",
@@ -6830,8 +6830,8 @@
      5
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": "GOLDONI"
+   "fotoSospetto": "GOLDONI",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-ristrutturato-porta-romana-lodi-milano-655262959.htm",
@@ -6920,8 +6920,8 @@
      5
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": ""
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26"
   },
   {
    "url": "https://www.subito.it/appartamenti/bilocale-terrazzino-vicino-citta-studi-argonne-milano-658293182.htm",
@@ -7006,8 +7006,8 @@
      5
     ]
    ],
-   "fotoLette": "2026-08-26",
-   "fotoSospetto": "AGNO"
+   "fotoSospetto": "AGNO",
+   "fotoLette": "2026-08-26"
   }
  ],
  "verificati": [

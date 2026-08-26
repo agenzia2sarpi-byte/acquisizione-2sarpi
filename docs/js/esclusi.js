@@ -154,7 +154,9 @@ function motivoAgenzia(a) {
     return (a.motiviAgenzia || []).join(" · ") || "perlustrazione: sospetto di agenzia";
   if (Number(a.sospettoAgenzia) >= SOGLIA_FUORI_JS)
     return `indice di sospetto ${Number(a.sospettoAgenzia)}/100${(a.motiviAgenzia || []).length ? " — " + a.motiviAgenzia.join(" · ") : ""}`;
-  if (a.fotoSospetto) return `sulle fotografie e' impressa la scritta «${a.fotoSospetto}»: ha l'aria di un marchio`;
+  // Il dubbio letto su una fotografia sola NON esclude, ne' qui ne' nel radar: e' un
+  // avviso sulla scheda, con un tasto per confermarlo a occhio. Renderlo decisivo, provato
+  // sul sito pubblicato, buttava fuori «GOLDONI» — che era il nome della via su una targa.
   const mail = a.email || "";
   if (mail && !EMAIL_LIBERA_JS.test(mail) && /immobiliar|realestate|real-estate|casa|home|dimore|properties/i.test(mail))
     return `email su dominio da agenzia (${mail})`;

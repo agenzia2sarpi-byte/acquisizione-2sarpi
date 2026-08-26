@@ -59,7 +59,7 @@
  "tolti_dalla_vista": 7,
  "indirizzi_completati": 23,
  "inserzionisti": {
-  "privato": 82,
+  "privato": 81,
   "da verificare": 0,
   "probabile agenzia": 0
  },
@@ -268,9 +268,9 @@
   }
  ],
  "esclusi_nuovi": 0,
- "esclusi_ricomparsi": 1,
+ "esclusi_ricomparsi": 0,
  "esclusi_in_archivio": 3,
  "esclusi_elenco": [],
- "quando": "2026-08-26T08:42:01+00:00",
+ "quando": "2026-08-26T08:52:46+00:00",
  "origine": "Mac di Gaetano"
 }
