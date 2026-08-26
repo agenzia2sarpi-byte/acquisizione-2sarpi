@@ -44,6 +44,12 @@ function render() {
   const tel = (a.telefono || "").replace(/[^\d+]/g, "");
 
   $("#vista").innerHTML = `
+  ${lavorato(a) ? `<div class="gestito${(a.esito || "") === "Da richiamare" ? " richiamo" : ""}" style="border-radius:9px;margin:0 0 12px">
+    <span>gestito da</span><span class="chi">${esc(a.operatore || "qualcuno di noi")}</span>
+    <span>${esc((a.esito || "").toLowerCase())}</span>
+    <span class="quando">${a.ultimoContatto ? dataIt(a.ultimoContatto) : ""}${a.dataRichiamo ? " · richiamare il " + dataIt(a.dataRichiamo) : ""}</span>
+  </div>` : ""}
+
   <div class="bottoniera nostampa" style="margin:0 0 12px">
     <a class="azione grigia" href="radar.html" style="text-decoration:none">‹ Tutti gli annunci</a>
   </div>
@@ -185,11 +191,15 @@ Object.assign(AZIONI, {
     a.canaleContatto = $("#canale").value; a.dataRichiamo = $("#richiamo").value;
     if (a.esito !== "Da lavorare") a.nuovo = false;
     if (a.esito !== prima) a.storicoEsiti = (a.storicoEsiti || []).concat([{ data: oggiISO(), esito: a.esito, chi: a.operatore }]);
-    if (a.esito === "Scartato") {
-      escludiAnnuncio(a, "scartato a mano", a.operatore);
+    if (a.esito === "Scartato" || a.esito === "Non buono") {
+      const chiuso = a.esito === "Non buono";
+      escludiAnnuncio(a, chiuso
+        ? `contattato da ${a.operatore} il ${dataIt(a.ultimoContatto || oggiISO())}: non buono${a.note ? " — " + a.note : ""}`
+        : "scartato a mano", a.operatore, chiuso ? "lavorato" : "scartato");
       S.annunci = S.annunci.filter(x => x.id !== ID);
       salva();
-      alert("Scartato: esce dalla lista e non rientra piu', nemmeno se l'annuncio viene ripubblicato.");
+      alert(chiuso ? "Chiuso: esce dalla lista, cosi' nessuno degli altri lo richiama."
+                   : "Scartato: esce dalla lista e non rientra piu', nemmeno se l'annuncio viene ripubblicato.");
       location.href = "radar.html";
       return;
     }
@@ -202,11 +212,18 @@ Object.assign(AZIONI, {
     const a = S.annunci.find(x => x.id === ID); if (!a) return;
     const nuovo = el.dataset.e;
     if ((a.esito || "Da lavorare") === nuovo) return;
-    if (nuovo === "Scartato") {
+    if (nuovo === "Scartato" || nuovo === "Non buono") {
       const dove = [a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "questo immobile";
-      if (!confirm(`Scartare ${dove}?\n\nEsce dalla lista e non torna piu': nemmeno se l'annuncio viene ripubblicato con un altro indirizzo o con il testo cambiato. Si puo' rimettere in lista dalla pagina Dati.`)) return;
-      escludiAnnuncio(a, "scartato a mano", S.operatore);
+      const chiuso = nuovo === "Non buono";
+      if (!confirm((chiuso
+        ? `${dove}: contattato, non porta a niente?\n\nEsce dalla lista e non ci torna piu', cosi' nessuno degli altri lo richiama.`
+        : `Scartare ${dove}?\n\nEsce dalla lista e non torna piu', nemmeno se l'annuncio viene ripubblicato con un altro indirizzo o con il testo cambiato.`)
+        + "\n\nSi puo' rimettere in lista dalla pagina Dati.")) return;
+      escludiAnnuncio(a, chiuso
+        ? `contattato da ${S.operatore} il ${dataIt(oggiISO())}: non buono${a.note ? " — " + a.note : ""}`
+        : "scartato a mano", S.operatore, chiuso ? "lavorato" : "scartato");
       S.annunci = S.annunci.filter(x => x.id !== ID);
+      if (chiuso) { const t = attivitaDi(oggiISO()); t.tentativi = num(t.tentativi) + 1; }
       salva(); location.href = "radar.html";
       return;
     }

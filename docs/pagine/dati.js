@@ -50,13 +50,13 @@ function render() {
     <div class="bottoniera nostampa"><button class="azione vuota" data-az="copia" data-t="anteprimaFirma">Copia la firma</button></div>
   </div>
 
-  <div class="scheda"><h3>Annunci esclusi <span class="etichetta">${(S.esclusi || []).length} in archivio</span></h3>
-    <p style="font-family:var(--serif);font-size:14.5px">Chi finisce qui non torna piu'. Non e' un filtro di visualizzazione: l'immobile esce dall'archivio, e a ogni aggiornamento viene riconosciuto e respinto <b>anche se il portale lo ripubblica con un altro indirizzo, un altro numero o il testo cambiato</b> — il confronto e' su indirizzo, metratura, recapito, fotografie e testo, non sul collegamento. Se un'esclusione era sbagliata, si rimette in lista da qui: alla prossima raccolta l'immobile rientra.</p>
+  <div class="scheda"><h3>Fuori dalla lista <span class="etichetta">${(S.esclusi || []).length} in archivio</span></h3>
+    <p style="font-family:var(--serif);font-size:14.5px">Chi finisce qui non torna piu'. Ci arrivano le agenzie, gli immobili scartati e <b>quelli gia' contattati che non hanno portato a niente</b> — cosi' nessuno dei tre richiama un numero che un altro ha gia' chiamato. Non e' un filtro di visualizzazione: l'immobile esce dall'archivio, e a ogni aggiornamento viene riconosciuto e respinto <b>anche se il portale lo ripubblica con un altro indirizzo, un altro numero o il testo cambiato</b> — il confronto e' su indirizzo, metratura, recapito, fotografie e testo, non sul collegamento. Se un'esclusione era sbagliata, si rimette in lista da qui: alla prossima raccolta l'immobile rientra.</p>
     ${(S.esclusi || []).length ? `<div class="tabellone"><table>
-      <thead><tr><th>Immobile</th><th>Perche'</th><th>Quando</th><th></th></tr></thead>
+      <thead><tr><th>Immobile</th><th>Perche' e' fuori</th><th>Quando</th><th></th></tr></thead>
       <tbody>${S.esclusi.slice().reverse().map(v => `<tr>
         <td><b>${esc(v.via || v.titolo || "—")}</b>${v.inserzionista ? `<br><small>${esc(v.inserzionista)}</small>` : ""}${v.url ? `<br><small><a href="${esc(v.url)}" target="_blank" rel="noopener">annuncio</a></small>` : ""}</td>
-        <td style="font-size:13px">${esc(v.motivo || "—")}${v.ricomparse ? `<br><small style="color:var(--ambra)">ha provato a rientrare ${v.ricomparse} volte</small>` : ""}</td>
+        <td style="font-size:13px"><span class="tag ${v.tipo === "lavorato" ? "verde" : ""}">${esc(v.tipo === "lavorato" ? "lavorato e chiuso" : v.tipo === "scartato" ? "scartato" : "agenzia")}</span><br>${esc(v.motivo || "—")}${v.ricomparse ? `<br><small style="color:var(--ambra)">ha provato a rientrare ${v.ricomparse} volte</small>` : ""}</td>
         <td><small>${dataIt(v.data)}${v.chi ? "<br>" + esc(v.chi) : ""}</small></td>
         <td><button class="azione grigia" data-az="riammetti" data-id="${esc(v.id)}">Rimetti in lista</button></td>
       </tr>`).join("")}</tbody></table></div>`

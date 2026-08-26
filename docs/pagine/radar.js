@@ -35,7 +35,7 @@ const GRUPPI = {
   dafare:    { t: "Da fare",       e: ["Da lavorare"] },
   buoni:     { t: "Buoni",         e: ["Buono", "Appuntamento", "Valutazione fatta", "In sequenza", "Contattato"] },
   richiamare:{ t: "Da richiamare", e: ["Da richiamare"] },
-  chiusi:    { t: "Chiusi",        e: ["Non buono", "Mandato", "Non contattare"] },
+  mandati:   { t: "Mandati",       e: ["Mandato"] },
   tutti:     { t: "Tutti",         e: null }
 };
 const statoDi = a => a.esito || "Da lavorare";
@@ -73,6 +73,21 @@ function gruppiOrdinati() {
   return g.sort(ord);
 }
 
+/* Chi ha in mano l'immobile, scritto dove non si puo' non vederlo. Serve a una cosa sola:
+   che Ciro non richiami il numero che Gaetano ha chiamato ieri, e che Francoise non scriva a
+   chi ha gia' risposto a Ciro. Finche' l'immobile e' in lista ed e' stato lavorato, questa
+   fascia sta in cima alla carta. */
+function fasciaGestito(a) {
+  if (!lavorato(a)) return "";
+  const chi = a.operatore || "qualcuno di noi";
+  const richiamo = statoDi(a) === "Da richiamare";
+  return `<div class="gestito${richiamo ? " richiamo" : ""}">
+    <span>gestito da</span><span class="chi">${esc(chi)}</span>
+    <span>${esc(statoDi(a).toLowerCase())}</span>
+    <span class="quando">${a.ultimoContatto ? dataIt(a.ultimoContatto) : ""}${richiamo && a.dataRichiamo ? " · richiamare il " + dataIt(a.dataRichiamo) : ""}</span>
+  </div>`;
+}
+
 /* Quello che resta di una telefonata: chi ha chiamato, quando, cosa si e' detto, quando
    richiamare. Senza questo la settimana dopo si ricomincia da capo sullo stesso numero. */
 function rigaLavoro(a) {
@@ -80,8 +95,8 @@ function rigaLavoro(a) {
     return `<div class="lavoro"><button data-az="nota" data-id="${esc(a.id)}">Aggiungi una nota</button></div>`;
   const giorniAlRichiamo = a.dataRichiamo ? giorniDa(a.dataRichiamo) : null;
   return `<div class="lavoro">
-    ${a.ultimoContatto ? `<span><b>${esc(statoDi(a))}</b> il ${dataIt(a.ultimoContatto)}${a.operatore ? " · " + esc(a.operatore) : ""}${a.canaleContatto ? " · " + esc(a.canaleContatto) : ""}</span>` : `<span>${esc(statoDi(a))}</span>`}
-    ${a.dataRichiamo ? `<span class="richiamo${giorniAlRichiamo !== null && giorniAlRichiamo >= 0 ? " scaduto" : ""}">richiamare il ${dataIt(a.dataRichiamo)}${giorniAlRichiamo !== null && giorniAlRichiamo > 0 ? ` — era ${giorniAlRichiamo} giorni fa` : ""}</span>` : ""}
+    ${a.canaleContatto ? `<span>contattato via ${esc(a.canaleContatto)}</span>` : ""}
+    ${giorniAlRichiamo !== null && giorniAlRichiamo > 0 ? `<span class="richiamo scaduto">il richiamo era ${giorniAlRichiamo} giorni fa</span>` : ""}
     <button data-az="nota" data-id="${esc(a.id)}">${a.note ? "Modifica la nota" : "Aggiungi una nota"}</button>
     ${a.note ? `<div class="nota">${esc(a.note)}</div>` : ""}
   </div>`;
@@ -108,7 +123,8 @@ function cartaAnnuncio(g) {
   const sc = rif && emq ? (emq - rif.valore) / rif.valore * 100 : null;
   const tel = (a.telefono || "").replace(/[^\d+]/g, "");
   const fr = freschezza(a);
-  return `<div class="annuncio${GRUPPI.chiusi.e.includes(statoDi(a)) || !eOnline(a) ? " chiuso" : ""}">
+  return `<div class="annuncio${!eOnline(a) ? " chiuso" : ""}${lavorato(a) ? " gestito-da" : ""}">
+    ${fasciaGestito(a)}
     <div class="apri" data-az="apriScheda" data-id="${esc(a.id)}">
     <div class="foto${a.foto ? "" : " senza"}">${foto}
       <div class="segno"><b>${esc(a.tipologia || (num(a.locali) ? num(a.locali) + " locali" : "immobile"))}</b><span>${esc(a.quartiere || a.municipio || "Milano")}</span></div>
@@ -296,13 +312,23 @@ Object.assign(AZIONI, {
     const nuovo = el.dataset.e;
     if (statoDi(a) === nuovo) return;
 
-    // «Scartato» e' definitivo: l'immobile esce dall'archivio e finisce fra gli esclusi, da
-    // dove non rientra nemmeno se il portale lo ripubblica domani con un altro indirizzo.
-    if (nuovo === "Scartato") {
+    // Due modi di finire, tutti e due definitivi: l'immobile esce dalla lista e finisce
+    // nell'archivio, da dove non rientra nemmeno se il portale lo ripubblica domani con un
+    // altro indirizzo. Cambia il perche', e il perche' resta scritto.
+    if (nuovo === "Scartato" || nuovo === "Non buono") {
       const dove = [a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "questo immobile";
-      if (!confirm(`Scartare ${dove}?\n\nEsce dalla lista e non torna piu': nemmeno se l'annuncio viene ripubblicato con un altro indirizzo o con il testo cambiato. Si puo' rimettere in lista dalla pagina Dati.`)) return;
-      escludiAnnuncio(a, "scartato a mano", S.operatore);
+      const chiuso = nuovo === "Non buono";
+      const domanda = chiuso
+        ? `${dove}: contattato, non porta a niente?\n\nEsce dalla lista e non ci torna piu', cosi' nessuno degli altri lo richiama. Se vuoi scrivere perche', usa «Aggiungi una nota» prima di chiudere.`
+        : `Scartare ${dove}?\n\nEsce dalla lista e non torna piu': nemmeno se l'annuncio viene ripubblicato con un altro indirizzo o con il testo cambiato.`;
+      if (!confirm(domanda + "\n\nSi puo' rimettere in lista dalla pagina Dati.")) return;
+      const perche = chiuso
+        ? `contattato da ${S.operatore} il ${dataIt(oggiISO())}: non buono${a.note ? " — " + a.note : ""}`
+        : "scartato a mano";
+      escludiAnnuncio(a, perche, S.operatore, chiuso ? "lavorato" : "scartato");
       S.annunci = S.annunci.filter(x => x.id !== a.id);
+      const t = attivitaDi(oggiISO());
+      if (chiuso) t.tentativi = num(t.tentativi) + 1;
       salva(); render();
       return;
     }
@@ -342,7 +368,13 @@ Object.assign(AZIONI, {
           note: d.note || ""
         });
         if (!eraDaLavorare || a.esito !== "Da lavorare") a.nuovo = false;
-        if (a.esito === "Scartato") { escludiAnnuncio(a, "scartato a mano", a.operatore); S.annunci = S.annunci.filter(x => x.id !== a.id); }
+        if (a.esito === "Scartato" || a.esito === "Non buono") {
+          const chiuso = a.esito === "Non buono";
+          escludiAnnuncio(a, chiuso
+            ? `contattato da ${a.operatore} il ${dataIt(a.ultimoContatto || oggiISO())}: non buono${a.note ? " — " + a.note : ""}`
+            : "scartato a mano", a.operatore, chiuso ? "lavorato" : "scartato");
+          S.annunci = S.annunci.filter(x => x.id !== a.id);
+        }
         salva(); chiudiFinestra(); render();
       });
   },

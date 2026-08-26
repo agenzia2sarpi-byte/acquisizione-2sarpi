@@ -92,7 +92,7 @@ function eEscluso(a) {
 /* Mette l'annuncio nell'archivio — o allarga le impronte di una voce gia' presente, che e'
    quello che succede quando lo stesso immobile ricompare con foto nuove: da domani si
    riconosce anche da quelle. */
-function escludiAnnuncio(a, motivo, chi) {
+function escludiAnnuncio(a, motivo, chi, tipo) {
   const nuove = improntaAnnuncio(a);
   if (!nuove.length) return false;
   const arch = archivioEsclusi();
@@ -114,6 +114,8 @@ function escludiAnnuncio(a, motivo, chi) {
     portale: a.portale || "", url: a.url || "",
     inserzionista: a.inserzionista || "", telefono: a.telefono || "",
     motivo: motivo || "escluso a mano", chi: chi || S.operatore || "",
+    tipo: tipo || "agenzia",       // agenzia · scartato · lavorato
+    esito: a.esito || "", nota: a.note || "", contattatoIl: a.ultimoContatto || "",
     data: oggiISO(), ricomparse: 0, impronte: nuove
   });
   scordaIndiceEsclusi(); salva();
@@ -174,9 +176,18 @@ function applicaEsclusioni() {
   const tenuti = [];
   (S.annunci || []).forEach(a => {
     if (eEscluso(a)) return;                       // gia' fuori: non rientra
-    const motivo = a.esito === "Scartato" ? "scartato a mano" : motivoAgenzia(a);
+    // Chi era gia' stato chiuso a mano esce adesso davvero dalla lista: prima «Scartato» e
+    // «Non buono» restavano li' a occupare posto, e uno degli altri due poteva richiamarli.
+    if (a.esito === "Scartato" || a.esito === "Non buono") {
+      const chiuso = a.esito === "Non buono";
+      if (escludiAnnuncio(a, chiuso
+        ? `contattato da ${a.operatore || "uno di noi"}${a.ultimoContatto ? " il " + dataIt(a.ultimoContatto) : ""}: non buono${a.note ? " — " + a.note : ""}`
+        : "scartato a mano", a.operatore || "", chiuso ? "lavorato" : "scartato")) nuoviEsclusi++;
+      return;
+    }
+    const motivo = motivoAgenzia(a);
     if (motivo) {
-      if (escludiAnnuncio(a, motivo, a.esito === "Scartato" ? (a.operatore || "") : "riconoscimento automatico")) nuoviEsclusi++;
+      if (escludiAnnuncio(a, motivo, "riconoscimento automatico", "agenzia")) nuoviEsclusi++;
       return;
     }
     tenuti.push(a);
