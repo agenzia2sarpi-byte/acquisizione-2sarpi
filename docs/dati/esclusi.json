@@ -23,7 +23,8 @@
     "foto:537941c6-ca14-459a-81b3-4881db436efb",
     "testo:vendesitrilocaledicirca95mqinsarpiviasignorelli1pianomilanocentrolostabileecostituitodaingressocucinaabitabilesalazonano",
     "parole:abitabile-agenzia-armadio-cabina-camere-cantina-centro-costituita-costituito-cucina-ingresso-lavanderia-locale-matrimoniali-milano-presente-separato-signorelli-stabile-trilocale-vendesi"
-   ]
+   ],
+   "tipo": "agenzia"
   },
   {
    "id": "esc-20260826095259-2",
@@ -47,7 +48,8 @@
     "foto:b10ee669-d11a-4a96-b4c0-65d4a63c9eee",
     "testo:viapierodellafrancesca8inunodeiquartieripiuvivaciecentralidimilanovicinoalparcosempioneconservizidiognigenereampiobiloca",
     "parole:12mesi-affaccio-appartamento-arredato-bilocale-camera-centrali-completamente-composto-contratti-corredato-cucina-disimpegno-divano-doppia-esposizione-francesca-genere-gerusalemme-ingresso-interno-libero-metropolitana-milano-pubblico"
-   ]
+   ],
+   "tipo": "agenzia"
   },
   {
    "id": "esc-20260826103553-6",
@@ -80,7 +82,8 @@
     "url:subito.it/appartamenti/bilocale-a-milano-milano-658143585.htm",
     "url:subito.it/appartamenti/bilocale-ristrutturato-milano-milano-658138964.htm"
    ],
-   "rivisto": "2026-08-26"
+   "rivisto": "2026-08-26",
+   "tipo": "agenzia"
   }
  ],
  "conteggio": 3,

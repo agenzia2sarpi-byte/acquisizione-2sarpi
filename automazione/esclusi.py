@@ -134,7 +134,7 @@ def escluso(a, indice_impronte):
     return ""
 
 
-def registra(archivio, a, motivo, chi="radar"):
+def registra(archivio, a, motivo, chi="radar", tipo="agenzia"):
     """Mette l'annuncio nell'archivio, o allarga le impronte di una voce gia' presente:
     l'annuncio ripubblicato con foto nuove insegna una foto nuova da riconoscere."""
     nuove = impronte(a)
@@ -157,6 +157,9 @@ def registra(archivio, a, motivo, chi="radar"):
         "telefono": a.get("telefono") or "",
         "motivo": motivo,
         "chi": chi,
+        # perche' e' fuori: il cruscotto lo mostra come etichetta, e «agenzia» non e' la
+        # stessa cosa di «l'ho chiamato e non portava a niente»
+        "tipo": tipo,
         "data": datetime.date.today().isoformat(),
         "ricomparse": 0,
         "impronte": nuove,
