@@ -59,7 +59,8 @@ function vistaRapporto() {
       <td class="num">${esc(x.giorni || "—")}</td></tr>`).join("")}</tbody></table>
     <p style="font-size:11px;color:#777;margin:14px 0 0">Fonte: ${esc(r.fonte || "—")}. Valori indicativi riferiti al periodo dichiarato: non costituiscono una valutazione dell'immobile ne' una proposta contrattuale.</p>
     <div class="firma">
-      <b>Agenzia 2 Sarpi</b> — Gaetano Romaniello · ${esc(S.telefono || "")}<br>
+      <b>Agenzia 2 Sarpi</b> — ${esc(persona(S.operatore).nome)} · ${esc(persona(S.operatore).telefono)}${persona(S.operatore).telefono2 ? " / " + esc(persona(S.operatore).telefono2) : ""}<br>
+      ${esc(persona(S.operatore).email)}<br>
       Valutazione scritta di un immobile in questa via: gratuita, consegnata a mano entro 48 ore, senza impegno.
     </div>
   </div>`;
@@ -67,11 +68,13 @@ function vistaRapporto() {
 
 /* ---------------- vista: SCRIPT ---------------- */
 function vistaScript() {
-  const c = S.scriptCampi || (S.scriptCampi = { X: "", P: "", Y: "", Z: "", N: "", C: "1200", R: "", TEL: S.telefono });
+  const c = S.scriptCampi || (S.scriptCampi = { X: "", P: "", Y: "", Z: "", N: "", C: "1200", R: "", TEL: "" });
+  // il numero non e' un campo da ricordarsi: e' quello di chi e' selezionato in alto
+  if (!c.TEL || Object.values(PERSONE).some(p => p.telefono === c.TEL)) c.TEL = persona(S.operatore).telefono;
   const sostituisci = t => t
     .replaceAll("[X]", c.X || "[via]").replaceAll("[P]", c.P || "[€/mq]").replaceAll("[Y]", c.Y || "[giorni]")
     .replaceAll("[Z]", c.Z || "[%]").replaceAll("[N]", c.N || "[nome]").replaceAll("[C]", c.C || "[canone]")
-    .replaceAll("[R]", c.R || "[risparmio]").replaceAll("[TEL]", c.TEL || S.telefono || "[telefono]");
+    .replaceAll("[R]", c.R || "[risparmio]").replaceAll("[TEL]", c.TEL || persona(S.operatore).telefono);
 
   return testa("Costa zero e vale tutto", "Script e modelli",
     `Preferisci sempre <b>il canale che il proprietario ha pubblicato</b>: e' piu' difendibile sul piano normativo e converte meglio — arrivi come qualcuno che ha letto, non come qualcuno che ha comprato una lista. Compila i campi qui sotto e i modelli si riempiono da soli.`) + `

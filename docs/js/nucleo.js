@@ -3,9 +3,45 @@
 
 const CHIAVE = "ag2sarpi.acquisizione.v1";
 
+/* ---------------- chi scrive ---------------- */
+/* Il nome scelto in alto non e' un'etichetta: e' il mittente. Da qui escono la firma, il
+   telefono e l'email di ogni messaggio, e non si mescolano mai — il numero di Ciro sotto il
+   nome di Francoise e' l'errore che fa perdere un mandato e basta una volta. */
+const PERSONE = {
+  "Gaetano": {
+    breve: "Gaetano", nome: "Gaetano Romaniello",
+    telefono: "338 38 66 596", email: "gaetano.romaniello80@gmail.com"
+  },
+  "Ciro": {
+    breve: "Ciro", nome: "Ciro Romaniello",
+    telefono: "340 194 0666", email: "agenzia2sarpi@gmail.com"
+  },
+  "Francoise": {
+    breve: "Francoise", nome: "Francoise Briend",
+    telefono: "342 013 7125", telefono2: "347 099 3663", email: "f.briend@ubhrealestate.it"
+  }
+};
+const NOMI_PERSONE = Object.keys(PERSONE);
+/* Non si cade mai su un mittente vuoto: se il nome selezionato non e' fra i tre, si torna al primo. */
+function persona(nome) {
+  return PERSONE[nome] || PERSONE[(S && S.operatore) || ""] || PERSONE[NOMI_PERSONE[0]];
+}
+/* La firma completa, com'e' in calce a ogni messaggio. Francoise ha due numeri e li vuole
+   tutti e due: chi la cerca la trova. */
+function firmaDi(nome) {
+  const p = persona(nome);
+  return [
+    p.nome,
+    "Agenzia 2 Sarpi",
+    p.telefono2 ? `Telefono: ${p.telefono} — in alternativa ${p.telefono2}` : `Telefono: ${p.telefono}`,
+    `Email: ${p.email}`
+  ].join("\n");
+}
+
 const VUOTO = {
   v: 2, piano: "500", operatore: "Gaetano",
-  operatori: ["Gaetano", "Ciro"],
+  operatori: ["Gaetano", "Ciro", "Francoise"],
+  esclusi: [],
   telefono: "340 000 0000",
   lead: [], mandati: [], rete: [], gestione: [], attivita: [], optout: [],
   annunci: [], amministratori: [], condomini: [],
@@ -21,7 +57,10 @@ function carica() {
       const s = Object.assign(JSON.parse(JSON.stringify(VUOTO)), g);
       s.operatori = (s.operatori || []).map(n => n === "Papa'" || n === "Papà" ? "Ciro" : n);
       if (s.operatore === "Papa'" || s.operatore === "Papà") s.operatore = "Ciro";
-      ["annunci", "amministratori", "condomini"].forEach(k => { if (!Array.isArray(s[k])) s[k] = []; });
+      // Francoise arriva dopo: si aggiunge a chi c'e' gia', senza toccare l'ordine ne' il resto
+      NOMI_PERSONE.forEach(n => { if (!s.operatori.includes(n)) s.operatori.push(n); });
+      if (!Array.isArray(s.esclusi)) s.esclusi = [];
+          ["annunci", "amministratori", "condomini", "esclusi"].forEach(k => { if (!Array.isArray(s[k])) s[k] = []; });
       if (!s.feed) s.feed = { ultimoId: null, ultimaLettura: null };
       return s;
     }
@@ -212,7 +251,12 @@ function guscio() {
   $("#selPiano").value = S.piano;
   $("#selOperatore").innerHTML = opz(S.operatori, S.operatore);
   $("#selPiano").addEventListener("change", e => { S.piano = e.target.value; salva(); if (typeof render === "function") render(); });
-  $("#selOperatore").addEventListener("change", e => { S.operatore = e.target.value; salva(); });
+  $("#selOperatore").addEventListener("change", e => {
+    S.operatore = e.target.value; salva();
+    // il messaggio e la firma si riscrivono per intero: mai un pezzo di una persona
+    // rimasto attaccato al nome di un'altra
+    if (typeof render === "function") render();
+  });
   $("#btIndietro").addEventListener("click", indietro);
   $("#btAggiorna").addEventListener("click", aggiornaAdesso);
   const att = document.querySelector("nav.tabs a.attivo");

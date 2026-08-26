@@ -28,7 +28,21 @@ function portaleDaUrl(u) {
 
 const TIPOLOGIE = ["Monolocale", "Bilocale", "Trilocale", "Quadrilocale", "5 locali o piu'", "Attico", "Loft", "Villa", "Altro"];
 const STATI_IMMOBILE = ["Nuovo / ristrutturato", "Buono", "Da ristrutturare", "Non indicato"];
-const ESITI = ["Da lavorare", "Contattato", "In sequenza", "Appuntamento", "Valutazione fatta", "Mandato", "Scartato", "Non contattare"];
+/* I quattro stati che Gaetano usa davvero al telefono stanno in cima; gli altri restano
+   perche' l'archivio ne e' pieno e cancellarli vorrebbe dire perdere lo storico. */
+const ESITI = ["Da lavorare", "Buono", "Non buono", "Da richiamare", "Scartato",
+  "Contattato", "In sequenza", "Appuntamento", "Valutazione fatta", "Mandato", "Non contattare"];
+/* Quattro tasti, uno per come finisce davvero una telefonata. */
+const PASSI = [
+  { e: "Buono", t: "buono", cl: "v", d: "vale la pena insistere" },
+  { e: "Non buono", t: "non buono", cl: "", d: "contattato, non porta a niente" },
+  { e: "Da richiamare", t: "da richiamare", cl: "a", d: "non ora: piu' avanti" },
+  { e: "Scartato", t: "scarta", cl: "r", d: "fuori per sempre" }
+];
+/* Quello che ha scritto Gaetano non lo riscrive nessun aggiornamento: ne' il radar, ne' un
+   file importato, ne' lo stesso annuncio ripubblicato domani. */
+const CAMPI_LAVORO = ["id", "esito", "note", "ultimoContatto", "canaleContatto",
+  "operatore", "dataRichiamo", "storicoEsiti", "nonFondere"];
 
 /* ---------------- normalizzazione ---------------- */
 const senzaAccenti = s => String(s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -186,16 +200,24 @@ function provvigioneAnnuncio(a) {
 /* ---------------- importazione ---------------- */
 /* Fonde per (portale + riferimento) o per URL; altrimenti aggiunge. Ritorna {nuovi, aggiornati}. */
 function importaAnnunci(lista, origine) {
-  let nuovi = 0, aggiornati = 0;
+  let nuovi = 0, aggiornati = 0, respinti = 0;
   lista.forEach(x => {
     const a = normalizzaAnnuncio(x, origine);
     if (!a.via && !a.url) return;
+    // Il filtro permanente, prima di ogni altra cosa: chi e' nell'archivio degli esclusi non
+    // rientra — nemmeno con un altro indirizzo web, nemmeno ripubblicato con tre parole
+    // cambiate — e chi si riconosce come agenzia adesso non entra affatto.
+    if (eEscluso(a)) { respinti++; return; }
+    const motivoFuori = motivoAgenzia(a);
+    if (motivoFuori) { escludiAnnuncio(a, motivoFuori, "riconoscimento automatico"); respinti++; return; }
     const esiste = S.annunci.find(y =>
       (a.url && y.url === a.url) ||
       (a.portale && a.riferimento && y.portale === a.portale && y.riferimento === a.riferimento));
     if (esiste) {
       const prezzoVecchio = num(esiste.prezzo);
-      Object.keys(a).forEach(k => { if (a[k] !== "" && a[k] !== undefined && a[k] !== null && k !== "id" && k !== "esito" && k !== "note") esiste[k] = a[k]; });
+      Object.keys(a).forEach(k => { if (a[k] !== "" && a[k] !== undefined && a[k] !== null && !CAMPI_LAVORO.includes(k)) esiste[k] = a[k]; });
+      // un immobile gia' lavorato non torna mai a presentarsi come una novita'
+      if (lavorato(esiste)) esiste.nuovo = false;
       if (prezzoVecchio && num(a.prezzo) && num(a.prezzo) < prezzoVecchio) {
         esiste.ribassi = num(esiste.ribassi) + 1;
         esiste.storicoPrezzi = (esiste.storicoPrezzi || []).concat([{ d: oggiISO(), p: prezzoVecchio }]);
@@ -205,8 +227,11 @@ function importaAnnunci(lista, origine) {
     } else { S.annunci.push(a); nuovi++; }
   });
   salva();
-  return { nuovi, aggiornati };
+  return { nuovi, aggiornati, respinti };
 }
+/* «Lavorato» vuol dire che qualcuno l'ha gia' guardato in faccia: uno stato diverso da «da
+   lavorare», o una telefonata segnata. */
+const lavorato = a => (a.esito && a.esito !== "Da lavorare") || !!a.ultimoContatto;
 function normalizzaAnnuncio(x, origine) {
   const url = x.url || x.link || "";
   const via = x.via || x.indirizzo || "";
@@ -238,6 +263,11 @@ function normalizzaAnnuncio(x, origine) {
     qualitaImmobile: x.qualitaImmobile ?? null, percheImmobile: x.percheImmobile || [],
     priorita: x.priorita ?? null, perchePriorita: x.perchePriorita || [],
     ribassi: num(x.ribassi), esito: x.esito || "Da lavorare", note: x.note || "",
+    // il lavoro sull'annuncio: chi l'ha sentito, quando, con che esito, e quando richiamare
+    ultimoContatto: x.ultimoContatto || "", canaleContatto: x.canaleContatto || "",
+    operatore: x.operatore || "", dataRichiamo: x.dataRichiamo || "",
+    storicoEsiti: x.storicoEsiti || [],
+    fotoSospetto: x.fotoSospetto || "",
     storicoPrezzi: x.storicoPrezzi || []
   };
 }
@@ -296,12 +326,15 @@ async function aggiornaDalFeed(silenzioso) {
     const d = await r.json();
     if (!d || !Array.isArray(d.annunci)) throw new Error("feed vuoto");
     if (d.id && d.id === S.feed.ultimoId) { if (!silenzioso) alert("Il radar non ha nulla di nuovo dall'ultimo aggiornamento."); return { nuovi: 0, aggiornati: 0 }; }
+    await aggiornaEsclusiDalFeed(true);
     const e = importaAnnunci(d.annunci, "radar");
     const s = segnaSpariti(d.spariti || [], d.verificati || []);
     e.spariti = s;
     S.feed = { ultimoId: d.id || null, ultimaLettura: new Date().toISOString(), generato: d.generato || null };
     salva();
-    if (!silenzioso) alert(`Radar aggiornato: ${e.nuovi} nuovi, ${e.aggiornati} aggiornati` + (e.spariti ? `, ${e.spariti} non piu' online.` : "."));
+    if (!silenzioso) alert(`Radar aggiornato: ${e.nuovi} nuovi, ${e.aggiornati} aggiornati`
+      + (e.spariti ? `, ${e.spariti} non piu' online` : "")
+      + (e.respinti ? `, ${e.respinti} respinti perche' esclusi o di agenzia.` : "."));
     return e;
   } catch (e) {
     if (!silenzioso) alert("Nessun aggiornamento disponibile dal radar.\n(" + e.message + ")");
@@ -340,7 +373,8 @@ async function aggiornaAmministratoriDalFeed(silenzioso) {
 /* ---------------- il messaggio di primo contatto ---------------- */
 /* Va bene sia per il modulo del portale sia per WhatsApp: da' informazione prima di chiedere,
    non usa la parola «esclusiva», non svaluta la scelta di vendere da solo, mette l'opt-out in chiaro. */
-function messaggioPortale(a, gruppo) {
+function messaggioPortale(a, gruppo, chi) {
+  const io = persona(chi);
   const rif = riferimentoEmq(a);
   const emq = num(a.mq) ? num(a.prezzo) / num(a.mq) : null;
   const sc = rif && emq ? ((emq - rif.valore) / rif.valore * 100) : null;
@@ -348,7 +382,7 @@ function messaggioPortale(a, gruppo) {
   const P = rif ? Math.round(rif.valore).toLocaleString("it-IT") : null;
   const gg = gruppo ? gruppo.giorniOnline : (giorniDa(a.pubblicato) ?? 0);
   if (a.tipo === "Locazione") {
-    return `Buongiorno, sono Gaetano dell'Agenzia 2 Sarpi.
+    return `Buongiorno, sono ${io.breve} dell'Agenzia 2 Sarpi.
 
 Non le scrivo per propormi: ho visto che affitta il suo immobile in ${via} da solo e le volevo segnalare due cose che forse le sono utili.
 
@@ -356,15 +390,21 @@ La prima: con un contratto a canone concordato 3+2 nel Comune di Milano si acced
 
 La seconda: la parte che fa perdere piu' tempo non e' trovare l'inquilino, e' filtrarlo. Se le fa comodo le mando per iscritto come lo verifichiamo noi, senza impegno.
 
-Il suo recapito l'ho preso dal suo annuncio: lo uso solo per questo contatto e, se mi dice di no, lo cancello e non la disturbo piu'.`;
+Il suo recapito l'ho preso dal suo annuncio: lo uso solo per questo contatto e, se mi dice di no, lo cancello e non la disturbo piu'.
+
+--
+${firmaDi(chi)}`;
   }
-  return `Buongiorno, sono Gaetano dell'Agenzia 2 Sarpi.
+  return `Buongiorno, sono ${io.breve} dell'Agenzia 2 Sarpi.
 
 Non le scrivo per propormi: ho notato il suo annuncio in ${via} e le volevo segnalare un dato.${P ? ` Nell'ultimo trimestre, in quell'isolato, le chiusure sono avvenute intorno a ${P} €/mq${sc !== null && Math.abs(sc) >= 3 ? `, e il suo posizionamento e' circa ${Math.abs(sc).toFixed(0)}% ${sc > 0 ? "sopra" : "sotto"}` : ""}.` : ""} Se le fa comodo le mando il dettaglio scritto delle tre comparabili della sua via.${gg > 45 ? `
 
 Le scrivo adesso perche' l'annuncio e' online da ${gg} giorni: e' il momento in cui, di solito, vale la pena rivedere insieme non tanto il prezzo quanto il modo in cui l'immobile viene filtrato.` : ""}
 
-Il suo recapito l'ho preso dal suo annuncio: lo uso solo per questo contatto e, se mi dice di no, lo cancello e non la disturbo piu'.`;
+Il suo recapito l'ho preso dal suo annuncio: lo uso solo per questo contatto e, se mi dice di no, lo cancello e non la disturbo piu'.
+
+--
+${firmaDi(chi)}`;
 }
 
 /* WhatsApp vuole il numero in formato internazionale, senza «+» e senza spazi. */
@@ -403,9 +443,10 @@ async function aggiornaScadutiDalFeed(silenzioso) {
 }
 
 /* Il messaggio per chi ha ritirato l'annuncio senza vendere. */
-function messaggioScaduto(x) {
+function messaggioScaduto(x, chi) {
+  const io = persona(chi);
   const via = (x.via || x.indirizzo || "").replace(/,?\s*\d+[a-zA-Z]?\s*$/, "") || "quella via";
-  return `Buongiorno, sono Gaetano dell'Agenzia 2 Sarpi.
+  return `Buongiorno, sono ${io.breve} dell'Agenzia 2 Sarpi.
 
 Ho notato che l'immobile in ${via} non e' piu' online. Se ha venduto, complimenti sinceri e la saluto qui.
 
@@ -413,7 +454,10 @@ Se invece l'ha ritirato, le lascio un dato: in quella via, nell'ultimo trimestre
 
 Nel suo caso l'annuncio ha visto ${num(x.ribassi)} ribassi in ${x.giorniOnline || "diversi"} giorni: e' il segnale tipico di un immobile presentato bene ma proposto al pubblico sbagliato.` : ""}
 
-Se le va, glielo guardo e le dico cosa cambierei. Venti minuti, senza impegno. Se preferisce non essere contattato me lo dica pure e non la disturbo oltre.`;
+Se le va, glielo guardo e le dico cosa cambierei. Venti minuti, senza impegno. Se preferisce non essere contattato me lo dica pure e non la disturbo oltre.
+
+--
+${firmaDi(chi)}`;
 }
 
 /* Le immagini di Subito senza regola di ritaglio rispondono 400: le sistemo all'avvio,
@@ -484,3 +528,9 @@ function applicaOptOut() {
   return n;
 }
 applicaOptOut();
+
+/* Il filtro permanente sull'archivio che c'e' gia'. Gira una volta a ogni apertura: le regole
+   sono arrivate dopo gli annunci, e la prima volta devono ripulire anche il pregresso —
+   compreso l'annuncio di via Luca Signorelli, che diceva «Presente Agenzia» in fondo alla
+   descrizione e nessuno se n'era accorto. */
+applicaEsclusioni();

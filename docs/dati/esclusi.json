@@ -1,0 +1,88 @@
+{
+ "generato": "2026-08-26T10:40:36",
+ "esclusi": [
+  {
+   "id": "esc-20260826095259-1",
+   "titolo": "Trilocale in zona Sarpi Milano",
+   "via": "Via Luca Signorelli 5",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/trilocale-in-zona-sarpi-milano-milano-657173402.htm",
+   "inserzionista": "Enrica Arrizza",
+   "telefono": "3492610219",
+   "motivo": "l'annuncio dichiara l'agenzia («Presente Agenzi»)",
+   "chi": "radar",
+   "data": "2026-08-26",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/trilocale-in-zona-sarpi-milano-milano-657173402.htm",
+    "rif:subito:657173402",
+    "tel:492610219",
+    "ind:luca signorelli|5|95|ven",
+    "foto:9064bc0d-15ff-4cc6-bb9a-b253de0fba96",
+    "foto:8d83bf79-5de2-4cca-8241-a896eeaf43df",
+    "foto:537941c6-ca14-459a-81b3-4881db436efb",
+    "testo:vendesitrilocaledicirca95mqinsarpiviasignorelli1pianomilanocentrolostabileecostituitodaingressocucinaabitabilesalazonano",
+    "parole:abitabile-agenzia-armadio-cabina-camere-cantina-centro-costituita-costituito-cucina-ingresso-lavanderia-locale-matrimoniali-milano-presente-separato-signorelli-stabile-trilocale-vendesi"
+   ]
+  },
+  {
+   "id": "esc-20260826095259-2",
+   "titolo": "Bilocale Arredato Sempione (M5)",
+   "via": "Via Piero della Francesca 8",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/bilocale-arredato-sempione-m5-milano-657655132.htm",
+   "inserzionista": "mb case",
+   "telefono": "3759847593",
+   "motivo": "chi pubblica si chiama «mb case»: e' il nome di un'attivita', non di una persona",
+   "chi": "radar",
+   "data": "2026-08-26",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/bilocale-arredato-sempione-m5-milano-657655132.htm",
+    "rif:subito:657655132",
+    "tel:759847593",
+    "ind:piero della francesca|8|55|loc",
+    "foto:25340ce3-2763-4a92-8e40-700d948bc702",
+    "foto:4f1b4ffd-8cf0-40b4-b560-71d94bfc0a11",
+    "foto:b10ee669-d11a-4a96-b4c0-65d4a63c9eee",
+    "testo:viapierodellafrancesca8inunodeiquartieripiuvivaciecentralidimilanovicinoalparcosempioneconservizidiognigenereampiobiloca",
+    "parole:12mesi-affaccio-appartamento-arredato-bilocale-camera-centrali-completamente-composto-contratti-corredato-cucina-disimpegno-divano-doppia-esposizione-francesca-genere-gerusalemme-ingresso-interno-libero-metropolitana-milano-pubblico"
+   ]
+  },
+  {
+   "id": "esc-20260826103553-6",
+   "titolo": "Bilocale ristrutturato - Milano",
+   "via": "Via Giulio Carcano 27",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/bilocale-ristrutturato-milano-milano-658138964.htm",
+   "inserzionista": "Vito",
+   "telefono": "3382235363",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "data": "2026-08-26",
+   "ricomparse": 1,
+   "impronte": [
+    "foto:2870da69-3520-44ec-9232-08673d419696",
+    "foto:708b882c-6d7c-4005-8602-75ceae5f2191",
+    "foto:84539bb3-9c3c-48eb-985c-3457eeb949ac",
+    "foto:caf94e98-6d72-4bee-aada-4038fb340a6a",
+    "foto:f13a1f22-680d-42d9-8423-be5d7d913844",
+    "foto:fbe1415d-42fc-49d1-a352-33588b0f6c69",
+    "ind:giulio carcano|27|50|loc",
+    "ind:vincenzo foppa|31|50|loc",
+    "parole:affitto-ammobiliato-appartamento-bilocale-camera-canone-centralissima-centralizzato-completamente-completo-composto-condominiali-cucina-direttamente-indipendente-ingresso-locazione-marciapiede-negozi-principali-propongo-pubblici-riscaldamento-ristrutturato-servito",
+    "parole:affitto-appartamento-autonomo-bilocale-camera-completo-composto-condominiali-contesto-cucina-dotato-matrimoniale-openspace-propongo-rialzato-riscaldamento-signorile-soggiorno-spaziosa",
+    "rif:subito:658138964",
+    "rif:subito:658143585",
+    "tel:382235363",
+    "testo:incontestosignorilepropongoinaffittounbilocaledi50mqcosicompostoopenspaceconcucinaesoggiornounacameramatrimonialespazios",
+    "testo:propongoinaffittobilocalecompletamenteristrutturatoesituatoinunazonacentralissimaservitodaiprincipalimezzipubbliciedaneg",
+    "url:subito.it/appartamenti/bilocale-a-milano-milano-658143585.htm",
+    "url:subito.it/appartamenti/bilocale-ristrutturato-milano-milano-658138964.htm"
+   ],
+   "rivisto": "2026-08-26"
+  }
+ ],
+ "conteggio": 3,
+ "id": "esclusi-202608261040"
+}

@@ -7,7 +7,8 @@ function gruppoDi(id) {
   return tutti.find(g => g.membri.some(m => m.id === id));
 }
 
-const messaggioPrimoContatto = (a, g) => messaggioPortale(a, g);
+/* Il messaggio e' sempre di chi e' selezionato in alto: cambiando persona si riscrive tutto. */
+const messaggioPrimoContatto = (a, g) => messaggioPortale(a, g, S.operatore);
 
 /* ---------------- perlustrazione dell'inserzionista ---------------- */
 /* Prima di spendere una telefonata: dall'altra parte c'e' un proprietario o un collega?
@@ -78,13 +79,13 @@ function render() {
     <div class="avviso" style="margin:12px 0 0"><b>Prima di telefonare</b>Il Registro Pubblico delle Opposizioni si applica anche ai numeri mobili. Pubblicare un recapito per ricevere offerte di acquisto non equivale a un consenso per proposte commerciali di servizi: primo contatto sul canale che il proprietario ha pubblicato, telefono solo dopo una risposta o previa verifica nel Registro.</div>
   </div>
 
-  <div class="scheda"><h3>Il messaggio, gia' scritto <span class="etichetta">giorno 0 — via portale</span></h3>
+  <div class="scheda"><h3>Il messaggio, gia' scritto <span class="etichetta">a nome di ${esc(persona(S.operatore).nome)}</span></h3>
     <div class="copiabile" id="msg">${esc(messaggioPrimoContatto(a, g))}</div>
     <div class="bottoniera nostampa">
       <button class="azione" data-az="copia" data-t="msg">Copia il messaggio</button>
       <button class="azione vuota" data-az="portaInTrattativa">Porta in trattativa e avvia la sequenza</button>
     </div>
-    <p style="font-size:12.5px;color:var(--grigio);margin:10px 0 0">Da' informazione prima di chiedere, non usa la parola «esclusiva», non svaluta la scelta di vendere da solo e mette l'opt-out in chiaro. Il rifiuto arriva subito e pulito — il che e' un bene: libera tempo per i si'.</p>
+    <p style="font-size:12.5px;color:var(--grigio);margin:10px 0 0">Firma, telefono ed email sono quelli di <b>${esc(persona(S.operatore).nome)}</b>: cambiando persona in alto, il testo si riscrive per intero. Da' informazione prima di chiedere, non usa la parola «esclusiva», non svaluta la scelta di vendere da solo e mette l'opt-out in chiaro. Il rifiuto arriva subito e pulito — il che e' un bene: libera tempo per i si'.</p>
   </div>
 
   ${bloccoInserzionista(a)}
@@ -144,26 +145,85 @@ function render() {
     <div style="font-family:var(--serif);font-size:14.5px;white-space:pre-wrap;max-height:260px;overflow:auto">${esc(a.descrizione)}</div></div>` : ""}
 
   <div class="scheda"><h3>Il tuo lavoro su questo immobile</h3>
+    <div class="passi" style="border-top:0;padding-top:0;margin:0 0 12px">
+      ${PASSI.map(x => `<button data-az="passo" data-e="${esc(x.e)}" title="${esc(x.d)}"
+        class="${(a.esito || "Da lavorare") === x.e ? "att " + x.cl : ""}">${esc(x.t)}</button>`).join("")}
+    </div>
+    ${a.fotoSospetto ? `<div class="watermark" style="margin:0 0 12px">
+      <span>sulle fotografie si legge <b>«${esc(a.fotoSospetto)}»</b>: se e' un marchio, dall'altra parte non c'e' un privato</span>
+      <button data-az="escludiAgenzia" data-m="watermark «${esc(a.fotoSospetto)}» sulle fotografie">E' un'agenzia, togli</button>
+    </div>` : ""}
     <div class="griglia g3">
       ${campo("Esito", `<select id="esito">${opz(ESITI, a.esito || "Da lavorare")}</select>`)}
+      ${campo("Chi ha gestito il contatto", `<select id="chi">${opz(S.operatori, a.operatore || S.operatore)}</select>`)}
+      ${campo("Ultima telefonata o mail", `<input type="date" id="ultimo" value="${esc(a.ultimoContatto || "")}">`)}
+      ${campo("Come l'hai contattato", `<select id="canale">${opz(["", "telefono", "WhatsApp", "email", "modulo del portale", "lettera"], a.canaleContatto)}</select>`)}
+      ${campo("Data del richiamo", `<input type="date" id="richiamo" value="${esc(a.dataRichiamo || "")}">`)}
       ${campo("Qualita' delle foto", `<select id="qfoto">${opz(["", "buone", "medie", "scarse"], a.qualitaFoto)}</select>`)}
       ${campo("Cura del testo", `<select id="qtesto">${opz(["", "curato", "medio", "scarno"], a.qualitaTesto)}</select>`)}
     </div>
-    ${campo("Note", `<textarea id="note" style="min-height:70px">${esc(a.note || "")}</textarea>`)}
+    ${campo("Note", `<textarea id="note" style="min-height:70px" placeholder="Cosa ti ha detto, cosa gli hai promesso, da dove riprendere…">${esc(a.note || "")}</textarea>`)}
     <div class="bottoniera">
       <button class="azione" data-az="salvaLavoro">Salva</button>
       <button class="azione vuota" data-az="modifica">Modifica tutti i dati</button>
       <button class="azione grigia" data-az="elimina">Elimina</button>
     </div>
+    ${(a.storicoEsiti || []).length ? `<div style="margin:14px 0 0;padding:10px 0 0;border-top:1px solid var(--linea)">
+      <div style="font-size:12px;color:var(--grigio);margin:0 0 4px">Cosa e' successo finora</div>
+      ${a.storicoEsiti.slice().reverse().map(x => `<div class="riga-storico"><span>${dataIt(x.data)}</span><b>${esc(x.esito)}</b><span style="margin-left:auto">${esc(x.chi || "")}</span></div>`).join("")}
+    </div>` : ""}
   </div>`;
 }
 
 Object.assign(AZIONI, {
   salvaLavoro: () => {
     const a = S.annunci.find(x => x.id === ID);
+    const prima = a.esito || "Da lavorare";
     a.esito = $("#esito").value; a.qualitaFoto = $("#qfoto").value;
     a.qualitaTesto = $("#qtesto").value; a.note = $("#note").value;
+    a.operatore = $("#chi").value; a.ultimoContatto = $("#ultimo").value;
+    a.canaleContatto = $("#canale").value; a.dataRichiamo = $("#richiamo").value;
+    if (a.esito !== "Da lavorare") a.nuovo = false;
+    if (a.esito !== prima) a.storicoEsiti = (a.storicoEsiti || []).concat([{ data: oggiISO(), esito: a.esito, chi: a.operatore }]);
+    if (a.esito === "Scartato") {
+      escludiAnnuncio(a, "scartato a mano", a.operatore);
+      S.annunci = S.annunci.filter(x => x.id !== ID);
+      salva();
+      alert("Scartato: esce dalla lista e non rientra piu', nemmeno se l'annuncio viene ripubblicato.");
+      location.href = "radar.html";
+      return;
+    }
     salva(); render();
+  },
+
+  /* Gli stessi quattro tasti della vetrina, perche' la scheda si apre spesso col telefono
+     gia' all'orecchio e non si ha voglia di scorrere fino ai menu. */
+  passo: el => {
+    const a = S.annunci.find(x => x.id === ID); if (!a) return;
+    const nuovo = el.dataset.e;
+    if ((a.esito || "Da lavorare") === nuovo) return;
+    if (nuovo === "Scartato") {
+      const dove = [a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "questo immobile";
+      if (!confirm(`Scartare ${dove}?\n\nEsce dalla lista e non torna piu': nemmeno se l'annuncio viene ripubblicato con un altro indirizzo o con il testo cambiato. Si puo' rimettere in lista dalla pagina Dati.`)) return;
+      escludiAnnuncio(a, "scartato a mano", S.operatore);
+      S.annunci = S.annunci.filter(x => x.id !== ID);
+      salva(); location.href = "radar.html";
+      return;
+    }
+    a.esito = nuovo; a.ultimoContatto = oggiISO(); a.operatore = S.operatore; a.nuovo = false;
+    a.storicoEsiti = (a.storicoEsiti || []).concat([{ data: oggiISO(), esito: nuovo, chi: S.operatore }]);
+    if (["Buono", "Non buono", "Da richiamare", "Contattato"].includes(nuovo)) { const t = attivitaDi(oggiISO()); t.tentativi = num(t.tentativi) + 1; }
+    if (["Buono", "Appuntamento"].includes(nuovo)) { const t = attivitaDi(oggiISO()); t.contatti = num(t.contatti) + 1; }
+    salva(); render();
+  },
+
+  escludiAgenzia: el => {
+    const a = S.annunci.find(x => x.id === ID); if (!a) return;
+    const dove = [a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "questo immobile";
+    if (!confirm(`Togliere ${dove} perche' e' di un'agenzia?\n\nMotivo registrato: ${el.dataset.m}\nNon rientrera' piu' in nessun aggiornamento.`)) return;
+    escludiAnnuncio(a, el.dataset.m || "riconosciuto come agenzia", S.operatore);
+    S.annunci = S.annunci.filter(x => x.id !== ID);
+    salva(); location.href = "radar.html";
   },
   modifica: () => {
     const a = S.annunci.find(x => x.id === ID);

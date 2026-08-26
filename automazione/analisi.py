@@ -99,6 +99,70 @@ DICHIARA_PRIVATO = re.compile(r"\b(sono\s+il\s+propriet|siamo\s+i\s+propriet|ven
                               r"senza\s+provvigion|no\s+intermediari)\b", re.I)
 
 SOGLIA_SOSPETTO, SOGLIA_AGENZIA = 25, 60
+# La soglia oltre la quale l'immobile esce e basta. Prima era 60 — sotto, l'annuncio restava
+# in lista col cartellino «da verificare», perche' al telefono si capisce in dieci secondi.
+# Non va bene: quei dieci secondi sono di Gaetano, e la lista deve essere di privati. Dal
+# 26 agosto 2026 esce chiunque suoni anche solo un campanello: il costo di perdere un privato
+# incerto e' molto piu' basso del costo di una telefonata a un concorrente.
+SOGLIA_FUORI = SOGLIA_SOSPETTO
+
+# ---------------------------------------------------------------- agenzia dichiarata: si scarta
+# Le spie qui sopra pesano e si sommano. Queste no: qui l'annuncio *dice* che dietro c'e'
+# un'agenzia, e allora non e' piu' un giudizio a punti — e' un fatto, e l'immobile esce.
+# Il caso che ha insegnato la regola: «Presente Agenzia» in fondo alla descrizione di via
+# Luca Signorelli, con il watermark sulle foto, e zero punti di sospetto perche' nessuna
+# delle spie a punti guarda la parola «agenzia» da sola.
+AGENZIA_DICHIARATA = re.compile(
+    # Che l'agenzia ci sia, lo dice l'annuncio stesso
+    r"present[ei]\s+agenzi|"                        # «Presente Agenzia»
+    r"presenza\s+(di\s+)?agenzi|"
+    r"\bcon\s+agenzi|\btramite\s+agenzi|\bvia\s+agenzi|"
+    r"gestit[oa]\s+(da|dall'?)\s*agenzi|"
+    r"seguit[oa]\s+(da|dall'?)\s*agenzi|"
+    r"incaric[oa]\s+(ad?|all'?)\s*agenzi|"
+    r"annuncio\s+(pubblicato|gestito)\s+da\s+agenzi|"
+    r"a\s+cura\s+(del|della|dell'?)\s*(nostr[ao]\s+)?(agenzi|studio\s+immobiliar)|"
+    r"agenzia\s+immobiliar|immobiliare\s+s\.?r\.?l|"
+    r"\bagenzia\s+di\s+riferimento|\bnostra\s+agenzi|"
+    # Chi fa il mestiere, comunque si chiami
+    r"\bagente\s+immobiliar|\bconsulente\s+immobiliar|"
+    r"\bintermediari[oa]\b|\bintermediazion|\bprocacciator|\bmediator[ei]\b|"
+    r"mediazione\s+(immobiliar|creditizi)|"
+    # Il modo di parlare di un ufficio, non di chi vende casa sua
+    r"la\s+nostra\s+agenzia|il\s+nostro\s+ufficio|i\s+nostri\s+uffici|nostro\s+portafoglio|"
+    r"\bns\.?\s*rif\b|rif\.?\s*(interno|agenzia|ag\.)|codice\s+immobile|"
+    r"in\s+esclusiva|mandato\s+in\s+esclusiva|incarico\s+in\s+esclusiva|"
+    r"provvigion[ei]\s+(di\s+)?agenzi|spese\s+di\s+agenzi|commission[ei]\s+(di\s+)?agenzi|"
+    r"visite?\s+(solo\s+)?su\s+appuntamento|appuntamenti\s+in\s+sede|"
+    # Una forma societaria o una partita IVA in fondo a un annuncio di privato non esiste
+    r"\bp\.?\s*iva\b|partita\s+iva|\bs\.?r\.?l\.?s?\b|\bs\.?a\.?s\.?\b|\bs\.?n\.?c\.?\b|"
+    # Le insegne che si incontrano piu' spesso a Milano
+    r"\btecnocasa\b|\bre\s*/?\s*max\b|\bremax\b|\bgabetti\b|\bgrimaldi\b|\bfrimm\b|"
+    r"professionecasa|engel\s*&?\s*volkers|century\s*21|\btoscano\b|\btempocasa\b|"
+    r"\bpirelli\s*&|\bcoldwell\b|\bsotheby|\bimmobiliare\.it\s+agenzi",
+    re.I)
+
+
+def agenzia_dichiarata(a):
+    """L'annuncio dichiara — nel titolo, nella descrizione o nel nome di chi pubblica — che
+    dietro c'e' un'agenzia. Ritorna il motivo, o stringa vuota. Chi scrive «no agenzie» sta
+    dicendo il contrario e non va confuso: quel controllo viene prima di tutti gli altri."""
+    testo = _testo(a)
+    nome = (a.get("inserzionista") or "").strip()
+    if DICHIARA_PRIVATO.search(testo):
+        return ""
+    m = AGENZIA_DICHIARATA.search(testo)
+    if m:
+        frase = re.sub(r"\s+", " ", m.group(0)).strip()
+        return f"l'annuncio dichiara l'agenzia («{frase}»)"
+    if nome and NOME_SOCIETA.search(nome):
+        return f"chi pubblica si chiama «{nome}»: e' il nome di un'attivita', non di una persona"
+    if a.get("privato") is False:
+        return "il portale lo classifica come annuncio di agenzia"
+    email = a.get("email") or ""
+    if email and not EMAIL_LIBERA.search(email) and re.search(r"immobiliar|realestate|real-estate|casa|home|dimore|properties", email, re.I):
+        return f"email su dominio da agenzia ({email})"
+    return ""
 
 # ---------------------------------------------------------------- qualita' dell'immobile
 BALCONE = re.compile(r"\bbalcon|terrazz|verand|loggia\b", re.I)
@@ -191,6 +255,11 @@ def vetting(a, per_telefono=None, per_nome=None):
     numero su piu' immobili non e' un proprietario, e questo e' il segnale piu' pesante di tutti.
     """
     testo = _testo(a)
+    # Prima di ogni conteggio: se l'annuncio dichiara l'agenzia, non c'e' niente da pesare.
+    dichiarata = agenzia_dichiarata(a)
+    if dichiarata:
+        return 100, "probabile agenzia", [dichiarata]
+
     punti, motivi = 0, []
 
     tel = _tel(a)
@@ -234,9 +303,7 @@ def vetting(a, per_telefono=None, per_nome=None):
         punti -= 5
 
     punti = max(0, min(100, punti))
-    verdetto = ("probabile agenzia" if punti >= SOGLIA_AGENZIA
-                else "da verificare" if punti >= SOGLIA_SOSPETTO
-                else "privato")
+    verdetto = ("probabile agenzia" if punti >= SOGLIA_FUORI else "privato")
     return punti, verdetto, motivi[:6]
 
 

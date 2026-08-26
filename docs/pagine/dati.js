@@ -29,11 +29,41 @@ window.open('${SITO}radar.html#a='+encodeURIComponent(b),'_blank');
 
 function render() {
   $("#vista").innerHTML = testa("Nessun account, nessuna password", "Dati, radar e installazione",
-    `Tutto vive dentro questo dispositivo. Per lavorare in due — tu e Ciro, su quattro dispositivi — <b>esporta un file dal dispositivo che ha lavorato e importalo sull'altro scegliendo «unisci»</b>: le schede si fondono, nessuno sovrascrive il lavoro dell'altro. Il file si tiene nella cartella iCloud condivisa.`) + `
+    `Tutto vive dentro questo dispositivo. Per lavorare in tre — tu, Ciro e Francoise — <b>esporta un file dal dispositivo che ha lavorato e importalo sull'altro scegliendo «unisci»</b>: le schede si fondono, nessuno sovrascrive il lavoro dell'altro. Il file si tiene nella cartella iCloud condivisa.`) + `
+
+  <div class="scheda"><h3>Chi scrive <span class="etichetta">mittente, firma e recapiti</span></h3>
+    <p style="font-family:var(--serif);font-size:14.5px">Il nome scelto in alto a destra non e' un'etichetta: e' <b>il mittente</b>. Da li' escono la firma, il telefono e l'email di ogni messaggio, e non si mescolano mai. Cambiando persona, il testo si riscrive per intero — non resta attaccato il numero di nessun altro.</p>
+    <div class="griglia g3">
+      ${NOMI_PERSONE.map(n => { const p = PERSONE[n]; const att = S.operatore === n; return `
+        <div class="dato${att ? " verde" : ""}" style="text-align:left">
+          <div class="titolo">${esc(n)}${att ? " · selezionata/o" : ""}</div>
+          <div style="font-family:var(--serif);font-size:14px;line-height:1.6;margin:4px 0 0">
+            <b>${esc(p.nome)}</b><br>
+            ${esc(p.telefono)}${p.telefono2 ? `<br><span style="color:var(--grigio)">in alternativa ${esc(p.telefono2)}</span>` : ""}<br>
+            <span style="overflow-wrap:anywhere">${esc(p.email)}</span>
+          </div>
+          ${att ? "" : `<button class="azione vuota" style="margin:8px 0 0" data-az="scegliPersona" data-n="${esc(n)}">Scrivi a nome di ${esc(p.breve)}</button>`}
+        </div>`; }).join("")}
+    </div>
+    <div class="copiabile" id="anteprimaFirma" style="margin:12px 0 0">${esc(firmaDi(S.operatore))}</div>
+    <div class="bottoniera nostampa"><button class="azione vuota" data-az="copia" data-t="anteprimaFirma">Copia la firma</button></div>
+  </div>
+
+  <div class="scheda"><h3>Annunci esclusi <span class="etichetta">${(S.esclusi || []).length} in archivio</span></h3>
+    <p style="font-family:var(--serif);font-size:14.5px">Chi finisce qui non torna piu'. Non e' un filtro di visualizzazione: l'immobile esce dall'archivio, e a ogni aggiornamento viene riconosciuto e respinto <b>anche se il portale lo ripubblica con un altro indirizzo, un altro numero o il testo cambiato</b> — il confronto e' su indirizzo, metratura, recapito, fotografie e testo, non sul collegamento. Se un'esclusione era sbagliata, si rimette in lista da qui: alla prossima raccolta l'immobile rientra.</p>
+    ${(S.esclusi || []).length ? `<div class="tabellone"><table>
+      <thead><tr><th>Immobile</th><th>Perche'</th><th>Quando</th><th></th></tr></thead>
+      <tbody>${S.esclusi.slice().reverse().map(v => `<tr>
+        <td><b>${esc(v.via || v.titolo || "—")}</b>${v.inserzionista ? `<br><small>${esc(v.inserzionista)}</small>` : ""}${v.url ? `<br><small><a href="${esc(v.url)}" target="_blank" rel="noopener">annuncio</a></small>` : ""}</td>
+        <td style="font-size:13px">${esc(v.motivo || "—")}${v.ricomparse ? `<br><small style="color:var(--ambra)">ha provato a rientrare ${v.ricomparse} volte</small>` : ""}</td>
+        <td><small>${dataIt(v.data)}${v.chi ? "<br>" + esc(v.chi) : ""}</small></td>
+        <td><button class="azione grigia" data-az="riammetti" data-id="${esc(v.id)}">Rimetti in lista</button></td>
+      </tr>`).join("")}</tbody></table></div>`
+      : `<div class="vuoto">Nessun annuncio escluso. Si escludono col tasto «scarta» sulla scheda, oppure li riconosce da solo il radar.</div>`}
+  </div>
 
   <div class="scheda"><h3>Il tuo profilo</h3><div class="griglia g3">
     ${campo("Chi sta lavorando", `<select data-d="operatore">${opz(S.operatori, S.operatore)}</select>`)}
-    ${campo("Telefono in calce ai materiali", `<input data-d="telefono" value="${esc(S.telefono)}">`)}
     ${campo("Nomi degli operatori (separati da virgola)", `<input data-d="operatoriTxt" value="${esc(S.operatori.join(", "))}">`)}
   </div></div>
 
@@ -136,6 +166,16 @@ document.addEventListener("input", ev => {
 });
 
 Object.assign(AZIONI, {
+  scegliPersona: el => {
+    S.operatore = el.dataset.n; salva();
+    const sel = $("#selOperatore"); if (sel) sel.value = S.operatore;
+    render();
+  },
+  riammetti: el => {
+    const v = (S.esclusi || []).find(x => x.id === el.dataset.id); if (!v) return;
+    if (!confirm(`Rimettere in lista ${v.via || v.titolo || "questo immobile"}?\n\nAlla prossima raccolta puo' rientrare fra gli annunci — sempre che il radar non lo riconosca di nuovo come agenzia.`)) return;
+    riammettiEscluso(el.dataset.id); render();
+  },
   salvaToken: () => { salvaToken($("#tokApify").value); $("#esitoToken").textContent = "chiave salvata su questo dispositivo"; },
   provaToken: async () => {
     salvaToken($("#tokApify").value);

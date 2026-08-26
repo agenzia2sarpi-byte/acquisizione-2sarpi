@@ -32,10 +32,11 @@ function rigaInserzionista(a) {
 
 /* Tre stati che contano davvero, piu' il dettaglio fine nel menu «Esito». */
 const GRUPPI = {
-  dafare:   { t: "Da fare",    e: ["Da lavorare"] },
-  incorso:  { t: "In corso",   e: ["Contattato", "In sequenza", "Appuntamento", "Valutazione fatta"] },
-  chiusi:   { t: "Chiusi",     e: ["Mandato", "Scartato", "Non contattare"] },
-  tutti:    { t: "Tutti",      e: null }
+  dafare:    { t: "Da fare",       e: ["Da lavorare"] },
+  buoni:     { t: "Buoni",         e: ["Buono", "Appuntamento", "Valutazione fatta", "In sequenza", "Contattato"] },
+  richiamare:{ t: "Da richiamare", e: ["Da richiamare"] },
+  chiusi:    { t: "Chiusi",        e: ["Non buono", "Mandato", "Non contattare"] },
+  tutti:     { t: "Tutti",         e: null }
 };
 const statoDi = a => a.esito || "Da lavorare";
 const gruppoDiEsito = e => Object.keys(GRUPPI).find(k => GRUPPI[k].e && GRUPPI[k].e.includes(e)) || "dafare";
@@ -70,6 +71,31 @@ function gruppiOrdinati() {
     portali: (a, b) => b.portali.length - a.portali.length
   }[F.ordine];
   return g.sort(ord);
+}
+
+/* Quello che resta di una telefonata: chi ha chiamato, quando, cosa si e' detto, quando
+   richiamare. Senza questo la settimana dopo si ricomincia da capo sullo stesso numero. */
+function rigaLavoro(a) {
+  if (!a.ultimoContatto && !a.note && !a.dataRichiamo && statoDi(a) === "Da lavorare")
+    return `<div class="lavoro"><button data-az="nota" data-id="${esc(a.id)}">Aggiungi una nota</button></div>`;
+  const giorniAlRichiamo = a.dataRichiamo ? giorniDa(a.dataRichiamo) : null;
+  return `<div class="lavoro">
+    ${a.ultimoContatto ? `<span><b>${esc(statoDi(a))}</b> il ${dataIt(a.ultimoContatto)}${a.operatore ? " · " + esc(a.operatore) : ""}${a.canaleContatto ? " · " + esc(a.canaleContatto) : ""}</span>` : `<span>${esc(statoDi(a))}</span>`}
+    ${a.dataRichiamo ? `<span class="richiamo${giorniAlRichiamo !== null && giorniAlRichiamo >= 0 ? " scaduto" : ""}">richiamare il ${dataIt(a.dataRichiamo)}${giorniAlRichiamo !== null && giorniAlRichiamo > 0 ? ` — era ${giorniAlRichiamo} giorni fa` : ""}</span>` : ""}
+    <button data-az="nota" data-id="${esc(a.id)}">${a.note ? "Modifica la nota" : "Aggiungi una nota"}</button>
+    ${a.note ? `<div class="nota">${esc(a.note)}</div>` : ""}
+  </div>`;
+}
+
+/* Il dubbio letto sulle fotografie. Una scritta sola su uno scatto solo non basta per buttare
+   via un immobile — puo' essere l'insegna di un negozio dalla finestra — ma va vista, e da qui
+   la si conferma in un colpo. */
+function rigaWatermark(a) {
+  if (!a.fotoSospetto) return "";
+  return `<div class="watermark">
+    <span>sulle foto si legge <b>«${esc(a.fotoSospetto)}»</b>: se e' un marchio, non e' un privato</span>
+    <button data-az="escludiAgenzia" data-id="${esc(a.id)}" data-m="watermark «${esc(a.fotoSospetto)}» sulle fotografie">E' un'agenzia, togli</button>
+  </div>`;
 }
 
 function cartaAnnuncio(g) {
@@ -119,13 +145,12 @@ function cartaAnnuncio(g) {
     </div>
     <div class="corpo" style="padding-top:0">
       <div style="font-size:11px;color:${fr.cl === "verde" ? "var(--verde)" : fr.cl === "ambra" ? "var(--ambra)" : "var(--grigio)"}">${eOnline(a) ? esc(fr.t) : "sparito dal portale il " + dataIt(a.sparito)}</div>
-      ${a.ultimoContatto ? `<div style="font-size:11.5px;color:var(--grigio)">ultimo passo: <b>${esc(statoDi(a))}</b> il ${dataIt(a.ultimoContatto)}${a.operatore ? " · " + esc(a.operatore) : ""}</div>` : ""}
+      ${rigaWatermark(a)}
       <div class="passi">
-        <button data-az="passo" data-id="${a.id}" data-e="Da lavorare" class="${statoDi(a) === "Da lavorare" ? "att" : ""}">da fare</button>
-        <button data-az="passo" data-id="${a.id}" data-e="Contattato" class="${statoDi(a) === "Contattato" ? "att v" : ""}">contattato</button>
-        <button data-az="passo" data-id="${a.id}" data-e="Appuntamento" class="${statoDi(a) === "Appuntamento" ? "att v" : ""}">appuntam.</button>
-        <button data-az="passo" data-id="${a.id}" data-e="Scartato" class="${statoDi(a) === "Scartato" ? "att r" : ""}">scarta</button>
+        ${PASSI.map(x => `<button data-az="passo" data-id="${esc(a.id)}" data-e="${esc(x.e)}" title="${esc(x.d)}"
+          class="${statoDi(a) === x.e ? "att " + x.cl : ""}">${esc(x.t)}</button>`).join("")}
       </div>
+      ${rigaLavoro(a)}
     </div>
   </div>`;
 }
@@ -263,18 +288,72 @@ Object.assign(AZIONI, {
   apriScheda: el => { location.href = "annuncio.html?id=" + encodeURIComponent(el.dataset.id); },
   copiaMsg: el => {
     const a = S.annunci.find(x => x.id === el.dataset.id); if (!a) return;
-    copiaTesto(messaggioPortale(a), "Messaggio copiato. Ora apri l'annuncio e incollalo nel modulo del portale.");
+    copiaTesto(messaggioPortale(a, null, S.operatore), "Messaggio copiato. Ora apri l'annuncio e incollalo nel modulo del portale.");
   },
   gruppo: el => { F.gruppo = el.dataset.g; F.esito = ""; render(); window.scrollTo({ top: 0 }); },
   passo: el => {
     const a = S.annunci.find(x => x.id === el.dataset.id); if (!a) return;
     const nuovo = el.dataset.e;
     if (statoDi(a) === nuovo) return;
+
+    // «Scartato» e' definitivo: l'immobile esce dall'archivio e finisce fra gli esclusi, da
+    // dove non rientra nemmeno se il portale lo ripubblica domani con un altro indirizzo.
+    if (nuovo === "Scartato") {
+      const dove = [a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "questo immobile";
+      if (!confirm(`Scartare ${dove}?\n\nEsce dalla lista e non torna piu': nemmeno se l'annuncio viene ripubblicato con un altro indirizzo o con il testo cambiato. Si puo' rimettere in lista dalla pagina Dati.`)) return;
+      escludiAnnuncio(a, "scartato a mano", S.operatore);
+      S.annunci = S.annunci.filter(x => x.id !== a.id);
+      salva(); render();
+      return;
+    }
+
     a.esito = nuovo; a.ultimoContatto = oggiISO(); a.operatore = S.operatore;
+    a.nuovo = false;                       // lavorato: non e' piu' una novita'
     a.storicoEsiti = (a.storicoEsiti || []).concat([{ data: oggiISO(), esito: nuovo, chi: S.operatore }]);
     // un contatto vero e' un tentativo: entra nei numeri della giornata senza che tu debba ricordartene
-    if (nuovo === "Contattato") { const t = attivitaDi(oggiISO()); t.tentativi = num(t.tentativi) + 1; }
-    if (nuovo === "Appuntamento") { const t = attivitaDi(oggiISO()); t.contatti = num(t.contatti) + 1; }
+    if (["Buono", "Non buono", "Da richiamare", "Contattato"].includes(nuovo)) { const t = attivitaDi(oggiISO()); t.tentativi = num(t.tentativi) + 1; }
+    if (["Buono", "Appuntamento"].includes(nuovo)) { const t = attivitaDi(oggiISO()); t.contatti = num(t.contatti) + 1; }
+    // «da richiamare» senza una data e' un buon proposito: la data si chiede subito
+    if (nuovo === "Da richiamare") { salva(); AZIONI.nota(el); return; }
+    salva(); render();
+  },
+
+  /* La nota, il canale e la data del richiamo: tutto quello che serve per riprendere il filo
+     fra due settimane senza rileggersi niente. */
+  nota: el => {
+    const a = S.annunci.find(x => x.id === el.dataset.id); if (!a) return;
+    const dove = [a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "Immobile";
+    apriFinestra(dove, `
+      <div class="griglia g2">
+        ${campo("Esito", `<select data-k="esito">${opz(ESITI, statoDi(a))}</select>`)}
+        ${campo("Chi ha gestito il contatto", `<select data-k="operatore">${opz(S.operatori, a.operatore || S.operatore)}</select>`)}
+        ${campo("Data dell'ultima telefonata o mail", inp("ultimoContatto", a.ultimoContatto || oggiISO(), "date"))}
+        ${campo("Come l'hai contattato", `<select data-k="canaleContatto">${opz(["", "telefono", "WhatsApp", "email", "modulo del portale", "lettera"], a.canaleContatto)}</select>`)}
+        ${campo("Data del richiamo", inp("dataRichiamo", a.dataRichiamo, "date"))}
+      </div>
+      ${campo("Nota", `<textarea data-k="note" style="min-height:110px" placeholder="Cosa ti ha detto, cosa gli hai promesso, da dove riprendere…">${esc(a.note || "")}</textarea>`)}`,
+      () => {
+        const d = raccogli();
+        const eraDaLavorare = statoDi(a) === "Da lavorare";
+        Object.assign(a, {
+          esito: d.esito || statoDi(a), operatore: d.operatore || S.operatore,
+          ultimoContatto: d.ultimoContatto || a.ultimoContatto,
+          canaleContatto: d.canaleContatto || "", dataRichiamo: d.dataRichiamo || "",
+          note: d.note || ""
+        });
+        if (!eraDaLavorare || a.esito !== "Da lavorare") a.nuovo = false;
+        if (a.esito === "Scartato") { escludiAnnuncio(a, "scartato a mano", a.operatore); S.annunci = S.annunci.filter(x => x.id !== a.id); }
+        salva(); chiudiFinestra(); render();
+      });
+  },
+
+  /* Il tasto sotto al watermark: conferma a occhio quello che l'OCR ha solo sospettato. */
+  escludiAgenzia: el => {
+    const a = S.annunci.find(x => x.id === el.dataset.id); if (!a) return;
+    const dove = [a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "questo immobile";
+    if (!confirm(`Togliere ${dove} perche' e' di un'agenzia?\n\nMotivo registrato: ${el.dataset.m}\nNon rientrera' piu' in nessun aggiornamento.`)) return;
+    escludiAnnuncio(a, el.dataset.m || "riconosciuto come agenzia", S.operatore);
+    S.annunci = S.annunci.filter(x => x.id !== a.id);
     salva(); render();
   },
   azzeraFiltri: () => { F = { q: "", tipo: "", portale: "", municipio: "", esito: "", chi: "privati", ordine: "punteggio", soloNuovi: false, soloPrivatiVeri: false, soloTel: false, mostraSpariti: false, gruppo: "tutti" }; render(); },

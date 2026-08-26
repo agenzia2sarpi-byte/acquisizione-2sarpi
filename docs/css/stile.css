@@ -235,13 +235,34 @@ details.blocco .corpo li{margin:0 0 5px}
 }
 
 /* ---------- avanzamento sugli annunci ---------- */
-.passi{display:flex;gap:4px;border-top:1px solid var(--linea);padding-top:8px;margin-top:6px}
-.passi button{flex:1;font-family:var(--sans);font-size:11px;font-weight:700;padding:6px 4px;border-radius:7px;
-  border:1px solid var(--linea);background:var(--carta);color:var(--grigio);cursor:pointer;white-space:nowrap}
+/* I quattro tasti dell'esito. Devono funzionare col pollice: 44px di altezza e' il minimo
+   sotto cui il dito sbaglia bersaglio, e questi si premono in piedi in mezzo alla strada. */
+.passi{display:flex;flex-wrap:wrap;gap:5px;border-top:1px solid var(--linea);padding-top:8px;margin-top:6px}
+.passi button{flex:1 1 calc(50% - 5px);min-height:44px;font-family:var(--sans);font-size:12px;font-weight:700;
+  padding:7px 6px;border-radius:8px;border:1px solid var(--linea);background:var(--carta);color:var(--grigio);
+  cursor:pointer;white-space:nowrap;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 .passi button:hover{border-color:var(--grigio)}
 .passi button.att{background:var(--inchiostro);color:#fff;border-color:var(--inchiostro)}
 .passi button.att.v{background:var(--verde);border-color:var(--verde)}
+.passi button.att.a{background:var(--ambra);border-color:var(--ambra);color:#fff}
 .passi button.att.r{background:var(--rosso);border-color:var(--rosso)}
+/* Due per riga sempre, non solo sul telefono: la carta e' larga uguale in tutte e due i
+   posti, e a certe larghezze intermedie «da richiamare» non ci sta in fila con gli altri tre
+   e li faceva impilare uno per riga. Meglio una griglia che non cambia idea. */
+/* la riga del lavoro fatto: chi, quando, la nota, il richiamo */
+.lavoro{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:11.5px;color:var(--grigio);margin:6px 0 0}
+.lavoro .nota{flex:1 1 100%;font-family:var(--serif);font-size:13px;color:var(--inchiostro);
+  background:var(--tenue);border-left:2px solid var(--linea);padding:5px 8px;border-radius:0 6px 6px 0;
+  white-space:pre-wrap;overflow-wrap:anywhere}
+.lavoro .richiamo{font-weight:700;color:var(--ambra)}
+.lavoro .richiamo.scaduto{color:var(--rosso)}
+.lavoro button{font-family:var(--sans);font-size:11px;font-weight:700;min-height:32px;padding:4px 10px;
+  border-radius:7px;border:1px solid var(--linea);background:var(--carta);color:var(--inchiostro);cursor:pointer;
+  touch-action:manipulation}
+/* il dubbio letto sulle fotografie: non esclude da solo, ma si vede */
+.watermark{font-size:11.5px;color:var(--ambra);margin:4px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.watermark button{font-family:var(--sans);font-size:11px;font-weight:700;min-height:30px;padding:3px 9px;
+  border-radius:7px;border:1px solid var(--ambra);background:var(--carta);color:var(--ambra);cursor:pointer}
 .annuncio.chiuso{opacity:.62}
 .annuncio.chiuso .foto img{filter:grayscale(1)}
 .stati{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}

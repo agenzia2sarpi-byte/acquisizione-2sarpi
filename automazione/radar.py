@@ -15,6 +15,8 @@ import json, os, re, subprocess, sys, time, datetime, urllib.request, urllib.par
 
 sys.path.insert(0, os.path.dirname(os.path.realpath(__file__)))
 import analisi
+import esclusi as archivio_esclusi
+import foto as lettore_foto
 
 # realpath, non abspath: sul Mac lo script si chiama da un collegamento dentro la skill,
 # e va risolto fin dentro il repository — altrimenti la cartella «dati» non si trova.
@@ -22,6 +24,8 @@ QUI = os.path.dirname(os.path.realpath(__file__))
 BASE = os.environ.get("RADAR_BASE") or os.path.join(os.path.dirname(QUI), "docs")
 # il sito sta in docs/ — fuori ci sono gli script, che GitHub Pages non pubblica
 RADAR = os.path.join(BASE, "dati", "radar.json")
+ESCLUSI = os.path.join(BASE, "dati", "esclusi.json")
+CACHE_FOTO = os.path.join(os.path.expanduser("~"), ".cache", "acquisizione-ag2", "foto.json")
 APIFY = os.path.join(QUI, "apify.sh")
 ATTORE = "emastra/subito-it-immobili"
 CAMPI = ("page_url,title,type,description,price,publication_date,advertiser,location,features,images,"
@@ -428,6 +432,52 @@ def perlustra(annunci, storici=()):
     return conta, len(mediane)
 
 
+def applica_esclusioni(annunci, arch, foto_max=0):
+    """Il filtro permanente. Esce dalla lista chi e' gia' nell'archivio degli esclusi — anche
+    se si ripresenta con un altro indirizzo web o con il titolo ritoccato — e chi la
+    perlustrazione ha appena riconosciuto come agenzia. I secondi entrano nell'archivio, cosi'
+    la settimana prossima li si riconosce prima ancora di guardarli.
+
+    Non e' un filtro di visualizzazione: l'annuncio esce proprio dal file, e con lui dalla
+    lista delle chiamate, dal cruscotto e dal telefono."""
+    idx = archivio_esclusi.indice(arch)
+    cache = lettore_foto.carica_cache(CACHE_FOTO) if foto_max else {}
+    lette = 0
+    tenuti, ricomparsi, nuovi, elenco = [], 0, 0, []
+    for a in annunci:
+        gia = archivio_esclusi.escluso(a, idx)
+        if gia:
+            archivio_esclusi.registra(arch, a, "gia' nell'archivio degli esclusi", "radar")
+            ricomparsi += 1
+            continue
+        motivo = analisi.agenzia_dichiarata(a)
+        if not motivo and a.get("verdettoInserzionista") == "probabile agenzia":
+            motivo = "; ".join(a.get("motiviAgenzia") or []) or "perlustrazione: probabile agenzia"
+        # Le fotografie parlano anche quando il testo tace: il marchio stampato sopra gli
+        # scatti e' la firma che l'agenzia non riesce a togliere. Si guardano una volta sola
+        # per annuncio, e la lettura resta in memoria.
+        if not motivo and foto_max and lette < foto_max and not a.get("fotoLette"):
+            m, sospetto, scaricate = lettore_foto.controlla(a, cache, urla)
+            a["fotoLette"] = OGGI.isoformat()
+            a["fotoSospetto"] = sospetto
+            if scaricate:
+                lette += 1
+            if m:
+                motivo = m
+        if motivo:
+            archivio_esclusi.registra(arch, a, motivo, "radar")
+            idx.update(archivio_esclusi.impronte(a))
+            nuovi += 1
+            elenco.append({"via": " ".join(x for x in ((a.get("via") or ""), str(a.get("civico") or "")) if x).strip()
+                                  or (a.get("titolo") or "")[:60],
+                           "inserzionista": a.get("inserzionista") or "",
+                           "motivo": motivo})
+            continue
+        tenuti.append(a)
+    return tenuti, {"esclusi_nuovi": nuovi, "esclusi_ricomparsi": ricomparsi,
+                    "esclusi_in_archivio": len(arch.get("esclusi", [])), "esclusi_elenco": elenco}
+
+
 def scrivi(d, annunci):
     d["annunci"] = annunci
     d["conteggio"] = len(annunci)
@@ -448,6 +498,7 @@ def main():
     verifiche_max = opzione(argv, "--verifiche", VERIFICHE)
     giorni_max = opzione(argv, "--giorni", GIORNI)
     indirizzi_max = opzione(argv, "--indirizzi", 40)
+    foto_max = opzione(argv, "--foto", 40)
     d = json.load(open(RADAR))
     annunci = d.get("annunci", [])
     rep = {"raccolti": 0, "aggiunti": 0, "ribassati": 0, "verificati": [], "spariti_nuovi": [], "potati": 0, "note": []}
@@ -455,6 +506,10 @@ def main():
     if "--solo-perlustra" in arg:
         rep["indirizzi_completati"] = completa_indirizzi(annunci, indirizzi_max)
         rep["inserzionisti"], rep["quartieri_con_mediana"] = perlustra(annunci, d.get("usciti", []))
+        arch = archivio_esclusi.carica(ESCLUSI)
+        annunci, r = applica_esclusioni(annunci, arch, foto_max)
+        archivio_esclusi.salva(arch, ESCLUSI)
+        rep.update(r)
         rep["nuovi_in_vista"] = sum(1 for a in annunci if a.get("nuovo"))
         rep["da_chiamare"] = sorted([a for a in annunci if a.get("privato") and not a.get("noAgenzie")],
                                     key=lambda a: -(a.get("priorita") or 0))[:10]
@@ -541,6 +596,10 @@ def main():
         annunci = list(per_url.values())
         rep["indirizzi_completati"] = completa_indirizzi(annunci, indirizzi_max)
         rep["inserzionisti"], rep["quartieri_con_mediana"] = perlustra(annunci, d.get("usciti", []))
+        arch = archivio_esclusi.carica(ESCLUSI)
+        annunci, r = applica_esclusioni(annunci, arch, foto_max)
+        archivio_esclusi.salva(arch, ESCLUSI)
+        rep.update(r)
         rep["nuovi_in_vista"] = sum(1 for a in annunci if a.get("nuovo"))
         rep["da_chiamare"] = sorted(
             [a for a in annunci if a.get("privato") and not a.get("noAgenzie")],
@@ -548,6 +607,9 @@ def main():
     else:
         rep["note"].append("prova a vuoto: nessuna chiamata di rete")
         rep["inserzionisti"], rep["quartieri_con_mediana"] = perlustra(annunci)
+        arch = archivio_esclusi.carica(ESCLUSI)
+        annunci, r = applica_esclusioni(annunci, arch, 0)
+        rep.update(r)
         rep["da_chiamare"] = sorted([a for a in annunci if a.get("privato") and not a.get("noAgenzie")],
                                     key=lambda a: -(a.get("priorita") or 0))[:10]
 
