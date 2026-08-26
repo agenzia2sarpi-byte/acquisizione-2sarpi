@@ -55,6 +55,7 @@ const VUOTO = {
   v: 2, piano: "500", operatore: "Gaetano",
   operatori: ["Gaetano", "Ciro", "Francoise"],
   esclusi: [],
+  squadra: { chiave: "", ultimaLettura: null, ultimoErrore: "" },
   telefono: "340 000 0000",
   lead: [], mandati: [], rete: [], gestione: [], attivita: [], optout: [],
   annunci: [], amministratori: [], condomini: [],
@@ -73,6 +74,7 @@ function carica() {
       // Francoise arriva dopo: si aggiunge a chi c'e' gia', senza toccare l'ordine ne' il resto
       NOMI_PERSONE.forEach(n => { if (!s.operatori.includes(n)) s.operatori.push(n); });
       if (!Array.isArray(s.esclusi)) s.esclusi = [];
+      if (!s.squadra) s.squadra = { chiave: "", ultimaLettura: null, ultimoErrore: "" };
           ["annunci", "amministratori", "condomini", "esclusi"].forEach(k => { if (!Array.isArray(s[k])) s[k] = []; });
       if (!s.feed) s.feed = { ultimoId: null, ultimaLettura: null };
       return s;
@@ -342,6 +344,10 @@ async function aggiornaAdesso() {
   if (!b || b.classList.contains("gira")) return;
   b.classList.add("gira");
   try {
+    // prima il quaderno della squadra: se un altro ha gia' chiuso un immobile, e' inutile
+    // che il radar me lo rimetta davanti
+    if (typeof sincronizzaSquadra === "function" && typeof squadraAttiva === "function" && squadraAttiva())
+      await sincronizzaSquadra(true);
     if (typeof aggiornaDalFeed === "function") {
       const e = await aggiornaDalFeed(true);
       if (e) {

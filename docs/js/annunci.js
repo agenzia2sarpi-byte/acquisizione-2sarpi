@@ -327,6 +327,7 @@ async function aggiornaDalFeed(silenzioso) {
     if (!d || !Array.isArray(d.annunci)) throw new Error("feed vuoto");
     if (d.id && d.id === S.feed.ultimoId) { if (!silenzioso) alert("Il radar non ha nulla di nuovo dall'ultimo aggiornamento."); return { nuovi: 0, aggiornati: 0 }; }
     await aggiornaEsclusiDalFeed(true);
+    if (typeof squadraAttiva === "function" && squadraAttiva()) await sincronizzaSquadra(true);
     const e = importaAnnunci(d.annunci, "radar");
     const s = segnaSpariti(d.spariti || [], d.verificati || []);
     e.spariti = s;

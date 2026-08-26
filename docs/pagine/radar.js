@@ -322,6 +322,7 @@ Object.assign(AZIONI, {
         ? `${dove}: contattato, non porta a niente?\n\nEsce dalla lista e non ci torna piu', cosi' nessuno degli altri lo richiama. Se vuoi scrivere perche', usa «Aggiungi una nota» prima di chiudere.`
         : `Scartare ${dove}?\n\nEsce dalla lista e non torna piu': nemmeno se l'annuncio viene ripubblicato con un altro indirizzo o con il testo cambiato.`;
       if (!confirm(domanda + "\n\nSi puo' rimettere in lista dalla pagina Dati.")) return;
+      a.esito = nuovo; a.ultimoContatto = oggiISO(); a.operatore = S.operatore;
       const perche = chiuso
         ? `contattato da ${S.operatore} il ${dataIt(oggiISO())}: non buono${a.note ? " — " + a.note : ""}`
         : "scartato a mano";

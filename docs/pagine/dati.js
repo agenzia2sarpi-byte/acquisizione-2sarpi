@@ -50,6 +50,29 @@ function render() {
     <div class="bottoniera nostampa"><button class="azione vuota" data-az="copia" data-t="anteprimaFirma">Copia la firma</button></div>
   </div>
 
+  <div class="scheda"><h3>Il quaderno della squadra <span class="etichetta">${squadraAttiva() ? "acceso" : "spento"}</span></h3>
+    <p style="font-family:var(--serif);font-size:14.5px">Il cruscotto vive dentro questo dispositivo, e va bene cosi'. Ma su una cosa il dispositivo da solo non basta: se Ciro chiama un numero stamattina, il tuo telefono non lo sa, e nel pomeriggio quel numero lo chiami di nuovo. Il quaderno serve solo a questo. Ci passa <b>com'e' finita, chi l'ha lavorato e quando</b> — non l'annuncio, non le foto, non il recapito del proprietario, che restano qui.</p>
+    <p style="font-family:var(--serif);font-size:14.5px">Gli immobili viaggiano <b>in cifra</b>: quello che arriva al server e' un'impronta illeggibile, non «via Terracina 64» e non un numero di telefono. Gli altri due dispositivi lo riconoscono lo stesso perche' hanno la stessa chiave. Senza la chiave, dal server non esce niente.</p>
+    <div class="griglia g2">
+      ${campo("Chiave della squadra", `<input id="chiaveSquadra" value="${esc(chiaveSquadra())}" placeholder="XXXXX-XXXXX-XXXXX-XXXXX" autocapitalize="characters" spellcheck="false">`)}
+      <div class="dato ${squadraAttiva() ? "verde" : ""}" style="text-align:left">
+        <div class="titolo">Stato</div>
+        <div style="font-family:var(--serif);font-size:14px;margin:4px 0 0">
+          ${squadraAttiva()
+            ? `Acceso. Ultimo scambio: <b>${S.squadra.ultimaLettura ? new Date(S.squadra.ultimaLettura).toLocaleString("it-IT") : "mai"}</b>.`
+            : `Spento: su questo dispositivo il lavoro resta qui e gli altri due non lo vedono.`}
+          ${S.squadra && S.squadra.ultimoErrore ? `<br><span style="color:var(--rosso)">${esc(S.squadra.ultimoErrore)}</span>` : ""}
+        </div>
+      </div>
+    </div>
+    <div class="bottoniera">
+      <button class="azione" data-az="accendiSquadra">${squadraAttiva() ? "Cambia la chiave" : "Accendi il quaderno"}</button>
+      ${squadraAttiva() ? `<button class="azione vuota" data-az="sincronizza">Scambia adesso</button>
+        <button class="azione grigia" data-az="spegniSquadra">Spegni su questo dispositivo</button>` : ""}
+    </div>
+    <div class="avviso" style="margin:12px 0 0"><b>Chi ha la chiave</b>La chiave sta solo sui vostri dispositivi: non e' scritta nel sito e non e' recuperabile da qui. Mettila una volta su ogni telefono e su ogni computer che usate. Se la perdete tutti e tre, se ne fa una nuova e il quaderno riparte vuoto — il lavoro sui dispositivi non si tocca.</div>
+  </div>
+
   <div class="scheda"><h3>Fuori dalla lista <span class="etichetta">${(S.esclusi || []).length} in archivio</span></h3>
     <p style="font-family:var(--serif);font-size:14.5px">Chi finisce qui non torna piu'. Ci arrivano le agenzie, gli immobili scartati e <b>quelli gia' contattati che non hanno portato a niente</b> — cosi' nessuno dei tre richiama un numero che un altro ha gia' chiamato. Non e' un filtro di visualizzazione: l'immobile esce dall'archivio, e a ogni aggiornamento viene riconosciuto e respinto <b>anche se il portale lo ripubblica con un altro indirizzo, un altro numero o il testo cambiato</b> — il confronto e' su indirizzo, metratura, recapito, fotografie e testo, non sul collegamento. Se un'esclusione era sbagliata, si rimette in lista da qui: alla prossima raccolta l'immobile rientra.</p>
     ${(S.esclusi || []).length ? `<div class="tabellone"><table>
@@ -167,6 +190,23 @@ document.addEventListener("input", ev => {
 });
 
 Object.assign(AZIONI, {
+  accendiSquadra: async () => {
+    const v = ($("#chiaveSquadra").value || "").trim();
+    if (!v) return alert("Serve la chiave della squadra.");
+    if (await provaChiaveSquadra(v)) {
+      const e = await sincronizzaSquadra(true);
+      render();
+      alert("Quaderno acceso su questo dispositivo." + (e ? `\nScambiate ${e.mandate} voci.` : ""));
+    } else {
+      render();
+      alert("Quella chiave non e' buona.\n(" + (S.squadra.ultimoErrore || "") + ")");
+    }
+  },
+  sincronizza: async () => { await sincronizzaSquadra(false); render(); },
+  spegniSquadra: () => {
+    if (!confirm("Spegnere il quaderno su questo dispositivo?\n\nIl lavoro fatto qui resta. Ma da adesso gli altri due non vedranno piu' cosa fai, e tu non vedrai cosa fanno loro.")) return;
+    statoSquadra().chiave = ""; salva(); render();
+  },
   scegliPersona: el => {
     S.operatore = el.dataset.n; salva();
     const sel = $("#selOperatore"); if (sel) sel.value = S.operatore;
@@ -175,6 +215,7 @@ Object.assign(AZIONI, {
   riammetti: el => {
     const v = (S.esclusi || []).find(x => x.id === el.dataset.id); if (!v) return;
     if (!confirm(`Rimettere in lista ${v.via || v.titolo || "questo immobile"}?\n\nAlla prossima raccolta puo' rientrare fra gli annunci — sempre che il radar non lo riconosca di nuovo come agenzia.`)) return;
+    rimettiNellaSquadra(v);
     riammettiEscluso(el.dataset.id); render();
   },
   salvaToken: () => { salvaToken($("#tokApify").value); $("#esitoToken").textContent = "chiave salvata su questo dispositivo"; },

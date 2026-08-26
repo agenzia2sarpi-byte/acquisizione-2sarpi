@@ -219,6 +219,7 @@ Object.assign(AZIONI, {
         ? `${dove}: contattato, non porta a niente?\n\nEsce dalla lista e non ci torna piu', cosi' nessuno degli altri lo richiama.`
         : `Scartare ${dove}?\n\nEsce dalla lista e non torna piu', nemmeno se l'annuncio viene ripubblicato con un altro indirizzo o con il testo cambiato.`)
         + "\n\nSi puo' rimettere in lista dalla pagina Dati.")) return;
+      a.esito = nuovo; a.ultimoContatto = oggiISO(); a.operatore = S.operatore;
       escludiAnnuncio(a, chiuso
         ? `contattato da ${S.operatore} il ${dataIt(oggiISO())}: non buono${a.note ? " — " + a.note : ""}`
         : "scartato a mano", S.operatore, chiuso ? "lavorato" : "scartato");
