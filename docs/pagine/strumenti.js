@@ -59,7 +59,7 @@ function vistaRapporto() {
       <td class="num">${esc(x.giorni || "—")}</td></tr>`).join("")}</tbody></table>
     <p style="font-size:11px;color:#777;margin:14px 0 0">Fonte: ${esc(r.fonte || "—")}. Valori indicativi riferiti al periodo dichiarato: non costituiscono una valutazione dell'immobile ne' una proposta contrattuale.</p>
     <div class="firma">
-      <b>Agenzia 2 Sarpi</b> — ${esc(persona(S.operatore).nome)} · ${esc(persona(S.operatore).telefono)}${persona(S.operatore).telefono2 ? " / " + esc(persona(S.operatore).telefono2) : ""}<br>
+      <b>${esc(persona(S.operatore).agenzia)}</b> — ${esc(persona(S.operatore).nome)} · ${esc(persona(S.operatore).telefono)}${persona(S.operatore).telefono2 ? " / " + esc(persona(S.operatore).telefono2) : ""}<br>
       ${esc(persona(S.operatore).email)}<br>
       Valutazione scritta di un immobile in questa via: gratuita, consegnata a mano entro 48 ore, senza impegno.
     </div>

@@ -9,15 +9,18 @@ const CHIAVE = "ag2sarpi.acquisizione.v1";
    nome di Francoise e' l'errore che fa perdere un mandato e basta una volta. */
 const PERSONE = {
   "Gaetano": {
-    breve: "Gaetano", nome: "Gaetano Romaniello",
+    breve: "Gaetano", nome: "Gaetano Romaniello", agenzia: "Agenzia 2 Sarpi",
     telefono: "338 38 66 596", email: "gaetano.romaniello80@gmail.com"
   },
   "Ciro": {
-    breve: "Ciro", nome: "Ciro Romaniello",
+    breve: "Ciro", nome: "Ciro Romaniello", agenzia: "Agenzia 2 Sarpi",
     telefono: "340 194 0666", email: "agenzia2sarpi@gmail.com"
   },
+  // Francoise non lavora sotto la stessa insegna: scrive per UBH Real Estate, e nella mail
+  // deve comparire la sua, non quella di 2 Sarpi. L'insegna sta qui accanto al nome apposta,
+  // cosi' non c'e' un solo posto nel codice dove sia scritta fissa e possa restare indietro.
   "Francoise": {
-    breve: "Francoise", nome: "Francoise Briend",
+    breve: "Francoise", nome: "Francoise Briend", agenzia: "UBH Real Estate",
     telefono: "342 013 7125", telefono2: "347 099 3663", email: "f.briend@ubhrealestate.it"
   }
 };
@@ -32,7 +35,7 @@ function firmaDi(nome) {
   const p = persona(nome);
   return [
     p.nome,
-    "Agenzia 2 Sarpi",
+    p.agenzia,
     p.telefono2 ? `Telefono: ${p.telefono} — in alternativa ${p.telefono2}` : `Telefono: ${p.telefono}`,
     `Email: ${p.email}`
   ].join("\n");
