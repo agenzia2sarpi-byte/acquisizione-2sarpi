@@ -16,11 +16,13 @@ const PERSONE = {
     breve: "Ciro", nome: "Ciro Romaniello", agenzia: "Agenzia 2 Sarpi",
     telefono: "340 194 0666", email: "agenzia2sarpi@gmail.com"
   },
-  // Francoise non lavora sotto la stessa insegna: scrive per UBH Real Estate, e nella mail
-  // deve comparire la sua, non quella di 2 Sarpi. L'insegna sta qui accanto al nome apposta,
-  // cosi' non c'e' un solo posto nel codice dove sia scritta fissa e possa restare indietro.
+  // Francoise non lavora sotto la stessa insegna: scrive per UBH Real Estate, in
+  // collaborazione con 2 Sarpi — e nella mail devono comparire tutte e due, in quest'ordine.
+  // L'insegna sta qui accanto al nome apposta, cosi' non c'e' un solo posto nel codice dove
+  // sia scritta fissa e possa restare indietro.
   "Francoise": {
-    breve: "Francoise", nome: "Francoise Briend", agenzia: "UBH Real Estate",
+    breve: "Francoise", nome: "Francoise Briend",
+    agenzia: "UBH Real Estate", insieme: "Agenzia 2 Sarpi",
     telefono: "342 013 7125", telefono2: "347 099 3663", email: "f.briend@ubhrealestate.it"
   }
 };
@@ -29,13 +31,21 @@ const NOMI_PERSONE = Object.keys(PERSONE);
 function persona(nome) {
   return PERSONE[nome] || PERSONE[(S && S.operatore) || ""] || PERSONE[NOMI_PERSONE[0]];
 }
+/* Come si presenta in apertura: «dell'Agenzia 2 Sarpi» per chi ci lavora dentro, «di UBH
+   Real Estate, in collaborazione con l'Agenzia 2 Sarpi» per Francoise. */
+function presentazioneDi(nome) {
+  const p = persona(nome);
+  if (!p.insieme) return `dell'${p.agenzia}`;
+  return `di ${p.agenzia}, in collaborazione con l'${p.insieme}`;
+}
+
 /* La firma completa, com'e' in calce a ogni messaggio. Francoise ha due numeri e li vuole
    tutti e due: chi la cerca la trova. */
 function firmaDi(nome) {
   const p = persona(nome);
   return [
     p.nome,
-    p.agenzia,
+    p.insieme ? `${p.agenzia} — in collaborazione con ${p.insieme}` : p.agenzia,
     p.telefono2 ? `Telefono: ${p.telefono} — in alternativa ${p.telefono2}` : `Telefono: ${p.telefono}`,
     `Email: ${p.email}`
   ].join("\n");

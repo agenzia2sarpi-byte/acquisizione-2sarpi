@@ -79,13 +79,13 @@ function render() {
     <div class="avviso" style="margin:12px 0 0"><b>Prima di telefonare</b>Il Registro Pubblico delle Opposizioni si applica anche ai numeri mobili. Pubblicare un recapito per ricevere offerte di acquisto non equivale a un consenso per proposte commerciali di servizi: primo contatto sul canale che il proprietario ha pubblicato, telefono solo dopo una risposta o previa verifica nel Registro.</div>
   </div>
 
-  <div class="scheda"><h3>Il messaggio, gia' scritto <span class="etichetta">a nome di ${esc(persona(S.operatore).nome)} · ${esc(persona(S.operatore).agenzia)}</span></h3>
+  <div class="scheda"><h3>Il messaggio, gia' scritto <span class="etichetta">a nome di ${esc(persona(S.operatore).nome)} · ${esc(persona(S.operatore).agenzia)}${persona(S.operatore).insieme ? " con " + esc(persona(S.operatore).insieme) : ""}</span></h3>
     <div class="copiabile" id="msg">${esc(messaggioPrimoContatto(a, g))}</div>
     <div class="bottoniera nostampa">
       <button class="azione" data-az="copia" data-t="msg">Copia il messaggio</button>
       <button class="azione vuota" data-az="portaInTrattativa">Porta in trattativa e avvia la sequenza</button>
     </div>
-    <p style="font-size:12.5px;color:var(--grigio);margin:10px 0 0">Insegna, firma, telefono ed email sono quelli di <b>${esc(persona(S.operatore).nome)}</b> (${esc(persona(S.operatore).agenzia)}): cambiando persona in alto, il testo si riscrive per intero. Da' informazione prima di chiedere, non usa la parola «esclusiva», non svaluta la scelta di vendere da solo e mette l'opt-out in chiaro. Il rifiuto arriva subito e pulito — il che e' un bene: libera tempo per i si'.</p>
+    <p style="font-size:12.5px;color:var(--grigio);margin:10px 0 0">Insegna, firma, telefono ed email sono quelli di <b>${esc(persona(S.operatore).nome)}</b> (${esc(persona(S.operatore).agenzia)}${persona(S.operatore).insieme ? ", in collaborazione con " + esc(persona(S.operatore).insieme) : ""}): cambiando persona in alto, il testo si riscrive per intero. Da' informazione prima di chiedere, non usa la parola «esclusiva», non svaluta la scelta di vendere da solo e mette l'opt-out in chiaro. Il rifiuto arriva subito e pulito — il che e' un bene: libera tempo per i si'.</p>
   </div>
 
   ${bloccoInserzionista(a)}

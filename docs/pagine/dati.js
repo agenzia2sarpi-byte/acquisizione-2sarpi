@@ -32,14 +32,14 @@ function render() {
     `Tutto vive dentro questo dispositivo. Per lavorare in tre — tu, Ciro e Francoise — <b>esporta un file dal dispositivo che ha lavorato e importalo sull'altro scegliendo «unisci»</b>: le schede si fondono, nessuno sovrascrive il lavoro dell'altro. Il file si tiene nella cartella iCloud condivisa.`) + `
 
   <div class="scheda"><h3>Chi scrive <span class="etichetta">mittente, firma e recapiti</span></h3>
-    <p style="font-family:var(--serif);font-size:14.5px">Il nome scelto in alto a destra non e' un'etichetta: e' <b>il mittente</b>. Da li' escono l'insegna, la firma, il telefono e l'email di ogni messaggio, e non si mescolano mai — Francoise scrive per <b>UBH Real Estate</b>, non per 2 Sarpi. Cambiando persona, il testo si riscrive per intero — non resta attaccato il numero di nessun altro.</p>
+    <p style="font-family:var(--serif);font-size:14.5px">Il nome scelto in alto a destra non e' un'etichetta: e' <b>il mittente</b>. Da li' escono l'insegna, la firma, il telefono e l'email di ogni messaggio, e non si mescolano mai — Francoise scrive per <b>UBH Real Estate, in collaborazione con Agenzia 2 Sarpi</b>. Cambiando persona, il testo si riscrive per intero — non resta attaccato il numero di nessun altro.</p>
     <div class="griglia g3">
       ${NOMI_PERSONE.map(n => { const p = PERSONE[n]; const att = S.operatore === n; return `
         <div class="dato${att ? " verde" : ""}" style="text-align:left">
           <div class="titolo">${esc(n)}${att ? " · selezionata/o" : ""}</div>
           <div style="font-family:var(--serif);font-size:14px;line-height:1.6;margin:4px 0 0">
             <b>${esc(p.nome)}</b><br>
-            <span style="color:var(--grigio)">${esc(p.agenzia)}</span><br>
+            <span style="color:var(--grigio)">${esc(p.agenzia)}${p.insieme ? "<br>in collaborazione con " + esc(p.insieme) : ""}</span><br>
             ${esc(p.telefono)}${p.telefono2 ? `<br><span style="color:var(--grigio)">in alternativa ${esc(p.telefono2)}</span>` : ""}<br>
             <span style="overflow-wrap:anywhere">${esc(p.email)}</span>
           </div>

@@ -382,7 +382,7 @@ function messaggioPortale(a, gruppo, chi) {
   const P = rif ? Math.round(rif.valore).toLocaleString("it-IT") : null;
   const gg = gruppo ? gruppo.giorniOnline : (giorniDa(a.pubblicato) ?? 0);
   if (a.tipo === "Locazione") {
-    return `Buongiorno, sono ${io.breve} ${io.agenzia === "Agenzia 2 Sarpi" ? "dell'Agenzia 2 Sarpi" : "di " + io.agenzia}.
+    return `Buongiorno, sono ${io.breve} ${presentazioneDi(chi)}.
 
 Non le scrivo per propormi: ho visto che affitta il suo immobile in ${via} da solo e le volevo segnalare due cose che forse le sono utili.
 
@@ -395,7 +395,7 @@ Il suo recapito l'ho preso dal suo annuncio: lo uso solo per questo contatto e, 
 --
 ${firmaDi(chi)}`;
   }
-  return `Buongiorno, sono ${io.breve} ${io.agenzia === "Agenzia 2 Sarpi" ? "dell'Agenzia 2 Sarpi" : "di " + io.agenzia}.
+  return `Buongiorno, sono ${io.breve} ${presentazioneDi(chi)}.
 
 Non le scrivo per propormi: ho notato il suo annuncio in ${via} e le volevo segnalare un dato.${P ? ` Nell'ultimo trimestre, in quell'isolato, le chiusure sono avvenute intorno a ${P} €/mq${sc !== null && Math.abs(sc) >= 3 ? `, e il suo posizionamento e' circa ${Math.abs(sc).toFixed(0)}% ${sc > 0 ? "sopra" : "sotto"}` : ""}.` : ""} Se le fa comodo le mando il dettaglio scritto delle tre comparabili della sua via.${gg > 45 ? `
 
@@ -446,7 +446,7 @@ async function aggiornaScadutiDalFeed(silenzioso) {
 function messaggioScaduto(x, chi) {
   const io = persona(chi);
   const via = (x.via || x.indirizzo || "").replace(/,?\s*\d+[a-zA-Z]?\s*$/, "") || "quella via";
-  return `Buongiorno, sono ${io.breve} ${io.agenzia === "Agenzia 2 Sarpi" ? "dell'Agenzia 2 Sarpi" : "di " + io.agenzia}.
+  return `Buongiorno, sono ${io.breve} ${presentazioneDi(chi)}.
 
 Ho notato che l'immobile in ${via} non e' piu' online. Se ha venduto, complimenti sinceri e la saluto qui.
 
