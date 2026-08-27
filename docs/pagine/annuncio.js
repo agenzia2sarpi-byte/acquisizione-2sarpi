@@ -91,7 +91,7 @@ function render() {
       <button class="azione" data-az="copia" data-t="msg">Copia il messaggio</button>
       <button class="azione vuota" data-az="portaInTrattativa">Porta in trattativa e avvia la sequenza</button>
     </div>
-    <p style="font-size:12.5px;color:var(--grigio);margin:10px 0 0">Insegna, firma, telefono ed email sono quelli di <b>${esc(persona(S.operatore).nome)}</b> (${esc(persona(S.operatore).agenzia)}${persona(S.operatore).insieme ? ", in collaborazione con " + esc(persona(S.operatore).insieme) : ""}): cambiando persona in alto, il testo si riscrive per intero. Da' informazione prima di chiedere, non usa la parola «esclusiva», non svaluta la scelta di vendere da solo e mette l'opt-out in chiaro. Il rifiuto arriva subito e pulito — il che e' un bene: libera tempo per i si'.</p>
+    <p style="font-size:12.5px;color:var(--grigio);margin:10px 0 0">Insegna, firma, telefono ed email sono quelli di <b>${esc(persona(S.operatore).nome)}</b> (${esc(persona(S.operatore).agenzia)}${persona(S.operatore).insieme ? ", in collaborazione con " + esc(persona(S.operatore).insieme) : ""}): cambiando persona in alto, il testo si riscrive per intero. Racconta cosa sai fare — promuovere l'annuncio a pagamento, far arrivare piu' richieste di quante ne prenda un privato, e filtrarle prima che entrino in casa — senza usare la parola «esclusiva» e con l'opt-out in chiaro. Il rifiuto arriva subito e pulito — il che e' un bene: libera tempo per i si'.</p>
   </div>
 
   ${bloccoInserzionista(a)}

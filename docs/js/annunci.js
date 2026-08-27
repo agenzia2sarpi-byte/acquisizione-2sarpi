@@ -377,30 +377,40 @@ async function aggiornaAmministratoriDalFeed(silenzioso) {
 function messaggioPortale(a, gruppo, chi) {
   const io = persona(chi);
   const rif = riferimentoEmq(a);
-  const emq = num(a.mq) ? num(a.prezzo) / num(a.mq) : null;
-  const sc = rif && emq ? ((emq - rif.valore) / rif.valore * 100) : null;
   const via = (a.via || "").replace(/,?\s*\d+[a-zA-Z]?\s*$/, "") || "zona";
   const P = rif ? Math.round(rif.valore).toLocaleString("it-IT") : null;
   const gg = gruppo ? gruppo.giorniOnline : (giorniDa(a.pubblicato) ?? 0);
+
   if (a.tipo === "Locazione") {
     return `Buongiorno, sono ${io.breve} ${presentazioneDi(chi)}.
 
-Non le scrivo per propormi: ho visto che affitta il suo immobile in ${via} da solo e le volevo segnalare due cose che forse le sono utili.
+Le scrivo perche' ho visto che affitta da solo il suo immobile in ${via}, e in due righe le dico cosa faccio io di diverso.
 
-La prima: con un contratto a canone concordato 3+2 nel Comune di Milano si accede alla cedolare secca al 10% invece del 21%, piu' riduzioni IMU. Su un canone come il suo sono oltre mille euro l'anno di tasse risparmiate, ogni anno.
+Il primo lavoro e' far arrivare le richieste. L'annuncio lo prepariamo noi — fotografie fatte bene, planimetria, un testo scritto per chi cerca davvero — e poi lo promuoviamo a pagamento sui portali e sui social. Un annuncio spinto cosi' lo vedono molte piu' persone di uno pubblicato e lasciato li': a me arrivano ogni settimana richieste che a un privato non arrivano proprio.
 
-La seconda: la parte che fa perdere piu' tempo non e' trovare l'inquilino, e' filtrarlo. Se le fa comodo le mando per iscritto come lo verifichiamo noi, senza impegno.
+Il secondo lavoro, che e' quello che conta, e' sceglierle. Piu' richieste vuol dire anche piu' perditempo: prima che qualcuno metta piede in casa sua verifico chi e', che lavoro fa, cosa guadagna e che garanzie porta. Lei incontra due o tre candidati seri, non quindici curiosi — e l'inquilino che entra e' uno che paga.
+
+Questo mestiere lo faccio da anni in questa zona e so chi ci cerca casa. Se le fa comodo passo a vedere l'immobile e le dico cosa cambierei: venti minuti, senza impegno.
 
 Il suo recapito l'ho preso dal suo annuncio: lo uso solo per questo contatto e, se mi dice di no, lo cancello e non la disturbo piu'.
 
 --
 ${firmaDi(chi)}`;
   }
+
   return `Buongiorno, sono ${io.breve} ${presentazioneDi(chi)}.
 
-Non le scrivo per propormi: ho notato il suo annuncio in ${via} e le volevo segnalare un dato.${P ? ` Nell'ultimo trimestre, in quell'isolato, le chiusure sono avvenute intorno a ${P} €/mq${sc !== null && Math.abs(sc) >= 3 ? `, e il suo posizionamento e' circa ${Math.abs(sc).toFixed(0)}% ${sc > 0 ? "sopra" : "sotto"}` : ""}.` : ""} Se le fa comodo le mando il dettaglio scritto delle tre comparabili della sua via.${gg > 45 ? `
+Le scrivo perche' ho visto il suo annuncio in ${via}, e in due righe le dico cosa faccio io di diverso.
 
-Le scrivo adesso perche' l'annuncio e' online da ${gg} giorni: e' il momento in cui, di solito, vale la pena rivedere insieme non tanto il prezzo quanto il modo in cui l'immobile viene filtrato.` : ""}
+Un immobile non si vende perche' e' pubblicato: si vende perche' lo vedono le persone giuste. L'annuncio lo prepariamo noi — fotografie professionali, planimetria, un testo scritto per chi compra — e poi lo promuoviamo a pagamento sui portali e sui social, tutti i giorni. Il risultato e' che su un immobile come il suo mi arrivano molte piu' richieste di quante ne riceva un privato: non le aspetto, me le vado a prendere.
+
+E qui viene la parte che fa davvero la differenza: sceglierle. Su dieci persone che chiamano, la maggior parte guarda e basta, oppure non ha i soldi che dice di avere. Io verifico prima chi puo' comprare davvero — budget, mutuo, tempi — e in casa sua faccio entrare solo chi ha senso far entrare. Lei fa tre visite utili invece di venti inutili, e non perde i mesi che si perdono cosi'.${P ? `
+
+Le chiusure vere della sua zona le ho sotto gli occhi ogni settimana — in questo periodo siamo intorno ai ${P} €/mq — e so cosa fa dire di si' a chi compra qui.` : ""}${gg > 45 ? `
+
+Le scrivo adesso perche' l'annuncio e' online da ${gg} giorni: di solito e' il momento in cui vale la pena rivedere non tanto il prezzo, quanto il modo in cui l'immobile viene presentato e a chi viene fatto vedere.` : ""}
+
+Se le fa comodo passo a vederlo e le dico cosa cambierei: venti minuti, senza impegno e senza che lei debba decidere niente.
 
 Il suo recapito l'ho preso dal suo annuncio: lo uso solo per questo contatto e, se mi dice di no, lo cancello e non la disturbo piu'.
 
