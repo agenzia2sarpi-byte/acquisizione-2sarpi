@@ -1,5 +1,5 @@
 {
- "generato": "2026-08-31T11:38:03",
+ "generato": "2026-08-31T11:19:30",
  "esclusi": [
   {
    "id": "esc-20260826095259-1",
@@ -97,7 +97,7 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-08-31",
-   "ricomparse": 1,
+   "ricomparse": 2,
    "impronte": [
     "foto:1189f217-85eb-487d-bf17-391309f09152",
     "foto:2a222094-84a2-4b13-82ad-5757106bebfe",
@@ -128,7 +128,7 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-08-31",
-   "ricomparse": 2,
+   "ricomparse": 5,
    "impronte": [
     "foto:0c815d2d-928b-4033-ba05-9f53e9f3a625",
     "foto:1257332f-e7a7-401f-ac15-4e036d026c47",
@@ -168,18 +168,19 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-08-31",
-   "ricomparse": 0,
+   "ricomparse": 1,
    "impronte": [
-    "url:subito.it/appartamenti/bilocale-via-savona-no-agenzie-milano-658902814.htm",
-    "rif:subito:658902814",
-    "tel:409623911",
-    "ind:savona|101|40|loc",
-    "foto:d3fc06d9-ce76-4437-9384-65f37fd8e3ea",
     "foto:05b6de18-71fc-45c2-bbd1-91c8eb8b0945",
     "foto:52f4d403-3427-4f96-9f0d-5838d377684e",
+    "foto:d3fc06d9-ce76-4437-9384-65f37fd8e3ea",
+    "ind:savona|101|40|loc",
+    "parole:9623911-abitabile-ambienti-animali-arredato-bilocale-comprensive-condizionata-condominiali-coppia-cucina-grande-interno-lavastoviglie-lavatrice-libero-luminosi-mensili-pagare-pietro-possibilita-preferibile-prezzo-referenziati-restano",
+    "rif:subito:658902814",
+    "tel:409623911",
     "testo:bilocaleinviasavonaarredatoambientiseparatieluminosistanzadalettograndebagnoecucinaabitabilesoppalcoariacondizionatalava",
-    "parole:9623911-abitabile-ambienti-animali-arredato-bilocale-comprensive-condizionata-condominiali-coppia-cucina-grande-interno-lavastoviglie-lavatrice-libero-luminosi-mensili-pagare-pietro-possibilita-preferibile-prezzo-referenziati-restano"
-   ]
+    "url:subito.it/appartamenti/bilocale-via-savona-no-agenzie-milano-658902814.htm"
+   ],
+   "rivisto": "2026-08-31"
   },
   {
    "id": "esc-20260831113427-7",
@@ -193,18 +194,19 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-08-31",
-   "ricomparse": 0,
+   "ricomparse": 1,
    "impronte": [
-    "url:subito.it/appartamenti/casa-in-via-polesine-milano-658640419.htm",
+    "foto:9d2fa78d-a05b-48c4-a6db-53dc6ee6d54e",
+    "foto:cdd4e6b8-7604-4dbd-a0a4-e5574f89c068",
+    "foto:dc942d86-d416-46a9-a957-de9f1ba42ec3",
+    "ind:polesine|6|78|loc",
+    "parole:affitto-annuncio-appartamento-arredamento-arredato-ascensore-attrezzata-autobus-balcone-biciclette-blindata-cantina-caratteristiche-centrale-classe-completo-condizioni-condominiale-coppia-cortile-corvetto-cucina-dedicata-deposito-disponibilita",
     "rif:subito:658640419",
     "tel:450836491",
-    "ind:polesine|6|78|loc",
-    "foto:dc942d86-d416-46a9-a957-de9f1ba42ec3",
-    "foto:cdd4e6b8-7604-4dbd-a0a4-e5574f89c068",
-    "foto:9d2fa78d-a05b-48c4-a6db-53dc6ee6d54e",
     "testo:annunciodiaffittoappartamentoarredatoinottimecondizioniindirizzoviapolesine23milanoasoli200mdallametrocorvettoedallaferm",
-    "parole:affitto-annuncio-appartamento-arredamento-arredato-ascensore-attrezzata-autobus-balcone-biciclette-blindata-cantina-caratteristiche-centrale-classe-completo-condizioni-condominiale-coppia-cortile-corvetto-cucina-dedicata-deposito-disponibilita"
-   ]
+    "url:subito.it/appartamenti/casa-in-via-polesine-milano-658640419.htm"
+   ],
+   "rivisto": "2026-08-31"
   },
   {
    "id": "esc-20260831113719-8",
@@ -232,5 +234,5 @@
   }
  ],
  "conteggio": 8,
- "id": "esclusi-202608311138"
+ "id": "esclusi-202608311119"
 }

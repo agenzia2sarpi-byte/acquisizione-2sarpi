@@ -1,7 +1,7 @@
 {
- "id": "radar-202608311138",
- "generato": "2026-08-31T11:38:03",
- "conteggio": 54,
+ "id": "radar-202608311119",
+ "generato": "2026-08-31T11:19:30",
+ "conteggio": 50,
  "fonte": "Subito — soli privati, Milano (via Apify)",
  "annunci": [
   {
@@ -80,182 +80,6 @@
     [
      "Nessun recapito diretto",
      -8
-    ]
-   ],
-   "indirizzoTentato": "2026-08-25",
-   "scoperto": "2026-08-18",
-   "fotoSospetto": "",
-   "fotoLette": "2026-08-26"
-  },
-  {
-   "url": "https://www.subito.it/appartamenti/monolocale-moderno-zona-bovisa-milano-653582665.htm",
-   "portale": "subito",
-   "riferimento": "653582665",
-   "titolo": "Monolocale moderno-zona Bovisa",
-   "via": "",
-   "civico": "",
-   "quartiere": "Villapizzone",
-   "municipio": "",
-   "tipo": "Locazione",
-   "tipologia": "",
-   "prezzo": 750.0,
-   "mq": 35.0,
-   "locali": 1.0,
-   "bagni": 1.0,
-   "piano": "6",
-   "ascensore": true,
-   "spese": "",
-   "classeEnergetica": "",
-   "statoImmobile": "ottimo---ristrutturato",
-   "telefono": "",
-   "email": "",
-   "inserzionista": "Zaimi",
-   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/2e/2e769826-ade3-4f64-885e-337ddf898db1?rule=vertical-mini-card-2x-auto",
-   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/55/550691eb-34b9-4e86-84ae-e333edbd2ebb?rule=vertical-mini-card-2x-auto",
-   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/7c/7c6d4252-b2d3-45ae-88fa-a957d777d835?rule=vertical-mini-card-2x-auto",
-   "descrizione": "Privato affitta grazioso monolocale di 35mq completamente ristrutturato e arredato a nuovo. Composto da ingresso, cucina separata semi abitabile, bagno finestrato e zona giorno/notte con un balconcino. Sito al 6 piano con ascensore e gode di affaccio interno molto silenzioso, luminoso e con piacevole vista. Situato vicino al Campus Bovisa del Politecnico di Milano, a due passi dal passante ferroviario Villapizzone, dalla fermata 12 e dal capolinea 19. Canone mensile Euro 750 piu' Euro 100 di spese condominiali (compreso di riscaldamento centralizzato). Solo referenziati, No agenzia. Libero da 01 settembre.",
-   "pubblicato": "2026-08-18",
-   "privato": true,
-   "verificatoIl": "2026-08-31",
-   "noAgenzie": true,
-   "nuovo": false,
-   "zona": "Fascia accessibile",
-   "zonaFonte": "5.2 km dal Duomo",
-   "qualitaFoto": "medie",
-   "qualitaTesto": "curato",
-   "sospettoAgenzia": 0,
-   "verdettoInserzionista": "privato",
-   "motiviAgenzia": [
-    "si dichiara proprietario o rifiuta le agenzie"
-   ],
-   "qualitaImmobile": 89,
-   "percheImmobile": [
-    "35 mq: taglio molto richiesto",
-    "con ascensore",
-    "ristrutturato o nuovo",
-    "balcone o terrazzo"
-   ],
-   "priorita": 0,
-   "perchePriorita": [
-    [
-     "Prezzo di zona non confrontabile",
-     6
-    ],
-    [
-     "13 giorni online",
-     2.6
-    ],
-    [
-     "Foto: medie",
-     6
-    ],
-    [
-     "Testo: curato",
-     1
-    ],
-    [
-     "Provvigione stimata 1.620 €",
-     1.8
-    ],
-    [
-     "Qualita' dell'immobile 89/100",
-     10.9
-    ],
-    [
-     "Nessun recapito diretto",
-     -8
-    ],
-    [
-     "Ha scritto «no agenzie»: non si chiama",
-     -30
-    ]
-   ],
-   "quartiereFonte": "nominato nel testo dell'annuncio",
-   "lat": 45.5012391,
-   "lon": 9.1486016,
-   "indirizzoTentato": "2026-08-25",
-   "scoperto": "2026-08-18",
-   "fotoSospetto": "",
-   "fotoLette": "2026-08-26"
-  },
-  {
-   "url": "https://www.subito.it/appartamenti/bilocale-trilocale-milano-651857047.htm",
-   "portale": "subito",
-   "riferimento": "651857047",
-   "titolo": "Bilocale/trilocale",
-   "via": "Via Luigi Ornato",
-   "civico": "44",
-   "quartiere": "",
-   "municipio": "Municipio 9",
-   "tipo": "Locazione",
-   "tipologia": "",
-   "prezzo": 900.0,
-   "mq": 40.0,
-   "locali": 3.0,
-   "bagni": 1.0,
-   "piano": "3",
-   "ascensore": false,
-   "spese": "",
-   "classeEnergetica": "in-attesa-di-certificazione",
-   "statoImmobile": "buono---abitabile",
-   "telefono": "3939256777",
-   "email": "",
-   "inserzionista": "Gabriele",
-   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d2/d24d110d-b58c-4c39-bd29-b19a536d1913?rule=vertical-mini-card-2x-auto",
-   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/45/45f4c349-2143-45f9-8cda-83ec80b0b35f?rule=vertical-mini-card-2x-auto",
-   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/09/09285029-e31d-4517-95ce-716858cd6c7d?rule=vertical-mini-card-2x-auto",
-   "descrizione": "Appartamento sito al terzo piano senza ascensore in Via Luigi Ornato 44 vicino ospedale niguarda e università Bicocca, con tram e autobus collegati con metropolitane e centro Milano. \nDisponibili BILOCALE E TRILOCALE. \nBilocale 900\nTrilocale 1200",
-   "pubblicato": "2026-08-18",
-   "privato": true,
-   "verificatoIl": "2026-08-31",
-   "noAgenzie": false,
-   "nuovo": false,
-   "lat": 45.5264126,
-   "lon": 9.1925433,
-   "zona": "Fascia accessibile",
-   "zonaFonte": "6.9 km dal Duomo",
-   "qualitaFoto": "medie",
-   "qualitaTesto": "medio",
-   "sospettoAgenzia": 14,
-   "verdettoInserzionista": "privato",
-   "motiviAgenzia": [
-    "«Gabriele» pubblica 2 immobili"
-   ],
-   "qualitaImmobile": 58,
-   "percheImmobile": [
-    "40 mq: taglio molto richiesto",
-    "3 locali: la domanda sta qui",
-    "3° piano senza ascensore"
-   ],
-   "priorita": 28,
-   "perchePriorita": [
-    [
-     "Prezzo di zona non confrontabile",
-     6
-    ],
-    [
-     "13 giorni online",
-     2.6
-    ],
-    [
-     "Foto: medie",
-     6
-    ],
-    [
-     "Testo: medio",
-     4
-    ],
-    [
-     "Provvigione stimata 1.944 €",
-     2.2
-    ],
-    [
-     "Qualita' dell'immobile 58/100",
-     2.2
-    ],
-    [
-     "Telefono pubblicato",
-     5
     ]
    ],
    "indirizzoTentato": "2026-08-25",
@@ -877,91 +701,6 @@
    "fotoLette": "2026-08-26"
   },
   {
-   "url": "https://www.subito.it/appartamenti/bilocale-ad-bocconi-iulm-via-pomponazzi-milano-658170036.htm",
-   "portale": "subito",
-   "riferimento": "658170036",
-   "titolo": "Bilocale ad. Bocconi / IULM (Via Pomponazzi)",
-   "via": "Via Pietro Pomponazzi",
-   "civico": "21",
-   "quartiere": "",
-   "municipio": "Municipio 5",
-   "tipo": "Locazione",
-   "tipologia": "",
-   "prezzo": 1300.0,
-   "mq": 40.0,
-   "locali": 2.0,
-   "bagni": 1.0,
-   "piano": "4",
-   "ascensore": true,
-   "zona": "Semicentro consolidato",
-   "lat": 45.4418973,
-   "lon": 9.1822169,
-   "spese": "",
-   "classeEnergetica": "g",
-   "statoImmobile": "ottimo---ristrutturato",
-   "telefono": "3384693664",
-   "email": "",
-   "inserzionista": "",
-   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/18/1896cb72-b980-4c2d-a801-998eda51b4ae?rule=vertical-mini-card-2x-auto",
-   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/6b/6bdf028b-e522-48ad-9905-3089a0482781?rule=vertical-mini-card-2x-auto",
-   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/ea/ead73d97-98eb-49a7-befb-6d1435c13102?rule=vertical-mini-card-2x-auto",
-   "numeroFoto": 6,
-   "descrizione": "Privato propone in affitto un luminoso bilocale di 40 mq, completamente arredato e accessoriato, situato al quarto piano con ascensore di via Pomponazzi 6. \nLo stabile è signorile e dotato di servizio di portineria. \nLa posizione è strategica e calmissima, nel cuore della zona universitaria tra Bocconi e IULM.\nL'appartamento è molto silenzioso grazie all'altezza del piano e alla presenza di finestre insonorizzate, caratteristiche ideali per studenti e giovani professionisti in cerca di tranquillità. \nLa casa è pronta per essere abitata fin da subito.\nServizi condominiali: Stabile con ascensore e servizio di portiere (comodo anche per il ritiro dei pacchi).\nIngresso e corridoio: Spazio ottimizzato con capiente armadiatura a muro a tutt'altezza e comoda cassettiera.\nCamera da letto: \nLetto matrimoniale con cassetti, grande armadio con ante a specchio e TV a schermo piatto a muro.\nCucina ab",
-   "pubblicato": "2026-08-24",
-   "privato": true,
-   "verificatoIl": "2026-08-31",
-   "noAgenzie": false,
-   "nuovo": false,
-   "scoperto": "2026-08-25",
-   "zonaFonte": "2.6 km dal Duomo",
-   "qualitaFoto": "medie",
-   "qualitaTesto": "curato",
-   "sospettoAgenzia": 0,
-   "verdettoInserzionista": "privato",
-   "motiviAgenzia": [],
-   "qualitaImmobile": 74,
-   "percheImmobile": [
-    "40 mq: taglio molto richiesto",
-    "2 locali: la domanda sta qui",
-    "con ascensore",
-    "classe energetica g"
-   ],
-   "priorita": 29,
-   "perchePriorita": [
-    [
-     "Prezzo di zona non confrontabile",
-     6
-    ],
-    [
-     "7 giorni online",
-     1.4
-    ],
-    [
-     "Foto: medie",
-     6
-    ],
-    [
-     "Testo: curato",
-     1
-    ],
-    [
-     "Provvigione stimata 2.808 €",
-     3.1
-    ],
-    [
-     "Qualita' dell'immobile 74/100",
-     6.7
-    ],
-    [
-     "Telefono pubblicato",
-     5
-    ]
-   ],
-   "indirizzoTentato": "2026-08-25",
-   "fotoSospetto": "",
-   "fotoLette": "2026-08-26"
-  },
-  {
    "url": "https://www.subito.it/appartamenti/appartamento-turro-milano-658330687.htm",
    "portale": "subito",
    "riferimento": "658330687",
@@ -1385,187 +1124,6 @@
    "fotoLette": "2026-08-26"
   },
   {
-   "url": "https://www.subito.it/appartamenti/grazioso-bilocale-milano-658354581.htm",
-   "portale": "subito",
-   "riferimento": "658354581",
-   "titolo": "grazioso bilocale ",
-   "via": "Piazzale Nizza",
-   "civico": "",
-   "quartiere": "",
-   "municipio": "Municipio 9",
-   "tipo": "Locazione",
-   "tipologia": "",
-   "prezzo": null,
-   "mq": 50.0,
-   "locali": 2.0,
-   "bagni": 1.0,
-   "piano": "2",
-   "ascensore": true,
-   "zona": "Fascia media urbana",
-   "lat": 45.5030051,
-   "lon": 9.1888918,
-   "spese": "",
-   "classeEnergetica": "b",
-   "statoImmobile": "ottimo---ristrutturato",
-   "telefono": "",
-   "email": "",
-   "inserzionista": "",
-   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/5c/5c68a266-90f7-42d9-b59c-cef2d8f8f063?rule=vertical-mini-card-2x-auto",
-   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/2c/2c3fbc3b-694a-47ad-9cb5-61d6bb1c49e5?rule=vertical-mini-card-2x-auto",
-   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/ae/aed2d352-dc36-41b1-94d8-43275fd976cf?rule=vertical-mini-card-2x-auto",
-   "numeroFoto": 6,
-   "descrizione": "adiacente piazzale Nizza ,ottima soluzione per coppia di lavoratori o studenti .arredato e comodo ai servizi pubblici .classe energetica b\ncanone transitorio 3-18 mesi.\nspese condominiali 100€ circa al mese \n",
-   "pubblicato": "2026-08-26",
-   "privato": true,
-   "verificatoIl": "2026-08-26",
-   "noAgenzie": false,
-   "nuovo": false,
-   "scoperto": "2026-08-26",
-   "indirizzoTentato": "2026-08-26",
-   "zonaFonte": "4.3 km dal Duomo",
-   "qualitaFoto": "medie",
-   "qualitaTesto": "scarno",
-   "sospettoAgenzia": 0,
-   "verdettoInserzionista": "privato",
-   "motiviAgenzia": [],
-   "qualitaImmobile": 87,
-   "percheImmobile": [
-    "50 mq: taglio molto richiesto",
-    "2 locali: la domanda sta qui",
-    "con ascensore",
-    "classe energetica b"
-   ],
-   "priorita": 23,
-   "perchePriorita": [
-    [
-     "Prezzo non attendibile: da verificare al telefono",
-     0
-    ],
-    [
-     "Prezzo di zona non confrontabile",
-     6
-    ],
-    [
-     "5 giorni online",
-     1.0
-    ],
-    [
-     "Foto: medie",
-     6
-    ],
-    [
-     "Testo: scarno",
-     8
-    ],
-    [
-     "Qualita' dell'immobile 87/100",
-     10.4
-    ],
-    [
-     "Nessun recapito diretto",
-     -8
-    ]
-   ],
-   "fotoSospetto": "",
-   "fotoLette": "2026-08-26"
-  },
-  {
-   "url": "https://www.subito.it/appartamenti/bilocale-arredato-nuovo-a-milano-citta-studi-milano-658344610.htm",
-   "portale": "subito",
-   "riferimento": "658344610",
-   "titolo": "Bilocale arredato nuovo a Milano Città Studi",
-   "via": "Via Vallazze",
-   "civico": "87",
-   "quartiere": "Vallazze",
-   "municipio": "",
-   "tipo": "Locazione",
-   "tipologia": "",
-   "prezzo": 1300.0,
-   "mq": 53.0,
-   "locali": 2.0,
-   "bagni": 2.0,
-   "piano": "4",
-   "ascensore": true,
-   "zona": "Fascia media urbana",
-   "lat": 45.4847308,
-   "lon": 9.228373999999999,
-   "spese": "",
-   "classeEnergetica": "d",
-   "statoImmobile": "ottimo---ristrutturato",
-   "telefono": "3335857514",
-   "email": "",
-   "inserzionista": "Claudio",
-   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/6d/6dc25f58-4826-4cb5-9b3a-7228023ee54a?rule=vertical-mini-card-2x-auto",
-   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/da/da820dc5-7889-4ef1-bd49-4b776b3717c6?rule=vertical-mini-card-2x-auto",
-   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/7c/7c736509-d2c9-4d95-993d-c713a5be1ccf?rule=vertical-mini-card-2x-auto",
-   "numeroFoto": 6,
-   "descrizione": "Privato affitta un interessante e luminoso bilocale arredato, completo di impianto di climatizzazione, a Milano in via Vallazze 87 in zona Città Studi. \n\nL'appartamento, mai abitato fino ad ora, è stato appena ristrutturato ed arredato da un Architetto.\n\nE'composto da: un soggiorno con cucina, tavolo allungabile e divano, una grande camera con due letti con contenitore e due scrivanie, un bagno con doccia.\n\nDispone di un bel balcone e di una ampia finestra da dove si osserva, sullo sfondo, lo skyline. \n\nL'appartamento si trova al quarto piano in un condominio con riscaldamento a pannelli radianti, ascensore e servizio di portineria. \n \nE'situato in una zona strategica di Milano Est. Nelle immediate vicinanze ci sono, oltre ad alcuni supermercati, importanti Istituti Universitari, due linee della metropolitana e di bus, la Tangenziale Est e la Stazione Ferroviaria di Lambrate.\n\nIl canone ",
-   "pubblicato": "2026-08-26",
-   "privato": true,
-   "verificatoIl": "2026-08-26",
-   "noAgenzie": true,
-   "nuovo": false,
-   "scoperto": "2026-08-26",
-   "indirizzoTentato": "2026-08-26",
-   "zonaFonte": "3.8 km dal Duomo",
-   "qualitaFoto": "medie",
-   "qualitaTesto": "curato",
-   "sospettoAgenzia": 7,
-   "verdettoInserzionista": "privato",
-   "motiviAgenzia": [
-    "lo stesso numero compare su 2 annunci",
-    "«Claudio» pubblica 2 immobili",
-    "descrizione strutturata da scheda",
-    "si dichiara proprietario o rifiuta le agenzie"
-   ],
-   "qualitaImmobile": 100,
-   "percheImmobile": [
-    "53 mq: taglio molto richiesto",
-    "2 locali: la domanda sta qui",
-    "due o piu' bagni",
-    "con ascensore",
-    "ristrutturato o nuovo",
-    "balcone o terrazzo"
-   ],
-   "priorita": 6,
-   "perchePriorita": [
-    [
-     "Prezzo di zona non confrontabile",
-     6
-    ],
-    [
-     "5 giorni online",
-     1.0
-    ],
-    [
-     "Foto: medie",
-     6
-    ],
-    [
-     "Testo: curato",
-     1
-    ],
-    [
-     "Provvigione stimata 2.808 €",
-     3.1
-    ],
-    [
-     "Qualita' dell'immobile 100/100",
-     14.0
-    ],
-    [
-     "Telefono pubblicato",
-     5
-    ],
-    [
-     "Ha scritto «no agenzie»: non si chiama",
-     -30
-    ]
-   ],
-   "fotoSospetto": "",
-   "fotoLette": "2026-08-26"
-  },
-  {
    "url": "https://www.subito.it/appartamenti/design-loft-a-turro-milano-658340361.htm",
    "portale": "subito",
    "riferimento": "658340361",
@@ -1598,7 +1156,7 @@
    "descrizione": "AFFITTO: Esclusivo Design Loft a Turro (MM1)\n\nLoft di design su 3 livelli a 50 metri dalla metropolitana Turro (MM1 rossa), frutto di un recupero post-industriale con finiture di pregio, acciaio a vista, dettagli in vetrocemento e arredi iconici.\nArticolazione degli Spazi:\n\n Piano Terra (Living & Dining): Cucina a vista con penisola (piano 5 fuochi, forno, lavastoviglie), zona pranzo con tavolo in vetro e lampadario a cristallo. Primo bagno con doccia walk-in, vetrocemento e zona lavanderia (lavatrice e asciugatrice).\n\n Mezzanino / Soppalco (Master Suite): Accessibile da scala in metallo, caratterizzato da pavimentazione trasparente in vetro blindato con travi in acciaio a vista e illuminazione FontanaArte. Ospita la camera da letto padronale (letto capitonné, lampade Tolomeo) e una cabina armadio dedicata.\n\n Piano Seminterrato (Open Space): Pavimentato in gres a spina di pesce scuro, of",
    "pubblicato": "2026-08-26",
    "privato": true,
-   "verificatoIl": "2026-08-26",
+   "verificatoIl": "2026-08-31",
    "noAgenzie": false,
    "nuovo": false,
    "scoperto": "2026-08-26",
@@ -1765,7 +1323,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": true,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "6.8 km dal Duomo",
@@ -1855,7 +1413,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-31",
@@ -1942,7 +1500,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "4.9 km dal Duomo",
@@ -2028,7 +1586,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": true,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "7.1 km dal Duomo",
@@ -2118,7 +1676,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "5.4 km dal Duomo",
@@ -2201,7 +1759,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-31",
@@ -2289,7 +1847,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": true,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-31",
@@ -2381,7 +1939,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "11.8 km dal Duomo",
@@ -2467,7 +2025,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "3.3 km dal Duomo",
@@ -2547,7 +2105,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": true,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "4.2 km dal Duomo",
@@ -2639,7 +2197,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-31",
@@ -2725,7 +2283,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-31",
@@ -2811,7 +2369,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "",
@@ -2891,7 +2449,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": true,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "quartiere di periferia esterna",
@@ -2980,7 +2538,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "5.9 km dal Duomo",
@@ -3068,7 +2626,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": true,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "3.2 km dal Duomo",
@@ -3160,7 +2718,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "7.9 km dal Duomo",
@@ -3245,7 +2803,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": true,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-31",
@@ -3336,7 +2894,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "6.0 km dal Duomo",
@@ -3420,7 +2978,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-31",
@@ -3508,7 +3066,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "2.5 km dal Duomo",
@@ -3593,7 +3151,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": true,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "5.2 km dal Duomo",
@@ -3684,7 +3242,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "2.8 km dal Duomo",
@@ -3770,7 +3328,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "",
@@ -3852,7 +3410,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "3.3 km dal Duomo",
@@ -3940,7 +3498,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "quartiereFonte": "nominato nel testo dell'annuncio",
    "indirizzoTentato": "2026-08-31",
@@ -4027,7 +3585,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "3.2 km dal Duomo",
@@ -4112,7 +3670,7 @@
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": true,
-   "nuovo": true,
+   "nuovo": false,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
    "zonaFonte": "7.0 km dal Duomo",
@@ -4172,403 +3730,56 @@
    "fotoSospetto": ""
   },
   {
-   "url": "https://www.subito.it/appartamenti/bilocale-ristrutturato-con-balcone-piano-alto-milano-650810312.htm",
+   "url": "https://www.subito.it/appartamenti/bilocale-d-epoca-ristrutturato-via-murat-milano-milano-658965677.htm",
    "portale": "subito",
-   "riferimento": "650810312",
-   "titolo": "Bilocale ristrutturato con balcone piano alto",
-   "via": "Via dei Guarneri",
-   "civico": "11",
-   "quartiere": "",
-   "municipio": "Municipio 5",
-   "tipo": "Locazione",
-   "tipologia": "",
-   "prezzo": 980.0,
-   "mq": 54.0,
-   "locali": null,
-   "bagni": null,
-   "piano": "3",
-   "ascensore": true,
-   "zona": "Fascia media urbana",
-   "lat": 45.4275341,
-   "lon": 9.2044177,
-   "spese": "",
-   "classeEnergetica": "",
-   "statoImmobile": "ottimo---ristrutturato",
-   "telefono": "3476837579",
-   "email": "",
-   "inserzionista": "Barbara",
-   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/a0/a0bb95d7-3fa4-401e-916a-17d30e2a6adf?rule=vertical-mini-card-2x-auto",
-   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/00/00ac637f-2555-4000-a62d-a6a613cac505?rule=vertical-mini-card-2x-auto",
-   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/97/97cd5184-3c69-42a8-a1b3-2da8b1135376?rule=vertical-mini-card-2x-auto",
-   "numeroFoto": 4,
-   "descrizione": "Bilocale arredato e interamente ristrutturato in Via dei Guarneri 24 - Milano, al 3° piano con portineria tutto il giorno e riscaldamento centralizzato. Composto da cucina abitabile, salottino, camera matrimoniale con bagno privato. Interamente climatizzato.\nPosizione comodissima: a pochi passi dal tram 24 e dai principali mezzi pubblici, in un quartiere residenziale tranquillo, ricco di negozi, scuole, servizi e vicino al Parco Agricolo Sud. Nelle vicinanze anche realtà culturali e moderne come Fondazione Prada e ICS Symbiosis.\n- Canone: euro 980\n- Spese condominiali: euro 150/mese\n- Disponibile da subito\nPer informazioni contattare solo tramite whatsapp il numero 3317801852 grazie",
-   "pubblicato": "2026-08-30",
-   "privato": true,
-   "verificatoIl": "2026-08-31",
-   "noAgenzie": false,
-   "nuovo": true,
-   "scoperto": "2026-08-31",
-   "indirizzoTentato": "2026-08-31",
-   "zonaFonte": "4.2 km dal Duomo",
-   "qualitaFoto": "medie",
-   "qualitaTesto": "curato",
-   "sospettoAgenzia": 0,
-   "verdettoInserzionista": "privato",
-   "motiviAgenzia": [],
-   "qualitaImmobile": 89,
-   "percheImmobile": [
-    "54 mq: taglio molto richiesto",
-    "con ascensore",
-    "ristrutturato o nuovo",
-    "balcone o terrazzo"
-   ],
-   "priorita": 31,
-   "perchePriorita": [
-    [
-     "Prezzo di zona non confrontabile",
-     6
-    ],
-    [
-     "1 giorni online",
-     0.2
-    ],
-    [
-     "Foto: medie",
-     6
-    ],
-    [
-     "Testo: curato",
-     1
-    ],
-    [
-     "Provvigione stimata 2.117 €",
-     2.4
-    ],
-    [
-     "Qualita' dell'immobile 89/100",
-     10.9
-    ],
-    [
-     "Telefono pubblicato",
-     5
-    ]
-   ],
-   "fotoLette": "2026-08-31",
-   "fotoSospetto": ""
-  },
-  {
-   "url": "https://www.subito.it/appartamenti/bilocale-per-studenti-milano-658896797.htm",
-   "portale": "subito",
-   "riferimento": "658896797",
-   "titolo": "Bilocale per studenti",
-   "via": "Via Ruggero Bonghi",
-   "civico": "18",
-   "quartiere": "",
-   "municipio": "Municipio 5",
-   "tipo": "Locazione",
-   "tipologia": "",
-   "prezzo": 1100.0,
-   "mq": 45.0,
-   "locali": 2.0,
-   "bagni": null,
-   "piano": "3",
-   "ascensore": false,
-   "zona": "Semicentro consolidato",
-   "lat": 45.4408601,
-   "lon": 9.1816064,
-   "spese": "",
-   "classeEnergetica": "",
-   "statoImmobile": "buono---abitabile",
-   "telefono": "",
-   "email": "",
-   "inserzionista": "Anna",
-   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f0/f08edf66-b880-4bc4-b2ac-056286f3fb4a?rule=vertical-mini-card-2x-auto",
-   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/c6/c6bbe863-1681-4a52-8377-3c4c3331623e?rule=vertical-mini-card-2x-auto",
-   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/c8/c88e935c-d87b-4001-8adb-ba66ef60c730?rule=vertical-mini-card-2x-auto",
-   "numeroFoto": 6,
-   "descrizione": "Appartamento BILOCALE ARREDATO, nelle tipiche case di ringhiera milanesi, molto tranquillo, al terzo piano senza ascensore con doppio affaccio. L'appartamento è composto da soggiorno con cucinino a vista dotato di forno piano cottura, frigo, lavatrice, camera da letto con 2 letti singoli, armadi e scrivanie e PICCOLO bagno (lavandino, doccia passante, wc, ma senza bidet). TERMOAUTONOMO con caldaia e impianti a norma. \nSi ricerca 2 studenti/studentesse, (gruppo già formato) REFERENZIATI dai propri genitori, seri, non fumatori. Contratto regolare come da norme, rinnovabile annualmente con tre mesi di preavviso. Si trova in via Ruggero BONGHI zona P.ta TICINESE vicino ai navigli e alla Darsena. PERFETTO PER STUDENTI IULM, NABA, BOCCONI STATALE che sono nelle vicinanze ma anche con altre facoltà essendoci numerosi mezzi di trasporto nelle vicinanze 90/91, Metro Verde, tram 3 e 15 . Comodo su",
-   "pubblicato": "2026-08-30",
-   "privato": true,
-   "verificatoIl": "2026-08-31",
-   "noAgenzie": false,
-   "nuovo": true,
-   "scoperto": "2026-08-31",
-   "indirizzoTentato": "2026-08-31",
-   "zonaFonte": "2.7 km dal Duomo",
-   "qualitaFoto": "medie",
-   "qualitaTesto": "curato",
-   "sospettoAgenzia": 0,
-   "verdettoInserzionista": "privato",
-   "motiviAgenzia": [],
-   "qualitaImmobile": 58,
-   "percheImmobile": [
-    "45 mq: taglio molto richiesto",
-    "2 locali: la domanda sta qui",
-    "3° piano senza ascensore"
-   ],
-   "priorita": 10,
-   "perchePriorita": [
-    [
-     "Prezzo di zona non confrontabile",
-     6
-    ],
-    [
-     "1 giorni online",
-     0.2
-    ],
-    [
-     "Foto: medie",
-     6
-    ],
-    [
-     "Testo: curato",
-     1
-    ],
-    [
-     "Provvigione stimata 2.376 €",
-     2.6
-    ],
-    [
-     "Qualita' dell'immobile 58/100",
-     2.2
-    ],
-    [
-     "Nessun recapito diretto",
-     -8
-    ]
-   ],
-   "fotoLette": "2026-08-31",
-   "fotoSospetto": ""
-  },
-  {
-   "url": "https://www.subito.it/appartamenti/arredato-milano-654525096.htm",
-   "portale": "subito",
-   "riferimento": "654525096",
-   "titolo": "Arredato",
-   "via": "Corso Lodi",
-   "civico": "",
-   "quartiere": "Porta Romana",
-   "municipio": "",
-   "tipo": "Locazione",
-   "tipologia": "",
-   "prezzo": 1300.0,
-   "mq": 66.0,
-   "locali": 3.0,
-   "bagni": 1.0,
-   "piano": "1",
-   "ascensore": true,
-   "zona": "Centro storico e semicentro di pregio",
-   "lat": 45.4493768,
-   "lon": 9.207084,
-   "spese": "",
-   "classeEnergetica": "d",
-   "statoImmobile": "ottimo---ristrutturato",
-   "telefono": "",
-   "email": "",
-   "inserzionista": "Gabriele",
-   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/a9/a9c39c7a-23be-488f-b6dd-e08dd2c554f3?rule=vertical-mini-card-2x-auto",
-   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/1d/1dd4a9c9-143e-49ec-b20e-1542387dd545?rule=vertical-mini-card-2x-auto",
-   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/a9/a96431e9-cb49-4413-9b36-16b53109ca44?rule=vertical-mini-card-2x-auto",
-   "numeroFoto": 6,
-   "descrizione": "3+2 o transitorio concordato 1300 euro +190 spese cond . Tranquillo appartamento di 66 mq a pochi minuti da Fondazione Prada, Corso Lodi, Porta Romana e a 10 minuti dall'aeroporto di Linate.\nL'appartamento è silenzioso e ideale per soggiorni di lavoro o turismo. Ospita fino a tre persone:\n o Una camera doppia\n o Una camera singola\nEntrambe le camere hanno accesso a un terrazzo.\n\nLa zona giorno include:\n o Cucina aperta con ampio frigorifero, microonde\n o Tavolo da pranzo per 4 persone\n o Divano angolare comodo e smart TV 42\"\n o Aria condizionata e tapparelle elettriche\n\nZona notte:\n o Camera matrimoniale con grande armadio\n o Camera singola con scrivania e armadio a tre ante, entrambe con terrazzo\n o Bagno moderno con ampia doccia e lavatrice a carico dall'alto\n o Angolo studio per smart working",
-   "pubblicato": "2026-08-30",
-   "privato": true,
-   "verificatoIl": "2026-08-31",
-   "noAgenzie": false,
-   "nuovo": true,
-   "scoperto": "2026-08-31",
-   "indirizzoTentato": "2026-08-31",
-   "zonaFonte": "quartiere di pregio",
-   "qualitaFoto": "medie",
-   "qualitaTesto": "curato",
-   "sospettoAgenzia": 14,
-   "verdettoInserzionista": "privato",
-   "motiviAgenzia": [
-    "«Gabriele» pubblica 2 immobili"
-   ],
-   "qualitaImmobile": 85,
-   "percheImmobile": [
-    "66 mq: taglio molto richiesto",
-    "3 locali: la domanda sta qui",
-    "con ascensore",
-    "balcone o terrazzo"
-   ],
-   "priorita": 18,
-   "perchePriorita": [
-    [
-     "Prezzo di zona non confrontabile",
-     6
-    ],
-    [
-     "1 giorni online",
-     0.2
-    ],
-    [
-     "Foto: medie",
-     6
-    ],
-    [
-     "Testo: curato",
-     1
-    ],
-    [
-     "Provvigione stimata 2.808 €",
-     3.1
-    ],
-    [
-     "Qualita' dell'immobile 85/100",
-     9.8
-    ],
-    [
-     "Nessun recapito diretto",
-     -8
-    ]
-   ],
-   "fotoLette": "2026-08-31",
-   "fotoSospetto": ""
-  },
-  {
-   "url": "https://www.subito.it/appartamenti/delizioso-appartamentino-con-terrazzo-milano-655979545.htm",
-   "portale": "subito",
-   "riferimento": "655979545",
-   "titolo": "Delizioso appartamentino con terrazzo",
-   "via": "",
-   "civico": "",
-   "quartiere": "Porta Venezia",
-   "municipio": "Municipio 1",
-   "tipo": "Locazione",
-   "tipologia": "",
-   "prezzo": 1050.0,
-   "mq": 35.0,
-   "locali": 1.0,
-   "bagni": 1.0,
-   "piano": "3",
-   "ascensore": false,
-   "zona": "Centro storico e semicentro di pregio",
-   "lat": 45.4742942,
-   "lon": 9.2052385,
-   "spese": "",
-   "classeEnergetica": "",
-   "statoImmobile": "ottimo---ristrutturato",
-   "telefono": "",
-   "email": "",
-   "inserzionista": "Fabio",
-   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/61/61cc6507-464c-4d7c-b9d1-f36680583804?rule=vertical-mini-card-2x-auto",
-   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/63/63a0f0af-461e-4b4b-a306-56ea7cc364f0?rule=vertical-mini-card-2x-auto",
-   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/23/23a19a0e-c65a-4d97-b785-9074dc95c514?rule=vertical-mini-card-2x-auto",
-   "numeroFoto": 6,
-   "descrizione": "Ideale per single, o giovane professionista. Elegante/moderno in ottima zona centrale signorile (Porta Venezia MM linea rossa, vicino ai giardini Palestro) con giardino alberato, servizio di portineria e videosorveglianza (3°p), finemente arredato, composto da: zona d'ingresso, area living/notte (moderna struttura letto matrimoniale a scomparsa CLEI, armadio e divano),\ncucinotto indipendente con finestra, bagno finestrato ed utile ripostiglio soppalcato, terrazzo vivibile con esposizione ad angolo esposto su giardino e fronte strada distanziata. Parquet, aria condizionata, doppi vetri, riscaldamento centralizzato. 1050 euro mensili (oltre 200 spese). ALL INCLUSIVE NESSUNA SPESA, TRATTATIVA CON DIRETTO PROPRIETARIO.",
-   "pubblicato": "2026-08-30",
-   "privato": true,
-   "verificatoIl": "2026-08-31",
-   "noAgenzie": false,
-   "nuovo": true,
-   "scoperto": "2026-08-31",
-   "quartiereFonte": "nominato nel testo dell'annuncio",
-   "indirizzoTentato": "2026-08-31",
-   "zonaFonte": "quartiere di pregio",
-   "qualitaFoto": "medie",
-   "qualitaTesto": "curato",
-   "sospettoAgenzia": 22,
-   "verdettoInserzionista": "privato",
-   "motiviAgenzia": [
-    "«Fabio» pubblica 2 immobili",
-    "descrizione strutturata da scheda"
-   ],
-   "qualitaImmobile": 56,
-   "percheImmobile": [
-    "35 mq: taglio molto richiesto",
-    "3° piano senza ascensore",
-    "balcone o terrazzo"
-   ],
-   "priorita": 9,
-   "perchePriorita": [
-    [
-     "Prezzo di zona non confrontabile",
-     6
-    ],
-    [
-     "1 giorni online",
-     0.2
-    ],
-    [
-     "Foto: medie",
-     6
-    ],
-    [
-     "Testo: curato",
-     1
-    ],
-    [
-     "Provvigione stimata 2.268 €",
-     2.5
-    ],
-    [
-     "Qualita' dell'immobile 56/100",
-     1.7
-    ],
-    [
-     "Nessun recapito diretto",
-     -8
-    ]
-   ],
-   "fotoLette": "2026-08-31",
-   "fotoSospetto": ""
-  },
-  {
-   "url": "https://www.subito.it/appartamenti/luminoso-bilocale-a-60-m-fermata-metro-dergano-milano-658882245.htm",
-   "portale": "subito",
-   "riferimento": "658882245",
-   "titolo": "Luminoso Bilocale a 60 m fermata metro Dergano",
-   "via": "Via Carlo Imbonati",
-   "civico": "",
+   "riferimento": "658965677",
+   "titolo": "Bilocale d'epoca ristrutturato via Murat Milano ",
+   "via": "Via Gioacchino Murat",
+   "civico": "29",
    "quartiere": "",
    "municipio": "Municipio 9",
-   "tipo": "Vendita",
+   "tipo": "Locazione",
    "tipologia": "",
    "prezzo": null,
-   "mq": 60.0,
-   "locali": null,
-   "bagni": 2.0,
-   "piano": "3",
-   "ascensore": true,
+   "mq": 55.0,
+   "locali": 2.0,
+   "bagni": 1.0,
+   "piano": "",
+   "ascensore": null,
    "zona": "Fascia media urbana",
-   "lat": 45.5048205,
-   "lon": 9.1799784,
+   "lat": 45.5005377,
+   "lon": 9.1903704,
    "spese": "",
    "classeEnergetica": "",
    "statoImmobile": "ottimo---ristrutturato",
-   "telefono": "3478852467",
+   "telefono": "",
    "email": "",
    "inserzionista": "",
-   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/04/04314011-9aed-4693-bdc4-fe6196f28f19?rule=vertical-mini-card-2x-auto",
-   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/e1/e1ba5795-4760-41d8-b7ce-bd53a7b21224?rule=vertical-mini-card-2x-auto",
-   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/56/56d7d9f0-1d90-4faf-ad34-b2c4c71cdd5d?rule=vertical-mini-card-2x-auto",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/17/17a36381-d6aa-4edb-836b-a9153bb28db6?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/80/8061788d-a46a-4ffd-a341-362e7f9859f0?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/0f/0f594a14-5004-42f7-b3f4-af5605faef30?rule=vertical-mini-card-2x-auto",
    "numeroFoto": 6,
-   "descrizione": "Luminoso appartamento al 3’ piano con ascensore, recentemente ristrutturato e ammobiliato a nuovo, in Milano, Via Imbonati, a 60 metri dalla fermata della metro Gialla  Dergano, che permette di raggiungere in soli 7 minuti stazione centrale, per cambio con metro Verde, in 12 minuti Piazza Duomo, per cambio con metro Rossa, in 4 minuti Zara, per cambio con metro Lilla.\nImmobile di 60 mq composto da sala living con angolo cottura, una camera da letto matrimoniale, n. 2 bagni finestrati  (solo uno dotato di doccia), n. 2 terrazzini, divano letto matrimoniale e n.2 ampi armadi.\nAppartamento dotato di Infissi in alluminio triplo vetro, n.2 condizionatori, zanzariere, videocitofono, lavastoviglie e lavatrice. Contratto della durata di 18 mesi, con possibilità di rinnovo.\nCanone di euro 1.100 + 150 spese condominiali. \nPossibilità di garage ad euro 120 mensili.\nIdeale per una persona o coppia, ",
-   "pubblicato": "2026-08-30",
+   "descrizione": "Affittasi in via Gioacchino Murat, Milano, bilocale di circa 55 mq, al piano rialzato di uno stabile d'epoca, recentemente ristrutturato.\nL'appartamento è arredato con mobili nuovi ed è in fase di ultimazione: mancano solo alcuni elementi e sono necessari un paio di giorni di lavoro per completarlo. Cucina nuova, camera con letto matrimoniale e aria condizionata di nuova installazione, programmabile anche da remoto.\nSerramenti e tapparelle nuovi ad alto isolamento termico e acustico.\nAlcune immagini dell'annuncio sono state elaborate con IA utilizzando gli arredi realmente acquistati, per mostrare il risultato finale degli ambienti.\nZona ben collegata, vicina a M5 Marche e M3 Maciachini, Stazione Centrale, Isola, Garibaldi, Bicocca e Niguarda.\nIdeale per single o coppia.\nCanone: €950/mese\nSpese condominiali: €150/mese, comprensive di riscaldamento e soggette a conguaglio.\nDeposito cauzio",
+   "pubblicato": "2026-08-31",
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": true,
    "nuovo": true,
    "scoperto": "2026-08-31",
    "indirizzoTentato": "2026-08-31",
-   "zonaFonte": "4.6 km dal Duomo",
+   "zonaFonte": "4.0 km dal Duomo",
    "qualitaFoto": "medie",
    "qualitaTesto": "curato",
    "sospettoAgenzia": 0,
    "verdettoInserzionista": "privato",
    "motiviAgenzia": [],
-   "qualitaImmobile": 100,
+   "qualitaImmobile": 84,
    "percheImmobile": [
-    "60 mq: taglio molto richiesto",
-    "due o piu' bagni",
-    "con ascensore",
-    "ristrutturato o nuovo",
-    "balcone o terrazzo",
-    "box o posto auto"
+    "55 mq: taglio molto richiesto",
+    "2 locali: la domanda sta qui",
+    "ristrutturato o nuovo"
    ],
-   "priorita": 2,
+   "priorita": 0,
    "perchePriorita": [
     [
      "Prezzo non attendibile: da verificare al telefono",
@@ -4579,8 +3790,8 @@
      6
     ],
     [
-     "1 giorni online",
-     0.2
+     "0 giorni online",
+     0.0
     ],
     [
      "Foto: medie",
@@ -4591,8 +3802,447 @@
      1
     ],
     [
-     "Qualita' dell'immobile 100/100",
-     14.0
+     "Qualita' dell'immobile 84/100",
+     9.5
+    ],
+    [
+     "Nessun recapito diretto",
+     -8
+    ],
+    [
+     "Ha scritto «no agenzie»: non si chiama",
+     -30
+    ]
+   ],
+   "fotoLette": "2026-08-31",
+   "fotoSospetto": ""
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/milano-monolocale-arredato-libero-subito-milano-650665897.htm",
+   "portale": "subito",
+   "riferimento": "650665897",
+   "titolo": "Milano monolocale arredato libero subito",
+   "via": "",
+   "civico": "",
+   "quartiere": "",
+   "municipio": "",
+   "tipo": "Locazione",
+   "tipologia": "",
+   "prezzo": 800.0,
+   "mq": 24.0,
+   "locali": null,
+   "bagni": null,
+   "piano": "",
+   "ascensore": true,
+   "zona": "",
+   "lat": null,
+   "lon": null,
+   "spese": "",
+   "classeEnergetica": "",
+   "statoImmobile": "buono---abitabile",
+   "telefono": "",
+   "email": "",
+   "inserzionista": "Gm",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/2b/2b1b1269-60be-4ccc-bf85-f317b25bef5d?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b3/b3856fb8-ba68-43bc-b39f-cda2a8de0740?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/36/362b790f-9dee-4d5d-9eb4-980f2edfc42c?rule=vertical-mini-card-2x-auto",
+   "numeroFoto": 6,
+   "descrizione": "Affittasi grazioso monolocale di circa 25 mq, completamente arredato e pronto da abitare, situato ad un piano alto di uno stabile ben tenuto.\nL'appartamento si distingue per la sua tranquillità grazie all'affaccio interno, che garantisce un ambiente particolarmente silenzioso e riservato, ideale per professionisti, studenti o lavoratori fuori sede.\nL'immobile è composto da:\n? zona giorno/notte ben organizzata;\n? cucina attrezzata;\n? bagno con doccia;\n? pavimentazione in parquet;\n? aria condizionata con pompa di calore per il massimo comfort in ogni stagione.\nLa posizione consente di raggiungere facilmente servizi, negozi e mezzi di trasporto.",
+   "pubblicato": "2026-08-31",
+   "privato": true,
+   "verificatoIl": "2026-08-31",
+   "noAgenzie": false,
+   "nuovo": true,
+   "scoperto": "2026-08-31",
+   "indirizzoTentato": "2026-08-31",
+   "zonaFonte": "",
+   "qualitaFoto": "medie",
+   "qualitaTesto": "curato",
+   "sospettoAgenzia": 8,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [
+    "descrizione strutturata da scheda"
+   ],
+   "qualitaImmobile": 57,
+   "percheImmobile": [
+    "con ascensore"
+   ],
+   "priorita": 9,
+   "perchePriorita": [
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "0 giorni online",
+     0.0
+    ],
+    [
+     "Foto: medie",
+     6
+    ],
+    [
+     "Testo: curato",
+     1
+    ],
+    [
+     "Provvigione stimata 1.728 €",
+     1.9
+    ],
+    [
+     "Qualita' dell'immobile 57/100",
+     2.0
+    ],
+    [
+     "Nessun recapito diretto",
+     -8
+    ]
+   ],
+   "fotoLette": "2026-08-31",
+   "fotoSospetto": ""
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/bilocale-palmanova-milano-658956502.htm",
+   "portale": "subito",
+   "riferimento": "658956502",
+   "titolo": "Bilocale Palmanova",
+   "via": "",
+   "civico": "",
+   "quartiere": "Crescenzago",
+   "municipio": "Municipio 2",
+   "tipo": "Locazione",
+   "tipologia": "",
+   "prezzo": null,
+   "mq": 45.0,
+   "locali": 2.0,
+   "bagni": null,
+   "piano": "4",
+   "ascensore": true,
+   "zona": "Fascia accessibile",
+   "lat": 45.5094512,
+   "lon": 9.2475983,
+   "spese": "",
+   "classeEnergetica": "in-attesa-di-certificazione",
+   "statoImmobile": "buono---abitabile",
+   "telefono": "",
+   "email": "",
+   "inserzionista": "",
+   "foto": "",
+   "foto2": "",
+   "foto3": "",
+   "numeroFoto": 0,
+   "descrizione": "Nelle richieste indicare PERIODO dal al, numero di persone, etc.\nOttimo per ospedale San Raffaele o RCS Accademy. A due passi da metro verde MM2 Crescenzago e Cimiano. Bilocale ammobiliato. Camera con letto matrimoniale, zona giorno con cucina attrezzata, divano letto. Bagno con doccia. Sgabuzzino. Balconcino. Tv, lavatrice, aria condizionata in camera.\nSi affitta per medi periodi (ad esempio per stagionali, studenti, lavoratori, esigenze transitorie, etc). Max. 3 persone. Animali non ammessi. Contratto transitorio superiore a 30 giorni. Max. 12 mesi. \n Il prezzo può dipendere dal periodo e dal numero di persone.\nGli ospiti devono avere documenti VALIDI. No agenzie.",
+   "pubblicato": "2026-08-31",
+   "privato": true,
+   "verificatoIl": "2026-08-31",
+   "noAgenzie": true,
+   "nuovo": true,
+   "scoperto": "2026-08-31",
+   "quartiereFonte": "nominato nel testo dell'annuncio",
+   "indirizzoTentato": "2026-08-31",
+   "zonaFonte": "6.7 km dal Duomo",
+   "qualitaFoto": "scarse",
+   "qualitaTesto": "curato",
+   "sospettoAgenzia": 0,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [],
+   "qualitaImmobile": 85,
+   "percheImmobile": [
+    "45 mq: taglio molto richiesto",
+    "2 locali: la domanda sta qui",
+    "con ascensore",
+    "balcone o terrazzo"
+   ],
+   "priorita": 0,
+   "perchePriorita": [
+    [
+     "Prezzo non attendibile: da verificare al telefono",
+     0
+    ],
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "0 giorni online",
+     0.0
+    ],
+    [
+     "Foto: scarse",
+     12
+    ],
+    [
+     "Testo: curato",
+     1
+    ],
+    [
+     "Qualita' dell'immobile 85/100",
+     9.8
+    ],
+    [
+     "Nessun recapito diretto",
+     -8
+    ],
+    [
+     "Ha scritto «no agenzie»: non si chiama",
+     -30
+    ]
+   ],
+   "fotoLette": "2026-08-31",
+   "fotoSospetto": ""
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/bilocale-via-masolino-da-panicale-milano-658955157.htm",
+   "portale": "subito",
+   "riferimento": "658955157",
+   "titolo": "Bilocale Via Masolino Da Panicale",
+   "via": "Via Masolino da Panicale",
+   "civico": "",
+   "quartiere": "Cagnola",
+   "municipio": "",
+   "tipo": "Locazione",
+   "tipologia": "",
+   "prezzo": 1150.0,
+   "mq": 65.0,
+   "locali": 2.0,
+   "bagni": 1.0,
+   "piano": "1",
+   "ascensore": false,
+   "zona": "Fascia media urbana",
+   "lat": 45.4939168,
+   "lon": 9.151814,
+   "spese": "",
+   "classeEnergetica": "b",
+   "statoImmobile": "ottimo---ristrutturato",
+   "telefono": "",
+   "email": "",
+   "inserzionista": "Stefan",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/2a/2adab856-0371-4b97-87c4-51eed17606c9?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/76/76dce547-e89e-447c-814a-18f36307727c?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d4/d473e1c9-e832-433d-8554-785894a36561?rule=vertical-mini-card-2x-auto",
+   "numeroFoto": 6,
+   "descrizione": "Affittiamo bilocale di 65 mq in zona Cagnola (Via masolino da panicale). Regolare contratto preferibilmente 4+4. Canone di affitto richiesto 1.150€ al mese comprensivo delle spese condominiali (restano fuori le utenze di luce e gas, no riscaldamento in quanto centralizzato).\n\nLa casa è composta da ampia camera da letto matrimoniale con balcone (potrebbe ospitare tranquillamente anche due letti di singoli), bagno, cucina e sala con balcone che affaccia su un verde cortile interno con posto per bici. L'appartamento è dotato di aria condizionata.\n\nLa zona è ben servita dai mezzi (ad esempio tram 19/12, autobus 57/90/91), ci sono supermercati vicini (lidl, piazza portello ipercoop...), facilmente raggiungibile piazza Firenze, corso Sempione, via Piero della Francesca, via Losanna, Gerusalemme e CityLife.\n\nE' possibile naturalmente visitare l'appartamento.",
+   "pubblicato": "2026-08-31",
+   "privato": true,
+   "verificatoIl": "2026-08-31",
+   "noAgenzie": false,
+   "nuovo": true,
+   "scoperto": "2026-08-31",
+   "indirizzoTentato": "2026-08-31",
+   "zonaFonte": "4.4 km dal Duomo",
+   "qualitaFoto": "medie",
+   "qualitaTesto": "curato",
+   "sospettoAgenzia": 0,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [],
+   "qualitaImmobile": 86,
+   "percheImmobile": [
+    "65 mq: taglio molto richiesto",
+    "2 locali: la domanda sta qui",
+    "classe energetica b",
+    "balcone o terrazzo"
+   ],
+   "priorita": 18,
+   "perchePriorita": [
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "0 giorni online",
+     0.0
+    ],
+    [
+     "Foto: medie",
+     6
+    ],
+    [
+     "Testo: curato",
+     1
+    ],
+    [
+     "Provvigione stimata 2.484 €",
+     2.8
+    ],
+    [
+     "Qualita' dell'immobile 86/100",
+     10.1
+    ],
+    [
+     "Nessun recapito diretto",
+     -8
+    ]
+   ],
+   "fotoLette": "2026-08-31",
+   "fotoSospetto": ""
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/luminoso-e-arredato-bilocale-ripamonti-prada-milano-658847683.htm",
+   "portale": "subito",
+   "riferimento": "658847683",
+   "titolo": "Luminoso e arredato bilocale - Ripamonti / Prada",
+   "via": "Via Gallura",
+   "civico": "8",
+   "quartiere": "Ex Om - Morivione",
+   "municipio": "",
+   "tipo": "Locazione",
+   "tipologia": "",
+   "prezzo": 1000.0,
+   "mq": 65.0,
+   "locali": 3.0,
+   "bagni": 1.0,
+   "piano": "3",
+   "ascensore": false,
+   "zona": "Semicentro consolidato",
+   "lat": 45.4374777,
+   "lon": 9.1992069,
+   "spese": "",
+   "classeEnergetica": "b",
+   "statoImmobile": "ottimo---ristrutturato",
+   "telefono": "3474777664",
+   "email": "",
+   "inserzionista": "luciano",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/03/03424bb6-ec44-4574-adf3-a140ea70d681?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/1a/1a41458e-72c1-4d58-a200-ebcc97f1153d?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/1a/1a4821d8-42d2-41d1-a264-4296e954ed09?rule=vertical-mini-card-2x-auto",
+   "numeroFoto": 6,
+   "descrizione": "Affittasi Bilocale ultimo piano (3 piano) composto da: soggiorno, cucina, bagno, camera da letto, comodo balcone. La casa è arredata e corredata di tutto l'occorrente, molto luminosa e silenziosa si trova in via Gallura, traversa molto tranquilla di via Ripamonti, a due passi dalla Fondazione Prada o dall'Università Bocconi e Parco Ravizza. Servita dai principali mezzi pubblici e dalle metro della zona. Affitto 1000 euro mensili spese condominiali incluse - escluse utenze (luce, gas, internet, tari)\nLIBERA DAL 1 SETTEMBRE 2026",
+   "pubblicato": "2026-08-31",
+   "privato": true,
+   "verificatoIl": "2026-08-31",
+   "noAgenzie": false,
+   "nuovo": true,
+   "scoperto": "2026-08-31",
+   "indirizzoTentato": "2026-08-31",
+   "zonaFonte": "3.1 km dal Duomo",
+   "qualitaFoto": "medie",
+   "qualitaTesto": "medio",
+   "sospettoAgenzia": 8,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [
+    "descrizione strutturata da scheda"
+   ],
+   "qualitaImmobile": 72,
+   "percheImmobile": [
+    "65 mq: taglio molto richiesto",
+    "3 locali: la domanda sta qui",
+    "3° piano senza ascensore",
+    "classe energetica b",
+    "balcone o terrazzo"
+   ],
+   "priorita": 30,
+   "perchePriorita": [
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "0 giorni online",
+     0.0
+    ],
+    [
+     "Foto: medie",
+     6
+    ],
+    [
+     "Testo: medio",
+     4
+    ],
+    [
+     "Provvigione stimata 2.160 €",
+     2.4
+    ],
+    [
+     "Qualita' dell'immobile 72/100",
+     6.2
+    ],
+    [
+     "Telefono pubblicato",
+     5
+    ]
+   ],
+   "fotoLette": "2026-08-31",
+   "fotoSospetto": ""
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/bilocale-di-pregio-a-corso-como-milano-653930091.htm",
+   "portale": "subito",
+   "riferimento": "653930091",
+   "titolo": "Bilocale di pregio a corso como",
+   "via": "Corso Como",
+   "civico": "9",
+   "quartiere": "",
+   "municipio": "Municipio 9",
+   "tipo": "Locazione",
+   "tipologia": "",
+   "prezzo": 1600.0,
+   "mq": 40.0,
+   "locali": 2.0,
+   "bagni": 1.0,
+   "piano": "",
+   "ascensore": true,
+   "zona": "Semicentro consolidato",
+   "lat": 45.4829157,
+   "lon": 9.183195399999999,
+   "spese": "",
+   "classeEnergetica": "",
+   "statoImmobile": "ottimo---ristrutturato",
+   "telefono": "3407073471",
+   "email": "",
+   "inserzionista": "Rosanna Rubino",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/78/78429a7f-cc68-4fc0-9c6c-407651dd27ab?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/3b/3b1c6f37-c744-45c1-9e2d-705389d10dfe?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b5/b5e87f92-6506-4dd0-9f30-3544421675b7?rule=vertical-mini-card-2x-auto",
+   "numeroFoto": 6,
+   "descrizione": "Libero a partire da settembre 2026 delizioso bi-locale design appena ristrutturato, dotato di ogni confort, arredato, bi esposto, luminosissimo, provvisto di terrazzo, arredi su misura, terzo piano con ascensore, palazzo di pregio in una via tranquilla a due passi da Corso Como, da Brera e dalla Fondazione Feltrinelli, a pochi passi dalla fermata Garibaldi della metro linea verde. Cucina provvista di tutto il necessario, aria condizionata caldo/freddo, riscaldamento autonomo, lavatrice e lavastoviglie, camera da letto con letto matrimoniale + divano letto doppio nel soggiorno, ideale per una persona o coppia. No agenzie, no intermediari, solo privati.",
+   "pubblicato": "2026-08-31",
+   "privato": true,
+   "verificatoIl": "2026-08-31",
+   "noAgenzie": true,
+   "nuovo": true,
+   "scoperto": "2026-08-31",
+   "indirizzoTentato": "2026-08-31",
+   "zonaFonte": "2.1 km dal Duomo",
+   "qualitaFoto": "medie",
+   "qualitaTesto": "curato",
+   "sospettoAgenzia": 0,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [
+    "si dichiara proprietario o rifiuta le agenzie"
+   ],
+   "qualitaImmobile": 97,
+   "percheImmobile": [
+    "40 mq: taglio molto richiesto",
+    "2 locali: la domanda sta qui",
+    "con ascensore",
+    "ristrutturato o nuovo",
+    "balcone o terrazzo"
+   ],
+   "priorita": 5,
+   "perchePriorita": [
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "0 giorni online",
+     0.0
+    ],
+    [
+     "Foto: medie",
+     6
+    ],
+    [
+     "Testo: curato",
+     1
+    ],
+    [
+     "Provvigione stimata 3.456 €",
+     3.8
+    ],
+    [
+     "Qualita' dell'immobile 97/100",
+     13.2
     ],
     [
      "Telefono pubblicato",
@@ -4607,96 +4257,89 @@
    "fotoSospetto": ""
   },
   {
-   "url": "https://www.subito.it/appartamenti/bilocale-navigli-ticinese-via-meda-milano-658878904.htm",
+   "url": "https://www.subito.it/appartamenti/singola-vicino-a-iulm-e-naba-milano-658607049.htm",
    "portale": "subito",
-   "riferimento": "658878904",
-   "titolo": "Bilocale Navigli Ticinese via Meda",
-   "via": "Via Giuseppe Meda",
-   "civico": "35",
-   "quartiere": "",
-   "municipio": "Municipio 5",
+   "riferimento": "658607049",
+   "titolo": "Singola vicino a Iulm e Naba",
+   "via": "Via Paternò",
+   "civico": "19",
+   "quartiere": "Restocco Maroni",
+   "municipio": "",
    "tipo": "Locazione",
    "tipologia": "",
-   "prezzo": 1050.0,
-   "mq": 50.0,
-   "locali": 2.0,
-   "bagni": 1.0,
-   "piano": "1",
+   "prezzo": 650.0,
+   "mq": 120.0,
+   "locali": 5.0,
+   "bagni": 2.0,
+   "piano": "6",
    "ascensore": true,
-   "zona": "Semicentro consolidato",
-   "lat": 45.441427,
-   "lon": 9.1789495,
+   "zona": "Fascia media urbana",
+   "lat": 45.4391011,
+   "lon": 9.1398413,
    "spese": "",
-   "classeEnergetica": "in-attesa-di-certificazione",
+   "classeEnergetica": "",
    "statoImmobile": "ottimo---ristrutturato",
-   "telefono": "",
+   "telefono": "3203905036",
    "email": "",
-   "inserzionista": "Riccardo",
-   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/ed/ed40793b-f776-4dde-bf59-6f009f1d0d88?rule=vertical-mini-card-2x-auto",
-   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/01/019536ff-77cd-4e3b-9ef9-25e196bb6fcc?rule=vertical-mini-card-2x-auto",
-   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/2b/2b413483-b506-4ffd-8767-9eef6a45bc9f?rule=vertical-mini-card-2x-auto",
-   "numeroFoto": 6,
-   "descrizione": "Navigli -Ticinese (San Gottardo/Meda): in gradevole e silenzioso contesto appartamento 50 mq ristrutturato, travi a vista, camino, luminoso e ristrutturato; composto da: ampio soggiorno con cucina a vista, camera con letto matrimoniale e bagno con box doccia e lavatrice. doppia esposizione. Completamente arredato. Riscaldamento autonomo. \nL'appartamento si trova in zona ben servita da negozi, supermercati, mezzi pubblici: tram 3 (fermata sotto casa), tram 15 (400 metri), autobus 95 - 91 - 71 - 59 (300 metri), Metro Verde Famagosta e Romolo (1000 metri); nelle immediate vicinanze dell'Università Bocconi, IULM, NABA e IED. Ben collegata al centro città e a pochi minuti a piedi dalla rinomata zona navigli con locali e ristoranti\nSi affitta per max. due persone. RICHIESTA: 1050€ + 100€ (spese) - Libero subito - NO AGENZIE\nNavigli - Ticinese (San Gottardo / Meda): in a pleasant and quiet sett",
-   "pubblicato": "2026-08-30",
+   "inserzionista": "azzurra",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/97/97a756cf-8499-43bb-8b9d-bb6e59e4d3cd?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/fe/fe57abb6-6d06-44aa-8bbe-3c78a01b00d3?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/01/017ed883-0d8b-45c2-bfab-6f21d60806c2?rule=vertical-mini-card-2x-auto",
+   "numeroFoto": 4,
+   "descrizione": "Affitto una bellissima stanza singola in via Paternò 19. L'appartamento è di 120mq, appena ristrutturato, ci sono \n3 stanze singole, 2 bagni, una cucina abitabile, un salone ed un balcone-terrazzino. La casa è in una zona \ntranquilla a pochissimi minuti dalla fermata porta Genova e dalla fermata Romolo. La zona, oltre ad essere ben \ncollegata, è super fornita di tabacchino, supermercato, bar, giardino, etc...\nIl costo della stanza comprende riscaldamento e condominio. Sono escluse Luce e Gas",
+   "pubblicato": "2026-08-31",
    "privato": true,
    "verificatoIl": "2026-08-31",
-   "noAgenzie": true,
+   "noAgenzie": false,
    "nuovo": true,
    "scoperto": "2026-08-31",
-   "zonaFonte": "2.7 km dal Duomo",
+   "indirizzoTentato": "2026-08-31",
+   "zonaFonte": "4.8 km dal Duomo",
    "qualitaFoto": "medie",
-   "qualitaTesto": "curato",
-   "sospettoAgenzia": 8,
+   "qualitaTesto": "medio",
+   "sospettoAgenzia": 0,
    "verdettoInserzionista": "privato",
-   "motiviAgenzia": [
-    "descrizione strutturata da scheda"
-   ],
-   "qualitaImmobile": 97,
+   "motiviAgenzia": [],
+   "qualitaImmobile": 82,
    "percheImmobile": [
-    "50 mq: taglio molto richiesto",
-    "2 locali: la domanda sta qui",
+    "due o piu' bagni",
     "con ascensore",
     "ristrutturato o nuovo",
-    "box o posto auto"
+    "balcone o terrazzo"
    ],
-   "priorita": 0,
+   "priorita": 32,
    "perchePriorita": [
     [
      "Prezzo di zona non confrontabile",
      6
     ],
     [
-     "1 giorni online",
-     0.2
+     "0 giorni online",
+     0.0
     ],
     [
      "Foto: medie",
      6
     ],
     [
-     "Testo: curato",
-     1
+     "Testo: medio",
+     4
     ],
     [
-     "Provvigione stimata 2.268 €",
-     2.5
+     "Provvigione stimata 1.404 €",
+     1.6
     ],
     [
-     "Qualita' dell'immobile 97/100",
-     13.2
+     "Qualita' dell'immobile 82/100",
+     9.0
     ],
     [
-     "Nessun recapito diretto",
-     -8
-    ],
-    [
-     "Ha scritto «no agenzie»: non si chiama",
-     -30
+     "Telefono pubblicato",
+     5
     ]
    ],
    "fotoLette": "2026-08-31",
-   "fotoSospetto": "",
-   "indirizzoTentato": "2026-08-31"
+   "fotoSospetto": ""
   }
  ],
  "verificati": [],
@@ -4719,14 +4362,17 @@
   "https://www.subito.it/appartamenti/appartamento-santa-maria-del-cedro-cs-milano-657708018.htm",
   "https://www.subito.it/appartamenti/appartamento-trilocale-ristrutturato-milano-657988470.htm",
   "https://www.subito.it/appartamenti/appartamento-zona-turro-gorla-milano-658356485.htm",
+  "https://www.subito.it/appartamenti/arredato-milano-654525096.htm",
   "https://www.subito.it/appartamenti/bel-bilocale-arredato-zona-parco-sempione-moscova-milano-610593377.htm",
   "https://www.subito.it/appartamenti/bilo-70-mq-2-camere-nuovo-zona-stazione-milano-657118936.htm",
+  "https://www.subito.it/appartamenti/bilocale-ad-bocconi-iulm-via-pomponazzi-milano-658170036.htm",
   "https://www.subito.it/appartamenti/bilocale-adiacente-bocconi-via-salasco-7-milano-658043410.htm",
   "https://www.subito.it/appartamenti/bilocale-appena-ristrutturato-milano-657997125.htm",
   "https://www.subito.it/appartamenti/bilocale-arredato-cimiano-milano-656872989.htm",
   "https://www.subito.it/appartamenti/bilocale-arredato-milano-657977458.htm",
   "https://www.subito.it/appartamenti/bilocale-arredato-milano-658162099.htm",
   "https://www.subito.it/appartamenti/bilocale-arredato-nuovo-a-milano-citta-studi-milano-656951694.htm",
+  "https://www.subito.it/appartamenti/bilocale-arredato-nuovo-a-milano-citta-studi-milano-658344610.htm",
   "https://www.subito.it/appartamenti/bilocale-con-terrazzo-zona-solari-milano-657632793.htm",
   "https://www.subito.it/appartamenti/bilocale-corso-sempione-adiacenze-piazza-firenze-milano-657323466.htm",
   "https://www.subito.it/appartamenti/bilocale-happy-500-metri-da-m1-primaticcio-milano-657815476.htm",
@@ -4737,27 +4383,34 @@
   "https://www.subito.it/appartamenti/bilocale-milano-658080803.htm",
   "https://www.subito.it/appartamenti/bilocale-milano-658185830.htm",
   "https://www.subito.it/appartamenti/bilocale-milano-m3-milano-658193251.htm",
+  "https://www.subito.it/appartamenti/bilocale-navigli-ticinese-via-meda-milano-658878904.htm",
   "https://www.subito.it/appartamenti/bilocale-per-due-persone-arredato-clima-milano-milano-658323402.htm",
+  "https://www.subito.it/appartamenti/bilocale-per-studenti-milano-658896797.htm",
   "https://www.subito.it/appartamenti/bilocale-ristrutturato-a-milano-milano-658157503.htm",
+  "https://www.subito.it/appartamenti/bilocale-ristrutturato-con-balcone-piano-alto-milano-650810312.htm",
   "https://www.subito.it/appartamenti/bilocale-ristrutturato-porta-romana-lodi-milano-655262959.htm",
   "https://www.subito.it/appartamenti/bilocale-ristrutturato-portello-milano-658011579.htm",
   "https://www.subito.it/appartamenti/bilocale-ristrutturato-studenti-bovisa-politecnico-milano-658237812.htm",
   "https://www.subito.it/appartamenti/bilocale-san-siro-milano-ultimo-piano-milano-636952160.htm",
   "https://www.subito.it/appartamenti/bilocale-terrazzino-vicino-citta-studi-argonne-milano-658293182.htm",
   "https://www.subito.it/appartamenti/bilocale-totalmente-ristrutturato-a-primaticcio-milano-656162962.htm",
+  "https://www.subito.it/appartamenti/bilocale-trilocale-milano-651857047.htm",
   "https://www.subito.it/appartamenti/bilocale-via-borsi-milano-milano-657481935.htm",
   "https://www.subito.it/appartamenti/bilocale-zona-affori-milano-657157325.htm",
   "https://www.subito.it/appartamenti/bilocale-zona-naba-iulm-bocconi-milano-656823947.htm",
   "https://www.subito.it/appartamenti/bocconi-bilocale-50-mq-arredato-a-200m-universita-milano-656005328.htm",
   "https://www.subito.it/appartamenti/bovisa-milano-653037601.htm",
   "https://www.subito.it/appartamenti/bovisa-politecnico-trilocale-1-500-mese-milano-657597359.htm",
+  "https://www.subito.it/appartamenti/delizioso-appartamentino-con-terrazzo-milano-655979545.htm",
   "https://www.subito.it/appartamenti/doppia-in-condivisione-ristrutt-bocconi-iulm-naba-milano-657844651.htm",
   "https://www.subito.it/appartamenti/grazioso-bilocale-milano-656637755.htm",
+  "https://www.subito.it/appartamenti/grazioso-bilocale-milano-658354581.htm",
   "https://www.subito.it/appartamenti/grazioso-monolocale-milano-656557773.htm",
   "https://www.subito.it/appartamenti/grazioso-monolocale-milano-658133918.htm",
   "https://www.subito.it/appartamenti/informazioni-milano-658162227.htm",
   "https://www.subito.it/appartamenti/loft-su-due-livelli-con-terrazzo-a-milano-milano-657606670.htm",
   "https://www.subito.it/appartamenti/loft-tucidide-ortica-ex-fabbriche-ginori-milano-657142649.htm",
+  "https://www.subito.it/appartamenti/luminoso-bilocale-a-60-m-fermata-metro-dergano-milano-658882245.htm",
   "https://www.subito.it/appartamenti/luminoso-monolocale-soppalcato-milano-656743577.htm",
   "https://www.subito.it/appartamenti/milano-grazioso-appartamento-in-via-benevento-milano-657483829.htm",
   "https://www.subito.it/appartamenti/mm2-udine-bilocale-da-privato-no-agenzie-milano-642354383.htm",
@@ -4773,6 +4426,7 @@
   "https://www.subito.it/appartamenti/monolocale-milano-657618982.htm",
   "https://www.subito.it/appartamenti/monolocale-milano-vicino-metro-e-zona-isola-milano-657692513.htm",
   "https://www.subito.it/appartamenti/monolocale-milano-vicino-metro-zona-isola-maggioli-milano-656642338.htm",
+  "https://www.subito.it/appartamenti/monolocale-moderno-zona-bovisa-milano-653582665.htm",
   "https://www.subito.it/appartamenti/monolocale-per-studenti-milano-650830083.htm",
   "https://www.subito.it/appartamenti/monolocale-per-studenti-milano-657494347.htm",
   "https://www.subito.it/appartamenti/monolocale-ristrutturato-milano-657504625.htm",
@@ -6247,7 +5901,7 @@
    "titolo": "Bovisa",
    "via": "",
    "civico": "",
-   "quartiere": "Bovisa",
+   "quartiere": "",
    "municipio": "",
    "tipo": "Locazione",
    "tipologia": "",
@@ -6257,77 +5911,26 @@
    "bagni": 1.0,
    "piano": "1",
    "ascensore": null,
+   "zona": "",
+   "lat": null,
+   "lon": null,
    "spese": "",
    "classeEnergetica": "c",
    "statoImmobile": "ottimo---ristrutturato",
    "telefono": "",
    "email": "",
    "inserzionista": "Fabio",
-   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/cc/cc0d11e8-8aea-4e73-85fb-813828b0b455?rule=vertical-mini-card-2x-auto",
-   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/33/338023e7-cd79-455d-bf2a-1bc1295793cf?rule=vertical-mini-card-2x-auto",
-   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/99/990e40df-3d93-424b-a86a-6a13c53d1dea?rule=vertical-mini-card-2x-auto",
-   "descrizione": "Posizionato strategicamente a 200m dal Campus Polimi Durando e a 200m dalla stazione FNM Bovisa. In contesto molto tranquillo e silenzioso, ideale per studiare, in caratteristica cascina primi anni 900 con corte recuperata, questo delizioso monolocale è dotato di un ampio terrazzo solarium esposto a sud con loggia chiudibile per avere un jardin d'hiver davvero unico. Appena ristrutturato finemente, cappotto termico e tetto nuovo, completamente arredato e corredato nuovo, con SmartTV. Aria condizionata e riscaldamento autonomo. Fibra Internet illimitato con WiFi incluso nel canone. Contratto transitorio per lavoratori o studenti non residenti, canone valido per contratto minimo 6 mesi. Libero subito, da privato, nessuna commissione di agenzia. Visite su appuntamento. Canone 1050+150 condominio, utenze (luce gas) a parte.",
-   "pubblicato": "2026-08-18",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/33/338023e7-cd79-455d-bf2a-1bc1295793cf?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/99/990e40df-3d93-424b-a86a-6a13c53d1dea?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/75/75535692-62e9-417e-88f7-8bce76df6474?rule=vertical-mini-card-2x-auto",
+   "numeroFoto": 6,
+   "descrizione": "Posizionato strategicamente a 200m dal Campus Polimi Durando, 200m dalla stazione FNM Bovisa e in corrispondenza del capolinea della nuova linea del tram. In contesto molto tranquillo e silenzioso, ideale per studiare, in caratteristica cascina primi anni 900 con corte recuperata, questo delizioso monolocale è dotato di un ampio terrazzo esposto a sud con veranda per un jardin d'hiver davvero unico. Appena ristrutturato finemente, cappotto termico e tetto nuovo, completamente arredato e corredato nuovo, con SmartTV. Aria condizionata e riscaldamento autonomo. Fibra Internet illimitato con WiFi incluso nel canone. Contratto transitorio per lavoratori o studenti non residenti, canone valido per contratto minimo 6 mesi. Libero subito, da privato, nessuna commissione di agenzia. Visite su appuntamento. Canone 1050+150 condominio, utenze (luce gas) a parte.",
+   "pubblicato": "2026-08-31",
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
    "nuovo": false,
-   "zona": "Fascia media urbana",
-   "zonaFonte": "4.7 km dal Duomo",
-   "qualitaFoto": "medie",
-   "qualitaTesto": "curato",
-   "sospettoAgenzia": 2,
-   "verdettoInserzionista": "privato",
-   "motiviAgenzia": [
-    "nomina le provvigioni",
-    "riceve su appuntamento in sede",
-    "si dichiara proprietario o rifiuta le agenzie"
-   ],
-   "qualitaImmobile": 90,
-   "percheImmobile": [
-    "50 mq: taglio molto richiesto",
-    "ristrutturato o nuovo",
-    "classe energetica c",
-    "balcone o terrazzo"
-   ],
-   "priorita": 20,
-   "perchePriorita": [
-    [
-     "Prezzo di zona non confrontabile",
-     6
-    ],
-    [
-     "8 giorni online",
-     1.6
-    ],
-    [
-     "Foto: medie",
-     6
-    ],
-    [
-     "Testo: curato",
-     1
-    ],
-    [
-     "Provvigione stimata 2.268 €",
-     2.5
-    ],
-    [
-     "Qualita' dell'immobile 90/100",
-     11.2
-    ],
-    [
-     "Nessun recapito diretto",
-     -8
-    ]
-   ],
-   "quartiereFonte": "nominato nel testo dell'annuncio",
-   "lat": 45.5022986,
-   "lon": 9.1653387,
-   "indirizzoTentato": "2026-08-25",
-   "scoperto": "2026-08-18",
-   "fotoSospetto": "",
-   "fotoLette": "2026-08-26",
+   "scoperto": "2026-08-31",
    "uscitoIl": "2026-08-31"
   },
   {
@@ -8625,7 +8228,7 @@
    "bagni": 1.0,
    "piano": "1",
    "ascensore": false,
-   "zona": "Fascia media urbana",
+   "zona": "",
    "lat": 45.47220739999999,
    "lon": 9.1421159,
    "spese": "",
@@ -8638,60 +8241,13 @@
    "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/43/4363df3a-6145-4223-9d20-d9e80caabbaf?rule=vertical-mini-card-2x-auto",
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/fb/fb8dbc25-6939-452d-969e-f7dec37021ed?rule=vertical-mini-card-2x-auto",
    "numeroFoto": 6,
-   "descrizione": "In una zona strategica di Milano, propongo in affitto a lungo termine un elegante bilocale di 58 m² con balconcino, completamente ristrutturato e arredato, ideale per chi cerca comfort, tranquillità e collegamenti eccellenti con il resto della città.\nL'appartamento si trova al primo piano di uno stabile con portineria attiva mezza giornata fino al sabato e ampio cortile interno alberato, recentemente rinnovato.\nL'affaccio interno garantisce un ambiente tranquillo e riservato, pur trovandosi in una posizione comoda per vivere Milano.\nLa casa è composta da un'ampia camera da letto matrimoniale climatizzata, una zona giorno open space con cucina abitabile completamente attrezzata e climatizzata, un bagno con ampia doccia, un balconcino con affaccio sul cortile interno e una cantina di pertinenza\nL'appartamento è stato recentemente valorizzato con interventi mirati al comfort abitativo, tra ",
-   "pubblicato": "2026-08-24",
+   "descrizione": "In una zona strategica di Milano, propongo in affitto a lungo termine un elegante bilocale di 58 m² con balconcino, completamente ristrutturato e arredato ad eccezione di divano e materasso, ideale per chi cerca comfort, tranquillità e collegamenti eccellenti con il resto della città.\nL'appartamento si trova al primo piano di uno stabile con portineria attiva mezza giornata fino al sabato e ampio cortile interno alberato.\nL'affaccio interno garantisce un ambiente tranquillo e riservato, pur trovandosi in una posizione comoda per vivere Milano.\nLa casa è composta da un'ampia camera da letto matrimoniale climatizzata, una zona giorno open space con cucina abitabile completamente attrezzata e climatizzata, un bagno con ampia doccia, un balconcino con affaccio sul cortile interno e una cantina di pertinenza\nL'appartamento è stato recentemente valorizzato con interventi mirati al comfort abit",
+   "pubblicato": "2026-08-31",
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": false,
    "nuovo": false,
-   "scoperto": "2026-08-25",
-   "zonaFonte": "3.8 km dal Duomo",
-   "qualitaFoto": "medie",
-   "qualitaTesto": "curato",
-   "sospettoAgenzia": 0,
-   "verdettoInserzionista": "privato",
-   "motiviAgenzia": [],
-   "qualitaImmobile": 92,
-   "percheImmobile": [
-    "58 mq: taglio molto richiesto",
-    "2 locali: la domanda sta qui",
-    "ristrutturato o nuovo",
-    "balcone o terrazzo"
-   ],
-   "priorita": 33,
-   "perchePriorita": [
-    [
-     "Prezzo di zona non confrontabile",
-     6
-    ],
-    [
-     "2 giorni online",
-     0.4
-    ],
-    [
-     "Foto: medie",
-     6
-    ],
-    [
-     "Testo: curato",
-     1
-    ],
-    [
-     "Provvigione stimata 2.376 €",
-     2.6
-    ],
-    [
-     "Qualita' dell'immobile 92/100",
-     11.8
-    ],
-    [
-     "Telefono pubblicato",
-     5
-    ]
-   ],
-   "indirizzoTentato": "2026-08-25",
-   "fotoSospetto": "",
-   "fotoLette": "2026-08-26",
+   "scoperto": "2026-08-31",
    "uscitoIl": "2026-08-31"
   },
   {
@@ -9851,7 +9407,7 @@
    "titolo": "MM2 Udine | Bilocale da privato [no agenzie]",
    "via": "",
    "civico": "",
-   "quartiere": "Udine",
+   "quartiere": "",
    "municipio": "",
    "tipo": "Locazione",
    "tipologia": "",
@@ -9861,9 +9417,9 @@
    "bagni": 1.0,
    "piano": "6",
    "ascensore": true,
-   "zona": "Fascia media urbana",
-   "lat": 45.4914324,
-   "lon": 9.2368811,
+   "zona": "",
+   "lat": null,
+   "lon": null,
    "spese": "",
    "classeEnergetica": "in-attesa-di-certificazione",
    "statoImmobile": "ottimo---ristrutturato",
@@ -9875,66 +9431,12 @@
    "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/3f/3f1e7faa-867c-4912-8095-4b1f810ae1d6?rule=vertical-mini-card-2x-auto",
    "numeroFoto": 6,
    "descrizione": "Bilocale luminosissimo e silenziosissimo.\n6° (ultimo) piano con affaccio su giardino interno, senza alcun rumore di strada. Due balconi. \nRecentemente rinnovato. Infissi doppio vetro PVC. Ampia capienza di armadi. \n\nConsiste di un camera da letto matrimoniale e di una seconda stanza da usare come soggiorno o seconda camera da letto. \n\nPer giovane/i professionista/i o due studenti. Canone 1000 Eur. Spese condominiali 140 Eur. Sono a carico del conduttore utenze elettrica e gas e Tari. \n\nDA PRIVATO A PRIVATO. \nINDISPENSABILI OTTIME REFERENZE E GARANZIE. \nNO ANIMALI. NO FUMATORI.\n\nASSOLUTAMENTE NON PARLO CON AGENZIE.",
-   "pubblicato": "2026-08-25",
+   "pubblicato": "2026-08-31",
    "privato": true,
    "verificatoIl": "2026-08-31",
    "noAgenzie": true,
    "nuovo": false,
-   "scoperto": "2026-08-26",
-   "quartiereFonte": "nominato nel testo dell'annuncio",
-   "indirizzoTentato": "2026-08-26",
-   "zonaFonte": "4.7 km dal Duomo",
-   "qualitaFoto": "medie",
-   "qualitaTesto": "curato",
-   "sospettoAgenzia": 0,
-   "verdettoInserzionista": "privato",
-   "motiviAgenzia": [
-    "si dichiara proprietario o rifiuta le agenzie"
-   ],
-   "qualitaImmobile": 85,
-   "percheImmobile": [
-    "50 mq: taglio molto richiesto",
-    "2 locali: la domanda sta qui",
-    "con ascensore",
-    "balcone o terrazzo"
-   ],
-   "priorita": 0,
-   "perchePriorita": [
-    [
-     "Prezzo di zona non confrontabile",
-     6
-    ],
-    [
-     "1 giorni online",
-     0.2
-    ],
-    [
-     "Foto: medie",
-     6
-    ],
-    [
-     "Testo: curato",
-     1
-    ],
-    [
-     "Provvigione stimata 2.160 €",
-     2.4
-    ],
-    [
-     "Qualita' dell'immobile 85/100",
-     9.8
-    ],
-    [
-     "Nessun recapito diretto",
-     -8
-    ],
-    [
-     "Ha scritto «no agenzie»: non si chiama",
-     -30
-    ]
-   ],
-   "fotoSospetto": "",
-   "fotoLette": "2026-08-26",
+   "scoperto": "2026-08-31",
    "uscitoIl": "2026-08-31"
   },
   {
@@ -10551,6 +10053,986 @@
    ],
    "fotoSospetto": "AGNO",
    "fotoLette": "2026-08-26",
+   "uscitoIl": "2026-08-31"
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/monolocale-moderno-zona-bovisa-milano-653582665.htm",
+   "portale": "subito",
+   "riferimento": "653582665",
+   "titolo": "Monolocale moderno-zona Bovisa",
+   "via": "",
+   "civico": "",
+   "quartiere": "Villapizzone",
+   "municipio": "",
+   "tipo": "Locazione",
+   "tipologia": "",
+   "prezzo": 750.0,
+   "mq": 35.0,
+   "locali": 1.0,
+   "bagni": 1.0,
+   "piano": "6",
+   "ascensore": true,
+   "spese": "",
+   "classeEnergetica": "",
+   "statoImmobile": "ottimo---ristrutturato",
+   "telefono": "",
+   "email": "",
+   "inserzionista": "Zaimi",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/2e/2e769826-ade3-4f64-885e-337ddf898db1?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/55/550691eb-34b9-4e86-84ae-e333edbd2ebb?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/7c/7c6d4252-b2d3-45ae-88fa-a957d777d835?rule=vertical-mini-card-2x-auto",
+   "descrizione": "Privato affitta grazioso monolocale di 35mq completamente ristrutturato e arredato a nuovo. Composto da ingresso, cucina separata semi abitabile, bagno finestrato e zona giorno/notte con un balconcino. Sito al 6 piano con ascensore e gode di affaccio interno molto silenzioso, luminoso e con piacevole vista. Situato vicino al Campus Bovisa del Politecnico di Milano, a due passi dal passante ferroviario Villapizzone, dalla fermata 12 e dal capolinea 19. Canone mensile Euro 750 piu' Euro 100 di spese condominiali (compreso di riscaldamento centralizzato). Solo referenziati, No agenzia. Libero da 01 settembre.",
+   "pubblicato": "2026-08-18",
+   "privato": true,
+   "verificatoIl": "2026-08-31",
+   "noAgenzie": true,
+   "nuovo": false,
+   "zona": "Fascia accessibile",
+   "zonaFonte": "5.2 km dal Duomo",
+   "qualitaFoto": "medie",
+   "qualitaTesto": "curato",
+   "sospettoAgenzia": 0,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [
+    "si dichiara proprietario o rifiuta le agenzie"
+   ],
+   "qualitaImmobile": 89,
+   "percheImmobile": [
+    "35 mq: taglio molto richiesto",
+    "con ascensore",
+    "ristrutturato o nuovo",
+    "balcone o terrazzo"
+   ],
+   "priorita": 0,
+   "perchePriorita": [
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "13 giorni online",
+     2.6
+    ],
+    [
+     "Foto: medie",
+     6
+    ],
+    [
+     "Testo: curato",
+     1
+    ],
+    [
+     "Provvigione stimata 1.620 €",
+     1.8
+    ],
+    [
+     "Qualita' dell'immobile 89/100",
+     10.9
+    ],
+    [
+     "Nessun recapito diretto",
+     -8
+    ],
+    [
+     "Ha scritto «no agenzie»: non si chiama",
+     -30
+    ]
+   ],
+   "quartiereFonte": "nominato nel testo dell'annuncio",
+   "lat": 45.5012391,
+   "lon": 9.1486016,
+   "indirizzoTentato": "2026-08-25",
+   "scoperto": "2026-08-18",
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26",
+   "uscitoIl": "2026-08-31"
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/bilocale-trilocale-milano-651857047.htm",
+   "portale": "subito",
+   "riferimento": "651857047",
+   "titolo": "Bilocale/trilocale",
+   "via": "Via Luigi Ornato",
+   "civico": "44",
+   "quartiere": "",
+   "municipio": "Municipio 9",
+   "tipo": "Locazione",
+   "tipologia": "",
+   "prezzo": 900.0,
+   "mq": 40.0,
+   "locali": 3.0,
+   "bagni": 1.0,
+   "piano": "3",
+   "ascensore": false,
+   "spese": "",
+   "classeEnergetica": "in-attesa-di-certificazione",
+   "statoImmobile": "buono---abitabile",
+   "telefono": "3939256777",
+   "email": "",
+   "inserzionista": "Gabriele",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d2/d24d110d-b58c-4c39-bd29-b19a536d1913?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/45/45f4c349-2143-45f9-8cda-83ec80b0b35f?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/09/09285029-e31d-4517-95ce-716858cd6c7d?rule=vertical-mini-card-2x-auto",
+   "descrizione": "Appartamento sito al terzo piano senza ascensore in Via Luigi Ornato 44 vicino ospedale niguarda e università Bicocca, con tram e autobus collegati con metropolitane e centro Milano. \nDisponibili BILOCALE E TRILOCALE. \nBilocale 900\nTrilocale 1200",
+   "pubblicato": "2026-08-18",
+   "privato": true,
+   "verificatoIl": "2026-08-31",
+   "noAgenzie": false,
+   "nuovo": false,
+   "lat": 45.5264126,
+   "lon": 9.1925433,
+   "zona": "Fascia accessibile",
+   "zonaFonte": "6.9 km dal Duomo",
+   "qualitaFoto": "medie",
+   "qualitaTesto": "medio",
+   "sospettoAgenzia": 14,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [
+    "«Gabriele» pubblica 2 immobili"
+   ],
+   "qualitaImmobile": 58,
+   "percheImmobile": [
+    "40 mq: taglio molto richiesto",
+    "3 locali: la domanda sta qui",
+    "3° piano senza ascensore"
+   ],
+   "priorita": 28,
+   "perchePriorita": [
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "13 giorni online",
+     2.6
+    ],
+    [
+     "Foto: medie",
+     6
+    ],
+    [
+     "Testo: medio",
+     4
+    ],
+    [
+     "Provvigione stimata 1.944 €",
+     2.2
+    ],
+    [
+     "Qualita' dell'immobile 58/100",
+     2.2
+    ],
+    [
+     "Telefono pubblicato",
+     5
+    ]
+   ],
+   "indirizzoTentato": "2026-08-25",
+   "scoperto": "2026-08-18",
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26",
+   "uscitoIl": "2026-08-31"
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/bilocale-ad-bocconi-iulm-via-pomponazzi-milano-658170036.htm",
+   "portale": "subito",
+   "riferimento": "658170036",
+   "titolo": "Bilocale ad. Bocconi / IULM (Via Pomponazzi)",
+   "via": "Via Pietro Pomponazzi",
+   "civico": "21",
+   "quartiere": "",
+   "municipio": "Municipio 5",
+   "tipo": "Locazione",
+   "tipologia": "",
+   "prezzo": 1300.0,
+   "mq": 40.0,
+   "locali": 2.0,
+   "bagni": 1.0,
+   "piano": "4",
+   "ascensore": true,
+   "zona": "Semicentro consolidato",
+   "lat": 45.4418973,
+   "lon": 9.1822169,
+   "spese": "",
+   "classeEnergetica": "g",
+   "statoImmobile": "ottimo---ristrutturato",
+   "telefono": "3384693664",
+   "email": "",
+   "inserzionista": "",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/18/1896cb72-b980-4c2d-a801-998eda51b4ae?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/6b/6bdf028b-e522-48ad-9905-3089a0482781?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/ea/ead73d97-98eb-49a7-befb-6d1435c13102?rule=vertical-mini-card-2x-auto",
+   "numeroFoto": 6,
+   "descrizione": "Privato propone in affitto un luminoso bilocale di 40 mq, completamente arredato e accessoriato, situato al quarto piano con ascensore di via Pomponazzi 6. \nLo stabile è signorile e dotato di servizio di portineria. \nLa posizione è strategica e calmissima, nel cuore della zona universitaria tra Bocconi e IULM.\nL'appartamento è molto silenzioso grazie all'altezza del piano e alla presenza di finestre insonorizzate, caratteristiche ideali per studenti e giovani professionisti in cerca di tranquillità. \nLa casa è pronta per essere abitata fin da subito.\nServizi condominiali: Stabile con ascensore e servizio di portiere (comodo anche per il ritiro dei pacchi).\nIngresso e corridoio: Spazio ottimizzato con capiente armadiatura a muro a tutt'altezza e comoda cassettiera.\nCamera da letto: \nLetto matrimoniale con cassetti, grande armadio con ante a specchio e TV a schermo piatto a muro.\nCucina ab",
+   "pubblicato": "2026-08-24",
+   "privato": true,
+   "verificatoIl": "2026-08-31",
+   "noAgenzie": false,
+   "nuovo": false,
+   "scoperto": "2026-08-25",
+   "zonaFonte": "2.6 km dal Duomo",
+   "qualitaFoto": "medie",
+   "qualitaTesto": "curato",
+   "sospettoAgenzia": 0,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [],
+   "qualitaImmobile": 74,
+   "percheImmobile": [
+    "40 mq: taglio molto richiesto",
+    "2 locali: la domanda sta qui",
+    "con ascensore",
+    "classe energetica g"
+   ],
+   "priorita": 29,
+   "perchePriorita": [
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "7 giorni online",
+     1.4
+    ],
+    [
+     "Foto: medie",
+     6
+    ],
+    [
+     "Testo: curato",
+     1
+    ],
+    [
+     "Provvigione stimata 2.808 €",
+     3.1
+    ],
+    [
+     "Qualita' dell'immobile 74/100",
+     6.7
+    ],
+    [
+     "Telefono pubblicato",
+     5
+    ]
+   ],
+   "indirizzoTentato": "2026-08-25",
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26",
+   "uscitoIl": "2026-08-31"
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/grazioso-bilocale-milano-658354581.htm",
+   "portale": "subito",
+   "riferimento": "658354581",
+   "titolo": "grazioso bilocale ",
+   "via": "Piazzale Nizza",
+   "civico": "",
+   "quartiere": "",
+   "municipio": "Municipio 9",
+   "tipo": "Locazione",
+   "tipologia": "",
+   "prezzo": null,
+   "mq": 50.0,
+   "locali": 2.0,
+   "bagni": 1.0,
+   "piano": "2",
+   "ascensore": true,
+   "zona": "Fascia media urbana",
+   "lat": 45.5030051,
+   "lon": 9.1888918,
+   "spese": "",
+   "classeEnergetica": "b",
+   "statoImmobile": "ottimo---ristrutturato",
+   "telefono": "",
+   "email": "",
+   "inserzionista": "",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/5c/5c68a266-90f7-42d9-b59c-cef2d8f8f063?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/2c/2c3fbc3b-694a-47ad-9cb5-61d6bb1c49e5?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/ae/aed2d352-dc36-41b1-94d8-43275fd976cf?rule=vertical-mini-card-2x-auto",
+   "numeroFoto": 6,
+   "descrizione": "adiacente piazzale Nizza ,ottima soluzione per coppia di lavoratori o studenti .arredato e comodo ai servizi pubblici .classe energetica b\ncanone transitorio 3-18 mesi.\nspese condominiali 100€ circa al mese \n",
+   "pubblicato": "2026-08-26",
+   "privato": true,
+   "verificatoIl": "2026-08-31",
+   "noAgenzie": false,
+   "nuovo": false,
+   "scoperto": "2026-08-26",
+   "indirizzoTentato": "2026-08-26",
+   "zonaFonte": "4.3 km dal Duomo",
+   "qualitaFoto": "medie",
+   "qualitaTesto": "scarno",
+   "sospettoAgenzia": 0,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [],
+   "qualitaImmobile": 87,
+   "percheImmobile": [
+    "50 mq: taglio molto richiesto",
+    "2 locali: la domanda sta qui",
+    "con ascensore",
+    "classe energetica b"
+   ],
+   "priorita": 23,
+   "perchePriorita": [
+    [
+     "Prezzo non attendibile: da verificare al telefono",
+     0
+    ],
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "5 giorni online",
+     1.0
+    ],
+    [
+     "Foto: medie",
+     6
+    ],
+    [
+     "Testo: scarno",
+     8
+    ],
+    [
+     "Qualita' dell'immobile 87/100",
+     10.4
+    ],
+    [
+     "Nessun recapito diretto",
+     -8
+    ]
+   ],
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26",
+   "uscitoIl": "2026-08-31"
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/bilocale-arredato-nuovo-a-milano-citta-studi-milano-658344610.htm",
+   "portale": "subito",
+   "riferimento": "658344610",
+   "titolo": "Bilocale arredato nuovo a Milano Città Studi",
+   "via": "Via Vallazze",
+   "civico": "87",
+   "quartiere": "Vallazze",
+   "municipio": "",
+   "tipo": "Locazione",
+   "tipologia": "",
+   "prezzo": 1300.0,
+   "mq": 53.0,
+   "locali": 2.0,
+   "bagni": 2.0,
+   "piano": "4",
+   "ascensore": true,
+   "zona": "Fascia media urbana",
+   "lat": 45.4847308,
+   "lon": 9.228373999999999,
+   "spese": "",
+   "classeEnergetica": "d",
+   "statoImmobile": "ottimo---ristrutturato",
+   "telefono": "3335857514",
+   "email": "",
+   "inserzionista": "Claudio",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/6d/6dc25f58-4826-4cb5-9b3a-7228023ee54a?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/da/da820dc5-7889-4ef1-bd49-4b776b3717c6?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/7c/7c736509-d2c9-4d95-993d-c713a5be1ccf?rule=vertical-mini-card-2x-auto",
+   "numeroFoto": 6,
+   "descrizione": "Privato affitta un interessante e luminoso bilocale arredato, completo di impianto di climatizzazione, a Milano in via Vallazze 87 in zona Città Studi. \n\nL'appartamento, mai abitato fino ad ora, è stato appena ristrutturato ed arredato da un Architetto.\n\nE'composto da: un soggiorno con cucina, tavolo allungabile e divano, una grande camera con due letti con contenitore e due scrivanie, un bagno con doccia.\n\nDispone di un bel balcone e di una ampia finestra da dove si osserva, sullo sfondo, lo skyline. \n\nL'appartamento si trova al quarto piano in un condominio con riscaldamento a pannelli radianti, ascensore e servizio di portineria. \n \nE'situato in una zona strategica di Milano Est. Nelle immediate vicinanze ci sono, oltre ad alcuni supermercati, importanti Istituti Universitari, due linee della metropolitana e di bus, la Tangenziale Est e la Stazione Ferroviaria di Lambrate.\n\nIl canone ",
+   "pubblicato": "2026-08-26",
+   "privato": true,
+   "verificatoIl": "2026-08-31",
+   "noAgenzie": true,
+   "nuovo": false,
+   "scoperto": "2026-08-26",
+   "indirizzoTentato": "2026-08-26",
+   "zonaFonte": "3.8 km dal Duomo",
+   "qualitaFoto": "medie",
+   "qualitaTesto": "curato",
+   "sospettoAgenzia": 7,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [
+    "lo stesso numero compare su 2 annunci",
+    "«Claudio» pubblica 2 immobili",
+    "descrizione strutturata da scheda",
+    "si dichiara proprietario o rifiuta le agenzie"
+   ],
+   "qualitaImmobile": 100,
+   "percheImmobile": [
+    "53 mq: taglio molto richiesto",
+    "2 locali: la domanda sta qui",
+    "due o piu' bagni",
+    "con ascensore",
+    "ristrutturato o nuovo",
+    "balcone o terrazzo"
+   ],
+   "priorita": 6,
+   "perchePriorita": [
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "5 giorni online",
+     1.0
+    ],
+    [
+     "Foto: medie",
+     6
+    ],
+    [
+     "Testo: curato",
+     1
+    ],
+    [
+     "Provvigione stimata 2.808 €",
+     3.1
+    ],
+    [
+     "Qualita' dell'immobile 100/100",
+     14.0
+    ],
+    [
+     "Telefono pubblicato",
+     5
+    ],
+    [
+     "Ha scritto «no agenzie»: non si chiama",
+     -30
+    ]
+   ],
+   "fotoSospetto": "",
+   "fotoLette": "2026-08-26",
+   "uscitoIl": "2026-08-31"
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/bilocale-ristrutturato-con-balcone-piano-alto-milano-650810312.htm",
+   "portale": "subito",
+   "riferimento": "650810312",
+   "titolo": "Bilocale ristrutturato con balcone piano alto",
+   "via": "Via dei Guarneri",
+   "civico": "11",
+   "quartiere": "",
+   "municipio": "Municipio 5",
+   "tipo": "Locazione",
+   "tipologia": "",
+   "prezzo": 980.0,
+   "mq": 54.0,
+   "locali": null,
+   "bagni": null,
+   "piano": "3",
+   "ascensore": true,
+   "zona": "Fascia media urbana",
+   "lat": 45.4275341,
+   "lon": 9.2044177,
+   "spese": "",
+   "classeEnergetica": "",
+   "statoImmobile": "ottimo---ristrutturato",
+   "telefono": "3476837579",
+   "email": "",
+   "inserzionista": "Barbara",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/a0/a0bb95d7-3fa4-401e-916a-17d30e2a6adf?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/00/00ac637f-2555-4000-a62d-a6a613cac505?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/97/97cd5184-3c69-42a8-a1b3-2da8b1135376?rule=vertical-mini-card-2x-auto",
+   "numeroFoto": 4,
+   "descrizione": "Bilocale arredato e interamente ristrutturato in Via dei Guarneri 24 - Milano, al 3° piano con portineria tutto il giorno e riscaldamento centralizzato. Composto da cucina abitabile, salottino, camera matrimoniale con bagno privato. Interamente climatizzato.\nPosizione comodissima: a pochi passi dal tram 24 e dai principali mezzi pubblici, in un quartiere residenziale tranquillo, ricco di negozi, scuole, servizi e vicino al Parco Agricolo Sud. Nelle vicinanze anche realtà culturali e moderne come Fondazione Prada e ICS Symbiosis.\n- Canone: euro 980\n- Spese condominiali: euro 150/mese\n- Disponibile da subito\nPer informazioni contattare solo tramite whatsapp il numero 3317801852 grazie",
+   "pubblicato": "2026-08-30",
+   "privato": true,
+   "verificatoIl": "2026-08-31",
+   "noAgenzie": false,
+   "nuovo": false,
+   "scoperto": "2026-08-31",
+   "indirizzoTentato": "2026-08-31",
+   "zonaFonte": "4.2 km dal Duomo",
+   "qualitaFoto": "medie",
+   "qualitaTesto": "curato",
+   "sospettoAgenzia": 0,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [],
+   "qualitaImmobile": 89,
+   "percheImmobile": [
+    "54 mq: taglio molto richiesto",
+    "con ascensore",
+    "ristrutturato o nuovo",
+    "balcone o terrazzo"
+   ],
+   "priorita": 31,
+   "perchePriorita": [
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "1 giorni online",
+     0.2
+    ],
+    [
+     "Foto: medie",
+     6
+    ],
+    [
+     "Testo: curato",
+     1
+    ],
+    [
+     "Provvigione stimata 2.117 €",
+     2.4
+    ],
+    [
+     "Qualita' dell'immobile 89/100",
+     10.9
+    ],
+    [
+     "Telefono pubblicato",
+     5
+    ]
+   ],
+   "fotoLette": "2026-08-31",
+   "fotoSospetto": "",
+   "uscitoIl": "2026-08-31"
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/bilocale-per-studenti-milano-658896797.htm",
+   "portale": "subito",
+   "riferimento": "658896797",
+   "titolo": "Bilocale per studenti",
+   "via": "Via Ruggero Bonghi",
+   "civico": "18",
+   "quartiere": "",
+   "municipio": "Municipio 5",
+   "tipo": "Locazione",
+   "tipologia": "",
+   "prezzo": 1100.0,
+   "mq": 45.0,
+   "locali": 2.0,
+   "bagni": null,
+   "piano": "3",
+   "ascensore": false,
+   "zona": "Semicentro consolidato",
+   "lat": 45.4408601,
+   "lon": 9.1816064,
+   "spese": "",
+   "classeEnergetica": "",
+   "statoImmobile": "buono---abitabile",
+   "telefono": "",
+   "email": "",
+   "inserzionista": "Anna",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f0/f08edf66-b880-4bc4-b2ac-056286f3fb4a?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/c6/c6bbe863-1681-4a52-8377-3c4c3331623e?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/c8/c88e935c-d87b-4001-8adb-ba66ef60c730?rule=vertical-mini-card-2x-auto",
+   "numeroFoto": 6,
+   "descrizione": "Appartamento BILOCALE ARREDATO, nelle tipiche case di ringhiera milanesi, molto tranquillo, al terzo piano senza ascensore con doppio affaccio. L'appartamento è composto da soggiorno con cucinino a vista dotato di forno piano cottura, frigo, lavatrice, camera da letto con 2 letti singoli, armadi e scrivanie e PICCOLO bagno (lavandino, doccia passante, wc, ma senza bidet). TERMOAUTONOMO con caldaia e impianti a norma. \nSi ricerca 2 studenti/studentesse, (gruppo già formato) REFERENZIATI dai propri genitori, seri, non fumatori. Contratto regolare come da norme, rinnovabile annualmente con tre mesi di preavviso. Si trova in via Ruggero BONGHI zona P.ta TICINESE vicino ai navigli e alla Darsena. PERFETTO PER STUDENTI IULM, NABA, BOCCONI STATALE che sono nelle vicinanze ma anche con altre facoltà essendoci numerosi mezzi di trasporto nelle vicinanze 90/91, Metro Verde, tram 3 e 15 . Comodo su",
+   "pubblicato": "2026-08-30",
+   "privato": true,
+   "verificatoIl": "2026-08-31",
+   "noAgenzie": false,
+   "nuovo": false,
+   "scoperto": "2026-08-31",
+   "indirizzoTentato": "2026-08-31",
+   "zonaFonte": "2.7 km dal Duomo",
+   "qualitaFoto": "medie",
+   "qualitaTesto": "curato",
+   "sospettoAgenzia": 0,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [],
+   "qualitaImmobile": 58,
+   "percheImmobile": [
+    "45 mq: taglio molto richiesto",
+    "2 locali: la domanda sta qui",
+    "3° piano senza ascensore"
+   ],
+   "priorita": 10,
+   "perchePriorita": [
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "1 giorni online",
+     0.2
+    ],
+    [
+     "Foto: medie",
+     6
+    ],
+    [
+     "Testo: curato",
+     1
+    ],
+    [
+     "Provvigione stimata 2.376 €",
+     2.6
+    ],
+    [
+     "Qualita' dell'immobile 58/100",
+     2.2
+    ],
+    [
+     "Nessun recapito diretto",
+     -8
+    ]
+   ],
+   "fotoLette": "2026-08-31",
+   "fotoSospetto": "",
+   "uscitoIl": "2026-08-31"
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/arredato-milano-654525096.htm",
+   "portale": "subito",
+   "riferimento": "654525096",
+   "titolo": "Arredato",
+   "via": "Corso Lodi",
+   "civico": "",
+   "quartiere": "Porta Romana",
+   "municipio": "",
+   "tipo": "Locazione",
+   "tipologia": "",
+   "prezzo": 1300.0,
+   "mq": 66.0,
+   "locali": 3.0,
+   "bagni": 1.0,
+   "piano": "1",
+   "ascensore": true,
+   "zona": "Centro storico e semicentro di pregio",
+   "lat": 45.4493768,
+   "lon": 9.207084,
+   "spese": "",
+   "classeEnergetica": "d",
+   "statoImmobile": "ottimo---ristrutturato",
+   "telefono": "",
+   "email": "",
+   "inserzionista": "Gabriele",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/a9/a9c39c7a-23be-488f-b6dd-e08dd2c554f3?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/1d/1dd4a9c9-143e-49ec-b20e-1542387dd545?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/a9/a96431e9-cb49-4413-9b36-16b53109ca44?rule=vertical-mini-card-2x-auto",
+   "numeroFoto": 6,
+   "descrizione": "3+2 o transitorio concordato 1300 euro +190 spese cond . Tranquillo appartamento di 66 mq a pochi minuti da Fondazione Prada, Corso Lodi, Porta Romana e a 10 minuti dall'aeroporto di Linate.\nL'appartamento è silenzioso e ideale per soggiorni di lavoro o turismo. Ospita fino a tre persone:\n o Una camera doppia\n o Una camera singola\nEntrambe le camere hanno accesso a un terrazzo.\n\nLa zona giorno include:\n o Cucina aperta con ampio frigorifero, microonde\n o Tavolo da pranzo per 4 persone\n o Divano angolare comodo e smart TV 42\"\n o Aria condizionata e tapparelle elettriche\n\nZona notte:\n o Camera matrimoniale con grande armadio\n o Camera singola con scrivania e armadio a tre ante, entrambe con terrazzo\n o Bagno moderno con ampia doccia e lavatrice a carico dall'alto\n o Angolo studio per smart working",
+   "pubblicato": "2026-08-30",
+   "privato": true,
+   "verificatoIl": "2026-08-31",
+   "noAgenzie": false,
+   "nuovo": false,
+   "scoperto": "2026-08-31",
+   "indirizzoTentato": "2026-08-31",
+   "zonaFonte": "quartiere di pregio",
+   "qualitaFoto": "medie",
+   "qualitaTesto": "curato",
+   "sospettoAgenzia": 14,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [
+    "«Gabriele» pubblica 2 immobili"
+   ],
+   "qualitaImmobile": 85,
+   "percheImmobile": [
+    "66 mq: taglio molto richiesto",
+    "3 locali: la domanda sta qui",
+    "con ascensore",
+    "balcone o terrazzo"
+   ],
+   "priorita": 18,
+   "perchePriorita": [
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "1 giorni online",
+     0.2
+    ],
+    [
+     "Foto: medie",
+     6
+    ],
+    [
+     "Testo: curato",
+     1
+    ],
+    [
+     "Provvigione stimata 2.808 €",
+     3.1
+    ],
+    [
+     "Qualita' dell'immobile 85/100",
+     9.8
+    ],
+    [
+     "Nessun recapito diretto",
+     -8
+    ]
+   ],
+   "fotoLette": "2026-08-31",
+   "fotoSospetto": "",
+   "uscitoIl": "2026-08-31"
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/delizioso-appartamentino-con-terrazzo-milano-655979545.htm",
+   "portale": "subito",
+   "riferimento": "655979545",
+   "titolo": "Delizioso appartamentino con terrazzo",
+   "via": "",
+   "civico": "",
+   "quartiere": "Porta Venezia",
+   "municipio": "Municipio 1",
+   "tipo": "Locazione",
+   "tipologia": "",
+   "prezzo": 1050.0,
+   "mq": 35.0,
+   "locali": 1.0,
+   "bagni": 1.0,
+   "piano": "3",
+   "ascensore": false,
+   "zona": "Centro storico e semicentro di pregio",
+   "lat": 45.4742942,
+   "lon": 9.2052385,
+   "spese": "",
+   "classeEnergetica": "",
+   "statoImmobile": "ottimo---ristrutturato",
+   "telefono": "",
+   "email": "",
+   "inserzionista": "Fabio",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/61/61cc6507-464c-4d7c-b9d1-f36680583804?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/63/63a0f0af-461e-4b4b-a306-56ea7cc364f0?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/23/23a19a0e-c65a-4d97-b785-9074dc95c514?rule=vertical-mini-card-2x-auto",
+   "numeroFoto": 6,
+   "descrizione": "Ideale per single, o giovane professionista. Elegante/moderno in ottima zona centrale signorile (Porta Venezia MM linea rossa, vicino ai giardini Palestro) con giardino alberato, servizio di portineria e videosorveglianza (3°p), finemente arredato, composto da: zona d'ingresso, area living/notte (moderna struttura letto matrimoniale a scomparsa CLEI, armadio e divano),\ncucinotto indipendente con finestra, bagno finestrato ed utile ripostiglio soppalcato, terrazzo vivibile con esposizione ad angolo esposto su giardino e fronte strada distanziata. Parquet, aria condizionata, doppi vetri, riscaldamento centralizzato. 1050 euro mensili (oltre 200 spese). ALL INCLUSIVE NESSUNA SPESA, TRATTATIVA CON DIRETTO PROPRIETARIO.",
+   "pubblicato": "2026-08-30",
+   "privato": true,
+   "verificatoIl": "2026-08-31",
+   "noAgenzie": false,
+   "nuovo": false,
+   "scoperto": "2026-08-31",
+   "quartiereFonte": "nominato nel testo dell'annuncio",
+   "indirizzoTentato": "2026-08-31",
+   "zonaFonte": "quartiere di pregio",
+   "qualitaFoto": "medie",
+   "qualitaTesto": "curato",
+   "sospettoAgenzia": 22,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [
+    "«Fabio» pubblica 2 immobili",
+    "descrizione strutturata da scheda"
+   ],
+   "qualitaImmobile": 56,
+   "percheImmobile": [
+    "35 mq: taglio molto richiesto",
+    "3° piano senza ascensore",
+    "balcone o terrazzo"
+   ],
+   "priorita": 9,
+   "perchePriorita": [
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "1 giorni online",
+     0.2
+    ],
+    [
+     "Foto: medie",
+     6
+    ],
+    [
+     "Testo: curato",
+     1
+    ],
+    [
+     "Provvigione stimata 2.268 €",
+     2.5
+    ],
+    [
+     "Qualita' dell'immobile 56/100",
+     1.7
+    ],
+    [
+     "Nessun recapito diretto",
+     -8
+    ]
+   ],
+   "fotoLette": "2026-08-31",
+   "fotoSospetto": "",
+   "uscitoIl": "2026-08-31"
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/luminoso-bilocale-a-60-m-fermata-metro-dergano-milano-658882245.htm",
+   "portale": "subito",
+   "riferimento": "658882245",
+   "titolo": "Luminoso Bilocale a 60 m fermata metro Dergano",
+   "via": "Via Carlo Imbonati",
+   "civico": "",
+   "quartiere": "",
+   "municipio": "Municipio 9",
+   "tipo": "Vendita",
+   "tipologia": "",
+   "prezzo": null,
+   "mq": 60.0,
+   "locali": null,
+   "bagni": 2.0,
+   "piano": "3",
+   "ascensore": true,
+   "zona": "Fascia media urbana",
+   "lat": 45.5048205,
+   "lon": 9.1799784,
+   "spese": "",
+   "classeEnergetica": "",
+   "statoImmobile": "ottimo---ristrutturato",
+   "telefono": "3478852467",
+   "email": "",
+   "inserzionista": "",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/04/04314011-9aed-4693-bdc4-fe6196f28f19?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/e1/e1ba5795-4760-41d8-b7ce-bd53a7b21224?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/56/56d7d9f0-1d90-4faf-ad34-b2c4c71cdd5d?rule=vertical-mini-card-2x-auto",
+   "numeroFoto": 6,
+   "descrizione": "Luminoso appartamento al 3’ piano con ascensore, recentemente ristrutturato e ammobiliato a nuovo, in Milano, Via Imbonati, a 60 metri dalla fermata della metro Gialla  Dergano, che permette di raggiungere in soli 7 minuti stazione centrale, per cambio con metro Verde, in 12 minuti Piazza Duomo, per cambio con metro Rossa, in 4 minuti Zara, per cambio con metro Lilla.\nImmobile di 60 mq composto da sala living con angolo cottura, una camera da letto matrimoniale, n. 2 bagni finestrati  (solo uno dotato di doccia), n. 2 terrazzini, divano letto matrimoniale e n.2 ampi armadi.\nAppartamento dotato di Infissi in alluminio triplo vetro, n.2 condizionatori, zanzariere, videocitofono, lavastoviglie e lavatrice. Contratto della durata di 18 mesi, con possibilità di rinnovo.\nCanone di euro 1.100 + 150 spese condominiali. \nPossibilità di garage ad euro 120 mensili.\nIdeale per una persona o coppia, ",
+   "pubblicato": "2026-08-30",
+   "privato": true,
+   "verificatoIl": "2026-08-31",
+   "noAgenzie": true,
+   "nuovo": false,
+   "scoperto": "2026-08-31",
+   "indirizzoTentato": "2026-08-31",
+   "zonaFonte": "4.6 km dal Duomo",
+   "qualitaFoto": "medie",
+   "qualitaTesto": "curato",
+   "sospettoAgenzia": 0,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [],
+   "qualitaImmobile": 100,
+   "percheImmobile": [
+    "60 mq: taglio molto richiesto",
+    "due o piu' bagni",
+    "con ascensore",
+    "ristrutturato o nuovo",
+    "balcone o terrazzo",
+    "box o posto auto"
+   ],
+   "priorita": 2,
+   "perchePriorita": [
+    [
+     "Prezzo non attendibile: da verificare al telefono",
+     0
+    ],
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "1 giorni online",
+     0.2
+    ],
+    [
+     "Foto: medie",
+     6
+    ],
+    [
+     "Testo: curato",
+     1
+    ],
+    [
+     "Qualita' dell'immobile 100/100",
+     14.0
+    ],
+    [
+     "Telefono pubblicato",
+     5
+    ],
+    [
+     "Ha scritto «no agenzie»: non si chiama",
+     -30
+    ]
+   ],
+   "fotoLette": "2026-08-31",
+   "fotoSospetto": "",
+   "uscitoIl": "2026-08-31"
+  },
+  {
+   "url": "https://www.subito.it/appartamenti/bilocale-navigli-ticinese-via-meda-milano-658878904.htm",
+   "portale": "subito",
+   "riferimento": "658878904",
+   "titolo": "Bilocale Navigli Ticinese via Meda",
+   "via": "Via Giuseppe Meda",
+   "civico": "35",
+   "quartiere": "",
+   "municipio": "Municipio 5",
+   "tipo": "Locazione",
+   "tipologia": "",
+   "prezzo": 1050.0,
+   "mq": 50.0,
+   "locali": 2.0,
+   "bagni": 1.0,
+   "piano": "1",
+   "ascensore": true,
+   "zona": "Semicentro consolidato",
+   "lat": 45.441427,
+   "lon": 9.1789495,
+   "spese": "",
+   "classeEnergetica": "in-attesa-di-certificazione",
+   "statoImmobile": "ottimo---ristrutturato",
+   "telefono": "",
+   "email": "",
+   "inserzionista": "Riccardo",
+   "foto": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/ed/ed40793b-f776-4dde-bf59-6f009f1d0d88?rule=vertical-mini-card-2x-auto",
+   "foto2": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/01/019536ff-77cd-4e3b-9ef9-25e196bb6fcc?rule=vertical-mini-card-2x-auto",
+   "foto3": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/2b/2b413483-b506-4ffd-8767-9eef6a45bc9f?rule=vertical-mini-card-2x-auto",
+   "numeroFoto": 6,
+   "descrizione": "Navigli -Ticinese (San Gottardo/Meda): in gradevole e silenzioso contesto appartamento 50 mq ristrutturato, travi a vista, camino, luminoso e ristrutturato; composto da: ampio soggiorno con cucina a vista, camera con letto matrimoniale e bagno con box doccia e lavatrice. doppia esposizione. Completamente arredato. Riscaldamento autonomo. \nL'appartamento si trova in zona ben servita da negozi, supermercati, mezzi pubblici: tram 3 (fermata sotto casa), tram 15 (400 metri), autobus 95 - 91 - 71 - 59 (300 metri), Metro Verde Famagosta e Romolo (1000 metri); nelle immediate vicinanze dell'Università Bocconi, IULM, NABA e IED. Ben collegata al centro città e a pochi minuti a piedi dalla rinomata zona navigli con locali e ristoranti\nSi affitta per max. due persone. RICHIESTA: 1050€ + 100€ (spese) - Libero subito - NO AGENZIE\nNavigli - Ticinese (San Gottardo / Meda): in a pleasant and quiet sett",
+   "pubblicato": "2026-08-30",
+   "privato": true,
+   "verificatoIl": "2026-08-31",
+   "noAgenzie": true,
+   "nuovo": false,
+   "scoperto": "2026-08-31",
+   "zonaFonte": "2.7 km dal Duomo",
+   "qualitaFoto": "medie",
+   "qualitaTesto": "curato",
+   "sospettoAgenzia": 8,
+   "verdettoInserzionista": "privato",
+   "motiviAgenzia": [
+    "descrizione strutturata da scheda"
+   ],
+   "qualitaImmobile": 97,
+   "percheImmobile": [
+    "50 mq: taglio molto richiesto",
+    "2 locali: la domanda sta qui",
+    "con ascensore",
+    "ristrutturato o nuovo",
+    "box o posto auto"
+   ],
+   "priorita": 0,
+   "perchePriorita": [
+    [
+     "Prezzo di zona non confrontabile",
+     6
+    ],
+    [
+     "1 giorni online",
+     0.2
+    ],
+    [
+     "Foto: medie",
+     6
+    ],
+    [
+     "Testo: curato",
+     1
+    ],
+    [
+     "Provvigione stimata 2.268 €",
+     2.5
+    ],
+    [
+     "Qualita' dell'immobile 97/100",
+     13.2
+    ],
+    [
+     "Nessun recapito diretto",
+     -8
+    ],
+    [
+     "Ha scritto «no agenzie»: non si chiama",
+     -30
+    ]
+   ],
+   "fotoLette": "2026-08-31",
+   "fotoSospetto": "",
+   "indirizzoTentato": "2026-08-31",
    "uscitoIl": "2026-08-31"
   }
  ]
