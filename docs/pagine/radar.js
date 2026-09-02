@@ -30,16 +30,22 @@ function rigaInserzionista(a) {
     <b>${v === "probabile agenzia" ? "Probabilmente non e' un proprietario" : "Da verificare al telefono"}</b>${m ? " — " + esc(m) : ""}</div>`;
 }
 
-/* Tre stati che contano davvero, piu' il dettaglio fine nel menu «Esito». */
-const GRUPPI = {
-  dafare:    { t: "Da fare",       e: ["Da lavorare"] },
-  buoni:     { t: "Buoni",         e: ["Buono", "Appuntamento", "Valutazione fatta", "In sequenza", "Contattato"] },
-  richiamare:{ t: "Da richiamare", e: ["Da richiamare"] },
-  mandati:   { t: "Mandati",       e: ["Mandato"] },
-  tutti:     { t: "Tutti",         e: null }
-};
+/* Le linguette in cima non sono una tassonomia degli esiti: sono la navigazione vera della
+   pagina, e rispondono alla domanda che uno si fa aprendola — «cosa mi resta da fare».
+   L'archivio e' l'ultima, e dev'esserci: senza un posto dove rivedere quello che si e'
+   archiviato, «Archivia» diventa il tasto che fa sparire le cose, e dopo due volte nessuno
+   lo preme piu'. */
 const statoDi = a => a.esito || "Da lavorare";
-const gruppoDiEsito = e => Object.keys(GRUPPI).find(k => GRUPPI[k].e && GRUPPI[k].e.includes(e)) || "dafare";
+const GRUPPI = {
+  dafare:    { t: "Da fare",       f: a => !gestioneDi(a) && statoDi(a) === "Da lavorare" },
+  buoni:     { t: "Buoni",         f: a => ["Buono", "Appuntamento", "Valutazione fatta", "In sequenza", "Contattato"].includes(statoDi(a)) },
+  richiamare:{ t: "Da richiamare", f: a => ["Da richiamare", "Nessuna risposta"].includes(statoDi(a)) },
+  rivedere:  { t: "Da rivedere",   f: a => gestioneDi(a) === "rivedere" },
+  gestiti:   { t: "Gestiti",       f: a => gestioneDi(a) === "gestito" },
+  mandati:   { t: "Mandati",       f: a => statoDi(a) === "Mandato" },
+  archivio:  { t: "Archivio",      f: null, archivio: true },
+  tutti:     { t: "Tutti",         f: null }
+};
 
 function annunciFiltrati() {
   let l = S.annunci.slice();
@@ -53,7 +59,8 @@ function annunciFiltrati() {
   if (F.portale) l = l.filter(a => a.portale === F.portale);
   if (F.municipio) l = l.filter(a => a.municipio === F.municipio);
   if (F.esito) l = l.filter(a => statoDi(a) === F.esito);
-  if (F.gruppo && GRUPPI[F.gruppo] && GRUPPI[F.gruppo].e) l = l.filter(a => GRUPPI[F.gruppo].e.includes(statoDi(a)));
+  const gr = GRUPPI[F.gruppo];
+  if (gr && typeof gr.f === "function") l = l.filter(gr.f);
   if (F.soloNuovi) l = l.filter(a => a.nuovo || (giorniDa(a.scoperto || a.visto) ?? 99) <= 1);
   if (F.soloPrivatiVeri) l = l.filter(a => (a.verdettoInserzionista || "privato") === "privato");
   if (F.soloTel) l = l.filter(a => a.telefono);
@@ -80,11 +87,30 @@ function gruppiOrdinati() {
 function fasciaGestito(a) {
   if (!lavorato(a)) return "";
   const chi = a.operatore || "qualcuno di noi";
-  const richiamo = statoDi(a) === "Da richiamare";
-  return `<div class="gestito${richiamo ? " richiamo" : ""}">
-    <span>gestito da</span><span class="chi">${esc(chi)}</span>
-    <span>${esc(statoDi(a).toLowerCase())}</span>
+  const g = gestioneDi(a), richiamo = statoDi(a) === "Da richiamare";
+  const cl = g === "gestito" ? " fatto" : (g === "rivedere" || richiamo) ? " richiamo" : "";
+  const apertura = g === "gestito" ? "gestito da" : g === "rivedere" ? "da rivedere ·" : "in mano a";
+  return `<div class="gestito${cl}">
+    <span>${apertura}</span><span class="chi">${esc(chi)}</span>
+    <span>${esc(statoDi(a) === "Da lavorare" ? "" : statoDi(a).toLowerCase())}</span>
     <span class="quando">${a.ultimoContatto ? dataIt(a.ultimoContatto) : ""}${richiamo && a.dataRichiamo ? " · richiamare il " + dataIt(a.dataRichiamo) : ""}</span>
+  </div>`;
+}
+
+/* I due assi sotto ogni carta. Il primo si preme col telefono ancora all'orecchio ed e' grande
+   apposta; il secondo si preme dopo ed e' piu' piccolo, perche' nove volte su dieci lo compila
+   gia' il primo da solo. */
+function assiAnnuncio(a) {
+  const g = gestioneDi(a);
+  return `<div class="assi">
+    <div class="asse"><span class="et">Com'e' andata</span>
+      <div class="passi">${GIUDIZI.map(x => `<button data-az="giudizio" data-id="${esc(a.id)}" data-e="${esc(x.e)}" title="${esc(x.d)}"
+        class="${statoDi(a) === x.e ? "att " + x.cl : ""}">${esc(x.t)}</button>`).join("")}</div>
+    </div>
+    <div class="asse"><span class="et">Dove lo metto</span>
+      <div class="passi mini">${GESTIONI.map(x => `<button data-az="${x.g === "archiviato" ? "archivia" : "gest"}" data-id="${esc(a.id)}" data-g="${esc(x.g)}" title="${esc(x.d)}"
+        class="${g === x.g ? "att " + x.cl : ""}">${esc(x.t)}</button>`).join("")}</div>
+    </div>
   </div>`;
 }
 
@@ -162,12 +188,31 @@ function cartaAnnuncio(g) {
     <div class="corpo" style="padding-top:0">
       <div style="font-size:11px;color:${fr.cl === "verde" ? "var(--verde)" : fr.cl === "ambra" ? "var(--ambra)" : "var(--grigio)"}">${eOnline(a) ? esc(fr.t) : "sparito dal portale il " + dataIt(a.sparito)}</div>
       ${rigaWatermark(a)}
-      <div class="passi">
-        ${PASSI.map(x => `<button data-az="passo" data-id="${esc(a.id)}" data-e="${esc(x.e)}" title="${esc(x.d)}"
-          class="${statoDi(a) === x.e ? "att " + x.cl : ""}">${esc(x.t)}</button>`).join("")}
-      </div>
+      ${assiAnnuncio(a)}
       ${rigaLavoro(a)}
     </div>
+  </div>`;
+}
+
+/* L'archivio, dalla parte di chi lo guarda. Non e' una lista di cose cancellate: e' l'elenco
+   di quello che non va piu' chiamato, con scritto perche' e da chi — ed e' l'unico posto da cui
+   si torna indietro. La marcia indietro qui vale per tutti e tre i dispositivi, se no domani il
+   quaderno della squadra lo rimette fuori. */
+function vistaArchivio() {
+  const arch = (S.esclusi || []).slice().sort((a, b) => String(b.rivisto || b.data || "").localeCompare(String(a.rivisto || a.data || "")));
+  const NOMI_TIPO = { agenzia: "agenzia", scartato: "scartato a mano", lavorato: "contattato, chiuso" };
+  if (!arch.length) return `<div class="vuoto">L'archivio e' vuoto. Ci finisce quello che premi <b>Archivia</b>, e le agenzie che il radar riconosce da solo.</div>`;
+  return `<div class="scheda">
+    <h3>Fuori dalla lista <span class="etichetta">${arch.length} immobili</span></h3>
+    <p style="font-family:var(--serif);font-size:14.5px">Chi sta qui non rientra a nessun aggiornamento, <b>nemmeno se il portale lo ripubblica con un altro indirizzo, un altro numero o il testo cambiato</b>: il riconoscimento e' su indirizzo, metratura, recapito, fotografie e testo, non sul collegamento. Se un'esclusione era sbagliata, <b>Rimetti in lista</b> lo riporta dentro su tutti e tre i dispositivi.</p>
+    <table><thead><tr><th>Immobile</th><th>Perche'</th><th>Chi e quando</th><th></th></tr></thead><tbody>
+    ${arch.map(v => `<tr>
+      <td><b>${esc(v.via || v.titolo || "senza indirizzo")}</b>${v.url ? `<br><a href="${esc(v.url)}" target="_blank" rel="noopener" style="font-size:11.5px">annuncio</a>` : ""}</td>
+      <td style="font-size:12.5px">${esc(NOMI_TIPO[v.tipo] || v.tipo || "")}${v.motivo ? " — " + esc(v.motivo) : ""}${num(v.ricomparse) ? `<br><span style="color:var(--ambra);font-size:11.5px">ha provato a rientrare ${num(v.ricomparse)} volte</span>` : ""}</td>
+      <td style="font-size:12.5px;white-space:nowrap">${esc(v.chi || "—")}<br><span style="color:var(--grigio)">${dataIt(v.rivisto || v.data)}</span></td>
+      <td><button class="azione grigia" data-az="rimetti" data-id="${esc(v.id)}">Rimetti in lista</button></td>
+    </tr>`).join("")}
+    </tbody></table>
   </div>`;
 }
 
@@ -177,22 +222,22 @@ function render() {
   const gTutti = raggruppaAnnunci(S.annunci);
   const doppioni = tutti - gTutti.length;
   const privati = S.annunci.filter(a => a.privato !== false).length;
-  const daLavorare = gruppi.filter(g => (g.capo.esito || "Da lavorare") === "Da lavorare").length;
+  const inArchivio = (S.esclusi || []).length;
 
   $("#vista").innerHTML = testa("Livello 1 — copertura cittadina", "Annunci",
-    `Ogni riga qui sotto e' <b>un immobile, non un annuncio</b>: lo stesso appartamento pubblicato su cinque portali resta una riga sola, con l'elenco dei portali dove compare. Il punteggio ordina la lista: <b>foto storte, testo scarno, prezzo sopra mercato e molti giorni online sono il lead migliore</b>, non il peggiore.`) + `
+    `Ogni riga qui sotto e' <b>un immobile, non un annuncio</b>: lo stesso appartamento pubblicato su cinque portali resta una riga sola, con l'elenco dei portali dove compare. Il punteggio ordina la lista: <b>foto storte, testo scarno, prezzo sopra mercato e molti giorni online sono il lead migliore</b>, non il peggiore.<br><br>Sotto ogni carta ci sono <b>due file di tasti, e rispondono a due domande diverse</b>. La prima — <i>com'e' andata</i> — si preme col telefono ancora all'orecchio e non fa sparire niente: si puo' cambiare idea premendone un altro. La seconda — <i>dove lo metto</i> — dice se qualcuno ce l'ha in mano, e la compila gia' la prima da sola quando il proprietario ha risposto. L'unico tasto che toglie davvero un immobile dalla lista si chiama <b>Archivia</b>, chiede conferma, e quello che archivia lo ritrovi nella linguetta <b>Archivio</b>.`) + `
 
   <div class="griglia g4" style="margin:0 0 14px">
     <div class="dato"><div class="titolo">Immobili unici</div><div class="valore">${gTutti.length}</div><div class="sotto">da ${tutti} annunci raccolti</div></div>
     <div class="dato ${doppioni ? "verde" : ""}"><div class="titolo">Doppioni tolti</div><div class="valore">${doppioni}</div><div class="sotto">stesso immobile, piu' portali</div></div>
     <div class="dato"><div class="titolo">Da privato</div><div class="valore">${privati}</div><div class="sotto">${tutti ? Math.round(privati / tutti * 100) : 0}% del raccolto</div></div>
     <div class="dato"><div class="titolo">Non piu' online</div><div class="valore">${S.annunci.filter(a => !eOnline(a)).length}</div><div class="sotto">tolti dalle chiamate</div></div>
-    <div class="dato"><div class="titolo">Con telefono</div><div class="valore">${S.annunci.filter(a => a.telefono).length}</div><div class="sotto">gli altri si contattano dal portale</div></div>
+    <div class="dato"><div class="titolo">Gia' gestiti</div><div class="valore">${S.annunci.filter(a => gestioneDi(a) === "gestito").length}</div><div class="sotto">${inArchivio} in archivio, fuori lista</div></div>
   </div>
 
   <div class="stati nostampa">${Object.entries(GRUPPI).map(([k, g]) => {
-      const n = g.e ? S.annunci.filter(a => a.privato !== false && g.e.includes(statoDi(a))).length
-                    : S.annunci.filter(a => a.privato !== false).length;
+      const privati = S.annunci.filter(a => a.privato !== false);
+      const n = g.archivio ? inArchivio : (typeof g.f === "function" ? privati.filter(g.f).length : privati.length);
       return `<button data-az="gruppo" data-g="${k}" class="${F.gruppo === k ? "att" : ""}">${esc(g.t)} <b>${n}</b></button>`;
     }).join("")}</div>
 
@@ -229,7 +274,8 @@ function render() {
     </div>
   </div>
 
-  ${gruppi.length ? `<div class="vetrina">${gruppi.map(cartaAnnuncio).join("")}</div>`
+  ${GRUPPI[F.gruppo] && GRUPPI[F.gruppo].archivio ? vistaArchivio()
+    : gruppi.length ? `<div class="vetrina">${gruppi.map(cartaAnnuncio).join("")}</div>`
       : tutti ? `<div class="vuoto">Nessun immobile con questi filtri.</div>`
         : `<div class="scheda"><h3>Il radar e' vuoto — ecco come si riempie</h3>
       <p style="font-family:var(--serif);font-size:14.5px">Quattro strade, tutte gratuite e tutte dentro i termini d'uso dei portali. La prima e' quella che userai il 90% delle volte.</p>
@@ -299,6 +345,17 @@ function apriAnnuncioForm(a, titolo) {
   });
 }
 
+/* Perche' un immobile e' finito fuori. Non e' un dettaglio burocratico: fra sei mesi, quando
+   quel proprietario torna a essere un lead, questa riga e' l'unica cosa che dice se richiamarlo
+   o lasciar perdere. */
+function motivoArchivio(a) {
+  const chi = a.operatore || S.operatore;
+  const quando = a.ultimoContatto ? " il " + dataIt(a.ultimoContatto) : "";
+  const st = statoDi(a);
+  if (st === "Da lavorare") return "archiviato a mano da " + chi + " senza contatto";
+  return `${st.toLowerCase()} — ${chi}${quando}${a.note ? " — " + a.note : ""}`;
+}
+
 /* ---------------- azioni ---------------- */
 Object.assign(AZIONI, {
   apriScheda: el => { location.href = "annuncio.html?id=" + encodeURIComponent(el.dataset.id); },
@@ -307,42 +364,46 @@ Object.assign(AZIONI, {
     copiaTesto(messaggioPortale(a, null, S.operatore), "Messaggio copiato. Ora apri l'annuncio e incollalo nel modulo del portale.");
   },
   gruppo: el => { F.gruppo = el.dataset.g; F.esito = ""; render(); window.scrollTo({ top: 0 }); },
-  passo: el => {
+  /* Primo asse: com'e' andata. Un tasto, e basta — niente conferme, niente finestre, niente
+     che sparisce. Quello che si preme al telefono dev'essere reversibile: si ripreme un altro
+     tasto e cambia, e nel frattempo lo storico si e' gia' scritto da solo. */
+  giudizio: el => {
     const a = S.annunci.find(x => x.id === el.dataset.id); if (!a) return;
-    const nuovo = el.dataset.e;
-    if (statoDi(a) === nuovo) return;
-
-    // Due modi di finire, tutti e due definitivi: l'immobile esce dalla lista e finisce
-    // nell'archivio, da dove non rientra nemmeno se il portale lo ripubblica domani con un
-    // altro indirizzo. Cambia il perche', e il perche' resta scritto.
-    if (nuovo === "Scartato" || nuovo === "Non buono") {
-      const dove = [a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "questo immobile";
-      const chiuso = nuovo === "Non buono";
-      const domanda = chiuso
-        ? `${dove}: contattato, non porta a niente?\n\nEsce dalla lista e non ci torna piu', cosi' nessuno degli altri lo richiama. Se vuoi scrivere perche', usa «Aggiungi una nota» prima di chiudere.`
-        : `Scartare ${dove}?\n\nEsce dalla lista e non torna piu': nemmeno se l'annuncio viene ripubblicato con un altro indirizzo o con il testo cambiato.`;
-      if (!confirm(domanda + "\n\nSi puo' rimettere in lista dalla pagina Dati.")) return;
-      a.esito = nuovo; a.ultimoContatto = oggiISO(); a.operatore = S.operatore;
-      const perche = chiuso
-        ? `contattato da ${S.operatore} il ${dataIt(oggiISO())}: non buono${a.note ? " — " + a.note : ""}`
-        : "scartato a mano";
-      escludiAnnuncio(a, perche, S.operatore, chiuso ? "lavorato" : "scartato");
-      S.annunci = S.annunci.filter(x => x.id !== a.id);
-      const t = attivitaDi(oggiISO());
-      if (chiuso) t.tentativi = num(t.tentativi) + 1;
-      salva(); render();
-      return;
-    }
-
-    a.esito = nuovo; a.ultimoContatto = oggiISO(); a.operatore = S.operatore;
-    a.nuovo = false;                       // lavorato: non e' piu' una novita'
-    a.storicoEsiti = (a.storicoEsiti || []).concat([{ data: oggiISO(), esito: nuovo, chi: S.operatore }]);
-    // un contatto vero e' un tentativo: entra nei numeri della giornata senza che tu debba ricordartene
-    if (["Buono", "Non buono", "Da richiamare", "Contattato"].includes(nuovo)) { const t = attivitaDi(oggiISO()); t.tentativi = num(t.tentativi) + 1; }
-    if (["Buono", "Appuntamento"].includes(nuovo)) { const t = attivitaDi(oggiISO()); t.contatti = num(t.contatti) + 1; }
+    if (!applicaGiudizio(a, el.dataset.e)) return;
     // «da richiamare» senza una data e' un buon proposito: la data si chiede subito
-    if (nuovo === "Da richiamare") { salva(); AZIONI.nota(el); return; }
+    if (el.dataset.e === "Da richiamare") { salva(); AZIONI.nota(el); return; }
     salva(); render();
+  },
+
+  /* Secondo asse: dove lo metto. Ripremendo il tasto acceso si torna a «da fare». */
+  gest: el => {
+    const a = S.annunci.find(x => x.id === el.dataset.id); if (!a) return;
+    applicaGestione(a, el.dataset.g);
+    salva(); render();
+  },
+
+  /* L'unico tasto che toglie davvero un immobile dalla vista. Ha una conferma perche' e'
+     l'unico che non si annulla da qui: si torna indietro dalla linguetta Archivio. */
+  archivia: el => {
+    const a = S.annunci.find(x => x.id === el.dataset.id); if (!a) return;
+    const dove = [a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "questo immobile";
+    if (!confirm(`Archiviare ${dove}?\n\nEsce dalla lista e non rientra a nessun aggiornamento, nemmeno se il portale lo ripubblica con un altro indirizzo o col testo cambiato.\n\nLo ritrovi nella linguetta «Archivio», e da li' si rimette in lista quando vuoi.`)) return;
+    a.gestione = "archiviato"; a.rivistoIl = oggiISO();
+    a.operatore = a.operatore || S.operatore;
+    escludiAnnuncio(a, motivoArchivio(a), a.operatore,
+      statoDi(a) === "Da lavorare" ? "scartato" : "lavorato");
+    S.annunci = S.annunci.filter(x => x.id !== a.id);
+    salva(); render();
+  },
+
+  /* La marcia indietro. Prima il quaderno della squadra, poi l'archivio locale: se si facesse
+     al contrario, un altro dispositivo lo rimanderebbe fuori al primo giro. */
+  rimetti: async el => {
+    const v = (S.esclusi || []).find(x => x.id === el.dataset.id); if (!v) return;
+    if (typeof rimettiNellaSquadra === "function") await rimettiNellaSquadra(v);
+    riammettiEscluso(el.dataset.id);
+    alert("Rimesso in lista. Rientra al prossimo aggiornamento dal radar.");
+    render();
   },
 
   /* La nota, il canale e la data del richiamo: tutto quello che serve per riprendere il filo
@@ -352,7 +413,8 @@ Object.assign(AZIONI, {
     const dove = [a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "Immobile";
     apriFinestra(dove, `
       <div class="griglia g2">
-        ${campo("Esito", `<select data-k="esito">${opz(ESITI, statoDi(a))}</select>`)}
+        ${campo("Com'e' andata", `<select data-k="esito">${opz(ESITI, statoDi(a))}</select>`)}
+        ${campo("Dove lo metto", `<select data-k="gestione">${["", "gestito", "rivedere"].map(g => `<option value="${g}"${gestioneDi(a) === g ? " selected" : ""}>${esc(NOMI_GESTIONE[g])}</option>`).join("")}</select>`)}
         ${campo("Chi ha gestito il contatto", `<select data-k="operatore">${opz(S.operatori, a.operatore || S.operatore)}</select>`)}
         ${campo("Data dell'ultima telefonata o mail", inp("ultimoContatto", a.ultimoContatto || oggiISO(), "date"))}
         ${campo("Come l'hai contattato", `<select data-k="canaleContatto">${opz(["", "telefono", "WhatsApp", "email", "modulo del portale", "lettera"], a.canaleContatto)}</select>`)}
@@ -369,13 +431,11 @@ Object.assign(AZIONI, {
           note: d.note || ""
         });
         if (!eraDaLavorare || a.esito !== "Da lavorare") a.nuovo = false;
-        if (a.esito === "Scartato" || a.esito === "Non buono") {
-          const chiuso = a.esito === "Non buono";
-          escludiAnnuncio(a, chiuso
-            ? `contattato da ${a.operatore} il ${dataIt(a.ultimoContatto || oggiISO())}: non buono${a.note ? " — " + a.note : ""}`
-            : "scartato a mano", a.operatore, chiuso ? "lavorato" : "scartato");
-          S.annunci = S.annunci.filter(x => x.id !== a.id);
-        }
+        if (d.gestione !== undefined) a.gestione = d.gestione;
+        // scegliere un esito da un menu non fa piu' sparire niente: da qui in avanti l'unico
+        // tasto che archivia si chiama «Archivia» e sta sotto la carta
+        else if (ESITI_CHE_CHIUDONO.includes(a.esito) && !a.gestione) a.gestione = "gestito";
+        a.rivistoIl = oggiISO();
         salva(); chiudiFinestra(); render();
       });
   },
@@ -389,7 +449,7 @@ Object.assign(AZIONI, {
     S.annunci = S.annunci.filter(x => x.id !== a.id);
     salva(); render();
   },
-  azzeraFiltri: () => { F = { q: "", tipo: "", portale: "", municipio: "", esito: "", chi: "privati", ordine: "punteggio", soloNuovi: false, soloPrivatiVeri: false, soloTel: false, mostraSpariti: false, gruppo: "tutti" }; render(); },
+  azzeraFiltri: () => { F = { q: "", tipo: "", portale: "", municipio: "", esito: "", chi: "privati", ordine: "punteggio", soloNuovi: false, soloPrivatiVeri: false, soloTel: false, mostraSpariti: false, gruppo: "dafare" }; render(); },
   nuovoAnnuncio: () => apriAnnuncioForm({ id: uid(), tipo: "Vendita", privato: true, pubblicato: oggiISO() }, "Nuovo annuncio"),
   incolla: () => {
     apriFinestra("Incolla un annuncio", `
@@ -466,7 +526,7 @@ function daSegnalibro() {
 
 avviaPagina(render);
 daSegnalibro();
-aggiornaDalFeed(true).then(e => { if (e && (e.nuovi || e.aggiornati)) render(); });
+aggiornaDalFeed(true).then(e => { if (e && (e.nuovi || e.aggiornati || e.spariti || e.respinti)) render(); });
 
 /* ---------------- raccolta automatica dai portali ---------------- */
 Object.assign(AZIONI, {

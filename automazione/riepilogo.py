@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """Prende il JSON che stampa radar.py e ne ricava due cose:
 
-  1. `dati/riepilogo.json` — quello che la pagina Oggi mostra in cima al lunedi' mattina;
+  1. `dati/riepilogo.json` — quello che la pagina Oggi mostra in cima ogni mattina;
   2. un riassunto in Markdown sullo standard output, che GitHub Actions incolla nella
      pagina del lavoro, cosi' l'esito si legge dal telefono senza aprire il cruscotto.
 
   riepilogo.py <file-del-radar.json>
 
-Lo usano tutti e due i giri: quello di GitHub Actions e quello locale del lunedi'.
+Lo usano tutti e due i giri: quello di GitHub Actions e quello locale di rincalzo.
 Con RADAR_ORIGINE si scrive chi l'ha fatto, e la pagina Oggi lo mostra.
 
 Se il file non e' un JSON valido — il giro si e' rotto a meta' — non tocca niente:
-meglio il riepilogo della settimana scorsa che un blocco rotto in cima alla pagina.
+meglio il riepilogo di ieri che un blocco rotto in cima alla pagina.
 """
 import datetime
 import json
@@ -36,9 +36,10 @@ def scrivi(r, origine):
 def markdown(r):
     ins = r.get("inserzionisti") or {}
     righe = [
-        "## Radar settimanale",
+        "## Radar quotidiano",
         "",
-        f"- credito Apify: **{r.get('credito', 'n.d.')}**",
+        f"- credito Apify: **{r.get('credito', 'n.d.')}**"
+        + (f" — razione di oggi: {r['razione']}" if r.get("razione") else ""),
         f"- nuovi in vista: **{r.get('nuovi_in_vista', 0)}** · "
         f"usciti dai portali: **{r.get('tolti_dalla_vista', 0)}** · "
         f"indirizzi completati: **{r.get('indirizzi_completati', 0)}**",
@@ -69,7 +70,7 @@ def main():
     try:
         r = json.load(open(sys.argv[1]))
     except (OSError, json.JSONDecodeError) as e:
-        print(f"## Radar settimanale\n\nIl giro non e' arrivato in fondo: {e}")
+        print(f"## Radar quotidiano\n\nIl giro non e' arrivato in fondo: {e}")
         return 1
     print(markdown(scrivi(r, os.environ.get("RADAR_ORIGINE", "GitHub Actions"))))
     return 0

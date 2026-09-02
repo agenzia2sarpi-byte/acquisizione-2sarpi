@@ -77,6 +77,33 @@ function vistaOggi() {
 }
 
 /* La lista del radar, in cima: e' con questa che si apre l'ora d'oro. */
+/* I richiami promessi. Erano l'unica cosa che il cruscotto sapeva e non diceva a nessuno: la
+   data si scriveva nella scheda e poi restava li' dentro, e chi aveva detto «mi richiami
+   giovedi'» il giovedi' non lo richiamava nessuno. Un richiamo mancato brucia un contatto
+   meglio di una telefonata sbagliata, perche' quello dall'altra parte ci contava. */
+function bloccoRichiami() {
+  const oggi = oggiISO();
+  const dovuti = S.annunci
+    .filter(a => a.dataRichiamo && a.dataRichiamo <= oggi && eOnline(a) && !inOptOut(a)
+                 && gestioneDi(a) !== "archiviato")
+    .sort((a, b) => String(a.dataRichiamo).localeCompare(String(b.dataRichiamo)));
+  if (!dovuti.length) return "";
+  const tardi = dovuti.filter(a => a.dataRichiamo < oggi).length;
+  return `<div class="scheda" style="border-left:3px solid var(--ambra)">
+    <h3>Richiami promessi <span class="etichetta">${dovuti.length} da fare${tardi ? ` · ${tardi} in ritardo` : ""}</span></h3>
+    ${dovuti.slice(0, 12).map(a => {
+      const g = giorniDa(a.dataRichiamo);
+      return `<a href="annuncio.html?id=${encodeURIComponent(a.id)}" style="display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--linea);text-decoration:none;color:inherit">
+        <span style="flex:1;min-width:0">
+          <b style="font-size:14px">${esc([a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "senza indirizzo")}</b>
+          <small style="display:block;color:var(--grigio);font-size:11.5px">${esc(a.operatore || "—")} · ${esc(a.quartiere || "Milano")}${a.note ? " · " + esc(a.note.slice(0, 60)) : ""}</small>
+        </span>
+        <b style="flex:0 0 auto;font-size:11.5px;color:${g > 0 ? "var(--rosso)" : "var(--ambra)"}">${g > 0 ? `${g} gg fa` : "oggi"}</b>
+      </a>`;
+    }).join("")}
+  </div>`;
+}
+
 function bloccoRadar() {
   if (!S.annunci.length) return `<div class="scheda"><h3>Il radar e' vuoto</h3>
     <p style="font-family:var(--serif);font-size:14.5px">L'ora d'oro senza lista e' un'ora persa. Vai su <a href="radar.html">Annunci</a> e alimenta il radar: bastano il tasto «Prendi annuncio» o un copia-incolla.</p>
@@ -87,7 +114,10 @@ function bloccoRadar() {
     a.privato !== false && eOnline(a) && !inOptOut(a) && !a.noAgenzie);
   const g = raggruppaAnnunci(chiamabili);
   g.forEach(x => x.p = punteggioAnnuncio(x.capo, x));
-  const daFare = g.filter(x => (x.capo.esito || "Da lavorare") === "Da lavorare").sort((a, b) => b.p.punti - a.p.punti);
+  // «da fare» adesso vuol dire due cose insieme: nessuno ci ha messo mano, e nessuno l'ha
+  // ancora chiamato. Chi e' segnato gestito o da rivedere non ruba spazio nell'ora d'oro.
+  const daFare = g.filter(x => !gestioneDi(x.capo) && (x.capo.esito || "Da lavorare") === "Da lavorare")
+    .sort((a, b) => b.p.punti - a.p.punti);
   const nuovi = g.filter(x => x.capo.nuovo || (giorniDa(x.capo.scoperto || x.capo.visto) ?? 99) <= 1).length;
   const usciti = S.annunci.filter(a => !eOnline(a)).length;
   const quota = Math.round(T().tentativiSett / 5);
@@ -111,20 +141,22 @@ function bloccoRadar() {
   </div>`;
 }
 /* ---------------- l'ultimo giro del radar ---------------- */
-/* Quando il giro lo fa GitHub — il lunedi' mattina, anche a Mac spento — nessuno e' li' a
+/* Quando il giro lo fa GitHub — ogni mattina, anche a Mac spento — nessuno e' li' a
    raccontare com'e' andata. Il riepilogo se lo scrive da solo in un file, e la pagina Oggi
    lo mostra in cima: quanti nuovi, quanti usciti, com'e' andata la perlustrazione. */
 let RIEPILOGO = null;
 
 /* Il semaforo dell'automatismo. Serve a rispondere a una domanda sola, senza aprire niente
-   altro: «sta girando da solo, si' o no?». Verde se l'ultimo giro e' andato liscio ed e'
-   recente; ambra se ha lasciato delle note; rosso se sono passati piu' di otto giorni, che
-   con una cadenza settimanale vuol dire che un giro e' saltato. */
+   altro: «sta girando da solo, si' o no?». Le soglie sono tarate sulla cadenza quotidiana: due
+   giorni di silenzio sono ancora il ritardo con cui GitHub fa partire i lavori programmati
+   quando e' carico, tre no — tre vuol dire che qualcosa si e' rotto e la lista sta invecchiando
+   con annunci gia' venduti in prima pagina. */
 function statoAutomatismo(r, gg) {
   if (gg === null || gg === undefined) return { cl: "var(--grigio)", t: "mai girato" };
-  if (gg > 8) return { cl: "var(--rosso)", t: `fermo da ${gg} giorni — un giro e' saltato` };
+  if (gg >= 3) return { cl: "var(--rosso)", t: `fermo da ${gg} giorni — il giro quotidiano e' saltato` };
+  if (gg === 2) return { cl: "var(--ambra)", t: "due giorni senza girare: da tenere d'occhio" };
   if ((r.note || []).length) return { cl: "var(--ambra)", t: "girato, ma con qualcosa da guardare" };
-  return { cl: "var(--verde)", t: "sta girando da solo" };
+  return { cl: "var(--verde)", t: "sta girando da solo, ogni mattina" };
 }
 
 function bloccoRiepilogo() {
@@ -155,7 +187,7 @@ function bloccoRiepilogo() {
   </div>`;
 }
 
-function render() { $("#vista").innerHTML = bloccoRiepilogo() + bloccoRadar() + vistaOggi(); }
+function render() { $("#vista").innerHTML = bloccoRiepilogo() + bloccoRichiami() + bloccoRadar() + vistaOggi(); }
 Object.assign(AZIONI, {
   piu: el => { const a = attivitaDi(oggiISO()); a[el.dataset.c] = num(a[el.dataset.c]) + 1; salva(); render(); },
   meno: el => { const a = attivitaDi(oggiISO()); a[el.dataset.c] = Math.max(0, num(a[el.dataset.c]) - 1); salva(); render(); },
@@ -165,7 +197,9 @@ Object.assign(AZIONI, {
 avviaPagina(render);
 /* Anche la home legge il radar pubblicato: un dispositivo nuovo si riempie da solo,
    senza dover passare prima dalla pagina Annunci. */
-aggiornaDalFeed(true).then(e => { if (e && (e.nuovi || e.aggiornati)) render(); });
+// anche «cinque immobili non sono piu' online» e' una novita': prima la pagina restava ferma
+// e continuava a proporre di chiamare chi aveva gia' venduto
+aggiornaDalFeed(true).then(e => { if (e && (e.nuovi || e.aggiornati || e.spariti || e.respinti)) render(); });
 
 /* Il riepilogo dell'ultimo giro: se il file non c'e' — perche' il giro non e' ancora mai
    girato — la pagina resta esattamente com'era, senza avvisi e senza buchi. */

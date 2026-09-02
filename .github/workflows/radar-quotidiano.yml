@@ -1,28 +1,35 @@
-# Il giro settimanale del radar, fatto da GitHub e non dal Mac di Gaetano.
+# Il giro quotidiano del radar, fatto da GitHub e non dal Mac di Gaetano.
 #
 # Serve perche' l'attivita' programmata dentro l'app Claude gira solo a computer acceso e app
-# aperta: se il lunedi' il Mac e' spento, il radar arriva quando lo riaccende. Qui invece la
-# macchina la accende GitHub, ogni lunedi', ovunque sia Gaetano.
+# aperta: se la mattina il Mac e' spento, il radar arriva quando lo riaccende. Qui invece la
+# macchina la accende GitHub, ogni giorno, ovunque sia Gaetano.
+#
+# Perche' ogni giorno e non piu' una volta a settimana. Un annuncio di privato a Milano vive
+# pochi giorni: chi affitta un bilocale in zona Sarpi lo toglie dopo tre. Con il giro
+# settimanale la lista restava vecchia fino a sei giorni — si chiamava chi aveva gia' affittato,
+# e i nuovi arrivavano quando qualcun altro li aveva gia' presi. Il costo non cambia: non e' il
+# numero dei giri a farlo, e' il numero di annunci toccati, e quello lo decide `--quotidiano`
+# dividendo il credito che resta per i giorni che mancano al rinnovo.
 #
 # L'unica cosa da mettere nel repository e' il secret APIFY_TOKEN.
 # Il commit lo fa il token integrato di Actions: nessuna chiave in piu' da custodire.
 
-name: Radar settimanale
+name: Radar quotidiano
 
 on:
   schedule:
-    # 05:00 UTC del lunedi' = 07:00 in Italia d'estate, 06:00 d'inverno.
+    # 05:00 UTC = 07:00 in Italia d'estate, 06:00 d'inverno.
     # GitHub puo' far partire i lavori programmati con un ritardo anche di un'ora quando e'
     # carico: si parte presto apposta, cosi' alle 9:30 la lista c'e' comunque.
-    - cron: "0 5 * * 1"
+    - cron: "0 5 * * *"
   workflow_dispatch:        # per lanciarlo a mano dalla scheda Actions, quando serve
     inputs:
       nuovi:
-        description: "Quanti annunci nuovi raccogliere (60 e' il giro pieno, ~0,30 $)"
-        default: "60"
+        description: "Annunci nuovi da raccogliere (vuoto = razione del giorno, calcolata dal credito)"
+        default: ""
       verifiche:
-        description: "Quanti annunci ricontrollare (60 e' il giro pieno, ~0,30 $)"
-        default: "60"
+        description: "Annunci da ricontrollare (vuoto = razione del giorno)"
+        default: ""
 
 permissions:
   contents: write           # solo per riscrivere dati/ e le marche di versione
@@ -46,10 +53,17 @@ jobs:
       - name: Il giro del radar
         env:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          NUOVI: ${{ inputs.nuovi }}
+          VERIFICHE: ${{ inputs.verifiche }}
         run: |
           set -o pipefail
-          python3 automazione/radar.py \
-            --nuovi "${{ inputs.nuovi || 60 }}" --verifiche "${{ inputs.verifiche || 60 }}" \
+          # Senza volumi scritti a mano si va a razione: e' il caso di tutti i giri automatici.
+          if [ -n "$NUOVI" ] || [ -n "$VERIFICHE" ]; then
+            VOLUMI="--nuovi ${NUOVI:-20} --verifiche ${VERIFICHE:-20}"
+          else
+            VOLUMI="--quotidiano"
+          fi
+          python3 automazione/radar.py $VOLUMI \
             --giorni 14 --indirizzi 40 \
             > /tmp/radar.json
 
@@ -68,5 +82,5 @@ jobs:
           fi
           sh automazione/versione.sh
           git add -A
-          git commit -m "radar settimanale $(date +%Y-%m-%d)"
+          git commit -m "radar quotidiano $(date +%Y-%m-%d)"
           git push

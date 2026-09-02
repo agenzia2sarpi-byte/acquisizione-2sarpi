@@ -77,6 +77,16 @@ function carica() {
       if (!s.squadra) s.squadra = { chiave: "", ultimaLettura: null, ultimoErrore: "" };
           ["annunci", "amministratori", "condomini", "esclusi"].forEach(k => { if (!Array.isArray(s[k])) s[k] = []; });
       if (!s.feed) s.feed = { ultimoId: null, ultimaLettura: null };
+      /* I due assi — com'e' andata e dove sta adesso — arrivano dopo gli annunci gia' in
+         casa. Senza questo passaggio, la prima apertura mostrerebbe come «da fare» anche gli
+         immobili gia' chiamati la settimana scorsa: sembrerebbe di aver perso tre settimane di
+         telefonate. Gli esiti stanno scritti qui e non presi da annunci.js perche' questo file
+         si carica per primo, prima che quelle costanti esistano. */
+      const CHIUSI = ["Buono", "Mediocre", "Non buono", "Contattato", "In sequenza",
+                      "Appuntamento", "Valutazione fatta", "Mandato"];
+      (s.annunci || []).forEach(a => {
+        if (a.gestione === undefined) a.gestione = CHIUSI.includes(a.esito) ? "gestito" : "";
+      });
       return s;
     }
   } catch (e) { console.warn("dati illeggibili", e); }

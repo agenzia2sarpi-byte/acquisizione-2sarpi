@@ -7,9 +7,11 @@ non arrivano alla sessione. Passa dall'API ufficiale di Apify (mai dai portali).
   radar.py --solo-verifica # nessuna raccolta nuova, solo il giro di verifica
   radar.py --prova         # nessuna chiamata di rete: prova la fusione a vuoto
 
+  radar.py --quotidiano    # il giro di ogni mattina: i volumi li calcola da solo, dividendo
+                           # il credito che resta per i giorni che mancano al rinnovo
   radar.py --nuovi 60 --verifiche 60 --giorni 14
-                           # volumi del giro settimanale (di serie sono quelli del giro
-                           # quotidiano: 20 nuovi, 20 verifiche, archivio a 10 giorni)
+                           # volumi decisi a mano (di serie: 20 nuovi, 20 verifiche,
+                           # archivio a 10 giorni)
 """
 import json, os, re, subprocess, sys, time, datetime, urllib.request, urllib.parse, tempfile
 
@@ -161,10 +163,38 @@ def apify(*args):
 
 
 def credito():
+    """Quanto e' stato consumato, il tetto del piano, e il giorno in cui il credito si rinnova.
+    La data di rinnovo serve al giro quotidiano: senza sapere quanti giorni mancano non si puo'
+    dividere il credito che resta, e o si spende tutto in tre giorni o non si spende mai."""
     d = apify("credito").get("data", {})
     speso = float(d.get("current", {}).get("monthlyUsageUsd", 0) or 0)
     tetto = float(d.get("limits", {}).get("maxMonthlyUsageUsd", 5) or 5)
-    return speso, tetto
+    fine = d.get("monthlyUsageCycle", {}).get("endAt") or ""
+    try:
+        fine = datetime.date.fromisoformat(fine[:10])
+    except Exception:
+        # senza la data vera si assume il primo del mese prossimo: e' la stima piu' prudente
+        fine = (OGGI.replace(day=28) + datetime.timedelta(days=4)).replace(day=1) - datetime.timedelta(days=1)
+    return speso, tetto, fine
+
+
+def razione_del_giorno(speso, fine_ciclo):
+    """La razione di oggi: il credito che resta diviso i giorni che restano.
+
+    E' questo che rende il giro *quotidiano* sostenibile. Il piano gratuito da' 5 $ al mese e il
+    radar si ferma a 4,20 $; se ogni giorno si prendesse un volume fisso, o si finirebbe il
+    credito a meta' mese — e per quindici giorni il sito resterebbe fermo con annunci gia'
+    venduti in prima pagina — oppure lo si terrebbe cosi' basso da non verificare mai niente.
+    Dividendo, invece, il giro di domani costa quanto puo' permettersi domani.
+
+    Torna (nuovi, verifiche). Le verifiche pesano piu' della raccolta: togliere dalla vista un
+    immobile gia' venduto vale piu' che aggiungerne uno in fondo alla lista."""
+    restante = max(0.0, TETTO_MESE - speso)
+    giorni = max(1, (fine_ciclo - OGGI).days + 1)
+    pezzi = int(restante / COSTO_PEZZO / giorni)
+    pezzi = max(0, min(pezzi, 60))              # sopra i 60 la chiamata sincrona di Apify scade
+    verifiche = int(pezzi * 0.6)
+    return pezzi - verifiche, verifiche
 
 
 def chiama(input_dict, tetto_usd):
@@ -520,7 +550,7 @@ def main():
 
     if "--prova" not in arg:
         try:
-            speso, tetto = credito()
+            speso, tetto, fine_ciclo = credito()
         except Exception as e:
             rep["note"].append(f"Apify non risponde, radar.json lasciato com'e': {e}")
             print(json.dumps(rep, ensure_ascii=False, indent=2))
@@ -530,12 +560,27 @@ def main():
             rep["note"].append(f"credito agli sgoccioli ({speso:.2f} $ su {tetto:.2f} $): niente raccolta, si riparte al rinnovo")
             print(json.dumps(rep, ensure_ascii=False, indent=2))
             return 0
+        if "--quotidiano" in arg:
+            # il giro di ogni mattina: i volumi non li decide chi ha scritto il comando, li
+            # decide il credito che resta e i giorni che mancano al rinnovo
+            nuovi_max, verifiche_max = razione_del_giorno(speso, fine_ciclo)
+            giorni_rimasti = max(1, (fine_ciclo - OGGI).days + 1)
+            rep["razione"] = (f"{nuovi_max} nuovi + {verifiche_max} verifiche: "
+                              f"{TETTO_MESE - speso:.2f} $ da qui al {fine_ciclo.isoformat()} "
+                              f"({giorni_rimasti} giorni)")
+            if nuovi_max + verifiche_max == 0:
+                rep["note"].append("razione di oggi a zero: il credito e' finito, si riparte al rinnovo")
+
         quota = nuovi_max // 2 if speso > tetto * 0.7 else nuovi_max
-        if quota < nuovi_max:
+        if quota < nuovi_max and "--quotidiano" not in arg:
             rep["note"].append("oltre il 70% del credito: volume dimezzato per oggi")
+        elif "--quotidiano" in arg:
+            quota = nuovi_max      # la razione ha gia' tenuto conto del credito residuo
 
         nuovi = []
-        if "--solo-verifica" not in arg and "--solo-credito" not in arg:
+        # razione a zero: si esce senza chiamare Apify. Una chiamata che chiede zero annunci
+        # costa comunque il tempo di risposta e sporca il riepilogo con un giro a vuoto.
+        if quota and "--solo-verifica" not in arg and "--solo-credito" not in arg:
             for tipo, u in (("Vendita", "https://www.subito.it/annunci-lombardia/vendita/appartamenti/milano/milano/"),
                             ("Locazione", "https://www.subito.it/annunci-lombardia/affitto/appartamenti/milano/milano/")):
                 try:

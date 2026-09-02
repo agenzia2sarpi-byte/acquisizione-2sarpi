@@ -30,19 +30,87 @@ const TIPOLOGIE = ["Monolocale", "Bilocale", "Trilocale", "Quadrilocale", "5 loc
 const STATI_IMMOBILE = ["Nuovo / ristrutturato", "Buono", "Da ristrutturare", "Non indicato"];
 /* I quattro stati che Gaetano usa davvero al telefono stanno in cima; gli altri restano
    perche' l'archivio ne e' pieno e cancellarli vorrebbe dire perdere lo storico. */
-const ESITI = ["Da lavorare", "Buono", "Non buono", "Da richiamare", "Scartato",
-  "Contattato", "In sequenza", "Appuntamento", "Valutazione fatta", "Mandato", "Non contattare"];
-/* Quattro tasti, uno per come finisce davvero una telefonata. */
-const PASSI = [
-  { e: "Buono", t: "buono", cl: "v", d: "vale la pena insistere" },
-  { e: "Non buono", t: "non buono", cl: "", d: "contattato, non porta a niente" },
-  { e: "Da richiamare", t: "da richiamare", cl: "a", d: "non ora: piu' avanti" },
-  { e: "Scartato", t: "scarta", cl: "r", d: "fuori per sempre" }
+const ESITI = ["Da lavorare", "Buono", "Mediocre", "Da richiamare", "Nessuna risposta",
+  "Non buono", "Scartato", "Contattato", "In sequenza", "Appuntamento", "Valutazione fatta",
+  "Mandato", "Non contattare"];
+
+/* ---------------- i due assi di ogni immobile ---------------- */
+/* Fino a ieri l'asse era uno solo e ci finivano dentro mescolate due domande diverse: «com'e'
+   andata» e «che ne faccio adesso». Ma non si fanno nello stesso momento. La prima si risponde
+   col telefono ancora all'orecchio, e dev'essere un tasto solo. La seconda si risponde dopo, a
+   mente fredda, e riguarda dove va a finire l'immobile. Tenendole insieme succedeva la cosa
+   peggiore: premere «non buono» cancellava l'immobile dalla lista, e quello che era un
+   giudizio su una telefonata diventava, senza dirlo, un'eliminazione.
+
+   Da qui in avanti sono due assi separati:
+     `esito`     — com'e' andata: buono, mediocre, da richiamare, non risponde, cattivo
+     `gestione`  — dove sta adesso: da fare (vuoto), gestito, da rivedere, archiviato
+
+   Un contatto puo' essere buono e non ancora gestito. Uno cattivo puo' essere gestito e
+   restare in lista, perche' fra due mesi ci si riprova. E l'unico tasto che toglie davvero un
+   immobile dalla vista e' «Archivia»: uno solo, chiamato col suo nome, con una conferma. */
+
+/* Cinque tasti, uno per come finisce davvero una telefonata. In cima i tre di tutti i giorni. */
+const GIUDIZI = [
+  { e: "Buono",            t: "Buono",        cl: "v", d: "proprietario vero, vale la pena insistere" },
+  { e: "Mediocre",         t: "Mediocre",     cl: "a", d: "risponde ma tiepido: si tiene, non e' una priorita'" },
+  { e: "Non buono",        t: "Cattivo",      cl: "r", d: "contattato, non porta a niente" },
+  { e: "Da richiamare",    t: "Da richiamare", cl: "b", d: "non ora: chiede di essere ripreso piu' avanti" },
+  { e: "Nessuna risposta", t: "Non risponde", cl: "",  d: "squillato a vuoto o nessuna replica: si riprova" }
 ];
+/* Tre tasti per l'altro asse. «Da fare» non e' un tasto: e' quello che sono tutti finche'
+   nessuno li tocca, e ci si torna ripremendo il tasto acceso. */
+const GESTIONI = [
+  { g: "gestito",    t: "Gestito",     cl: "v", d: "l'ho lavorato io: gli altri due non ci tornano sopra" },
+  { g: "rivedere",   t: "Da rivedere", cl: "a", d: "messo da parte: da riguardare con calma" },
+  { g: "archiviato", t: "Archivia",    cl: "r", d: "fuori dalla lista: non rientra a nessun aggiornamento" }
+];
+const NOMI_GESTIONE = { "": "da fare", gestito: "gestito", rivedere: "da rivedere", archiviato: "archiviato" };
+const gestioneDi = a => a.gestione || "";
+
 /* Quello che ha scritto Gaetano non lo riscrive nessun aggiornamento: ne' il radar, ne' un
    file importato, ne' lo stesso annuncio ripubblicato domani. */
-const CAMPI_LAVORO = ["id", "esito", "note", "ultimoContatto", "canaleContatto",
-  "operatore", "dataRichiamo", "storicoEsiti", "nonFondere"];
+const CAMPI_LAVORO = ["id", "esito", "gestione", "rivistoIl", "note", "ultimoContatto",
+  "canaleContatto", "operatore", "dataRichiamo", "storicoEsiti", "nonFondere"];
+
+/* ---------------- cosa succede quando si preme un tasto ---------------- */
+/* Sta qui, e non dentro le pagine, perche' gli stessi tasti compaiono in tre posti — la
+   vetrina degli annunci, la scheda del singolo immobile, la lista di Oggi — e devono
+   comportarsi allo stesso identico modo. Quando erano copiati in due punti, uno dei due
+   contava i tentativi e l'altro no, e i numeri della giornata non tornavano mai. */
+
+/* Gli esiti dopo i quali la pratica e' chiusa davvero: ha risposto una persona e ha detto la
+   sua. «Da richiamare» e «Non risponde» non ci sono apposta — li' il lavoro non e' finito. */
+const ESITI_CHE_CHIUDONO = ["Buono", "Mediocre", "Non buono"];
+const ESITI_CHE_CONTANO = ["Buono", "Mediocre", "Non buono", "Da richiamare", "Nessuna risposta", "Contattato"];
+
+function applicaGiudizio(a, esito) {
+  if (!a || !esito || (a.esito || "Da lavorare") === esito) return false;
+  a.esito = esito;
+  a.ultimoContatto = oggiISO();
+  a.operatore = S.operatore;
+  a.nuovo = false;                       // lavorato: non e' piu' una novita'
+  a.storicoEsiti = (a.storicoEsiti || []).concat([{ data: oggiISO(), esito, chi: S.operatore }]);
+  // il secondo tasto lo preme lui: chi ha parlato col proprietario ha finito, e non deve
+  // ricordarsi di dirlo una seconda volta
+  if (ESITI_CHE_CHIUDONO.includes(esito)) { a.gestione = "gestito"; a.rivistoIl = oggiISO(); }
+  else if (a.gestione === "gestito") { a.gestione = ""; a.rivistoIl = oggiISO(); }
+  // un contatto vero e' un tentativo: entra nei numeri della giornata senza doverselo ricordare
+  const t = attivitaDi(oggiISO());
+  if (ESITI_CHE_CONTANO.includes(esito)) t.tentativi = num(t.tentativi) + 1;
+  if (["Buono", "Appuntamento"].includes(esito)) t.contatti = num(t.contatti) + 1;
+  return true;
+}
+
+/* L'altro asse. Ripremere il tasto gia' acceso riporta l'immobile fra quelli da fare: e' la
+   marcia indietro, e dev'esserci, se no nessuno si fida a premere niente. */
+function applicaGestione(a, g) {
+  if (!a) return false;
+  a.gestione = (a.gestione === g) ? "" : g;
+  a.rivistoIl = oggiISO();
+  if (a.gestione) { a.operatore = a.operatore || S.operatore; a.nuovo = false; }
+  return true;
+}
 
 /* ---------------- normalizzazione ---------------- */
 const senzaAccenti = s => String(s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -231,7 +299,7 @@ function importaAnnunci(lista, origine) {
 }
 /* «Lavorato» vuol dire che qualcuno l'ha gia' guardato in faccia: uno stato diverso da «da
    lavorare», o una telefonata segnata. */
-const lavorato = a => (a.esito && a.esito !== "Da lavorare") || !!a.ultimoContatto;
+const lavorato = a => (a.esito && a.esito !== "Da lavorare") || !!a.ultimoContatto || !!a.gestione;
 function normalizzaAnnuncio(x, origine) {
   const url = x.url || x.link || "";
   const via = x.via || x.indirizzo || "";

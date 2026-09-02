@@ -7,7 +7,7 @@
    contatto e per sembrare un'agenzia disorganizzata.
 
    Allora qui passa **solo quello che serve per non pestarsi i piedi**: per ogni immobile,
-   com'e' finita, chi l'ha lavorato, quando, e la nota. Nient'altro. L'annuncio — foto,
+   com'e' finita, se qualcuno ce l'ha in mano, chi l'ha lavorato, quando, e la nota. Nient'altro. L'annuncio — foto,
    prezzo, descrizione, recapito del proprietario — resta dov'e' sempre stato, sul dispositivo.
 
    Come fa a riconoscere lo stesso immobile senza mandare l'indirizzo. Le impronte le calcola
@@ -83,7 +83,7 @@ async function vociDaMandare() {
     if (!lavorato(a)) continue;
     voci.push({
       impronte: await cifraImpronte(improntaAnnuncio(a)),
-      stato: a.esito || "Da lavorare", fuori: false, tipo: "in corso",
+      stato: a.esito || "Da lavorare", gestione: a.gestione || "", fuori: false, tipo: "in corso",
       chi: a.operatore || "", quando: a.ultimoContatto || null,
       canale: a.canaleContatto || "", richiamo: a.dataRichiamo || "",
       nota: a.note || "", etichetta: [a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "",
@@ -94,7 +94,7 @@ async function vociDaMandare() {
     voci.push({
       impronte: await cifraImpronte(v.impronte || []),
       stato: v.esito || (v.tipo === "lavorato" ? "Non buono" : "Scartato"),
-      fuori: true, tipo: v.tipo || "agenzia",
+      gestione: "archiviato", fuori: true, tipo: v.tipo || "agenzia",
       chi: v.chi || "", quando: v.contattatoIl || v.data || null,
       canale: "", richiamo: "", nota: v.nota || "",
       etichetta: v.via || v.titolo || "", motivo: v.motivo || "",
@@ -125,8 +125,11 @@ function applicaVoce(v, perImpronta) {
   const mio = a.ultimoContatto || "";
   const suo = v.quando || "";
   if (mio && suo && mio > suo) return "";        // il mio e' piu' fresco, tengo il mio
-  const cambia = a.esito !== v.stato || a.operatore !== v.chi;
+  const cambia = a.esito !== v.stato || a.operatore !== v.chi || (a.gestione || "") !== (v.gestione || "");
   a.esito = v.stato || a.esito;
+  // il secondo asse puo' legittimamente tornare vuoto — «rimesso fra quelli da fare» e' una
+  // decisione come le altre — quindi qui non si usa il solito «||»
+  if (v.gestione !== undefined && v.gestione !== null) a.gestione = v.gestione;
   a.operatore = v.chi || a.operatore;
   a.ultimoContatto = v.quando || a.ultimoContatto;
   a.canaleContatto = v.canale || a.canaleContatto;

@@ -44,11 +44,15 @@ function render() {
   const tel = (a.telefono || "").replace(/[^\d+]/g, "");
 
   $("#vista").innerHTML = `
-  ${lavorato(a) ? `<div class="gestito${(a.esito || "") === "Da richiamare" ? " richiamo" : ""}" style="border-radius:9px;margin:0 0 12px">
-    <span>gestito da</span><span class="chi">${esc(a.operatore || "qualcuno di noi")}</span>
-    <span>${esc((a.esito || "").toLowerCase())}</span>
-    <span class="quando">${a.ultimoContatto ? dataIt(a.ultimoContatto) : ""}${a.dataRichiamo ? " · richiamare il " + dataIt(a.dataRichiamo) : ""}</span>
-  </div>` : ""}
+  ${lavorato(a) ? (() => {
+    const g = gestioneDi(a), richiamo = (a.esito || "") === "Da richiamare";
+    const cl = g === "gestito" ? " fatto" : (g === "rivedere" || richiamo) ? " richiamo" : "";
+    const apertura = g === "gestito" ? "gestito da" : g === "rivedere" ? "da rivedere ·" : "in mano a";
+    return `<div class="gestito${cl}" style="border-radius:9px;margin:0 0 12px">
+      <span>${apertura}</span><span class="chi">${esc(a.operatore || "qualcuno di noi")}</span>
+      <span>${esc((a.esito === "Da lavorare" ? "" : a.esito || "").toLowerCase())}</span>
+      <span class="quando">${a.ultimoContatto ? dataIt(a.ultimoContatto) : ""}${a.dataRichiamo ? " · richiamare il " + dataIt(a.dataRichiamo) : ""}</span>
+    </div>`; })() : ""}
 
   <div class="bottoniera nostampa" style="margin:0 0 12px">
     <a class="azione grigia" href="radar.html" style="text-decoration:none">‹ Tutti gli annunci</a>
@@ -151,16 +155,23 @@ function render() {
     <div style="font-family:var(--serif);font-size:14.5px;white-space:pre-wrap;max-height:260px;overflow:auto">${esc(a.descrizione)}</div></div>` : ""}
 
   <div class="scheda"><h3>Il tuo lavoro su questo immobile</h3>
-    <div class="passi" style="border-top:0;padding-top:0;margin:0 0 12px">
-      ${PASSI.map(x => `<button data-az="passo" data-e="${esc(x.e)}" title="${esc(x.d)}"
-        class="${(a.esito || "Da lavorare") === x.e ? "att " + x.cl : ""}">${esc(x.t)}</button>`).join("")}
+    <div class="assi" style="margin:0 0 12px">
+      <div class="asse"><span class="et">Com'e' andata</span>
+        <div class="passi" style="border-top:0;padding-top:0">${GIUDIZI.map(x => `<button data-az="giudizio" data-e="${esc(x.e)}" title="${esc(x.d)}"
+          class="${(a.esito || "Da lavorare") === x.e ? "att " + x.cl : ""}">${esc(x.t)}</button>`).join("")}</div>
+      </div>
+      <div class="asse"><span class="et">Dove lo metto</span>
+        <div class="passi mini" style="border-top:0;padding-top:0">${GESTIONI.map(x => `<button data-az="${x.g === "archiviato" ? "archivia" : "gest"}" data-g="${esc(x.g)}" title="${esc(x.d)}"
+          class="${gestioneDi(a) === x.g ? "att " + x.cl : ""}">${esc(x.t)}</button>`).join("")}</div>
+      </div>
     </div>
     ${a.fotoSospetto ? `<div class="watermark" style="margin:0 0 12px">
       <span>sulle fotografie si legge <b>«${esc(a.fotoSospetto)}»</b>: se e' un marchio, dall'altra parte non c'e' un privato</span>
       <button data-az="escludiAgenzia" data-m="watermark «${esc(a.fotoSospetto)}» sulle fotografie">E' un'agenzia, togli</button>
     </div>` : ""}
     <div class="griglia g3">
-      ${campo("Esito", `<select id="esito">${opz(ESITI, a.esito || "Da lavorare")}</select>`)}
+      ${campo("Com'e' andata", `<select id="esito">${opz(ESITI, a.esito || "Da lavorare")}</select>`)}
+      ${campo("Dove lo metto", `<select id="gestione">${["", "gestito", "rivedere"].map(g => `<option value="${g}"${gestioneDi(a) === g ? " selected" : ""}>${esc(NOMI_GESTIONE[g])}</option>`).join("")}</select>`)}
       ${campo("Chi ha gestito il contatto", `<select id="chi">${opz(S.operatori, a.operatore || S.operatore)}</select>`)}
       ${campo("Ultima telefonata o mail", `<input type="date" id="ultimo" value="${esc(a.ultimoContatto || "")}">`)}
       ${campo("Come l'hai contattato", `<select id="canale">${opz(["", "telefono", "WhatsApp", "email", "modulo del portale", "lettera"], a.canaleContatto)}</select>`)}
@@ -189,50 +200,45 @@ Object.assign(AZIONI, {
     a.qualitaTesto = $("#qtesto").value; a.note = $("#note").value;
     a.operatore = $("#chi").value; a.ultimoContatto = $("#ultimo").value;
     a.canaleContatto = $("#canale").value; a.dataRichiamo = $("#richiamo").value;
+    a.gestione = $("#gestione").value;
     if (a.esito !== "Da lavorare") a.nuovo = false;
     if (a.esito !== prima) a.storicoEsiti = (a.storicoEsiti || []).concat([{ data: oggiISO(), esito: a.esito, chi: a.operatore }]);
-    if (a.esito === "Scartato" || a.esito === "Non buono") {
-      const chiuso = a.esito === "Non buono";
-      escludiAnnuncio(a, chiuso
-        ? `contattato da ${a.operatore} il ${dataIt(a.ultimoContatto || oggiISO())}: non buono${a.note ? " — " + a.note : ""}`
-        : "scartato a mano", a.operatore, chiuso ? "lavorato" : "scartato");
-      S.annunci = S.annunci.filter(x => x.id !== ID);
-      salva();
-      alert(chiuso ? "Chiuso: esce dalla lista, cosi' nessuno degli altri lo richiama."
-                   : "Scartato: esce dalla lista e non rientra piu', nemmeno se l'annuncio viene ripubblicato.");
-      location.href = "radar.html";
-      return;
-    }
+    // scegliere «cattivo» da un menu non fa piu' sparire l'immobile: l'unico tasto che archivia
+    // si chiama «Archivia» e sta qui sopra, con la sua conferma
+    if (a.esito !== prima && ESITI_CHE_CHIUDONO.includes(a.esito) && !a.gestione) a.gestione = "gestito";
+    a.rivistoIl = oggiISO();
     salva(); render();
   },
 
-  /* Gli stessi quattro tasti della vetrina, perche' la scheda si apre spesso col telefono
-     gia' all'orecchio e non si ha voglia di scorrere fino ai menu. */
-  passo: el => {
+  /* Gli stessi tasti della vetrina — stessa funzione, non una copia — perche' la scheda si
+     apre spesso col telefono gia' all'orecchio e non si ha voglia di scorrere fino ai menu. */
+  giudizio: el => {
     const a = S.annunci.find(x => x.id === ID); if (!a) return;
-    const nuovo = el.dataset.e;
-    if ((a.esito || "Da lavorare") === nuovo) return;
-    if (nuovo === "Scartato" || nuovo === "Non buono") {
-      const dove = [a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "questo immobile";
-      const chiuso = nuovo === "Non buono";
-      if (!confirm((chiuso
-        ? `${dove}: contattato, non porta a niente?\n\nEsce dalla lista e non ci torna piu', cosi' nessuno degli altri lo richiama.`
-        : `Scartare ${dove}?\n\nEsce dalla lista e non torna piu', nemmeno se l'annuncio viene ripubblicato con un altro indirizzo o con il testo cambiato.`)
-        + "\n\nSi puo' rimettere in lista dalla pagina Dati.")) return;
-      a.esito = nuovo; a.ultimoContatto = oggiISO(); a.operatore = S.operatore;
-      escludiAnnuncio(a, chiuso
-        ? `contattato da ${S.operatore} il ${dataIt(oggiISO())}: non buono${a.note ? " — " + a.note : ""}`
-        : "scartato a mano", S.operatore, chiuso ? "lavorato" : "scartato");
-      S.annunci = S.annunci.filter(x => x.id !== ID);
-      if (chiuso) { const t = attivitaDi(oggiISO()); t.tentativi = num(t.tentativi) + 1; }
-      salva(); location.href = "radar.html";
-      return;
-    }
-    a.esito = nuovo; a.ultimoContatto = oggiISO(); a.operatore = S.operatore; a.nuovo = false;
-    a.storicoEsiti = (a.storicoEsiti || []).concat([{ data: oggiISO(), esito: nuovo, chi: S.operatore }]);
-    if (["Buono", "Non buono", "Da richiamare", "Contattato"].includes(nuovo)) { const t = attivitaDi(oggiISO()); t.tentativi = num(t.tentativi) + 1; }
-    if (["Buono", "Appuntamento"].includes(nuovo)) { const t = attivitaDi(oggiISO()); t.contatti = num(t.contatti) + 1; }
+    if (!applicaGiudizio(a, el.dataset.e)) return;
     salva(); render();
+  },
+
+  gest: el => {
+    const a = S.annunci.find(x => x.id === ID); if (!a) return;
+    applicaGestione(a, el.dataset.g);
+    salva(); render();
+  },
+
+  /* L'unico tasto che toglie l'immobile dalla lista, e l'unico con una conferma. */
+  archivia: () => {
+    const a = S.annunci.find(x => x.id === ID); if (!a) return;
+    const dove = [a.via, a.civico].filter(Boolean).join(" ") || a.titolo || "questo immobile";
+    if (!confirm(`Archiviare ${dove}?\n\nEsce dalla lista e non rientra a nessun aggiornamento, nemmeno se il portale lo ripubblica con un altro indirizzo o col testo cambiato.\n\nLo ritrovi nella linguetta «Archivio» degli annunci, e da li' si rimette in lista quando vuoi.`)) return;
+    a.gestione = "archiviato"; a.rivistoIl = oggiISO();
+    a.operatore = a.operatore || S.operatore;
+    const st = a.esito || "Da lavorare";
+    const chi = a.operatore;
+    escludiAnnuncio(a, st === "Da lavorare"
+      ? "archiviato a mano da " + chi + " senza contatto"
+      : `${st.toLowerCase()} — ${chi}${a.ultimoContatto ? " il " + dataIt(a.ultimoContatto) : ""}${a.note ? " — " + a.note : ""}`,
+      chi, st === "Da lavorare" ? "scartato" : "lavorato");
+    S.annunci = S.annunci.filter(x => x.id !== ID);
+    salva(); location.href = "radar.html";
   },
 
   escludiAgenzia: el => {
