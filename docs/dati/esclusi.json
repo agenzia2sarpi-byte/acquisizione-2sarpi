@@ -1,5 +1,5 @@
 {
- "generato": "2026-08-31T11:19:30",
+ "generato": "2026-09-02T09:22:48",
  "esclusi": [
   {
    "id": "esc-20260826095259-1",
@@ -231,8 +231,37 @@
     "testo:inuncontestodirecentecostruzioneelegantetranquilloebencuratosiaffittabilocaledi52mqsitoal2pianoconascensoresulpianoincon",
     "parole:100eur-abitabile-abitativo-affacciato-affitta-agenzie-altamente-ascensore-autonomo-balcone-bilocale-caldaia-calore-camera-canone-cantina-classe-climatizzatori-condominiale-condominiali-contatto-contesto-costruzione-cottura-cucina"
    ]
+  },
+  {
+   "id": "esc-20260902092248-9",
+   "titolo": "GORLA/TURRO APPARTAMENTO ",
+   "via": "",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/gorla-turro-appartamento-milano-658669424.htm",
+   "inserzionista": "",
+   "telefono": "3200309144",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-02",
+   "ricomparse": 1,
+   "impronte": [
+    "foto:7e5dae6b-77bc-44ae-b769-10e72025274f",
+    "foto:d4f40661-d830-4caa-b7d1-9fcabcbb77c0",
+    "foto:d8ddf334-2a15-47a9-8bf3-c58abbfa9444",
+    "parole:abitare-affitta-appartamento-arredata-balconcino-camera-centro-collegato-componibile-cucina-curato-doccia-esclusivamente-finestra-grande-ideale-lavatrice-libero-milano-persone-pronto-referenziate-ripostiglio-stendino-subito",
+    "parole:appartamento-arredato-balconcino-camera-condizionata-coppia-cucina-finemente-finestra-giovane-libero-minuti-subito",
+    "rif:subito:658669424",
+    "rif:subito:659217926",
+    "tel:200309144",
+    "testo:appartamentoinzonagorlaturroapiedipochiminutidallametrofinementearredatoperunacoppiagiovaneappartamentozonagorlaturropoc",
+    "testo:metrogorlaturroliberogiadasubitoidealeperchicercaunappartamentocuratoprontodaabitareebencollegatoconilcentrodimilanosiaf",
+    "url:subito.it/appartamenti/gorla-turro-appartamento-milano-658669424.htm",
+    "url:subito.it/appartamenti/metro-turro-gorla-milano-659217926.htm"
+   ],
+   "rivisto": "2026-09-02"
   }
  ],
- "conteggio": 8,
- "id": "esclusi-202608311119"
+ "conteggio": 9,
+ "id": "esclusi-202609020922"
 }
