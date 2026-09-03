@@ -1,4 +1,4 @@
-/* Acquisizione 2 Sarpi — nucleo condiviso da tutte le pagine.
+/* Acquisizione Due Sarpi — nucleo condiviso da tutte le pagine.
    Stato, salvataggio, utilita', navigazione, finestre. Nessun server: tutto in localStorage. */
 
 const CHIAVE = "ag2sarpi.acquisizione.v1";
@@ -292,7 +292,7 @@ function guscio() {
         <button class="tondo" id="btIndietro" title="Torna indietro" aria-label="Torna indietro">‹</button>
         <a class="marchio" href="index.html">
           <div class="logo">2S</div>
-          <div class="txt"><b>Acquisizione 2 Sarpi</b><span>Milano citta'</span></div>
+          <div class="txt"><b>Acquisizione Due Sarpi</b><span>Milano citta'</span></div>
         </a>
         <div class="spinta">
           <span id="salvato">salvato</span>

@@ -1,4 +1,4 @@
-/* Acquisizione 2 Sarpi — il quaderno condiviso: chi ha in mano quale immobile.
+/* Acquisizione Due Sarpi — il quaderno condiviso: chi ha in mano quale immobile.
 
    Il cruscotto vive dentro il dispositivo, e va benissimo cosi': niente account, niente
    password, i dati dei proprietari non passano da nessuna parte. Ma su una cosa il dispositivo

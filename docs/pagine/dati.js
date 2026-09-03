@@ -159,7 +159,7 @@ function render() {
       <li>Apri questo indirizzo <b>con Safari</b> (solo Safari sa aggiungere alla Home).</li>
       <li>Tocca <b>Condividi</b> in basso — il quadrato con la freccia.</li>
       <li>Scorri e scegli <b>«Aggiungi a Home»</b>.</li>
-      <li>Il nome proposto e' gia' <b>2S Acquisizione</b> e l'icona rossa e' gia' quella giusta. Tocca <b>Aggiungi</b>.</li>
+      <li>Il nome proposto e' gia' <b>Acquisizione</b> e l'icona rossa e' gia' quella giusta. Tocca <b>Aggiungi</b>.</li>
     </ol>
   </div>
 
@@ -167,7 +167,7 @@ function render() {
     <ol style="font-family:var(--serif);font-size:14.5px;padding-left:20px;line-height:1.7">
       <li>Apri l'indirizzo <b>con Safari</b>.</li>
       <li>Menu <b>File → Aggiungi al Dock…</b>, poi conferma.</li>
-      <li>In alternativa trascina nel Dock <b>Acquisizione 2 Sarpi.app</b> dalla cartella del progetto.</li>
+      <li>In alternativa trascina nel Dock <b>Acquisizione Due Sarpi.app</b> dalla cartella del progetto.</li>
     </ol>
   </div>
 

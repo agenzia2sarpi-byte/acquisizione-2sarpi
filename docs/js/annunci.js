@@ -1,4 +1,4 @@
-/* Acquisizione 2 Sarpi — archivio annunci: normalizzazione, deduplica fra portali, punteggio, importazione.
+/* Acquisizione Due Sarpi — archivio annunci: normalizzazione, deduplica fra portali, punteggio, importazione.
    La deduplica non guarda l'URL: guarda l'immobile. Lo stesso appartamento su cinque portali resta una riga sola. */
 
 const PORTALI = [
