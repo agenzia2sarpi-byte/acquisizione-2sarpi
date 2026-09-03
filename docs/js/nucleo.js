@@ -354,7 +354,13 @@ async function aggiornaAdesso() {
   if (!b || b.classList.contains("gira")) return;
   b.classList.add("gira");
   try {
-    // prima il quaderno della squadra: se un altro ha gia' chiuso un immobile, e' inutile
+    // La freccia circolare deve valere per tutta la pagina, non solo per i dati. Prima si
+    // guarda se il sito e' stato ripubblicato: se si', si ricarica quello e il resto non
+    // serve. Senza questo passaggio il tasto rileggeva gli annunci e ridisegnava, ma il
+    // vestito della pagina restava quello del giorno prima — e a chi lo premeva sembrava
+    // che la correzione non fosse mai arrivata.
+    if (await controllaVersione(true)) return;
+    // poi il quaderno della squadra: se un altro ha gia' chiuso un immobile, e' inutile
     // che il radar me lo rimetta davanti
     if (typeof sincronizzaSquadra === "function" && typeof squadraAttiva === "function" && squadraAttiva())
       await sincronizzaSquadra(true);
@@ -416,23 +422,32 @@ function attivaGesti() {
    corrente: se non e' quella che ha in mano, si ricarica da sola con un indirizzo diverso,
    che e' l'unico modo per costringere iOS a riscaricare davvero. Una volta sola per
    sessione, se no si rischia il rimbalzo infinito quando qualcosa non torna. */
-async function controllaVersione() {
+async function controllaVersione(forzato) {
   try {
     const r = await fetch("dati/versione.json?t=" + Date.now(), { cache: "no-store" });
-    if (!r.ok) return;
+    if (!r.ok) return false;
     const nuova = (await r.json()).v;
     const tag = document.querySelector('script[src*="nucleo.js"]');
     const adesso = tag ? (tag.getAttribute("src").split("v=")[1] || "") : "";
-    if (!nuova || !adesso || String(nuova) === String(adesso)) return;
-    if (sessionStorage.getItem("versioneTentata") === String(nuova)) return;
+    if (!nuova || !adesso || String(nuova) === String(adesso)) return false;
+    if (!forzato && sessionStorage.getItem("versioneTentata") === String(nuova)) return false;
     sessionStorage.setItem("versioneTentata", String(nuova));
     // gli altri parametri vanno tenuti: su annuncio.html c'e' l'id dell'immobile,
     // e ricaricare senza porterebbe su una scheda vuota
     const q = new URLSearchParams(location.search);
     q.set("v", nuova);
     location.replace(location.pathname + "?" + q.toString() + location.hash);
-  } catch (_) { /* offline: si tiene quello che ha, ed e' giusto cosi' */ }
+    return true;
+  } catch (_) { return false; /* offline: si tiene quello che ha, ed e' giusto cosi' */ }
 }
+
+/* Il controllo all'apertura non basta: una scheda del browser resta aperta per giorni, e sul
+   Mac quella del Dock non si chiude mai. Cosi' e' successo che una correzione pubblicata al
+   mattino restasse invisibile fino a sera. Quando la pagina torna in primo piano si richiede
+   quale sia la versione buona: e' una riga di JSON, non pesa niente. */
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") controllaVersione();
+});
 
 /* avvio comune: ogni pagina chiama avviaPagina() */
 function avviaPagina(renderFn) {
