@@ -1,4 +1,4 @@
-/* Acquisizione Due Sarpi — l'archivio degli esclusi, dalla parte del cruscotto.
+/* Acquisizione 2 Sarpi — l'archivio degli esclusi, dalla parte del cruscotto.
 
    Il radar toglie gli annunci di agenzia prima ancora di scriverli nel file. Ma il cruscotto
    non riceve solo dal radar: riceve dal segnalibro, dal testo incollato, da un CSV, e riceve

@@ -1,4 +1,4 @@
-/* Acquisizione Due Sarpi — sorgenti dati.
+/* Acquisizione 2 Sarpi — sorgenti dati.
    L'applicazione chiama direttamente i raccoglitori Apify dal tuo browser: i dati vanno da Apify
    al tuo dispositivo, senza passare da nessun server nostro e senza finire sulla pagina pubblica.
    La chiave resta nel browser di questo dispositivo. */

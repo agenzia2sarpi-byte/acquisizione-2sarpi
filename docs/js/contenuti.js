@@ -1,4 +1,4 @@
-/* Acquisizione Due Sarpi — contenuti operativi
+/* Acquisizione 2 Sarpi — contenuti operativi
    Tutto quanto e' scritto nei due piani (500 €/mese e 1.000 €/mese), reso consultabile e utilizzabile.
    Questo file contiene solo dati e testi: nessuna informazione personale di clienti. */
 
