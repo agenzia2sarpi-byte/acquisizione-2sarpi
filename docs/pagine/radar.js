@@ -139,6 +139,10 @@ function rigaWatermark(a) {
   </div>`;
 }
 
+/* La carta di un immobile. Attenzione ai due `</div>` di fila a meta': il primo chiude il
+   corpo, il secondo chiude «apri» — la zona cliccabile che porta alla scheda. Ne mancava uno,
+   e il browser rimediava a modo suo infilando ogni carta dentro la precedente: la vetrina
+   restava una colonna sola per quanto larga fosse la finestra. */
 function cartaAnnuncio(g) {
   const a = g.capo, p = g.p.punti;
   const emq = num(a.mq) ? Math.round(num(a.prezzo) / num(a.mq)) : null;
@@ -177,6 +181,7 @@ function cartaAnnuncio(g) {
       </div>
       ${rigaInserzionista(a)}
       <div class="fonti">${g.portali.map(x => `<span class="chip-portale att">${esc(nomePortale(x))}</span>`).join("")}</div>
+    </div>
     </div>
     <div class="contatti-rapidi">
       ${tel ? `<a href="tel:${esc(tel)}" title="${esc(a.telefono)}">Chiama</a>

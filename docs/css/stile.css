@@ -173,7 +173,12 @@ details.blocco .corpo li{margin:0 0 5px}
 .finestra .capo button{margin-left:auto;background:transparent;border:0;font-size:25px;line-height:1;color:var(--grigio);cursor:pointer}
 
 /* ---------- annunci in stile portale ---------- */
-.vetrina{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(268px,1fr))}
+/* Tre carte per riga sul computer, due sul tablet, una sul telefono. Numero fisso e non
+   «auto-fill»: con auto-fill bastava una finestra un po' stretta perche' le carte si
+   incolonnassero tutte su una riga sola, che e' proprio la vista che non serve a nessuno. */
+.vetrina{display:grid;gap:14px;grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.vetrina{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.vetrina{grid-template-columns:1fr}}
 .annuncio{background:var(--carta);border:1px solid var(--linea);border-radius:12px;overflow:hidden;
   display:flex;flex-direction:column;cursor:pointer;transition:box-shadow .18s,transform .18s;text-decoration:none;color:inherit}
 .annuncio:hover{box-shadow:0 6px 20px rgba(26,25,23,.10);transform:translateY(-2px)}
