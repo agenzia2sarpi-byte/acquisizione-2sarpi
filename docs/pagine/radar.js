@@ -366,7 +366,8 @@ Object.assign(AZIONI, {
   apriScheda: el => { location.href = "annuncio.html?id=" + encodeURIComponent(el.dataset.id); },
   copiaMsg: el => {
     const a = S.annunci.find(x => x.id === el.dataset.id); if (!a) return;
-    copiaTesto(messaggioPortale(a, null, S.operatore), "Messaggio copiato. Ora apri l'annuncio e incollalo nel modulo del portale.");
+    const t = messaggioPortale(a, null, S.operatore);
+    copiaTesto(t, `Messaggio copiato — ${t.length} caratteri sui ${LIMITE_PORTALE} che il modulo accetta. Ora apri l'annuncio e incollalo.`);
   },
   gruppo: el => { F.gruppo = el.dataset.g; F.esito = ""; render(); window.scrollTo({ top: 0 }); },
   /* Primo asse: com'e' andata. Un tasto, e basta — niente conferme, niente finestre, niente

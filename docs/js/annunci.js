@@ -441,49 +441,39 @@ async function aggiornaAmministratoriDalFeed(silenzioso) {
 
 /* ---------------- il messaggio di primo contatto ---------------- */
 /* Va bene sia per il modulo del portale sia per WhatsApp: da' informazione prima di chiedere,
-   non usa la parola «esclusiva», non svaluta la scelta di vendere da solo, mette l'opt-out in chiaro. */
+   non usa la parola «esclusiva», non svaluta la scelta di vendere da solo, mette l'opt-out in
+   chiaro. Sta dentro i 1000 caratteri di Subito con tutti e tre i mittenti. */
 function messaggioPortale(a, gruppo, chi) {
   const io = persona(chi);
   const rif = riferimentoEmq(a);
   const via = (a.via || "").replace(/,?\s*\d+[a-zA-Z]?\s*$/, "") || "zona";
   const P = rif ? Math.round(rif.valore).toLocaleString("it-IT") : null;
   const gg = gruppo ? gruppo.giorniOnline : (giorniDa(a.pubblicato) ?? 0);
+  const apertura = `Buongiorno, sono ${io.breve} ${presentazioneDi(chi)}.`;
+  const firma = `--\n${firmaDi(chi)}`;
 
   if (a.tipo === "Locazione") {
-    return `Buongiorno, sono ${io.breve} ${presentazioneDi(chi)}.
-
-Le scrivo perche' ho visto che affitta da solo il suo immobile in ${via}, e in due righe le dico cosa faccio io di diverso.
-
-Il primo lavoro e' far arrivare le richieste. L'annuncio lo prepariamo noi — fotografie fatte bene, planimetria, un testo scritto per chi cerca davvero — e poi lo promuoviamo a pagamento sui portali e sui social. Un annuncio spinto cosi' lo vedono molte piu' persone di uno pubblicato e lasciato li': a me arrivano ogni settimana richieste che a un privato non arrivano proprio.
-
-Il secondo lavoro, che e' quello che conta, e' sceglierle. Piu' richieste vuol dire anche piu' perditempo: prima che qualcuno metta piede in casa sua verifico chi e', che lavoro fa, cosa guadagna e che garanzie porta. Lei incontra due o tre candidati seri, non quindici curiosi — e l'inquilino che entra e' uno che paga.
-
-Questo mestiere lo faccio da anni in questa zona e so chi ci cerca casa. Se le fa comodo passo a vedere l'immobile e le dico cosa cambierei: venti minuti, senza impegno.
-
-Il suo recapito l'ho preso dal suo annuncio: lo uso solo per questo contatto e, se mi dice di no, lo cancello e non la disturbo piu'.
-
---
-${firmaDi(chi)}`;
+    return componiMessaggio([
+      { t: apertura },
+      { t: `Ho visto che affitta da solo il suo immobile in ${via}. Il primo lavoro è far arrivare le richieste: l'annuncio lo preparo io — foto fatte bene, planimetria, un testo scritto per chi cerca — e lo promuovo a pagamento su portali e social.` },
+      { t: `Il secondo, quello che conta, è sceglierle: prima che entri in casa sua verifico chi è, che lavoro fa, quanto guadagna e che garanzie porta. Lei vede due o tre candidati seri invece di quindici curiosi, e chi firma paga.` },
+      { opz: true, t: `Lavoro in questa zona da anni e so chi ci cerca casa.` },
+      { t: `Se le fa comodo passo a vederlo e le dico cosa cambierei: venti minuti, senza impegno.` },
+      { t: `Il recapito l'ho preso dall'annuncio: lo uso solo per questo contatto e, se mi dice di no, non la disturbo più.` },
+      { t: firma }
+    ]);
   }
 
-  return `Buongiorno, sono ${io.breve} ${presentazioneDi(chi)}.
-
-Le scrivo perche' ho visto il suo annuncio in ${via}, e in due righe le dico cosa faccio io di diverso.
-
-Un immobile non si vende perche' e' pubblicato: si vende perche' lo vedono le persone giuste. L'annuncio lo prepariamo noi — fotografie professionali, planimetria, un testo scritto per chi compra — e poi lo promuoviamo a pagamento sui portali e sui social, tutti i giorni. Il risultato e' che su un immobile come il suo mi arrivano molte piu' richieste di quante ne riceva un privato: non le aspetto, me le vado a prendere.
-
-E qui viene la parte che fa davvero la differenza: sceglierle. Su dieci persone che chiamano, la maggior parte guarda e basta, oppure non ha i soldi che dice di avere. Io verifico prima chi puo' comprare davvero — budget, mutuo, tempi — e in casa sua faccio entrare solo chi ha senso far entrare. Lei fa tre visite utili invece di venti inutili, e non perde i mesi che si perdono cosi'.${P ? `
-
-Le chiusure vere della sua zona le ho sotto gli occhi ogni settimana — in questo periodo siamo intorno ai ${P} €/mq — e so cosa fa dire di si' a chi compra qui.` : ""}${gg > 45 ? `
-
-Le scrivo adesso perche' l'annuncio e' online da ${gg} giorni: di solito e' il momento in cui vale la pena rivedere non tanto il prezzo, quanto il modo in cui l'immobile viene presentato e a chi viene fatto vedere.` : ""}
-
-Se le fa comodo passo a vederlo e le dico cosa cambierei: venti minuti, senza impegno e senza che lei debba decidere niente.
-
-Il suo recapito l'ho preso dal suo annuncio: lo uso solo per questo contatto e, se mi dice di no, lo cancello e non la disturbo piu'.
-
---
-${firmaDi(chi)}`;
+  return componiMessaggio([
+    { t: apertura },
+    { t: `Ho visto il suo annuncio in ${via}. Un immobile non si vende perché è pubblicato, ma perché lo vedono le persone giuste: l'annuncio lo preparo io — foto professionali, planimetria, un testo scritto per chi compra — e lo promuovo a pagamento sui portali e sui social, tutti i giorni.` },
+    { t: `Poi filtro le richieste: verifico budget, mutuo e tempi prima di far entrare qualcuno in casa sua. Così lei fa tre visite utili invece di venti inutili, e non perde mesi.` },
+    P ? { opz: true, t: `Le chiusure vere della sua zona le ho sotto gli occhi ogni settimana: in questo periodo siamo intorno ai ${P} €/mq.` } : null,
+    gg > 45 ? { opz: true, t: `L'annuncio è online da ${gg} giorni: di solito è il momento di rivedere non tanto il prezzo, quanto il modo in cui l'immobile viene presentato.` } : null,
+    { t: `Se le fa comodo passo a vederlo e le dico cosa cambierei: venti minuti, senza impegno.` },
+    { t: `Il recapito l'ho preso dall'annuncio: lo uso solo per questo contatto e, se mi dice di no, non la disturbo più.` },
+    { t: firma }
+  ]);
 }
 
 /* WhatsApp vuole il numero in formato internazionale, senza «+» e senza spazi. */
@@ -521,22 +511,18 @@ async function aggiornaScadutiDalFeed(silenzioso) {
   }
 }
 
-/* Il messaggio per chi ha ritirato l'annuncio senza vendere. */
+/* Il messaggio per chi ha ritirato l'annuncio senza vendere. Stessa misura da portale. */
 function messaggioScaduto(x, chi) {
   const io = persona(chi);
   const via = (x.via || x.indirizzo || "").replace(/,?\s*\d+[a-zA-Z]?\s*$/, "") || "quella via";
-  return `Buongiorno, sono ${io.breve} ${presentazioneDi(chi)}.
-
-Ho notato che l'immobile in ${via} non e' piu' online. Se ha venduto, complimenti sinceri e la saluto qui.
-
-Se invece l'ha ritirato, le lascio un dato: in quella via, nell'ultimo trimestre, si e' chiuso intorno ai valori che le riporto scritti, con tempi medi che le posso documentare. Nella grande maggioranza dei casi che vedo, il problema non e' stato il prezzo ma il modo in cui l'immobile e' stato presentato e filtrato.${num(x.ribassi) ? `
-
-Nel suo caso l'annuncio ha visto ${num(x.ribassi)} ribassi in ${x.giorniOnline || "diversi"} giorni: e' il segnale tipico di un immobile presentato bene ma proposto al pubblico sbagliato.` : ""}
-
-Se le va, glielo guardo e le dico cosa cambierei. Venti minuti, senza impegno. Se preferisce non essere contattato me lo dica pure e non la disturbo oltre.
-
---
-${firmaDi(chi)}`;
+  return componiMessaggio([
+    { t: `Buongiorno, sono ${io.breve} ${presentazioneDi(chi)}.` },
+    { t: `Ho notato che l'immobile in ${via} non è più online. Se ha venduto, complimenti sinceri e la saluto qui.` },
+    { t: `Se invece l'ha ritirato, le lascio un dato: nella grande maggioranza dei casi che vedo il problema non è stato il prezzo, ma il modo in cui l'immobile è stato presentato e a chi è stato mostrato.` },
+    num(x.ribassi) ? { opz: true, t: `Nel suo caso l'annuncio ha visto ${num(x.ribassi)} ribassi in ${x.giorniOnline || "diversi"} giorni: è il segnale tipico di un immobile presentato bene ma proposto al pubblico sbagliato.` } : null,
+    { t: `Se le va glielo guardo e le dico cosa cambierei: venti minuti, senza impegno. Se preferisce non essere contattato me lo dica pure e non la disturbo oltre.` },
+    { t: `--\n${firmaDi(chi)}` }
+  ]);
 }
 
 /* Le immagini di Subito senza regola di ritaglio rispondono 400: le sistemo all'avvio,

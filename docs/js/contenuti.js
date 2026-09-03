@@ -122,19 +122,19 @@ const INTOCCABILI = [
 
 /* Script e modelli. I segnaposto [X] [Y] [Z] [N] si compilano dai campi in alto. */
 const SCRIPT = [
-  { id:"portale", t:"Primo contatto — via portale, giorno 0", nota:"Preferisci sempre il canale che il proprietario ha pubblicato: e' piu' difendibile e converte meglio.",
+  { id:"portale", msg:true, t:"Primo contatto — via portale, giorno 0", nota:"Preferisci sempre il canale che il proprietario ha pubblicato: e' piu' difendibile e converte meglio.",
     x:`Buongiorno, sono Gaetano dell'Agenzia 2 Sarpi.
 
-Non le scrivo per propormi: ho notato il suo annuncio in via [X] e le volevo segnalare un dato. Nell'ultimo trimestre, in quell'isolato, le chiusure sono avvenute intorno a [P] €/mq, con tempi medi di [Y] giorni. Il suo posizionamento e' circa [Z]% sopra: puo' essere del tutto voluto, ma se le fa comodo le mando il dettaglio scritto delle tre comparabili.
+Non le scrivo per propormi: ho notato il suo annuncio in via [X] e le volevo segnalare un dato. Nell'ultimo trimestre, in quell'isolato, le chiusure sono avvenute intorno a [P] €/mq, con tempi medi di [Y] giorni. Il suo posizionamento è circa [Z]% sopra: può essere del tutto voluto, ma se le fa comodo le mando il dettaglio scritto delle tre comparabili.
 
-Se preferisce non essere contattato me lo dica pure e non la disturbo piu'.` },
+Se preferisce non essere contattato me lo dica pure e non la disturbo più.` },
 
-  { id:"lettera", t:"Lettera scritta a mano — giorno 3", nota:"Busta bianca, indirizzo a mano, francobollo vero, mai affrancatura meccanica. Sei righe. Apertura vicina al 100% contro il 20% di un'email.",
+  { id:"lettera", msg:true, t:"Lettera scritta a mano — giorno 3", nota:"Busta bianca, indirizzo a mano, francobollo vero, mai affrancatura meccanica. Sei righe. Apertura vicina al 100% contro il 20% di un'email.",
     x:`Gentile Signora,
 
-ho visto che vende il suo appartamento in via [X] da sola, e per come e' messo il mercato in quella zona credo stia facendo la scelta giusta a provarci.
+ho visto che vende il suo appartamento in via [X] da sola, e per come è messo il mercato in quella zona credo stia facendo la scelta giusta a provarci.
 
-Le lascio comunque un dato che forse le e' utile: nell'ultimo trimestre, in quella via, si e' chiuso mediamente a [P] €/mq, con tempi intorno ai [Y] giorni. Se le va, glielo porto scritto — e' una scheda di una pagina, gliela lascio e non le chiedo nulla.
+Le lascio comunque un dato che forse le è utile: nell'ultimo trimestre, in quella via, si è chiuso mediamente a [P] €/mq, con tempi intorno ai [Y] giorni. Se le va, glielo porto scritto — è una scheda di una pagina, gliela lascio e non le chiedo nulla.
 
 Nessun impegno e nessuna insistenza: se non mi risponde, non la disturbo oltre.
 
@@ -150,7 +150,7 @@ IL PUNTO DI LEVA
 LA RICHIESTA MINIMA
 «Le propongo una cosa senza impegno: passo io, venti minuti, e le lascio scritto il range di prezzo con tre comparabili vere della sua via. Se poi decide di continuare da solo, l'avra' usato lo stesso ed e' tempo mio, non suo. Le va meglio giovedi' alle 18 o sabato mattina?»` },
 
-  { id:"whatsapp", t:"Risposta automatica entro 60 secondi a un lead in entrata", nota:"Poi la chiamata umana subito dopo. Sotto i 5 minuti converte diverse volte meglio. Se non rispondi in 5 minuti, non spendere in pubblicita' a risposta diretta.",
+  { id:"whatsapp", msg:true, t:"Risposta automatica entro 60 secondi a un lead in entrata", nota:"Poi la chiamata umana subito dopo. Sotto i 5 minuti converte diverse volte meglio. Se non rispondi in 5 minuti, non spendere in pubblicita' a risposta diretta.",
     x:`Sono Gaetano dell'Agenzia 2 Sarpi, ho ricevuto la sua richiesta per la casa in via [X], la chiamo entro 10 minuti — le va bene?` },
 
   { id:"obiezione1", t:"Obiezione — «Provo ancora da solo»", nota:"Non insistere: costruisci. Poi la sequenza continua.",
@@ -162,49 +162,49 @@ LA RICHIESTA MINIMA
   { id:"obiezione3", t:"Obiezione — «Voi non siete di questa zona»", nota:"E' l'obiezione che sentirai piu' spesso lavorando su tutta la citta'. Si vince con i numeri, mai con la simpatia. Se il numero e' zero, di' la verita' e porta il dato di mercato.",
     x:`«Ha ragione a chiedermelo. Le dico cosa faccio io in questa zona: [N] immobili seguiti quest'anno, prezzo medio di chiusura [P] €/mq, tempo medio [Y] giorni. Glielo lascio scritto.»` },
 
-  { id:"amministratore", t:"Primo contatto con un amministratore di condominio", nota:"La regola: dai per primo, tre volte. Non chiedere segnalazioni al primo incontro. La mossa singola piu' efficace e' il Rapporto di Via con la sua intestazione sopra.",
+  { id:"amministratore", msg:true, t:"Primo contatto con un amministratore di condominio", nota:"La regola: dai per primo, tre volte. Non chiedere segnalazioni al primo incontro. La mossa singola piu' efficace e' il Rapporto di Via con la sua intestazione sopra.",
     x:`Buongiorno,
 
 sono Gaetano dell'Agenzia 2 Sarpi. Non la contatto per chiederle segnalazioni.
 
-Produco ogni mese una scheda di una pagina sui prezzi reali al metro quadro, via per via: quanto si e' venduto, in quanti giorni, a che canone si e' affittato. Se le fa comodo gliela preparo con la sua intestazione sopra, cosi' la gira ai suoi condomini a suo nome. Non le costa nulla e non c'e' pubblicita' mia dentro.
+Produco ogni mese una scheda di una pagina sui prezzi reali al metro quadro, via per via: quanto si è venduto, in quanti giorni, a che canone si è affittato. Se le fa comodo gliela preparo con la sua intestazione sopra, così la gira ai suoi condomini a suo nome. Non le costa nulla e non c'è pubblicità mia dentro.
 
 Se poi le serve una valutazione per un suo assistito o una presenza a un'assemblea dove serve un parere immobiliare, ci sono.` },
 
-  { id:"nonresidente", t:"Proprietario che non abita a Milano", nota:"Non confrontano cinque agenzie: cercano qualcuno di cui fidarsi. Il protocollo a distanza scritto e' cio' che ti fa scegliere.",
+  { id:"nonresidente", msg:true, t:"Proprietario che non abita a Milano", nota:"Non confrontano cinque agenzie: cercano qualcuno di cui fidarsi. Il protocollo a distanza scritto e' cio' che ti fa scegliere.",
     x:`Buongiorno,
 
-sono Gaetano dell'Agenzia 2 Sarpi, Milano. Lavoro spesso con proprietari che non vivono in citta', quindi le scrivo gia' come funziona, per iscritto:
+sono Gaetano dell'Agenzia 2 Sarpi, Milano. Lavoro spesso con proprietari che non vivono in città, quindi le scrivo già come funziona, per iscritto:
 
-— sopralluogo in videochiamata, cosi' vede tutto senza prendere un treno;
+— sopralluogo in videochiamata, così vede tutto senza prendere un treno;
 — firma digitale, niente spostamenti;
 — gestione delle chiavi e degli artigiani da parte nostra, con un referente unico;
 — report fotografico dopo ogni visita.
 
-Se l'immobile e' affittato o da affittare, gestiamo anche contratto, cedolare, registrazione e adempimenti annuali: lei non tocca niente.` },
+Se l'immobile è affittato o da affittare, gestiamo anche contratto, cedolare, registrazione e adempimenti annuali: lei non tocca niente.` },
 
   { id:"concordato", t:"Il gancio fiscale — canone concordato", nota:"E' l'argomento di acquisizione piu' potente che hai, e la maggior parte dei piccoli proprietari non lo conosce. Fai confermare aliquote e valori correnti dal commercialista prima di metterli in comunicazione.",
     x:`«Le faccio un conto in trenta secondi. Con un contratto a canone concordato 3+2 nel Comune di Milano lei accede alla cedolare secca agevolata al 10% invece del 21%, piu' riduzioni sull'IMU. Su un canone di [C] € al mese sono circa [R] € l'anno di tasse risparmiate, ogni anno, a fronte di un canone leggermente piu' basso.
 
 Serve l'attestazione di rispondenza rilasciata da un'organizzazione firmataria dell'accordo territoriale: la gestisco io per lei.»` },
 
-  { id:"scaduto", t:"Annuncio scaduto o mandato non rinnovato", nota:"La fonte con il tasso di conversione piu' alto in assoluto: spesso 1 mandato ogni 8-10 contatti. Arrivi nel momento esatto in cui l'esclusiva del collega e' scaduta.",
+  { id:"scaduto", msg:true, t:"Annuncio scaduto o mandato non rinnovato", nota:"La fonte con il tasso di conversione piu' alto in assoluto: spesso 1 mandato ogni 8-10 contatti. Arrivi nel momento esatto in cui l'esclusiva del collega e' scaduta.",
     x:`Buongiorno,
 
-ho notato che l'immobile in via [X] non e' piu' online. Se ha venduto, complimenti sinceri e la saluto qui.
+ho notato che l'immobile in via [X] non è più online. Se ha venduto, complimenti sinceri e la saluto qui.
 
-Se invece l'ha ritirato, le lascio un dato: in quella via, nell'ultimo trimestre, si e' chiuso intorno a [P] €/mq con tempi di [Y] giorni. Nella grande maggioranza dei casi che vedo, il problema non e' stato il prezzo ma il modo in cui l'immobile e' stato presentato e filtrato.
+Se invece l'ha ritirato, le lascio un dato: in quella via, nell'ultimo trimestre, si è chiuso intorno a [P] €/mq con tempi di [Y] giorni. Nella grande maggioranza dei casi che vedo, il problema non è stato il prezzo ma il modo in cui l'immobile è stato presentato e filtrato.
 
 Se le va, glielo guardo e le dico cosa cambierei. Venti minuti, senza impegno.` },
 
-  { id:"host", t:"Host di affitti brevi in uscita", nota:"Sono proprietari gia' abituati a pagare un servizio di gestione: la conversazione parte da un livello piu' avanzato.",
+  { id:"host", msg:true, t:"Host di affitti brevi in uscita", nota:"Sono proprietari gia' abituati a pagare un servizio di gestione: la conversazione parte da un livello piu' avanzato.",
     x:`Buongiorno,
 
-con la stretta sugli affitti brevi molti proprietari stanno valutando il lungo periodo, e quasi sempre la domanda e' una sola: quanto ci perdo davvero.
+con la stretta sugli affitti brevi molti proprietari stanno valutando il lungo periodo, e quasi sempre la domanda è una sola: quanto ci perdo davvero.
 
-Le faccio il conto vero, sul suo immobile: rendimento netto del breve — al netto di pulizie, gestione, sfitto e imposte — contro il netto di un 3+2 a canone concordato con cedolare al 10% e canone garantito da polizza. Se il breve resta piu' conveniente glielo dico io.
+Le faccio il conto vero, sul suo immobile: rendimento netto del breve — al netto di pulizie, gestione, sfitto e imposte — contro il netto di un 3+2 a canone concordato con cedolare al 10% e canone garantito da polizza. Se il breve resta più conveniente glielo dico io.
 
-Nessun impegno: e' un foglio, glielo mando.` }
+Nessun impegno: è un foglio, glielo mando.` }
 ];
 
 /* Piano a 90 giorni. */

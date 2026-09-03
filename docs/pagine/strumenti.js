@@ -93,7 +93,7 @@ function vistaScript() {
   ${SCRIPT.map(s => `<details class="blocco"><summary>${esc(s.t)}</summary><div class="corpo">
     ${s.nota ? `<p style="font-family:var(--sans);font-size:12.5px;color:var(--grigio)">${esc(s.nota)}</p>` : ""}
     <div class="copiabile" id="sc-${s.id}">${esc(sostituisci(s.x))}</div>
-    <div class="bottoniera nostampa"><button class="azione vuota" data-az="copia" data-t="sc-${s.id}">Copia</button></div>
+    <div class="bottoniera nostampa"><button class="azione vuota" data-az="copia" data-t="sc-${s.id}">Copia</button>${s.msg ? `<span id="mis-${s.id}" style="align-self:center">${etichettaMisura(sostituisci(s.x))}</span>` : ""}</div>
   </div></details>`).join("")}
 
   <div class="avviso"><b>Prima di ogni chiamata a freddo</b>Il Registro Pubblico delle Opposizioni si applica anche alle numerazioni mobili. Pubblicare un recapito per ricevere offerte di acquisto non equivale a un consenso per ricevere proposte commerciali di servizi: primo contatto sul canale che il proprietario ha pubblicato, telefono solo dopo una risposta o previa verifica nel Registro.</div>`;
@@ -110,7 +110,11 @@ function aggiornaScript() {
   const sost = t => t.replaceAll("[X]", c.X || "[via]").replaceAll("[P]", c.P || "[€/mq]").replaceAll("[Y]", c.Y || "[giorni]")
     .replaceAll("[Z]", c.Z || "[%]").replaceAll("[N]", c.N || "[nome]").replaceAll("[C]", c.C || "[canone]")
     .replaceAll("[R]", c.R || "[risparmio]").replaceAll("[TEL]", c.TEL || "[telefono]");
-  SCRIPT.forEach(s => { const el = document.getElementById("sc-" + s.id); if (el) el.textContent = sost(s.x); });
+  SCRIPT.forEach(s => {
+    const el = document.getElementById("sc-" + s.id); if (el) el.textContent = sost(s.x);
+    // la misura si rifa' a ogni battuta: i campi in alto allungano il testo, e il tetto e' quello
+    const m = document.getElementById("mis-" + s.id); if (m) m.innerHTML = etichettaMisura(sost(s.x));
+  });
 }
 document.addEventListener("input", ev => {
   const t = ev.target;

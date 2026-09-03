@@ -51,6 +51,40 @@ function firmaDi(nome) {
   ].join("\n");
 }
 
+/* ---------------- la misura dei messaggi da portale ---------------- */
+/* Il modulo «Contatta l'inserzionista» di Subito.it accetta al massimo 1000 caratteri e ne
+   pretende almeno 20: oltre quel tetto il campo non li prende proprio, e un messaggio tagliato
+   a meta' fa piu' danno di un messaggio corto. Immobiliare.it e Idealista stanno piu' larghi,
+   quindi 1000 e' la misura buona per tutti e tre e il testo si scrive una volta sola.
+   La firma non cede mai — e' il recapito, l'unica parte che deve arrivare comunque:
+   a cedere sono i capoversi facoltativi, dall'ultimo al primo. */
+const LIMITE_PORTALE = 1000;
+/* Non si scrive mai al pelo del tetto: gli a capo, quando il modulo li normalizza, contano un
+   carattere in piu' ciascuno, e un messaggio che passa oggi per un soffio e' un messaggio che
+   un giorno si fa tagliare. Venti caratteri di margine e la questione non si ripresenta. */
+const MARGINE_PORTALE = 20;
+
+/* I capoversi arrivano nell'ordine in cui si leggono; quelli marcati «opz» sono quelli di cui
+   si puo' fare a meno. Si toglie l'ultimo facoltativo, poi il penultimo, finche' ci sta. */
+function componiMessaggio(parti, limite) {
+  const tetto = (limite || LIMITE_PORTALE) - MARGINE_PORTALE;
+  const v = parti.filter(p => p && p.t);
+  const testo = () => v.map(p => p.t).join("\n\n");
+  for (let i = v.length - 1; i >= 0 && testo().length > tetto; i--) if (v[i].opz) v.splice(i, 1);
+  return testo();
+}
+/* Quanto e' lungo e quanto ne resta: le pagine lo mostrano accanto al messaggio, cosi' si vede
+   a colpo d'occhio che ci sta nel modulo prima ancora di incollarlo. */
+const misuraMessaggio = t => ({ lunghezza: t.length, limite: LIMITE_PORTALE, entro: t.length <= LIMITE_PORTALE });
+
+/* L'etichetta da mettere accanto a un testo copiabile: quanto e' lungo e qual e' il tetto.
+   Sopra il tetto diventa rossa — con i modelli scritti qui non succede, ma se un domani
+   qualcuno allunga la firma o il testo, lo vede prima di incollarlo, non dopo. */
+function etichettaMisura(t) {
+  const m = misuraMessaggio(t);
+  return `<span class="etichetta" style="${m.entro ? "" : "background:var(--rosso);color:#fff;border-color:var(--rosso)"}" title="Il modulo di Subito.it accetta al massimo ${m.limite} caratteri">${m.lunghezza}/${m.limite} caratteri${m.entro ? "" : " — troppo lungo per Subito"}</span>`;
+}
+
 const VUOTO = {
   v: 2, piano: "500", operatore: "Gaetano",
   operatori: ["Gaetano", "Ciro", "Francoise"],

@@ -42,6 +42,9 @@ function render() {
   const prov = provvigioneAnnuncio(a);
   const foto = [a.foto, a.foto2, a.foto3].filter(Boolean);
   const tel = (a.telefono || "").replace(/[^\d+]/g, "");
+  // scritto una volta sola: lo stesso testo che si vede e' quello che si copia, e la misura
+  // accanto al titolo e' la sua, non quella di un'altra versione
+  const msg = messaggioPrimoContatto(a, g);
 
   $("#vista").innerHTML = `
   ${lavorato(a) ? (() => {
@@ -89,8 +92,8 @@ function render() {
     <div class="avviso" style="margin:12px 0 0"><b>Prima di telefonare</b>Il Registro Pubblico delle Opposizioni si applica anche ai numeri mobili. Pubblicare un recapito per ricevere offerte di acquisto non equivale a un consenso per proposte commerciali di servizi: primo contatto sul canale che il proprietario ha pubblicato, telefono solo dopo una risposta o previa verifica nel Registro.</div>
   </div>
 
-  <div class="scheda"><h3>Il messaggio, gia' scritto <span class="etichetta">a nome di ${esc(persona(S.operatore).nome)} · ${esc(persona(S.operatore).agenzia)}${persona(S.operatore).insieme ? " con " + esc(persona(S.operatore).insieme) : ""}</span></h3>
-    <div class="copiabile" id="msg">${esc(messaggioPrimoContatto(a, g))}</div>
+  <div class="scheda"><h3>Il messaggio, gia' scritto <span class="etichetta">a nome di ${esc(persona(S.operatore).nome)} · ${esc(persona(S.operatore).agenzia)}${persona(S.operatore).insieme ? " con " + esc(persona(S.operatore).insieme) : ""}</span> ${etichettaMisura(msg)}</h3>
+    <div class="copiabile" id="msg">${esc(msg)}</div>
     <div class="bottoniera nostampa">
       <button class="azione" data-az="copia" data-t="msg">Copia il messaggio</button>
       <button class="azione vuota" data-az="portaInTrattativa">Porta in trattativa e avvia la sequenza</button>

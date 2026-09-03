@@ -137,7 +137,8 @@ Object.assign(AZIONI, {
   aggiornaScaduti: async () => { await aggiornaScadutiDalFeed(false); render(); },
   copiaScaduto: el => {
     const x = (S.scaduti || []).find(y => y.id === el.dataset.id); if (!x) return;
-    copiaTesto(messaggioScaduto(x, S.operatore), "Messaggio copiato. Se hai il recapito chiama, altrimenti spediscilo scritto a mano al civico.");
+    const t = messaggioScaduto(x, S.operatore);
+    copiaTesto(t, `Messaggio copiato — ${t.length} caratteri sui ${LIMITE_PORTALE} che il modulo accetta. Se hai il recapito chiama, altrimenti spediscilo scritto a mano al civico.`);
   },
   cercaCatasto: el => {
     const x = (S.scaduti || []).find(y => y.id === el.dataset.id); if (!x) return;
