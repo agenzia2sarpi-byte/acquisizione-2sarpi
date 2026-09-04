@@ -4,22 +4,22 @@
  "ribassati": 0,
  "verificati": [],
  "spariti_nuovi": [
-  "https://www.subito.it/appartamenti/appartamento-nuovo-milano-milano-643955231.htm",
-  "https://www.subito.it/appartamenti/appartamento-turro-milano-658330687.htm",
-  "https://www.subito.it/appartamenti/bilocale-ristrutturato-zona-chiesa-rossa-milano-658284475.htm",
-  "https://www.subito.it/appartamenti/bilocale-zona-chiesarossa-milano-658283397.htm",
-  "https://www.subito.it/appartamenti/luminoso-appartamento-50-mq-milano-658273088.htm",
-  "https://www.subito.it/appartamenti/monolocale-corso-sempione-6-mesi-milano-658259912.htm",
-  "https://www.subito.it/appartamenti/appartamentino-milano-653700081.htm"
+  "https://www.subito.it/appartamenti/design-loft-a-turro-milano-658340361.htm",
+  "https://www.subito.it/appartamenti/monolocale-metro-rovereto-3-mesi-milano-658421966.htm",
+  "https://www.subito.it/appartamenti/fineviasavona-ingr-sogg-camma-k-bmese1000-200-milano-658410649.htm",
+  "https://www.subito.it/appartamenti/bilocale-nuova-costruzione-e-arredato-classe-a-milano-658381949.htm",
+  "https://www.subito.it/appartamenti/monolocale-zona-brenta-milano-658555969.htm",
+  "https://www.subito.it/appartamenti/bilocale-ristrutturato-e-arredato-milano-658546052.htm",
+  "https://www.subito.it/appartamenti/bilocale-zona-universita-bicocca-milano-658532282.htm"
  ],
  "potati": 0,
  "note": [],
- "credito": "2.98 $ consumati su 5.00 $",
- "razione": "6 nuovi + 7 verifiche: 1.22 $ da qui al 2026-09-17 (15 giorni)",
+ "credito": "3.04 $ consumati su 5.00 $",
+ "razione": "6 nuovi + 7 verifiche: 1.16 $ da qui al 2026-09-17 (14 giorni)",
  "tolti_dalla_vista": 7,
  "indirizzi_completati": 5,
  "inserzionisti": {
-  "privato": 44,
+  "privato": 41,
   "da verificare": 0,
   "probabile agenzia": 0
  },
@@ -39,7 +39,7 @@
    "prezzo": 430000.0,
    "mq": 80.0,
    "tipo": "Vendita",
-   "giorni": 6,
+   "giorni": 7,
    "telefono": "3465900083",
    "qualitaImmobile": 95,
    "inserzionista": "privato",
@@ -51,7 +51,7 @@
    "url": "https://www.subito.it/appartamenti/appartamento-via-erodoto-4-milano-milano-658640689.htm"
   },
   {
-   "priorita": 57,
+   "priorita": 58,
    "via": "Via Giovanni Ameglio",
    "civico": "",
    "quartiere": "Musocco",
@@ -59,7 +59,7 @@
    "prezzo": 280000.0,
    "mq": 76.0,
    "tipo": "Vendita",
-   "giorni": 1,
+   "giorni": 2,
    "telefono": "3383942111",
    "qualitaImmobile": 96,
    "inserzionista": "privato",
@@ -71,7 +71,7 @@
    "url": "https://www.subito.it/appartamenti/appartamento-ristrutturato-milano-659229272.htm"
   },
   {
-   "priorita": 46,
+   "priorita": 47,
    "via": "",
    "civico": "",
    "quartiere": "Isola",
@@ -79,7 +79,7 @@
    "prezzo": 410000.0,
    "mq": 55.0,
    "tipo": "Vendita",
-   "giorni": 7,
+   "giorni": 8,
    "telefono": "3284545754",
    "qualitaImmobile": 85,
    "inserzionista": "privato",
@@ -99,7 +99,7 @@
    "prezzo": 340000.0,
    "mq": 75.0,
    "tipo": "Vendita",
-   "giorni": 4,
+   "giorni": 5,
    "telefono": "3881926878",
    "qualitaImmobile": 97,
    "inserzionista": "privato",
@@ -111,26 +111,6 @@
    "url": "https://www.subito.it/appartamenti/app-di-75-mq-ristrutturato-e-arredato-milano-658891113.htm"
   },
   {
-   "priorita": 43,
-   "via": "Via Lanfranco della Pila",
-   "civico": "5",
-   "quartiere": "",
-   "zona": "Fascia accessibile",
-   "prezzo": 265000.0,
-   "mq": 55.0,
-   "tipo": "Vendita",
-   "giorni": 8,
-   "telefono": "",
-   "qualitaImmobile": 98,
-   "inserzionista": "privato",
-   "perche": [
-    "Prezzo +28% rispetto alla zona (fascia indicativa Fascia accessibile)",
-    "Qualita' dell'immobile 98/100",
-    "Provvigione stimata 7.950 €"
-   ],
-   "url": "https://www.subito.it/appartamenti/bilocale-nuova-costruzione-e-arredato-classe-a-milano-658381949.htm"
-  },
-  {
    "priorita": 37,
    "via": "Via Don Giovanni Minzoni",
    "civico": "",
@@ -139,7 +119,7 @@
    "prezzo": 205000.0,
    "mq": 50.0,
    "tipo": "Locazione",
-   "giorni": 0,
+   "giorni": 1,
    "telefono": "3281924535",
    "qualitaImmobile": 93,
    "inserzionista": "privato",
@@ -159,7 +139,7 @@
    "prezzo": 1800.0,
    "mq": 75.0,
    "tipo": "Locazione",
-   "giorni": 0,
+   "giorni": 1,
    "telefono": "3457998411",
    "qualitaImmobile": 99,
    "inserzionista": "privato",
@@ -179,7 +159,7 @@
    "prezzo": 1800.0,
    "mq": 80.0,
    "tipo": "Locazione",
-   "giorni": 4,
+   "giorni": 5,
    "telefono": "022361205",
    "qualitaImmobile": 93,
    "inserzionista": "privato",
@@ -192,26 +172,6 @@
   },
   {
    "priorita": 34,
-   "via": "Via Jean Jaures",
-   "civico": "8",
-   "quartiere": "",
-   "zona": "Fascia media urbana",
-   "prezzo": 1800.0,
-   "mq": 98.0,
-   "tipo": "Locazione",
-   "giorni": 8,
-   "telefono": "3497820952",
-   "qualitaImmobile": 85,
-   "inserzionista": "privato",
-   "perche": [
-    "Qualita' dell'immobile 85/100",
-    "Prezzo di zona non confrontabile",
-    "Foto: medie"
-   ],
-   "url": "https://www.subito.it/appartamenti/design-loft-a-turro-milano-658340361.htm"
-  },
-  {
-   "priorita": 33,
    "via": "Via Gargano",
    "civico": "17",
    "quartiere": "",
@@ -219,7 +179,7 @@
    "prezzo": 1200.0,
    "mq": 50.0,
    "tipo": "Locazione",
-   "giorni": 4,
+   "giorni": 5,
    "telefono": "3384219644",
    "qualitaImmobile": 92,
    "inserzionista": "privato",
@@ -229,8 +189,48 @@
     "Foto: medie"
    ],
    "url": "https://www.subito.it/appartamenti/bilocale-arredato-milano-651318303.htm"
+  },
+  {
+   "priorita": 32,
+   "via": "Via Padova",
+   "civico": "217",
+   "quartiere": "Corte Regina",
+   "zona": "Fascia accessibile",
+   "prezzo": 1050.0,
+   "mq": 50.0,
+   "tipo": "Locazione",
+   "giorni": 4,
+   "telefono": "3472806232",
+   "qualitaImmobile": 79,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 79/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/bilocale-arredato-cimiano-milano-658937728.htm"
+  },
+  {
+   "priorita": 32,
+   "via": "Via Paternò",
+   "civico": "19",
+   "quartiere": "Restocco Maroni",
+   "zona": "Fascia media urbana",
+   "prezzo": 650.0,
+   "mq": 120.0,
+   "tipo": "Locazione",
+   "giorni": 4,
+   "telefono": "3203905036",
+   "qualitaImmobile": 82,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 82/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/singola-vicino-a-iulm-e-naba-milano-658607049.htm"
   }
  ],
- "quando": "2026-09-03T09:18:42+00:00",
+ "quando": "2026-09-04T09:12:19+00:00",
  "origine": "GitHub Actions"
 }
