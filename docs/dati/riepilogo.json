@@ -4,52 +4,33 @@
  "ribassati": 0,
  "verificati": [],
  "spariti_nuovi": [
-  "https://www.subito.it/appartamenti/design-loft-a-turro-milano-658340361.htm",
-  "https://www.subito.it/appartamenti/monolocale-metro-rovereto-3-mesi-milano-658421966.htm",
-  "https://www.subito.it/appartamenti/fineviasavona-ingr-sogg-camma-k-bmese1000-200-milano-658410649.htm",
-  "https://www.subito.it/appartamenti/bilocale-nuova-costruzione-e-arredato-classe-a-milano-658381949.htm",
-  "https://www.subito.it/appartamenti/monolocale-zona-brenta-milano-658555969.htm",
-  "https://www.subito.it/appartamenti/bilocale-ristrutturato-e-arredato-milano-658546052.htm",
-  "https://www.subito.it/appartamenti/bilocale-zona-universita-bicocca-milano-658532282.htm"
+  "https://www.subito.it/appartamenti/bilocale-a-reddito-milano-658470153.htm",
+  "https://www.subito.it/appartamenti/milano-bilocale-ristrutturato-metro-mm1-turro-milano-658655831.htm",
+  "https://www.subito.it/appartamenti/appartamento-via-erodoto-4-milano-milano-658640689.htm",
+  "https://www.subito.it/appartamenti/monolocale-metro-blu-milano-658739856.htm",
+  "https://www.subito.it/appartamenti/trilocale-a-milano-zona-comasina-affori-milano-658915557.htm",
+  "https://www.subito.it/appartamenti/primaticcio-bande-nere-bilocale-happy-m1-350-m-milano-658909606.htm",
+  "https://www.subito.it/appartamenti/app-di-75-mq-ristrutturato-e-arredato-milano-658891113.htm",
+  "https://www.subito.it/appartamenti/monolocale-milano-via-ripamonti-milano-658874166.htm"
  ],
  "potati": 0,
  "note": [],
- "credito": "3.04 $ consumati su 5.00 $",
- "razione": "6 nuovi + 7 verifiche: 1.16 $ da qui al 2026-09-17 (14 giorni)",
- "tolti_dalla_vista": 7,
+ "credito": "3.09 $ consumati su 5.00 $",
+ "razione": "6 nuovi + 8 verifiche: 1.11 $ da qui al 2026-09-17 (13 giorni)",
+ "tolti_dalla_vista": 8,
  "indirizzi_completati": 5,
  "inserzionisti": {
-  "privato": 41,
+  "privato": 37,
   "da verificare": 0,
   "probabile agenzia": 0
  },
  "quartieri_con_mediana": 0,
  "esclusi_nuovi": 0,
- "esclusi_ricomparsi": 1,
+ "esclusi_ricomparsi": 0,
  "esclusi_in_archivio": 9,
  "esclusi_elenco": [],
- "nuovi_in_vista": 4,
+ "nuovi_in_vista": 5,
  "da_chiamare": [
-  {
-   "priorita": 63,
-   "via": "Via Erodoto",
-   "civico": "4",
-   "quartiere": "",
-   "zona": "Periferia esterna",
-   "prezzo": 430000.0,
-   "mq": 80.0,
-   "tipo": "Vendita",
-   "giorni": 7,
-   "telefono": "3465900083",
-   "qualitaImmobile": 95,
-   "inserzionista": "privato",
-   "perche": [
-    "Prezzo +115% rispetto alla zona (fascia indicativa Periferia esterna)",
-    "Provvigione stimata 12.900 €",
-    "Qualita' dell'immobile 95/100"
-   ],
-   "url": "https://www.subito.it/appartamenti/appartamento-via-erodoto-4-milano-milano-658640689.htm"
-  },
   {
    "priorita": 58,
    "via": "Via Giovanni Ameglio",
@@ -59,7 +40,7 @@
    "prezzo": 280000.0,
    "mq": 76.0,
    "tipo": "Vendita",
-   "giorni": 2,
+   "giorni": 3,
    "telefono": "3383942111",
    "qualitaImmobile": 96,
    "inserzionista": "privato",
@@ -71,46 +52,6 @@
    "url": "https://www.subito.it/appartamenti/appartamento-ristrutturato-milano-659229272.htm"
   },
   {
-   "priorita": 47,
-   "via": "",
-   "civico": "",
-   "quartiere": "Isola",
-   "zona": "Semicentro consolidato",
-   "prezzo": 410000.0,
-   "mq": 55.0,
-   "tipo": "Vendita",
-   "giorni": 8,
-   "telefono": "3284545754",
-   "qualitaImmobile": 85,
-   "inserzionista": "privato",
-   "perche": [
-    "Provvigione stimata 12.300 €",
-    "Qualita' dell'immobile 85/100",
-    "Prezzo +6% rispetto alla zona (fascia indicativa Semicentro consolidato)"
-   ],
-   "url": "https://www.subito.it/appartamenti/bilocale-a-reddito-milano-658470153.htm"
-  },
-  {
-   "priorita": 44,
-   "via": "",
-   "civico": "",
-   "quartiere": "Cagnola",
-   "zona": "Fascia media urbana",
-   "prezzo": 340000.0,
-   "mq": 75.0,
-   "tipo": "Vendita",
-   "giorni": 5,
-   "telefono": "3881926878",
-   "qualitaImmobile": 97,
-   "inserzionista": "privato",
-   "perche": [
-    "Qualita' dell'immobile 97/100",
-    "Foto: scarse",
-    "Provvigione stimata 10.200 €"
-   ],
-   "url": "https://www.subito.it/appartamenti/app-di-75-mq-ristrutturato-e-arredato-milano-658891113.htm"
-  },
-  {
    "priorita": 37,
    "via": "Via Don Giovanni Minzoni",
    "civico": "",
@@ -119,7 +60,7 @@
    "prezzo": 205000.0,
    "mq": 50.0,
    "tipo": "Locazione",
-   "giorni": 1,
+   "giorni": 2,
    "telefono": "3281924535",
    "qualitaImmobile": 93,
    "inserzionista": "privato",
@@ -132,26 +73,6 @@
   },
   {
    "priorita": 36,
-   "via": "Via Melchiorre Delfico",
-   "civico": "",
-   "quartiere": "Simonetta",
-   "zona": "Fascia media urbana",
-   "prezzo": 1800.0,
-   "mq": 75.0,
-   "tipo": "Locazione",
-   "giorni": 1,
-   "telefono": "3457998411",
-   "qualitaImmobile": 99,
-   "inserzionista": "privato",
-   "perche": [
-    "Qualita' dell'immobile 99/100",
-    "Prezzo di zona non confrontabile",
-    "Foto: medie"
-   ],
-   "url": "https://www.subito.it/appartamenti/appartamento-ristrutturato-via-delfico-milano-659341471.htm"
-  },
-  {
-   "priorita": 35,
    "via": "Piazza Aspromonte",
    "civico": "10",
    "quartiere": "",
@@ -159,7 +80,7 @@
    "prezzo": 1800.0,
    "mq": 80.0,
    "tipo": "Locazione",
-   "giorni": 5,
+   "giorni": 6,
    "telefono": "022361205",
    "qualitaImmobile": 93,
    "inserzionista": "privato",
@@ -171,6 +92,26 @@
    "url": "https://www.subito.it/appartamenti/luminoso-appartamento-nel-centro-storico-di-milano-milano-658915677.htm"
   },
   {
+   "priorita": 36,
+   "via": "Via Melchiorre Delfico",
+   "civico": "",
+   "quartiere": "Simonetta",
+   "zona": "Fascia media urbana",
+   "prezzo": 1800.0,
+   "mq": 75.0,
+   "tipo": "Locazione",
+   "giorni": 2,
+   "telefono": "3457998411",
+   "qualitaImmobile": 99,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 99/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/appartamento-ristrutturato-via-delfico-milano-659341471.htm"
+  },
+  {
    "priorita": 34,
    "via": "Via Gargano",
    "civico": "17",
@@ -179,7 +120,7 @@
    "prezzo": 1200.0,
    "mq": 50.0,
    "tipo": "Locazione",
-   "giorni": 5,
+   "giorni": 6,
    "telefono": "3384219644",
    "qualitaImmobile": 92,
    "inserzionista": "privato",
@@ -191,7 +132,7 @@
    "url": "https://www.subito.it/appartamenti/bilocale-arredato-milano-651318303.htm"
   },
   {
-   "priorita": 32,
+   "priorita": 33,
    "via": "Via Padova",
    "civico": "217",
    "quartiere": "Corte Regina",
@@ -199,7 +140,7 @@
    "prezzo": 1050.0,
    "mq": 50.0,
    "tipo": "Locazione",
-   "giorni": 4,
+   "giorni": 5,
    "telefono": "3472806232",
    "qualitaImmobile": 79,
    "inserzionista": "privato",
@@ -211,7 +152,7 @@
    "url": "https://www.subito.it/appartamenti/bilocale-arredato-cimiano-milano-658937728.htm"
   },
   {
-   "priorita": 32,
+   "priorita": 33,
    "via": "Via Paternò",
    "civico": "19",
    "quartiere": "Restocco Maroni",
@@ -219,7 +160,7 @@
    "prezzo": 650.0,
    "mq": 120.0,
    "tipo": "Locazione",
-   "giorni": 4,
+   "giorni": 5,
    "telefono": "3203905036",
    "qualitaImmobile": 82,
    "inserzionista": "privato",
@@ -229,8 +170,68 @@
     "Foto: medie"
    ],
    "url": "https://www.subito.it/appartamenti/singola-vicino-a-iulm-e-naba-milano-658607049.htm"
+  },
+  {
+   "priorita": 32,
+   "via": "Via San Benigno",
+   "civico": "4",
+   "quartiere": "",
+   "zona": "Fascia media urbana",
+   "prezzo": 1200.0,
+   "mq": 45.0,
+   "tipo": "Locazione",
+   "giorni": 0,
+   "telefono": "3386738503",
+   "qualitaImmobile": 79,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 79/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/bilocale-citta-studi-milano-milano-659580892.htm"
+  },
+  {
+   "priorita": 31,
+   "via": "Via Gallura",
+   "civico": "8",
+   "quartiere": "Ex Om - Morivione",
+   "zona": "Semicentro consolidato",
+   "prezzo": 1000.0,
+   "mq": 65.0,
+   "tipo": "Locazione",
+   "giorni": 5,
+   "telefono": "3474777664",
+   "qualitaImmobile": 72,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 72/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/luminoso-e-arredato-bilocale-ripamonti-prada-milano-658847683.htm"
+  },
+  {
+   "priorita": 29,
+   "via": "Via Filippo Tajani",
+   "civico": "3",
+   "quartiere": "",
+   "zona": "Fascia media urbana",
+   "prezzo": 1100.0,
+   "mq": 48.0,
+   "tipo": "Locazione",
+   "giorni": 3,
+   "telefono": "3481066373",
+   "qualitaImmobile": 78,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 78/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/bilocale-in-citta-studi-milano-659226948.htm"
   }
  ],
- "quando": "2026-09-04T09:12:19+00:00",
+ "quando": "2026-09-05T08:43:25+00:00",
  "origine": "GitHub Actions"
 }
