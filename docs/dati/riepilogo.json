@@ -1,35 +1,41 @@
 {
- "raccolti": 6,
- "aggiunti": 5,
+ "raccolti": 5,
+ "aggiunti": 4,
  "ribassati": 0,
  "verificati": [],
  "spariti_nuovi": [
-  "https://www.subito.it/appartamenti/bilocale-a-reddito-milano-658470153.htm",
-  "https://www.subito.it/appartamenti/milano-bilocale-ristrutturato-metro-mm1-turro-milano-658655831.htm",
-  "https://www.subito.it/appartamenti/appartamento-via-erodoto-4-milano-milano-658640689.htm",
-  "https://www.subito.it/appartamenti/monolocale-metro-blu-milano-658739856.htm",
-  "https://www.subito.it/appartamenti/trilocale-a-milano-zona-comasina-affori-milano-658915557.htm",
-  "https://www.subito.it/appartamenti/primaticcio-bande-nere-bilocale-happy-m1-350-m-milano-658909606.htm",
-  "https://www.subito.it/appartamenti/app-di-75-mq-ristrutturato-e-arredato-milano-658891113.htm",
-  "https://www.subito.it/appartamenti/monolocale-milano-via-ripamonti-milano-658874166.htm"
+  "https://www.subito.it/appartamenti/loft-citta-studi-a-100mt-da-m4-susa-milano-658203052.htm",
+  "https://www.subito.it/appartamenti/monolocale-o-stanza-per-ragazza-lavoratrice-milano-658916702.htm",
+  "https://www.subito.it/appartamenti/luminoso-appartamento-nel-centro-storico-di-milano-milano-658915677.htm",
+  "https://www.subito.it/appartamenti/bilocale-ristrutturato-per-studenti-lambrate-milano-652969669.htm",
+  "https://www.subito.it/appartamenti/bilocale-arredato-milano-651318303.htm",
+  "https://www.subito.it/appartamenti/premium-loft-di-design-terrazzo-posto-auto-gym-milano-656390457.htm",
+  "https://www.subito.it/appartamenti/trilocale-arredato-e-corredato-con-doppi-servizi-milano-647284771.htm",
+  "https://www.subito.it/appartamenti/ampio-bilocale-ca-granda-milano-656350466.htm"
  ],
  "potati": 0,
  "note": [],
- "credito": "3.09 $ consumati su 5.00 $",
- "razione": "6 nuovi + 8 verifiche: 1.11 $ da qui al 2026-09-17 (13 giorni)",
- "tolti_dalla_vista": 8,
- "indirizzi_completati": 5,
+ "credito": "3.13 $ consumati su 5.00 $",
+ "razione": "6 nuovi + 8 verifiche: 1.07 $ da qui al 2026-09-17 (12 giorni)",
+ "tolti_dalla_vista": 9,
+ "indirizzi_completati": 3,
  "inserzionisti": {
-  "privato": 37,
+  "privato": 31,
   "da verificare": 0,
-  "probabile agenzia": 0
+  "probabile agenzia": 1
  },
  "quartieri_con_mediana": 0,
- "esclusi_nuovi": 0,
+ "esclusi_nuovi": 1,
  "esclusi_ricomparsi": 0,
- "esclusi_in_archivio": 9,
- "esclusi_elenco": [],
- "nuovi_in_vista": 5,
+ "esclusi_in_archivio": 10,
+ "esclusi_elenco": [
+  {
+   "via": "Via Nicola Palmieri 25",
+   "inserzionista": "Alessio",
+   "motivo": "il portale lo classifica come annuncio di agenzia"
+  }
+ ],
+ "nuovi_in_vista": 2,
  "da_chiamare": [
   {
    "priorita": 58,
@@ -40,7 +46,7 @@
    "prezzo": 280000.0,
    "mq": 76.0,
    "tipo": "Vendita",
-   "giorni": 3,
+   "giorni": 4,
    "telefono": "3383942111",
    "qualitaImmobile": 96,
    "inserzionista": "privato",
@@ -52,7 +58,7 @@
    "url": "https://www.subito.it/appartamenti/appartamento-ristrutturato-milano-659229272.htm"
   },
   {
-   "priorita": 37,
+   "priorita": 38,
    "via": "Via Don Giovanni Minzoni",
    "civico": "",
    "quartiere": "",
@@ -60,7 +66,7 @@
    "prezzo": 205000.0,
    "mq": 50.0,
    "tipo": "Locazione",
-   "giorni": 2,
+   "giorni": 3,
    "telefono": "3281924535",
    "qualitaImmobile": 93,
    "inserzionista": "privato",
@@ -72,27 +78,7 @@
    "url": "https://www.subito.it/appartamenti/appartamento-piano-alto-milano-649550032.htm"
   },
   {
-   "priorita": 36,
-   "via": "Piazza Aspromonte",
-   "civico": "10",
-   "quartiere": "",
-   "zona": "Fascia media urbana",
-   "prezzo": 1800.0,
-   "mq": 80.0,
-   "tipo": "Locazione",
-   "giorni": 6,
-   "telefono": "022361205",
-   "qualitaImmobile": 93,
-   "inserzionista": "privato",
-   "perche": [
-    "Qualita' dell'immobile 93/100",
-    "Prezzo di zona non confrontabile",
-    "Foto: medie"
-   ],
-   "url": "https://www.subito.it/appartamenti/luminoso-appartamento-nel-centro-storico-di-milano-milano-658915677.htm"
-  },
-  {
-   "priorita": 36,
+   "priorita": 37,
    "via": "Via Melchiorre Delfico",
    "civico": "",
    "quartiere": "Simonetta",
@@ -100,7 +86,7 @@
    "prezzo": 1800.0,
    "mq": 75.0,
    "tipo": "Locazione",
-   "giorni": 2,
+   "giorni": 3,
    "telefono": "3457998411",
    "qualitaImmobile": 99,
    "inserzionista": "privato",
@@ -112,26 +98,6 @@
    "url": "https://www.subito.it/appartamenti/appartamento-ristrutturato-via-delfico-milano-659341471.htm"
   },
   {
-   "priorita": 34,
-   "via": "Via Gargano",
-   "civico": "17",
-   "quartiere": "",
-   "zona": "Semicentro consolidato",
-   "prezzo": 1200.0,
-   "mq": 50.0,
-   "tipo": "Locazione",
-   "giorni": 6,
-   "telefono": "3384219644",
-   "qualitaImmobile": 92,
-   "inserzionista": "privato",
-   "perche": [
-    "Qualita' dell'immobile 92/100",
-    "Prezzo di zona non confrontabile",
-    "Foto: medie"
-   ],
-   "url": "https://www.subito.it/appartamenti/bilocale-arredato-milano-651318303.htm"
-  },
-  {
    "priorita": 33,
    "via": "Via Padova",
    "civico": "217",
@@ -140,7 +106,7 @@
    "prezzo": 1050.0,
    "mq": 50.0,
    "tipo": "Locazione",
-   "giorni": 5,
+   "giorni": 6,
    "telefono": "3472806232",
    "qualitaImmobile": 79,
    "inserzionista": "privato",
@@ -160,7 +126,7 @@
    "prezzo": 650.0,
    "mq": 120.0,
    "tipo": "Locazione",
-   "giorni": 5,
+   "giorni": 6,
    "telefono": "3203905036",
    "qualitaImmobile": 82,
    "inserzionista": "privato",
@@ -180,7 +146,7 @@
    "prezzo": 1200.0,
    "mq": 45.0,
    "tipo": "Locazione",
-   "giorni": 0,
+   "giorni": 1,
    "telefono": "3386738503",
    "qualitaImmobile": 79,
    "inserzionista": "privato",
@@ -192,6 +158,26 @@
    "url": "https://www.subito.it/appartamenti/bilocale-citta-studi-milano-milano-659580892.htm"
   },
   {
+   "priorita": 32,
+   "via": "Largo Promessi Sposi",
+   "civico": "9",
+   "quartiere": "",
+   "zona": "Fascia media urbana",
+   "prezzo": 1200.0,
+   "mq": 50.0,
+   "tipo": "Locazione",
+   "giorni": 0,
+   "telefono": "3381188683",
+   "qualitaImmobile": 91,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 91/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/bilocale-naviglio-pavese-milano-659682602.htm"
+  },
+  {
    "priorita": 31,
    "via": "Via Gallura",
    "civico": "8",
@@ -200,7 +186,7 @@
    "prezzo": 1000.0,
    "mq": 65.0,
    "tipo": "Locazione",
-   "giorni": 5,
+   "giorni": 6,
    "telefono": "3474777664",
    "qualitaImmobile": 72,
    "inserzionista": "privato",
@@ -220,7 +206,7 @@
    "prezzo": 1100.0,
    "mq": 48.0,
    "tipo": "Locazione",
-   "giorni": 3,
+   "giorni": 4,
    "telefono": "3481066373",
    "qualitaImmobile": 78,
    "inserzionista": "privato",
@@ -230,8 +216,28 @@
     "Foto: medie"
    ],
    "url": "https://www.subito.it/appartamenti/bilocale-in-citta-studi-milano-659226948.htm"
+  },
+  {
+   "priorita": 25,
+   "via": "Corso Buones Aires",
+   "civico": "20",
+   "quartiere": "Buenos Aires",
+   "zona": "Semicentro consolidato",
+   "prezzo": 1200.0,
+   "mq": 47.0,
+   "tipo": "Locazione",
+   "giorni": 3,
+   "telefono": "",
+   "qualitaImmobile": 98,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 98/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/bilocale-mm-corso-buones-aires-milano-659342431.htm"
   }
  ],
- "quando": "2026-09-05T08:43:25+00:00",
+ "quando": "2026-09-06T09:03:32+00:00",
  "origine": "GitHub Actions"
 }

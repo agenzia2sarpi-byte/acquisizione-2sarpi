@@ -1,5 +1,5 @@
 {
- "generato": "2026-09-05T08:43:25",
+ "generato": "2026-09-06T09:03:32",
  "esclusi": [
   {
    "id": "esc-20260826095259-1",
@@ -260,8 +260,32 @@
     "url:subito.it/appartamenti/metro-turro-gorla-milano-659217926.htm"
    ],
    "rivisto": "2026-09-02"
+  },
+  {
+   "id": "esc-20260906090332-10",
+   "titolo": "Luminoso monolocale con veranda [M2 ABBIATEGRASSO]",
+   "via": "Via Nicola Palmieri 25",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/luminoso-monolocale-con-veranda-m2-abbiategrasso-milano-659685228.htm",
+   "inserzionista": "Alessio",
+   "telefono": "",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-06",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/luminoso-monolocale-con-veranda-m2-abbiategrasso-milano-659685228.htm",
+    "rif:subito:659685228",
+    "ind:nicola palmieri|25|28|loc",
+    "foto:4cb66f72-2373-44e4-80c8-6dc6b622edf3",
+    "foto:a205c41a-7399-435f-b749-45ea8248de6c",
+    "foto:56303839-05a8-4a7e-a150-808fe8217291",
+    "testo:grandeeluminosomonolocaleconangolocotturaverandaabitabileepiccolalavanderiaprezzo800eurospesecondominialiinclusebigandbr",
+    "parole:abbiategrasso-abitabile-angolo-apartment-bocconi-bright-building-cattolica-colonne-condominiali-cottura-expenses-famagosta-grande-included-incluse-kitchenette-laundry-lavanderia-location-lorenzo-luminoso-monolocale-navigli-neighborhoods"
+   ]
   }
  ],
- "conteggio": 9,
- "id": "esclusi-202609050843"
+ "conteggio": 10,
+ "id": "esclusi-202609060903"
 }
