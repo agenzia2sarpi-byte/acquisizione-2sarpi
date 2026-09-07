@@ -1,5 +1,10 @@
 /* Pagina Oggi — generata dal nucleo condiviso. */
 
+/* Il registro della posta agli amministratori. Sta qui perche' «quante mail sono partite
+   stamattina» e' una domanda da pagina di apertura: se la risposta e' zero per tre giorni
+   di fila, l'impianto e' fermo e nessuno se ne accorgerebbe guardando solo le telefonate. */
+let POSTA_OGGI = null;
+
 /* ---------------- vista: OGGI ---------------- */
 function vistaOggi() {
   const t = T(), a = attivitaDi(oggiISO());
@@ -72,8 +77,24 @@ function vistaOggi() {
       <div class="dato"><div class="titolo">Mandati attivi</div><div class="valore">${S.mandati.length}</div></div>
       <div class="dato"><div class="titolo">Immobili in gestione</div><div class="valore">${S.gestione.length}</div><div class="sotto">obiettivo +2/mese</div></div>
       <div class="dato ${reteDaFare > 0 ? "ambra" : "verde"}"><div class="titolo">Rete da incontrare</div><div class="valore">${reteDaFare}</div><div class="sotto">su ${S.rete.length} inseriti / 20</div></div>
+      ${riquadroPosta()}
     </div>
   </div>`;
+}
+
+/* Quante mail sono partite oggi agli amministratori, e quanti destinatari restano. Finche'
+   il file non arriva non si mostra niente: un riquadro a zero mentre il registro non e'
+   ancora stato letto direbbe «fermo» di una macchina che invece sta girando. */
+function riquadroPosta() {
+  if (!POSTA_OGGI) return "";
+  const inviate = POSTA_OGGI.inviate || [];
+  const oggi = inviate.filter(v => String(v.inviata || "").slice(0, 10) === oggiISO()).length;
+  const coda = (POSTA_OGGI.coda || []).length;
+  return `<a class="dato ${oggi >= 10 ? "verde" : oggi > 0 ? "ambra" : ""}" href="posta.html" style="text-decoration:none;color:inherit">
+    <div class="titolo">Mail partite oggi</div>
+    <div class="valore">${oggi}</div>
+    <div class="sotto">${oggi ? "su 10" : coda ? coda + " in coda" : "coda vuota"} · ${inviate.length} in tutto</div>
+  </a>`;
 }
 
 /* La lista del radar, in cima: e' con questa che si apre l'ora d'oro. */
@@ -206,4 +227,11 @@ aggiornaDalFeed(true).then(e => { if (e && (e.nuovi || e.aggiornati || e.spariti
 fetch("dati/riepilogo.json?t=" + Date.now(), { cache: "no-store" })
   .then(r => r.ok ? r.json() : null)
   .then(d => { if (d) { RIEPILOGO = d; render(); } })
+  .catch(() => {});
+
+/* Lo stesso patto del riepilogo: se il registro della posta non esiste ancora — perche'
+   nessuna mail e' mai partita — la pagina resta com'e', senza buchi e senza allarmi. */
+fetch("dati/posta.json?t=" + Date.now(), { cache: "no-store" })
+  .then(r => r.ok ? r.json() : null)
+  .then(d => { if (d) { POSTA_OGGI = d; render(); } })
   .catch(() => {});

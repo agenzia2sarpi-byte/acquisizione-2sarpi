@@ -94,6 +94,9 @@ const VUOTO = {
   lead: [], mandati: [], rete: [], gestione: [], attivita: [], optout: [],
   annunci: [], amministratori: [], condomini: [],
   conformita: {}, piano90: {}, recensioni: [], spesa: {},
+  // gli esiti della posta annotati a mano: e' l'unica parte della pagina Posta che vive
+  // sul dispositivo — cio' che risulta spedito lo dice il registro dell'automazione
+  postaNote: {},
   feed: { ultimoId: null, ultimaLettura: null },
   aggiornato: null
 };
@@ -272,6 +275,7 @@ const PAGINE = [
   { f: "radar.html", t: "Annunci" },
   { f: "scaduti.html", t: "Scaduti" },
   { f: "condomini.html", t: "Amministratori" },
+  { f: "posta.html", t: "Posta" },
   { sep: 1 },
   { f: "pipeline.html", t: "Trattative" },
   { f: "rete.html", t: "Rete dei 20" },

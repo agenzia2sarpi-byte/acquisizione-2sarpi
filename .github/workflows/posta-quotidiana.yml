@@ -1,0 +1,103 @@
+# Le dieci mail del giorno agli amministratori di condominio.
+#
+# Perche' qui e non sul Mac. Vale la stessa ragione del radar: un impianto che parte solo a
+# computer acceso non e' un impianto, e' un promemoria. Qui la macchina la accende GitHub,
+# tutte le mattine, che Gaetano sia in ufficio, in visita o in ferie.
+#
+# Perche' dal lunedi' al venerdi'. Dall'altra parte c'e' uno studio professionale: una mail
+# che arriva di sabato non viene letta il sabato, viene letta il lunedi' in mezzo a quaranta
+# altre. Spedirla il lunedi' mattina costa uguale e vale di piu'.
+#
+# Perche' dopo il radar. Il radar gira alle 05:00 e tocca gli stessi file: due giri
+# sovrapposti si sovrascriverebbero a vicenda. Qui si parte alle 07:00, a cose fatte.
+#
+# Due secret nel repository, e senza quelli non parte niente — ma nemmeno si rompe niente:
+# la coda si prepara lo stesso e si vede nella pagina Posta, ferma, in attesa. E' voluto:
+# il primo giorno si guarda la coda, e solo dopo si mettono i secret.
+#
+#   POSTA_MITTENTE   agenzia2sarpi@gmail.com
+#   POSTA_PASSWORD   la password per app di quella casella (16 lettere, senza spazi)
+#
+# La password per app non e' la password di Google: si crea in
+# myaccount.google.com/apppasswords con la verifica in due passaggi accesa, vale solo per la
+# posta, e revocarla non tocca l'account ne' nient'altro.
+
+name: Posta quotidiana
+
+on:
+  schedule:
+    # 07:00 UTC = 09:00 in Italia d'estate, 08:00 d'inverno. Dal lunedi' al venerdi'.
+    - cron: "0 7 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      quante:
+        description: "Quante mail spedire (vuoto = 10)"
+        default: ""
+      solo_coda:
+        description: "Prepara la coda senza spedire"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: posta
+  cancel-in-progress: false
+
+jobs:
+  posta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      # Gli indirizzi nuovi, prima di spedire: uno studio censito ieri senza email puo'
+      # averla oggi, e cercarla non costa niente — sono i siti degli studi, non un servizio
+      # a consumo. Se il giro va storto si spedisce lo stesso a chi un indirizzo ce l'ha.
+      - name: Gli indirizzi degli studi
+        continue-on-error: true
+        run: python3 automazione/indirizzi.py
+
+      - name: Le dieci mail
+        env:
+          POSTA_MITTENTE: ${{ secrets.POSTA_MITTENTE }}
+          POSTA_PASSWORD: ${{ secrets.POSTA_PASSWORD }}
+          QUANTE: ${{ inputs.quante }}
+          SOLO_CODA: ${{ inputs.solo_coda }}
+        run: |
+          set -o pipefail
+          if [ -z "$POSTA_MITTENTE" ] || [ -z "$POSTA_PASSWORD" ]; then
+            echo "::warning::POSTA_MITTENTE o POSTA_PASSWORD non impostate: preparo la coda, non spedisco."
+            INVIO=""
+          elif [ "$SOLO_CODA" = "true" ]; then
+            INVIO=""
+          else
+            INVIO="--invia"
+          fi
+          python3 automazione/posta.py $INVIO --quante "${QUANTE:-10}" --mittente Ciro \
+            | tee /tmp/posta.json
+
+      - name: Cos'e' successo
+        if: always()
+        run: python3 automazione/riepilogo_posta.py /tmp/posta.json >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Pubblica il registro
+        if: always()
+        run: |
+          git config user.name  "Posta 2 Sarpi"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/dati/posta.json docs/dati/amministratori.json
+          if git diff --cached --quiet; then
+            echo "niente di nuovo: nessun commit"
+            exit 0
+          fi
+          sh automazione/versione.sh
+          git add -A
+          git commit -m "posta quotidiana $(date +%Y-%m-%d)"
+          git push

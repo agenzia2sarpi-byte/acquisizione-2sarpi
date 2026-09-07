@@ -1,6 +1,6 @@
 {
  "id": "amministratori-202608111404",
- "generato": "2026-08-11T14:04:53",
+ "generato": "2026-09-07T16:57:38",
  "conteggio": 60,
  "fonte": "Studi di amministrazione condominiale a Milano — dati d'impresa pubblici. Municipio ricavato dall'indirizzo con OpenStreetMap.",
  "amministratori": [
@@ -16,7 +16,12 @@
    "voto": 4.6,
    "recensioni": 86,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Bassi%20Amministratore%20di%20condominio%20Milano%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@amministratorebassi.it",
+   "emailAltre": [
+    "tecnico@amministratorebassi.it"
+   ]
   },
   {
    "nome": "Amministratore di condominio Milano - Gestioni Immobiliari Integrate",
@@ -30,7 +35,9 @@
    "voto": 4.9,
    "recensioni": 661,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Amministratore%20di%20condominio%20Milano%20-%20Gestioni%20Immobiliari%20Integrate%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@gestioni.org"
   },
   {
    "nome": "Amministrazioni di condominio - Cb amministrazioni",
@@ -44,7 +51,8 @@
    "voto": 4.4,
    "recensioni": 14,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Amministrazioni%20di%20condominio%20-%20Cb%20amministrazioni%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07"
   },
   {
    "nome": "Progest casa - Amministratore di condominio",
@@ -58,7 +66,9 @@
    "voto": 4.9,
    "recensioni": 36,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Progest%20casa%20-%20Amministratore%20di%20condominio%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@progest-casa.it"
   },
   {
    "nome": "Amministrazione condomini Milano",
@@ -72,7 +82,8 @@
    "voto": 4.5,
    "recensioni": 15,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Amministrazione%20condomini%20Milano%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07"
   },
   {
    "nome": "Studio di Amministrazione Edellio D'Angelo",
@@ -86,7 +97,13 @@
    "voto": 5.0,
    "recensioni": 17,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20di%20Amministrazione%20Edellio%20D%27Angelo%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@studioedelliodangelo.it",
+   "emailAltre": [
+    "monica@studioedelliodangelo.it",
+    "edellio@studioedelliodangelo.it"
+   ]
   },
   {
    "nome": "Studio Lidia Speranza - Amministrazioni Condominiali",
@@ -100,7 +117,13 @@
    "voto": 5.0,
    "recensioni": 23,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Lidia%20Speranza%20-%20Amministrazioni%20Condominiali%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@studiolidiasperanza.it",
+   "emailAltre": [
+    "preventivi@studiolidiasperanza.it",
+    "candidature@studiolidiasperanza.it"
+   ]
   },
   {
    "nome": "Amministrami",
@@ -114,7 +137,9 @@
    "voto": 4.7,
    "recensioni": 15,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Amministrami%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@amministrami.it"
   },
   {
    "nome": "Italia Amministrazioni",
@@ -128,7 +153,16 @@
    "voto": 3.9,
    "recensioni": 57,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Italia%20Amministrazioni%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "segreteria@italiamministrazioni.it",
+   "emailAltre": [
+    "roma@italiamministrazioni.it",
+    "varese@italiamministrazioni.it",
+    "milano@italiamministrazioni.it",
+    "catania@italiamministrazioni.it",
+    "siracusa@italiamministrazioni.it"
+   ]
   },
   {
    "nome": "Studio Greco - Amministrazioni Condominiali",
@@ -142,7 +176,16 @@
    "voto": 4.0,
    "recensioni": 32,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Greco%20-%20Amministrazioni%20Condominiali%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "degregorioservizi@gmail.com",
+   "emailAltre": [
+    "info@studiolidiagreco.com",
+    "1eeb89147c984dc6bc3ffafd9e6cd089@sentry.wixpress.com",
+    "8eb368c655b84e029ed79ad7a5c1718e@sentry.wixpress.com",
+    "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com",
+    "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com"
+   ]
   },
   {
    "nome": "Gesticond Milano - Amministrazioni Condominiali",
@@ -170,7 +213,8 @@
    "voto": 4.5,
    "recensioni": 8,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=AMA%20Condominio%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07"
   },
   {
    "nome": "Studio Conti Service sas",
@@ -198,7 +242,8 @@
    "voto": 3.6,
    "recensioni": 11,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Mauro%20Saraino%20Amministratore%20Stabili%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07"
   },
   {
    "nome": "Amministrazione Condominiale Meloni",
@@ -212,7 +257,9 @@
    "voto": 5.0,
    "recensioni": 14,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Amministrazione%20Condominiale%20Meloni%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@amministrazionemeloni.com"
   },
   {
    "nome": "Milano Stabili",
@@ -226,7 +273,9 @@
    "voto": 4.7,
    "recensioni": 19,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Milano%20Stabili%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@milanostabili.it"
   },
   {
    "nome": "Studio Legale e Amministrazione Condominiale PAE",
@@ -240,7 +289,9 @@
    "voto": 5.0,
    "recensioni": 10,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Legale%20e%20Amministrazione%20Condominiale%20PAE%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "studiolegale.pae@outlook.it"
   },
   {
    "nome": "Petricone Rag. Marco Amministratore di Condominio",
@@ -254,7 +305,9 @@
    "voto": 2.2,
    "recensioni": 5,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Petricone%20Rag.%20Marco%20Amministratore%20di%20Condominio%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "amm.petricone@gmail.com"
   },
   {
    "nome": "Studio Pasina srl",
@@ -268,7 +321,15 @@
    "voto": 3.7,
    "recensioni": 3,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Pasina%20srl%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@studiopasina.com",
+   "emailAltre": [
+    "roma@studiopasina.com",
+    "milano@studiopasina.com",
+    "livorno@studiopasina.com",
+    "brescia@studiopasina.com"
+   ]
   },
   {
    "nome": "4A Studio Amministrazioni e Revisioni Condominiali Sas",
@@ -282,7 +343,8 @@
    "voto": 5.0,
    "recensioni": 1,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=4A%20Studio%20Amministrazioni%20e%20Revisioni%20Condominiali%20Sas%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07"
   },
   {
    "nome": "Studio Amministrazioni Condominiali di Spini Carmela",
@@ -296,7 +358,9 @@
    "voto": "",
    "recensioni": "",
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Amministrazioni%20Condominiali%20di%20Spini%20Carmela%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "amministrazione@studiospini.it"
   },
   {
    "nome": "Unicasa Amministratore di Condominio (Panicale)",
@@ -310,7 +374,8 @@
    "voto": "",
    "recensioni": "",
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Unicasa%20Amministratore%20di%20Condominio%20%28Panicale%29%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07"
   },
   {
    "nome": "Milano Amministrazioni Srl",
@@ -324,7 +389,9 @@
    "voto": 2.8,
    "recensioni": 30,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Milano%20Amministrazioni%20Srl%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@milanoamministrazioni.it"
   },
   {
    "nome": "Amministrazione Maggi S.r.l.",
@@ -338,7 +405,12 @@
    "voto": 4.0,
    "recensioni": 16,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Amministrazione%20Maggi%20S.r.l.%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@amministrazionemaggi.it",
+   "emailAltre": [
+    "studio@amministrazionemaggi.it"
+   ]
   },
   {
    "nome": "Studio Chiarelli",
@@ -352,7 +424,12 @@
    "voto": 4.4,
    "recensioni": 90,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Chiarelli%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@studio-chiarelli.com",
+   "emailAltre": [
+    "info@studiochiarelli.eu"
+   ]
   },
   {
    "nome": "Amministrazione Condominio (Vittor Pisani)",
@@ -380,7 +457,12 @@
    "voto": 3.6,
    "recensioni": 64,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Donzelli%20%26%20Criscuoli%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "amministrazione@archdonzelli.it",
+   "emailAltre": [
+    "ufficiotecnico@archdonzelli.it"
+   ]
   },
   {
    "nome": "Studio Monti & F. S.R.L.",
@@ -394,7 +476,9 @@
    "voto": 3.1,
    "recensioni": 44,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Monti%20%26%20F.%20S.R.L.%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@studiomonti.it"
   },
   {
    "nome": "Studio Dalvit",
@@ -408,7 +492,9 @@
    "voto": 3.7,
    "recensioni": 18,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Dalvit%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "segreteria@studiodalvit.com"
   },
   {
    "nome": "Unicasa Amministratore di Condominio (Grosseto)",
@@ -422,7 +508,8 @@
    "voto": 3.0,
    "recensioni": 2,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Unicasa%20Amministratore%20di%20Condominio%20%28Grosseto%29%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07"
   },
   {
    "nome": "Zacchetti Amministrazioni Condominiali",
@@ -436,7 +523,9 @@
    "voto": 3.3,
    "recensioni": 16,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Zacchetti%20Amministrazioni%20Condominiali%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "segreteria.zac@gmail.com"
   },
   {
    "nome": "Amministrazioni Maggi di Ing. Maria Cristina Somaschi",
@@ -450,7 +539,8 @@
    "voto": 5.0,
    "recensioni": 4,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Amministrazioni%20Maggi%20di%20Ing.%20Maria%20Cristina%20Somaschi%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07"
   },
   {
    "nome": "Studio c.s.e. amministrazione condominiale",
@@ -464,7 +554,9 @@
    "voto": 2.9,
    "recensioni": 8,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20c.s.e.%20amministrazione%20condominiale%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "amministrazione@studiocse.net"
   },
   {
    "nome": "Morelli Amministrazione Immobili",
@@ -478,7 +570,13 @@
    "voto": 4.9,
    "recensioni": 10,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Morelli%20Amministrazione%20Immobili%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@morelliamministrazioneimmobili.it",
+   "emailAltre": [
+    "direzione@morelliamministrazioneimmobili.it",
+    "c.morelli@morelliamministrazioneimmobili.it"
+   ]
   },
   {
    "nome": "Studio Sozzi Srl",
@@ -492,7 +590,9 @@
    "voto": 4.1,
    "recensioni": 61,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Sozzi%20Srl%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "segreteria@studiosozzi.it"
   },
   {
    "nome": "Studio Associato Mozzani",
@@ -506,7 +606,15 @@
    "voto": 2.8,
    "recensioni": 20,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Associato%20Mozzani%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "mozzani.marco@studiomozzani.it",
+   "emailAltre": [
+    "mozzani.marcello@studiomozzani.it",
+    "interventi@studiomozzani.it",
+    "contabilita@studiomozzani.it",
+    "pratiche.assicurazione@studiomozzani.it"
+   ]
   },
   {
    "nome": "Studio Emme",
@@ -520,7 +628,8 @@
    "voto": 4.0,
    "recensioni": 6,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Emme%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07"
   },
   {
    "nome": "Ena Spa",
@@ -534,7 +643,9 @@
    "voto": 2.5,
    "recensioni": 37,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Ena%20Spa%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@enaspa.it"
   },
   {
    "nome": "Studio Quattrini S.a.s.",
@@ -548,7 +659,16 @@
    "voto": 3.6,
    "recensioni": 34,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Quattrini%20S.a.s.%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "amministrazione@studioquattrini.it",
+   "emailAltre": [
+    "ed436f5053144538958ad06a5005e99a@sentry.wixpress.com",
+    "8eb368c655b84e029ed79ad7a5c1718e@sentry.wixpress.com",
+    "460ff4620fa44cba8df530afde949785@sentry.wixpress.com",
+    "9a65e97ebe8141fca0c4fd686f70996b@sentry.wixpress.com",
+    "c183baa23371454f99f417f6616b724d@sentry.wixpress.com"
+   ]
   },
   {
    "nome": "Unicasa Amministratore di Condominio (Mussi)",
@@ -562,7 +682,8 @@
    "voto": 3.1,
    "recensioni": 14,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Unicasa%20Amministratore%20di%20Condominio%20%28Mussi%29%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07"
   },
   {
    "nome": "Studio Pietrasanta",
@@ -576,7 +697,9 @@
    "voto": 3.6,
    "recensioni": 61,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Pietrasanta%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@studiopietrasanta.it"
   },
   {
    "nome": "Tognon Giorgio",
@@ -618,7 +741,9 @@
    "voto": 4.7,
    "recensioni": 27,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Carretta%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@studio-carretta.it"
   },
   {
    "nome": "Amministrazione Stabili - Ammicasa S.r.l.",
@@ -646,7 +771,9 @@
    "voto": 3.6,
    "recensioni": 5,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Amministrazione%20stabili%20di%20Michele%20Russo%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "am@amministratori.info"
   },
   {
    "nome": "Studio Cogliati Srl",
@@ -674,7 +801,9 @@
    "voto": 1.0,
    "recensioni": 2,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Condominio%2024%20ore%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@condominiosi.it"
   },
   {
    "nome": "Amministrazioni Condominiali Esposito Miriam Silvia",
@@ -688,7 +817,9 @@
    "voto": 4.0,
    "recensioni": 21,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Amministrazioni%20Condominiali%20Esposito%20Miriam%20Silvia%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@espositoimmobili.it"
   },
   {
    "nome": "Studio Bargiggia",
@@ -702,7 +833,16 @@
    "voto": 4.2,
    "recensioni": 21,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Bargiggia%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@studiobargiggia.it",
+   "emailAltre": [
+    "preventivi@studiobargiggia.it",
+    "collaboratori@studiobargiggia.it",
+    "u003einfo@studiobargiggia.it",
+    "u003epreventivi@studiobargiggia.it",
+    "u003ecollaboratori@studiobargiggia.it"
+   ]
   },
   {
    "nome": "Studio De Risi",
@@ -716,7 +856,8 @@
    "voto": 4.6,
    "recensioni": 20,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20De%20Risi%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07"
   },
   {
    "nome": "Jessica Mesiti Amministrazioni",
@@ -744,7 +885,9 @@
    "voto": 4.6,
    "recensioni": 7,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Luzio%20Costa%20Snc%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "info@studioluziocosta.it"
   },
   {
    "nome": "Studio Elia - Amministrazione Stabili",
@@ -758,7 +901,16 @@
    "voto": 3.7,
    "recensioni": 9,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Elia%20-%20Amministrazione%20Stabili%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "studio.eliagualtieri@libero.it",
+   "emailAltre": [
+    "ed436f5053144538958ad06a5005e99a@sentry.wixpress.com",
+    "8eb368c655b84e029ed79ad7a5c1718e@sentry.wixpress.com",
+    "460ff4620fa44cba8df530afde949785@sentry.wixpress.com",
+    "271e9fa3230b4eec94b02bf95780f5f2@sentry.wixpress.com",
+    "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com"
+   ]
   },
   {
    "nome": "Paduano Gabriele",
@@ -800,7 +952,8 @@
    "voto": 3.1,
    "recensioni": 59,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Fenaia%20Amministrazione%20Stabili%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07"
   },
   {
    "nome": "Amministratore Condominio Petrucci B. M. sas",
@@ -828,7 +981,9 @@
    "voto": 4.7,
    "recensioni": 3,
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Studio%20Valente%20SRL%20Milano",
-   "fonte": "Schede pubbliche di attivita' (Google Maps)"
+   "fonte": "Schede pubbliche di attivita' (Google Maps)",
+   "emailCercata": "2026-09-07",
+   "email": "amministrazione@studiovalente.net"
   },
   {
    "nome": "Amministratore di condominio (Legnone)",
@@ -844,5 +999,6 @@
    "schedaMaps": "https://www.google.com/maps/search/?api=1&query=Amministratore%20di%20condominio%20%28Legnone%29%20Milano",
    "fonte": "Schede pubbliche di attivita' (Google Maps)"
   }
- ]
+ ],
+ "conEmail": 36
 }
