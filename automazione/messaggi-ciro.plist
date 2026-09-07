@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  I cinque da chiamare, a Ciro su iMessage, ogni mattina dal lunedi' al venerdi'.
+
+  Questo file non fa niente finche' non lo si installa. Si installa con due comandi, che
+  stanno scritti in fondo: uno lo copia dove macOS va a cercarlo, l'altro lo accende.
+
+  Alle 09:15: il radar su GitHub ha gia' girato alle 07:00 italiane, quindi la lista e'
+  quella di stamattina, e Ciro ce l'ha in mano prima dell'ora d'oro delle 9:30.
+
+  Il messaggio parte dal numero di Gaetano tramite Messages, percio' serve il Mac acceso.
+  Se alle 09:15 e' spento, macOS fa partire il lavoro appena lo si riaccende: la lista
+  arriva in ritardo ma arriva, e non salta il giorno.
+
+  Ogni corsa lascia una riga scritta in ~/.config/acquisizione-ag2/messaggi.log. Serve:
+  un automatismo che non lascia traccia, il giorno che smette di funzionare, smette in
+  silenzio e non se ne accorge nessuno.
+
+  Per installarlo:
+    cp "/Users/gaetano/Documents/Claude Workspace/Acquisizione Ag2/sito/automazione/messaggi-ciro.plist" ~/Library/LaunchAgents/it.agenzia2sarpi.messaggi-ciro.plist
+    launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/it.agenzia2sarpi.messaggi-ciro.plist
+
+  Per fermarlo:
+    launchctl bootout gui/$(id -u)/it.agenzia2sarpi.messaggi-ciro
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>it.agenzia2sarpi.messaggi-ciro</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/Users/gaetano/Documents/Claude Workspace/Acquisizione Ag2/sito/automazione/messaggi.py</string>
+        <string>--invia</string>
+        <string>--quanti</string>
+        <string>5</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict><key>Weekday</key><integer>1</integer><key>Hour</key><integer>9</integer><key>Minute</key><integer>15</integer></dict>
+        <dict><key>Weekday</key><integer>2</integer><key>Hour</key><integer>9</integer><key>Minute</key><integer>15</integer></dict>
+        <dict><key>Weekday</key><integer>3</integer><key>Hour</key><integer>9</integer><key>Minute</key><integer>15</integer></dict>
+        <dict><key>Weekday</key><integer>4</integer><key>Hour</key><integer>9</integer><key>Minute</key><integer>15</integer></dict>
+        <dict><key>Weekday</key><integer>5</integer><key>Hour</key><integer>9</integer><key>Minute</key><integer>15</integer></dict>
+    </array>
+
+    <key>StandardOutPath</key>
+    <string>/Users/gaetano/.config/acquisizione-ag2/messaggi.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/gaetano/.config/acquisizione-ag2/messaggi.log</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>
