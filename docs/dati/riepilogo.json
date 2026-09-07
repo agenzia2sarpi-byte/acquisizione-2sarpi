@@ -1,41 +1,36 @@
 {
- "raccolti": 5,
+ "raccolti": 6,
  "aggiunti": 4,
- "ribassati": 0,
+ "ribassati": 1,
  "verificati": [],
  "spariti_nuovi": [
-  "https://www.subito.it/appartamenti/loft-citta-studi-a-100mt-da-m4-susa-milano-658203052.htm",
-  "https://www.subito.it/appartamenti/monolocale-o-stanza-per-ragazza-lavoratrice-milano-658916702.htm",
-  "https://www.subito.it/appartamenti/luminoso-appartamento-nel-centro-storico-di-milano-milano-658915677.htm",
-  "https://www.subito.it/appartamenti/bilocale-ristrutturato-per-studenti-lambrate-milano-652969669.htm",
-  "https://www.subito.it/appartamenti/bilocale-arredato-milano-651318303.htm",
-  "https://www.subito.it/appartamenti/premium-loft-di-design-terrazzo-posto-auto-gym-milano-656390457.htm",
-  "https://www.subito.it/appartamenti/trilocale-arredato-e-corredato-con-doppi-servizi-milano-647284771.htm",
-  "https://www.subito.it/appartamenti/ampio-bilocale-ca-granda-milano-656350466.htm"
+  "https://www.subito.it/appartamenti/bilocale-arredato-cimiano-milano-658937728.htm",
+  "https://www.subito.it/appartamenti/bilocale-naba-bocconi-iulm-milano-658907102.htm",
+  "https://www.subito.it/appartamenti/bilocale-ristrutturato-con-terrazzo-milano-658924663.htm",
+  "https://www.subito.it/appartamenti/bilocale-d-epoca-ristrutturato-via-murat-milano-milano-658965677.htm",
+  "https://www.subito.it/appartamenti/milano-monolocale-arredato-libero-subito-milano-650665897.htm",
+  "https://www.subito.it/appartamenti/bilocale-palmanova-milano-658956502.htm",
+  "https://www.subito.it/appartamenti/bilocale-via-masolino-da-panicale-milano-658955157.htm",
+  "https://www.subito.it/appartamenti/luminoso-e-arredato-bilocale-ripamonti-prada-milano-658847683.htm",
+  "https://www.subito.it/appartamenti/bilocale-di-pregio-a-corso-como-milano-653930091.htm"
  ],
  "potati": 0,
  "note": [],
- "credito": "3.13 $ consumati su 5.00 $",
- "razione": "6 nuovi + 8 verifiche: 1.07 $ da qui al 2026-09-17 (12 giorni)",
- "tolti_dalla_vista": 9,
+ "credito": "3.19 $ consumati su 5.00 $",
+ "razione": "6 nuovi + 9 verifiche: 1.01 $ da qui al 2026-09-17 (11 giorni)",
+ "tolti_dalla_vista": 10,
  "indirizzi_completati": 3,
  "inserzionisti": {
-  "privato": 31,
+  "privato": 25,
   "da verificare": 0,
-  "probabile agenzia": 1
+  "probabile agenzia": 0
  },
  "quartieri_con_mediana": 0,
- "esclusi_nuovi": 1,
+ "esclusi_nuovi": 0,
  "esclusi_ricomparsi": 0,
  "esclusi_in_archivio": 10,
- "esclusi_elenco": [
-  {
-   "via": "Via Nicola Palmieri 25",
-   "inserzionista": "Alessio",
-   "motivo": "il portale lo classifica come annuncio di agenzia"
-  }
- ],
- "nuovi_in_vista": 2,
+ "esclusi_elenco": [],
+ "nuovi_in_vista": 3,
  "da_chiamare": [
   {
    "priorita": 58,
@@ -46,7 +41,7 @@
    "prezzo": 280000.0,
    "mq": 76.0,
    "tipo": "Vendita",
-   "giorni": 4,
+   "giorni": 5,
    "telefono": "3383942111",
    "qualitaImmobile": 96,
    "inserzionista": "privato",
@@ -66,7 +61,7 @@
    "prezzo": 205000.0,
    "mq": 50.0,
    "tipo": "Locazione",
-   "giorni": 3,
+   "giorni": 4,
    "telefono": "3281924535",
    "qualitaImmobile": 93,
    "inserzionista": "privato",
@@ -86,7 +81,7 @@
    "prezzo": 1800.0,
    "mq": 75.0,
    "tipo": "Locazione",
-   "giorni": 3,
+   "giorni": 4,
    "telefono": "3457998411",
    "qualitaImmobile": 99,
    "inserzionista": "privato",
@@ -99,26 +94,6 @@
   },
   {
    "priorita": 33,
-   "via": "Via Padova",
-   "civico": "217",
-   "quartiere": "Corte Regina",
-   "zona": "Fascia accessibile",
-   "prezzo": 1050.0,
-   "mq": 50.0,
-   "tipo": "Locazione",
-   "giorni": 6,
-   "telefono": "3472806232",
-   "qualitaImmobile": 79,
-   "inserzionista": "privato",
-   "perche": [
-    "Qualita' dell'immobile 79/100",
-    "Prezzo di zona non confrontabile",
-    "Foto: medie"
-   ],
-   "url": "https://www.subito.it/appartamenti/bilocale-arredato-cimiano-milano-658937728.htm"
-  },
-  {
-   "priorita": 33,
    "via": "Via Paternò",
    "civico": "19",
    "quartiere": "Restocco Maroni",
@@ -126,7 +101,7 @@
    "prezzo": 650.0,
    "mq": 120.0,
    "tipo": "Locazione",
-   "giorni": 6,
+   "giorni": 7,
    "telefono": "3203905036",
    "qualitaImmobile": 82,
    "inserzionista": "privato",
@@ -138,27 +113,7 @@
    "url": "https://www.subito.it/appartamenti/singola-vicino-a-iulm-e-naba-milano-658607049.htm"
   },
   {
-   "priorita": 32,
-   "via": "Via San Benigno",
-   "civico": "4",
-   "quartiere": "",
-   "zona": "Fascia media urbana",
-   "prezzo": 1200.0,
-   "mq": 45.0,
-   "tipo": "Locazione",
-   "giorni": 1,
-   "telefono": "3386738503",
-   "qualitaImmobile": 79,
-   "inserzionista": "privato",
-   "perche": [
-    "Qualita' dell'immobile 79/100",
-    "Prezzo di zona non confrontabile",
-    "Foto: medie"
-   ],
-   "url": "https://www.subito.it/appartamenti/bilocale-citta-studi-milano-milano-659580892.htm"
-  },
-  {
-   "priorita": 32,
+   "priorita": 33,
    "via": "Largo Promessi Sposi",
    "civico": "9",
    "quartiere": "",
@@ -166,7 +121,7 @@
    "prezzo": 1200.0,
    "mq": 50.0,
    "tipo": "Locazione",
-   "giorni": 0,
+   "giorni": 1,
    "telefono": "3381188683",
    "qualitaImmobile": 91,
    "inserzionista": "privato",
@@ -178,24 +133,24 @@
    "url": "https://www.subito.it/appartamenti/bilocale-naviglio-pavese-milano-659682602.htm"
   },
   {
-   "priorita": 31,
-   "via": "Via Gallura",
-   "civico": "8",
-   "quartiere": "Ex Om - Morivione",
-   "zona": "Semicentro consolidato",
-   "prezzo": 1000.0,
-   "mq": 65.0,
+   "priorita": 32,
+   "via": "Via San Benigno",
+   "civico": "4",
+   "quartiere": "",
+   "zona": "Fascia media urbana",
+   "prezzo": 1200.0,
+   "mq": 45.0,
    "tipo": "Locazione",
-   "giorni": 6,
-   "telefono": "3474777664",
-   "qualitaImmobile": 72,
+   "giorni": 2,
+   "telefono": "3386738503",
+   "qualitaImmobile": 79,
    "inserzionista": "privato",
    "perche": [
-    "Qualita' dell'immobile 72/100",
+    "Qualita' dell'immobile 79/100",
     "Prezzo di zona non confrontabile",
     "Foto: medie"
    ],
-   "url": "https://www.subito.it/appartamenti/luminoso-e-arredato-bilocale-ripamonti-prada-milano-658847683.htm"
+   "url": "https://www.subito.it/appartamenti/bilocale-citta-studi-milano-milano-659580892.htm"
   },
   {
    "priorita": 29,
@@ -206,7 +161,7 @@
    "prezzo": 1100.0,
    "mq": 48.0,
    "tipo": "Locazione",
-   "giorni": 4,
+   "giorni": 5,
    "telefono": "3481066373",
    "qualitaImmobile": 78,
    "inserzionista": "privato",
@@ -218,6 +173,26 @@
    "url": "https://www.subito.it/appartamenti/bilocale-in-citta-studi-milano-659226948.htm"
   },
   {
+   "priorita": 28,
+   "via": "",
+   "civico": "",
+   "quartiere": "Centrale",
+   "zona": "Semicentro consolidato",
+   "prezzo": 1600.0,
+   "mq": 80.0,
+   "tipo": "Locazione",
+   "giorni": 7,
+   "telefono": "",
+   "qualitaImmobile": 87,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 87/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/ampio-appartamento-arredato-in-centro-milano-649203296.htm"
+  },
+  {
    "priorita": 25,
    "via": "Corso Buones Aires",
    "civico": "20",
@@ -226,7 +201,7 @@
    "prezzo": 1200.0,
    "mq": 47.0,
    "tipo": "Locazione",
-   "giorni": 3,
+   "giorni": 4,
    "telefono": "",
    "qualitaImmobile": 98,
    "inserzionista": "privato",
@@ -236,8 +211,28 @@
     "Foto: medie"
    ],
    "url": "https://www.subito.it/appartamenti/bilocale-mm-corso-buones-aires-milano-659342431.htm"
+  },
+  {
+   "priorita": 25,
+   "via": "Piazza Nizza",
+   "civico": "",
+   "quartiere": "Niguarda",
+   "zona": "Periferia esterna",
+   "prezzo": 850.0,
+   "mq": 50.0,
+   "tipo": "Locazione",
+   "giorni": 3,
+   "telefono": "",
+   "qualitaImmobile": 87,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 87/100",
+    "Testo: scarno",
+    "Prezzo di zona non confrontabile"
+   ],
+   "url": "https://www.subito.it/appartamenti/elegante-bilocale-milano-659456734.htm"
   }
  ],
- "quando": "2026-09-06T09:03:32+00:00",
- "origine": "GitHub Actions"
+ "quando": "2026-09-07T08:13:08+00:00",
+ "origine": "Mac di Gaetano"
 }
