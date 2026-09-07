@@ -310,6 +310,33 @@ def credenziali():
     return utente.strip(), chiave.replace(" ", "").strip()
 
 
+def verifica_casella(p):
+    """Entra nella casella e ne esce, senza spedire niente.
+
+    Serve perche' un codice sbagliato non si vede: la coda si prepara lo stesso, il lavoro
+    su GitHub finisce senza errori, e ci si accorge che non e' mai partita una mail solo
+    quando qualcuno va a guardare. Meglio saperlo in dieci secondi."""
+    utente, chiave = credenziali()
+    if not utente or not chiave:
+        return {"entrata": False, "perche": "POSTA_MITTENTE o POSTA_PASSWORD non impostate"}
+    if normalizza(utente) != normalizza(p["email"]):
+        return {"entrata": False, "casella": utente,
+                "perche": f"la casella collegata e' {utente} ma la firma e' di {p['nome']} "
+                          f"({p['email']})"}
+    try:
+        with smtplib.SMTP(SMTP_HOST, SMTP_PORTA, timeout=45) as s:
+            s.ehlo()
+            s.starttls(context=ssl.create_default_context())
+            s.login(utente, chiave)
+        return {"entrata": True, "casella": utente,
+                "perche": "codice giusto: la casella si apre e puo' spedire"}
+    except smtplib.SMTPAuthenticationError:
+        return {"entrata": False, "casella": utente,
+                "perche": "Google rifiuta il codice: la password per app e' sbagliata o revocata"}
+    except Exception as e:
+        return {"entrata": False, "casella": utente, "perche": str(e)[:200]}
+
+
 def spedisci(reg, p, limite):
     utente, chiave = credenziali()
     if not utente or not chiave:
@@ -371,9 +398,16 @@ def main():
     ap.add_argument("--quante", type=int, default=QUANTE)
     ap.add_argument("--mittente", default="Ciro")
     ap.add_argument("--prova", action="store_true")
+    ap.add_argument("--verifica", action="store_true",
+                    help="entra nella casella e basta: non prepara e non spedisce")
     a = ap.parse_args()
 
     p = PERSONE.get(a.mittente) or PERSONE["Ciro"]
+
+    if a.verifica:
+        print(json.dumps(verifica_casella(p), ensure_ascii=False, indent=1))
+        return
+
     reg = leggi_registro()
     nuovi, disponibili = prepara(reg, a.quante, p)
 

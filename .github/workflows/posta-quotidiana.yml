@@ -37,6 +37,10 @@ on:
         description: "Prepara la coda senza spedire"
         type: boolean
         default: false
+      verifica:
+        description: "Prova solo ad aprire la casella: non prepara e non spedisce"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -57,14 +61,28 @@ jobs:
         with:
           python-version: "3.12"
 
+      # La prova della casella: entra e ne esce, senza preparare e senza spedire. Serve
+      # subito dopo aver messo i due secret, perche' un codice sbagliato non si vede — la
+      # coda si prepara lo stesso e il lavoro finisce senza errori.
+      - name: La casella si apre?
+        if: inputs.verifica
+        env:
+          POSTA_MITTENTE: ${{ secrets.POSTA_MITTENTE }}
+          POSTA_PASSWORD: ${{ secrets.POSTA_PASSWORD }}
+        run: |
+          python3 automazione/posta.py --verifica --mittente Ciro | tee /tmp/verifica.json
+          python3 -c "import json,sys; sys.exit(0 if json.load(open('/tmp/verifica.json'))['entrata'] else 1)"
+
       # Gli indirizzi nuovi, prima di spedire: uno studio censito ieri senza email puo'
       # averla oggi, e cercarla non costa niente — sono i siti degli studi, non un servizio
       # a consumo. Se il giro va storto si spedisce lo stesso a chi un indirizzo ce l'ha.
       - name: Gli indirizzi degli studi
+        if: ${{ !inputs.verifica }}
         continue-on-error: true
         run: python3 automazione/indirizzi.py
 
       - name: Le dieci mail
+        if: ${{ !inputs.verifica }}
         env:
           POSTA_MITTENTE: ${{ secrets.POSTA_MITTENTE }}
           POSTA_PASSWORD: ${{ secrets.POSTA_PASSWORD }}
@@ -84,11 +102,11 @@ jobs:
             | tee /tmp/posta.json
 
       - name: Cos'e' successo
-        if: always()
+        if: ${{ always() && !inputs.verifica }}
         run: python3 automazione/riepilogo_posta.py /tmp/posta.json >> "$GITHUB_STEP_SUMMARY"
 
       - name: Pubblica il registro
-        if: always()
+        if: ${{ always() && !inputs.verifica }}
         run: |
           git config user.name  "Posta 2 Sarpi"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
