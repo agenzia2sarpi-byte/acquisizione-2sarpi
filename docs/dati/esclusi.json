@@ -1,5 +1,5 @@
 {
- "generato": "2026-09-07T09:50:48",
+ "generato": "2026-09-07T18:12:41",
  "esclusi": [
   {
    "id": "esc-20260826095259-1",
@@ -128,7 +128,7 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-08-31",
-   "ricomparse": 7,
+   "ricomparse": 8,
    "impronte": [
     "foto:0c815d2d-928b-4033-ba05-9f53e9f3a625",
     "foto:1257332f-e7a7-401f-ac15-4e036d026c47",
@@ -154,7 +154,7 @@
     "url:subito.it/appartamenti/bilocale-con-terrazzo-milano-657164402.htm",
     "url:subito.it/appartamenti/bilocale-luminoso-milano-654446775.htm"
    ],
-   "rivisto": "2026-09-04"
+   "rivisto": "2026-09-07"
   },
   {
    "id": "esc-20260831113353-6",
@@ -284,8 +284,153 @@
     "testo:grandeeluminosomonolocaleconangolocotturaverandaabitabileepiccolalavanderiaprezzo800eurospesecondominialiinclusebigandbr",
     "parole:abbiategrasso-abitabile-angolo-apartment-bocconi-bright-building-cattolica-colonne-condominiali-cottura-expenses-famagosta-grande-included-incluse-kitchenette-laundry-lavanderia-location-lorenzo-luminoso-monolocale-navigli-neighborhoods"
    ]
+  },
+  {
+   "id": "esc-20260907180952-11",
+   "titolo": "Bilocale NUOVO con Posto Auto e Cantina",
+   "via": "Via Ripamonti 1",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/bilocale-nuovo-con-posto-auto-e-cantina-milano-659809681.htm",
+   "inserzionista": "Flavio",
+   "telefono": "",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-07",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/bilocale-nuovo-con-posto-auto-e-cantina-milano-659809681.htm",
+    "rif:subito:659809681",
+    "ind:ripamonti|1|50|loc",
+    "foto:ded2b919-597c-41db-8c14-af187a150bc2",
+    "foto:af193a88-dbfa-41c8-86b9-130b4c698f51",
+    "foto:9b3ac489-4113-4382-b107-8b02fdd9ab74",
+    "testo:danovembreaffittobilocalenuovoarredatodicirca50mqall8pianodellazenithtowersconpostoautocopertoprivatoalpianoseminterrato",
+    "parole:accessori-affitto-ancora-appartamento-arredato-arredo-attiva-bilocale-camera-cantina-classe-completamente-condizionata-consegnato-controllata-coperto-costruzione-cucina-direttamente-dotazioni-energetica-esclusivo-forniti-futuro-giorno"
+   ]
+  },
+  {
+   "id": "esc-20260907181127-12",
+   "titolo": "BILOCALE MM2 Crescenzago",
+   "via": "Via Orbetello",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/bilocale-mm2-crescenzago-milano-656007648.htm",
+   "inserzionista": "MA Real Estate",
+   "telefono": "3883276085",
+   "motivo": "chi pubblica si chiama «MA Real Estate»: e' il nome di un'attivita', non di una persona",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-07",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/bilocale-mm2-crescenzago-milano-656007648.htm",
+    "rif:subito:656007648",
+    "tel:883276085",
+    "ind:orbetello||55|loc",
+    "foto:54495143-8b8d-4ee8-bd48-ab4bb92d912a",
+    "foto:fdffcd0e-a280-47a4-8d38-a0416bd03593",
+    "foto:2c3a335e-4758-422d-a76d-27b6805bdf27",
+    "testo:affittiamoluminosobilocaleristrutturatoasoli100metridallafermatadellametropolitanamm2crescenzagoaffittasisplendidobiloca",
+    "parole:accordo-affittasi-affittiamo-arredo-atenei-bilocale-canone-cantina-centro-collaborazioni-collegata-comoda-compresa-congrue-considerazione-contratto-crescenzago-dimostrabili-disponibilita-esigenze-fermata-fideiussione-futuro-garante-garanzie"
+   ]
+  },
+  {
+   "id": "esc-20260907181143-13",
+   "titolo": "Bilocale ristrutturato metro MM2 Milano",
+   "via": "Via Palmanova",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/bilocale-ristrutturato-metro-mm2-milano-milano-659831819.htm",
+   "inserzionista": "CasaDaPrivatoMilano",
+   "telefono": "3284529836",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-07",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/bilocale-ristrutturato-metro-mm2-milano-milano-659831819.htm",
+    "rif:subito:659831819",
+    "tel:284529836",
+    "ind:palmanova||65|loc",
+    "foto:91536cd3-3459-4475-b2cf-d0ced61fdd76",
+    "foto:f1b30328-7c9f-4f1d-a607-4def9b6a2b28",
+    "foto:358622b9-4140-48f8-8351-b8282de4b65c",
+    "testo:pergiovaniprofessionistiospecializzandimodernoappartamentosuduepianimq65arredatoeclimatizzatocondominiosignorilevicinoal",
+    "parole:agenzia-appartamento-appuntamento-arredato-chiamare-climatizzato-comodo-condominiali-condominio-fissare-giovani-mensilita-metropolitana-minima-moderno-nessun-permanenza-professionisti-riscaldamento-signorile-specializzandi-telefono-totale-vicino"
+   ]
+  },
+  {
+   "id": "esc-20260907181150-14",
+   "titolo": "Trilo in zona strategica 1250/mese",
+   "via": "",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/trilo-in-zona-strategica-1250-mese-milano-630544827.htm",
+   "inserzionista": "Andrea",
+   "telefono": "",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-07",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/trilo-in-zona-strategica-1250-mese-milano-630544827.htm",
+    "rif:subito:630544827",
+    "foto:a164ca22-5ea3-4f5f-9b88-08510bf94932",
+    "foto:e5a35841-1957-45d3-9460-36d232570368",
+    "foto:8a29443e-ab90-4867-8c05-df796f0da6fc",
+    "testo:siaffittasplendidotrilocale80mqcircapianoaltoincontestotranquilloinzonaottimamenteservitadamezzidisuperficiesottocasaaut",
+    "parole:abbiategrasso-accoglient-affitta-aggiuntiva-appartamento-arredate-assago-attualmente-autobus-balcone-bocconi-botteghe-camera-centri-centro-commerciali-completano-compone-contesto-cucina-disponibilita-diversi-doccia-doppia-entrambe"
+   ]
+  },
+  {
+   "id": "esc-20260907181156-15",
+   "titolo": "Confortevole e ampio bilocale con balcone",
+   "via": "Via Giuseppe Govone 38",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/confortevole-e-ampio-bilocale-con-balcone-milano-659809627.htm",
+   "inserzionista": "silvia",
+   "telefono": "",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-07",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/confortevole-e-ampio-bilocale-con-balcone-milano-659809627.htm",
+    "rif:subito:659809627",
+    "ind:giuseppe govone|38|50|loc",
+    "foto:b647f281-b47a-4968-8993-241ecdba0851",
+    "foto:31a8169f-e22e-4e6c-b63e-a257ad133ba6",
+    "foto:e84d97e2-e484-412b-ad51-1bb6f0ac776f",
+    "testo:accoglienteemoltospaziosobilocaleincasadiringhieraformatodaunsoggiornoconcucinacaminettodaarredodivanolettoaduepiazzeeam",
+    "parole:accogliente-agenzie-angolo-appartamento-arredato-arredo-autonomo-balcone-biesposto-bilocale-blindata-camera-caminetto-completamente-confortevole-contratto-coppia-cucina-dicembre-divano-doccia-farmacie-finemente-formato-indeterminato"
+   ]
+  },
+  {
+   "id": "esc-20260907181218-16",
+   "titolo": "BILOCALE ",
+   "via": "",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/bilocale-milano-659802354.htm",
+   "inserzionista": "",
+   "telefono": "3405931831",
+   "motivo": "l'annuncio dichiara l'agenzia («intermediazion»)",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-07",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/bilocale-milano-659802354.htm",
+    "rif:subito:659802354",
+    "tel:405931831",
+    "foto:e74bb93f-eff1-4e6c-ae2f-c3c5a50e5963",
+    "foto:06208dc1-619a-492b-8093-f6994d14d2d9",
+    "foto:215ef374-7a47-461b-8b7a-518a55572db3",
+    "testo:noagenzieaffittozonaisolaapochimetridallametrogioiaeapocadistanzadallastazionecentralepiccolobilocalecompostodaingressos",
+    "parole:affitto-agenzie-allarme-appartamento-arredato-bilocale-blindata-camera-cauzione-cedolare-centrale-centralizzato-completo-composto-condizionata-contattare-contratto-cucina-distanza-elettrodomestici-estermo-finestrato-ingresso-intermediazione-interno"
+   ]
   }
  ],
- "conteggio": 10,
- "id": "esclusi-202609070950"
+ "conteggio": 16,
+ "id": "esclusi-202609071812"
 }

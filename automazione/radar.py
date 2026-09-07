@@ -33,7 +33,13 @@ ATTORE = "emastra/subito-it-immobili"
 CAMPI = ("page_url,title,type,description,price,publication_date,advertiser,location,features,images,"
          "isPrivateAdvertiser")
 RITAGLIO = "?rule=vertical-mini-card-2x-auto"
+# TETTO_MESE e' solo il ripiego di partenza: il tetto vero lo dice Apify a ogni giro
+# (`credito()`), e da li' si ricava quello operativo. Scriverlo a mano e' stato un errore
+# che si e' visto il 07/09/2026: passando al piano Starter il radar ha continuato a
+# razionare come se avesse ancora i 5 $ gratuiti, tenendosi a sei annunci al giorno con
+# diciannove dollari inutilizzati in cassa.
 TETTO_MESE, NUOVI, VERIFICHE, GIORNI = 4.20, 20, 20, 10
+MARGINE = 0.90      # si lavora al 90% del piano: oltre il prepagato Apify addebita l'eccesso
 COSTO_PEZZO = 0.006          # ~0,005 $ per annuncio, con un filo di margine
 LOTTO_VERIFICA = 20          # la chiamata sincrona di Apify scade a 300 s: si va a lotti
 OGGI = datetime.date.today()
@@ -176,6 +182,13 @@ def credito():
         # senza la data vera si assume il primo del mese prossimo: e' la stima piu' prudente
         fine = (OGGI.replace(day=28) + datetime.timedelta(days=4)).replace(day=1) - datetime.timedelta(days=1)
     return speso, tetto, fine
+
+
+def tetto_operativo(tetto):
+    """Il tetto a cui il radar si ferma davvero: una fetta sotto il piano, perche' sul
+    piano a pagamento superare il prepagato non ferma il giro — lo addebita. Un margine
+    del dieci per cento costa qualche annuncio e toglie di mezzo le sorprese in fattura."""
+    return round(max(1.0, float(tetto) * MARGINE), 2)
 
 
 def razione_del_giorno(speso, fine_ciclo):
@@ -555,7 +568,11 @@ def main():
             rep["note"].append(f"Apify non risponde, radar.json lasciato com'e': {e}")
             print(json.dumps(rep, ensure_ascii=False, indent=2))
             return 3
-        rep["credito"] = f"{speso:.2f} $ consumati su {tetto:.2f} $"
+        # il tetto operativo si prende dal piano vero, non dalla costante di ripiego
+        global TETTO_MESE
+        TETTO_MESE = tetto_operativo(tetto)
+        rep["credito"] = (f"{speso:.2f} $ consumati su {tetto:.2f} $ "
+                          f"(il radar si ferma a {TETTO_MESE:.2f} $)")
         if speso > TETTO_MESE:
             rep["note"].append(f"credito agli sgoccioli ({speso:.2f} $ su {tetto:.2f} $): niente raccolta, si riparte al rinnovo")
             print(json.dumps(rep, ensure_ascii=False, indent=2))
