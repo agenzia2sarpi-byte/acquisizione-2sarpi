@@ -24,11 +24,20 @@ const STATI = {
 
 async function caricaPosta() {
   CARICAMENTO = "";
+  /* Con un tetto di dieci secondi: una rete che non risponde e non fallisce nemmeno —
+     la copertura a una tacca, il treno in galleria — lascerebbe la pagina a «sto leggendo»
+     per sempre, che a chi guarda somiglia a un blocco. Meglio dire che non si e' letto. */
   const prendi = async (f, chiave) => {
-    const r = await fetch(`dati/${f}?t=` + Date.now(), { cache: "no-store" });
-    if (!r.ok) throw new Error(f);
-    const d = await r.json();
-    return chiave ? (d[chiave] || []) : d;
+    const taglio = new AbortController();
+    const t = setTimeout(() => taglio.abort(), 10000);
+    try {
+      const r = await fetch(`dati/${f}?t=` + Date.now(), { cache: "no-store", signal: taglio.signal });
+      if (!r.ok) throw new Error(f);
+      const d = await r.json();
+      return chiave ? (d[chiave] || []) : d;
+    } finally {
+      clearTimeout(t);
+    }
   };
   try { POSTA = await prendi("posta.json"); }
   catch (e) { POSTA = null; CARICAMENTO = "Il registro della posta non c'e' ancora: nessuna mail e' mai partita da questo impianto."; }
@@ -78,8 +87,12 @@ function partiteOggi(tutte) {
 
 function vistaPosta() {
   if (POSTA === null && !STUDI.length) {
-    return testa("La posta", "Mail agli amministratori", "Sto leggendo il registro…") +
-      `<div class="vuoto">Un attimo.</div>`;
+    return testa("La posta", "Mail agli amministratori",
+                 CARICAMENTO ? esc(CARICAMENTO) : "Sto leggendo il registro…") +
+      (CARICAMENTO
+        ? `<div class="avviso rosso"><b>Non ho letto i dati</b>${esc(CARICAMENTO)}
+             <br>La pagina funziona lo stesso: premi ↻ in alto a destra per riprovare.</div>`
+        : `<div class="vuoto">Un attimo…</div>`);
   }
   const tutte = righe();
   const inviate = tutte.filter(v => v.stato === "inviata");
@@ -219,4 +232,16 @@ Object.assign(AZIONI, {
   }
 });
 
-caricaPosta().then(() => avviaPagina(render));
+/* L'ordine conta, ed e' l'errore che ha prodotto una pagina bianca senza vie d'uscita il
+   07/09/2026: prima si costruiva la pagina e *poi* si disegnava il guscio, cosi' finche' i
+   due file non arrivavano non c'era niente — nemmeno la freccia indietro e il tasto
+   aggiorna. E nell'app sulla schermata Home non c'e' la barra del browser: restare senza
+   guscio vuol dire restare in trappola, e l'unica uscita e' chiudere l'applicazione.
+
+   Adesso il guscio si disegna per primo, sempre, prima di toccare la rete. I dati arrivano
+   dopo e la pagina si ridisegna da sola. Se non arrivano affatto, resta comunque una pagina
+   con la navigazione, che dice cos'e' andato storto. */
+avviaPagina(render);
+caricaPosta()
+  .catch(e => { CARICAMENTO = "Non sono riuscito a leggere il registro della posta: " + (e && e.message ? e.message : e); })
+  .then(() => render());
