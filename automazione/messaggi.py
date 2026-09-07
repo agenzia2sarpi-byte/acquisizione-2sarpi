@@ -84,6 +84,32 @@ def scrivi_registro(d):
     os.chmod(REGISTRO, 0o600)   # ci sono dentro numeri di persone
 
 
+# Quello che a Ciro non si manda. Non e' un giudizio sull'immobile: e' che una vendita a
+# reddito e un usufrutto non sono acquisizioni ordinarie — il proprietario non vende casa
+# sua, vende un investimento o un diritto — e la telefonata parte da un discorso diverso.
+# Frasi intere e non parole sciolte, apposta: «inquilino» da solo compare negli affitti in
+# modo del tutto innocente («cerco inquilino serio») e da solo butterebbe via annunci buoni.
+FUORI = re.compile(
+    r"a\s+reddito"
+    r"|reddito\s+garantito"
+    r"|nuda\s+propriet"
+    r"|usufrutt"
+    r"|gi[aà]\s+(?:affittat|locat)"
+    r"|attualmente\s+(?:affittat|locat)"
+    r"|con\s+inquilin"
+    r"|inquilin\w*\s+in\s+essere"
+    r"|contratto\s+in\s+essere"
+    r"|cedol\w*\s+in\s+corso",
+    re.I)
+
+
+def da_scartare(a):
+    """(vero, motivo) se l'annuncio non deve andare a Ciro."""
+    testo = f"{a.get('titolo') or ''} {a.get('descrizione') or ''}"
+    m = FUORI.search(testo)
+    return (True, m.group(0).strip()) if m else (False, "")
+
+
 def scegli(dati, reg, quanti):
     """I migliori ancora da mandare. L'ordine e' quello che il radar ha gia' calcolato:
     il punteggio tiene conto di prezzo fuori mercato, giorni online, foto scarse e
@@ -93,7 +119,8 @@ def scegli(dati, reg, quanti):
              if a.get("telefono")
              and a.get("privato") is not False
              and not a.get("noAgenzie")
-             and a.get("url") not in fuori]
+             and a.get("url") not in fuori
+             and not da_scartare(a)[0]]
     buoni.sort(key=lambda a: -(a.get("priorita") or 0))
     return buoni[:quanti]
 
