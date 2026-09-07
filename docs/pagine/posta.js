@@ -13,8 +13,14 @@ let CARICAMENTO = "";     // cosa dire se i file non arrivano
 
 const OBIETTIVO_GIORNO = 10;
 
-/* Gli stati, in ordine di quanto contano per chi guarda la pagina. */
-const STATI = {
+/* Gli stati, in ordine di quanto contano per chi guarda la pagina.
+
+   Il nome porta il suffisso _POSTA e non e' pignoleria: si chiamava STATI, e STATI esiste
+   gia' in `js/contenuti.js`, che si carica prima. Due `const` con lo stesso nome nello
+   stesso ambito globale non sono un avviso, sono un errore di sintassi: il browser scarta
+   **tutto il file** senza eseguirne una riga. La pagina restava bianca, senza guscio e
+   senza messaggio, e non c'era niente da leggere da nessuna parte. */
+const STATI_POSTA = {
   inviata: { et: "Inviata", p: "v" },
   "in coda": { et: "In coda", p: "a" },
   errore: { et: "Non partita", p: "r" },
@@ -146,7 +152,7 @@ function vistaPosta() {
   </div>`;
 
   const riga = v => {
-    const s = STATI[v.stato] || STATI.mai;
+    const s = STATI_POSTA[v.stato] || STATI_POSTA.mai;
     const n = v.nota || {};
     return `<tr>
       <td><span class="pallino ${s.p}"></span>
