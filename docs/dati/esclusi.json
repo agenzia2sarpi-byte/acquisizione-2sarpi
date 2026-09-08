@@ -1,5 +1,5 @@
 {
- "generato": "2026-09-07T18:12:41",
+ "generato": "2026-09-08T09:16:29",
  "esclusi": [
   {
    "id": "esc-20260826095259-1",
@@ -297,17 +297,19 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-09-07",
-   "ricomparse": 0,
+   "ricomparse": 1,
    "impronte": [
-    "url:subito.it/appartamenti/bilocale-nuovo-con-posto-auto-e-cantina-milano-659809681.htm",
-    "rif:subito:659809681",
-    "ind:ripamonti|1|50|loc",
-    "foto:ded2b919-597c-41db-8c14-af187a150bc2",
-    "foto:af193a88-dbfa-41c8-86b9-130b4c698f51",
     "foto:9b3ac489-4113-4382-b107-8b02fdd9ab74",
+    "foto:af193a88-dbfa-41c8-86b9-130b4c698f51",
+    "foto:ded2b919-597c-41db-8c14-af187a150bc2",
+    "ind:ripamonti|1|50|loc",
+    "parole:accessori-affitto-ancora-appartamento-arredato-arredo-attiva-bilocale-camera-cantina-classe-completamente-condizionata-consegnato-controllata-coperto-costruzione-cucina-direttamente-dotazioni-energetica-esclusivo-forniti-futuro-giorno",
+    "rif:subito:659809681",
+    "testo:affittobilocalenuovoarredatodicirca50mqall8pianodellazenithtowersconpostoautocopertoprivatoalpianoseminterratoeunacantin",
     "testo:danovembreaffittobilocalenuovoarredatodicirca50mqall8pianodellazenithtowersconpostoautocopertoprivatoalpianoseminterrato",
-    "parole:accessori-affitto-ancora-appartamento-arredato-arredo-attiva-bilocale-camera-cantina-classe-completamente-condizionata-consegnato-controllata-coperto-costruzione-cucina-direttamente-dotazioni-energetica-esclusivo-forniti-futuro-giorno"
-   ]
+    "url:subito.it/appartamenti/bilocale-nuovo-con-posto-auto-e-cantina-milano-659809681.htm"
+   ],
+   "rivisto": "2026-09-08"
   },
   {
    "id": "esc-20260907181127-12",
@@ -429,8 +431,81 @@
     "testo:noagenzieaffittozonaisolaapochimetridallametrogioiaeapocadistanzadallastazionecentralepiccolobilocalecompostodaingressos",
     "parole:affitto-agenzie-allarme-appartamento-arredato-bilocale-blindata-camera-cauzione-cedolare-centrale-centralizzato-completo-composto-condizionata-contattare-contratto-cucina-distanza-elettrodomestici-estermo-finestrato-ingresso-intermediazione-interno"
    ]
+  },
+  {
+   "id": "esc-20260908091629-17",
+   "titolo": "Appartamento moderno a 15 minuti dal centro",
+   "via": "Piazzale Luigi Emanuele Corvetto",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/appartamento-moderno-a-15-minuti-dal-centro-milano-659869390.htm",
+   "inserzionista": "",
+   "telefono": "",
+   "motivo": "l'annuncio dichiara l'agenzia («intermediazion»)",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-08",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/appartamento-moderno-a-15-minuti-dal-centro-milano-659869390.htm",
+    "rif:subito:659869390",
+    "ind:luigi emanuele corvetto||78|ven",
+    "foto:32f54226-abf4-4312-b2ae-3e5ee59ec108",
+    "foto:dab04ddf-d257-4e1e-9ca9-0b73a9c94f99",
+    "foto:f92d23af-6272-46da-908a-4fb2cb4f0ac4",
+    "testo:splendidotrilocaleristrutturatodirecenteconduecamerematrimonialiognunaconpropriobagnopostetraampiosoggiornoecucinainmodo",
+    "parole:agenzie-ambiente-ascensore-camera-camere-collegate-colonna-comfort-completamente-composta-condominiale-conduce-convivialita-corvetto-cottura-cucina-dotata-dotato-elegante-essere-frigorifero-funzionale-gialla-giardino-ideale"
+   ]
+  },
+  {
+   "id": "esc-20260908091629-18",
+   "titolo": "Monolocale Viale Washington ",
+   "via": "Viale Washington 5",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/monolocale-viale-washington-milano-659154728.htm",
+   "inserzionista": "",
+   "telefono": "",
+   "motivo": "l'annuncio dichiara l'agenzia («spese di agenzi»)",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-08",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/monolocale-viale-washington-milano-659154728.htm",
+    "rif:subito:659154728",
+    "ind:washington|5|25|ven",
+    "foto:d4f11c85-11ea-4b94-9dd9-563d380c95bd",
+    "foto:d72a55bb-0753-42b5-a4b6-1a8e128ab280",
+    "foto:4d31b294-fbbc-4792-a256-349cb332e87a",
+    "testo:disponibiledasubitomonolocaledi25mqinvialewashingtonvicinometroblubolivaremetrorossawagnerlappartamentoestatorecentement",
+    "parole:agenzia-appartamento-bolivar-canone-cauzionale-chiavi-compresa-comprese-condizionata-condominiali-confort-consegna-deposito-disponibile-dotato-escluse-inferiori-mensilita-monolocale-periodi-recentemente-restano-richiedono-riscaldamento-ristrutturato"
+   ]
+  },
+  {
+   "id": "esc-20260908091629-19",
+   "titolo": "Trilocale niguarda",
+   "via": "Via Luigi Ornato 44",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/trilocale-niguarda-milano-651857047.htm",
+   "inserzionista": "Gabriele",
+   "telefono": "3939256777",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-08",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/trilocale-niguarda-milano-651857047.htm",
+    "rif:subito:651857047",
+    "tel:939256777",
+    "ind:luigi ornato|44|40|loc",
+    "foto:d24d110d-b58c-4c39-bd29-b19a536d1913",
+    "foto:45f4c349-2143-45f9-8cda-83ec80b0b35f",
+    "foto:09285029-e31d-4517-95ce-716858cd6c7d",
+    "testo:appartamentositoalterzopianosenzaascensoreinvialuigiornato44vicinoospedaleniguardaeuniversitabicoccacontrameautobuscolle",
+    "parole:3939256777-appartamento-ascensore-autobus-bicocca-centro-chiamare-collegati-compreso-condominiali-disponibile-grazie-metropolitane-milano-niguarda-ornato-ospedale-riscaldamento-subito-trilocale-universita-vicino"
+   ]
   }
  ],
- "conteggio": 16,
- "id": "esclusi-202609071812"
+ "conteggio": 19,
+ "id": "esclusi-202609080916"
 }
