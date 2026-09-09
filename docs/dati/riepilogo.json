@@ -4,72 +4,46 @@
  "ribassati": 0,
  "verificati": [],
  "spariti_nuovi": [
-  "https://www.subito.it/appartamenti/bilocale-zona-navigli-bocconi-i-milano-659305312.htm",
-  "https://www.subito.it/appartamenti/bilocale-milano-milano-659294972.htm",
-  "https://www.subito.it/appartamenti/bilocale-a-reddito-milano-659427392.htm",
-  "https://www.subito.it/appartamenti/elegante-bilocale-milano-659456734.htm",
-  "https://www.subito.it/appartamenti/appartamento-di-98-m2-piu-taverna-30-m2-collegata-milano-659563510.htm",
-  "https://www.subito.it/appartamenti/trilocale-in-stabile-d-epoca-luminos-milano-659527088.htm",
-  "https://www.subito.it/appartamenti/attico-milano-659507387.htm",
-  "https://www.subito.it/appartamenti/bilocale-in-contesto-tipico-milano-659581324.htm",
-  "https://www.subito.it/appartamenti/mm-brenta-fondazione-prada-milano-659648282.htm",
-  "https://www.subito.it/appartamenti/ampio-bilocale-milano-644682491.htm",
-  "https://www.subito.it/appartamenti/fineviasavona-ing-sogg-camatr-cucina-b270000-milano-659760852.htm",
-  "https://www.subito.it/appartamenti/bilocale-con-cantina-milano-659758749.htm",
-  "https://www.subito.it/appartamenti/appartamento-via-gallarate-311-13-milano-milano-659753911.htm",
-  "https://www.subito.it/appartamenti/trilocale-a-milano-greco-gioia-milano-659745310.htm",
-  "https://www.subito.it/appartamenti/privato-bilocale-arredato-m5-segesta-milano-659733008.htm",
-  "https://www.subito.it/appartamenti/bilocale-arredato-zona-portello-milano-milano-659724101.htm",
-  "https://www.subito.it/appartamenti/metro-brenta-fondazione-prada-milano-659772722.htm",
-  "https://www.subito.it/appartamenti/ampio-monolocale-con-balcone-e-finestra-con-ingres-milano-635868854.htm",
-  "https://www.subito.it/appartamenti/bilocale-ristrutturato-arredato-nuovo-milano-659420304.htm",
-  "https://www.subito.it/appartamenti/trilocale-in-corso-lodi-milano-milano-659846612.htm",
-  "https://www.subito.it/appartamenti/bilocale-funzionale-e-luminoso-milano-659845565.htm",
-  "https://www.subito.it/appartamenti/privato-affitta-arredato-via-valtellina-isola-milano-659841070.htm",
-  "https://www.subito.it/appartamenti/trilocale-in-via-termopili-zona-nolo-milano-milano-655041789.htm",
-  "https://www.subito.it/appartamenti/bilocale-ristrutturato-e-arredato-milano-659161558.htm",
-  "https://www.subito.it/appartamenti/appartamento-bilocale-arredato-affori-centro-milano-653864656.htm",
-  "https://www.subito.it/appartamenti/viale-bligny-angolo-via-bocconi-milano-659068070.htm",
-  "https://www.subito.it/appartamenti/quadrilocale-due-appartamenti-collegati-tra-loro-milano-659241666.htm",
-  "https://www.subito.it/appartamenti/bilocale-arredato-e-corredato-milano-659113587.htm",
-  "https://www.subito.it/appartamenti/bilocale-zona-affori-milano-659467354.htm",
-  "https://www.subito.it/appartamenti/monolocale-iulm-s-paolo-navigli-milano-659802021.htm",
-  "https://www.subito.it/appartamenti/bovisa-politecnico-bilocale-ristrutturato-a-nuovo-milano-659800216.htm",
-  "https://www.subito.it/appartamenti/monolocale-o-bilocale-prov-milano-milano-659791779.htm"
+  "https://www.subito.it/appartamenti/bilocale-zona-bocconi-vigentino-milano-659454712.htm",
+  "https://www.subito.it/appartamenti/trilocale-ristrutturato-ed-arredato-milano-mm-zara-milano-659797056.htm",
+  "https://www.subito.it/appartamenti/appartamento-in-viale-bligny-42-milano-659789641.htm",
+  "https://www.subito.it/appartamenti/grazioso-ampio-monolocale-milano-659824293.htm",
+  "https://www.subito.it/appartamenti/bilocale-51-mq-con-posto-auto-milano-658999550.htm",
+  "https://www.subito.it/appartamenti/privato-trilocale-con-2-camere-libero-1-settembre-milano-651150349.htm"
  ],
  "potati": 0,
  "note": [],
- "credito": "0.92 $ consumati su 19.00 $ (il radar si ferma a 17.10 $)",
- "razione": "24 nuovi + 36 verifiche: 16.18 $ da qui al 2026-10-06 (29 giorni)",
- "tolti_dalla_vista": 38,
+ "credito": "1.17 $ consumati su 19.00 $ (il radar si ferma a 17.10 $)",
+ "razione": "24 nuovi + 36 verifiche: 15.93 $ da qui al 2026-10-06 (28 giorni)",
+ "tolti_dalla_vista": 12,
  "indirizzi_completati": 10,
  "inserzionisti": {
-  "privato": 12,
+  "privato": 9,
   "da verificare": 0,
-  "probabile agenzia": 4
+  "probabile agenzia": 7
  },
  "quartieri_con_mediana": 0,
  "esclusi_nuovi": 3,
- "esclusi_ricomparsi": 1,
- "esclusi_in_archivio": 19,
+ "esclusi_ricomparsi": 4,
+ "esclusi_in_archivio": 22,
  "esclusi_elenco": [
   {
-   "via": "Piazzale Luigi Emanuele Corvetto",
-   "inserzionista": "",
-   "motivo": "l'annuncio dichiara l'agenzia («intermediazion»)"
+   "via": "Via dei Fiordalisi 5",
+   "inserzionista": "Daniele",
+   "motivo": "il portale lo classifica come annuncio di agenzia"
   },
   {
-   "via": "Viale Washington 5",
-   "inserzionista": "",
-   "motivo": "l'annuncio dichiara l'agenzia («spese di agenzi»)"
+   "via": "Via Ortica",
+   "inserzionista": "stefania",
+   "motivo": "il portale lo classifica come annuncio di agenzia"
   },
   {
-   "via": "Via Luigi Ornato 44",
-   "inserzionista": "Gabriele",
+   "via": "Via San Benigno 4",
+   "inserzionista": "Rosina",
    "motivo": "il portale lo classifica come annuncio di agenzia"
   }
  ],
- "nuovi_in_vista": 6,
+ "nuovi_in_vista": 3,
  "da_chiamare": [
   {
    "priorita": 33,
@@ -80,7 +54,7 @@
    "prezzo": 1700.0,
    "mq": 75.0,
    "tipo": "Locazione",
-   "giorni": 0,
+   "giorni": 1,
    "telefono": "3318021219",
    "qualitaImmobile": 79,
    "inserzionista": "privato",
@@ -92,44 +66,24 @@
    "url": "https://www.subito.it/appartamenti/stabile-vecchia-milano-milano-659901679.htm"
   },
   {
-   "priorita": 26,
-   "via": "Viale Bligny",
-   "civico": "42",
+   "priorita": 29,
+   "via": "Piazza Firenze",
+   "civico": "27",
    "quartiere": "",
-   "zona": "Centro storico e semicentro di pregio",
-   "prezzo": 800.0,
-   "mq": 27.0,
-   "tipo": "Locazione",
+   "zona": "Fascia media urbana",
+   "prezzo": 253000.0,
+   "mq": 55.0,
+   "tipo": "Vendita",
    "giorni": 1,
-   "telefono": "3496740435",
-   "qualitaImmobile": 50,
+   "telefono": "3933324730",
+   "qualitaImmobile": 92,
    "inserzionista": "privato",
    "perche": [
-    "Foto: scarse",
-    "Prezzo di zona non confrontabile",
-    "Telefono pubblicato"
+    "Qualita' dell'immobile 92/100",
+    "Provvigione stimata 7.590 €",
+    "Foto: medie"
    ],
-   "url": "https://www.subito.it/appartamenti/appartamento-in-viale-bligny-42-milano-659789641.htm"
-  },
-  {
-   "priorita": 26,
-   "via": "Via Mecenate",
-   "civico": "",
-   "quartiere": "",
-   "zona": "Fascia accessibile",
-   "prezzo": 800.0,
-   "mq": 35.0,
-   "tipo": "Locazione",
-   "giorni": 1,
-   "telefono": "",
-   "qualitaImmobile": 71,
-   "inserzionista": "privato",
-   "perche": [
-    "Foto: scarse",
-    "Testo: scarno",
-    "Prezzo di zona non confrontabile"
-   ],
-   "url": "https://www.subito.it/appartamenti/grazioso-ampio-monolocale-milano-659824293.htm"
+   "url": "https://www.subito.it/appartamenti/bilocale-arredato-zona-greco-milano-659972906.htm"
   },
   {
    "priorita": 22,
@@ -140,7 +94,7 @@
    "prezzo": null,
    "mq": 70.0,
    "tipo": "Vendita",
-   "giorni": 0,
+   "giorni": 1,
    "telefono": "",
    "qualitaImmobile": 64,
    "inserzionista": "privato",
@@ -160,7 +114,7 @@
    "prezzo": 1050.0,
    "mq": 60.0,
    "tipo": "Locazione",
-   "giorni": 0,
+   "giorni": 1,
    "telefono": "",
    "qualitaImmobile": 91,
    "inserzionista": "privato",
@@ -172,7 +126,7 @@
    "url": "https://www.subito.it/appartamenti/bilocale-arredato-milano-649348033.htm"
   },
   {
-   "priorita": 18,
+   "priorita": 19,
    "via": "",
    "civico": "",
    "quartiere": "Bande Nere",
@@ -180,7 +134,7 @@
    "prezzo": 1300.0,
    "mq": 60.0,
    "tipo": "Locazione",
-   "giorni": 0,
+   "giorni": 1,
    "telefono": "",
    "qualitaImmobile": 87,
    "inserzionista": "privato",
@@ -192,44 +146,24 @@
    "url": "https://www.subito.it/appartamenti/bilocale-60mq-arredato-m1bande-nere-m4-gelsomi-milano-659113593.htm"
   },
   {
-   "priorita": 16,
+   "priorita": 13,
    "via": "",
    "civico": "",
-   "quartiere": "Brenta",
-   "zona": "Fascia media urbana",
-   "prezzo": 1400.0,
-   "mq": 80.0,
+   "quartiere": "Cimiano",
+   "zona": "Fascia accessibile",
+   "prezzo": 700.0,
+   "mq": 45.0,
    "tipo": "Locazione",
    "giorni": 0,
    "telefono": "",
-   "qualitaImmobile": 79,
+   "qualitaImmobile": 72,
    "inserzionista": "privato",
    "perche": [
-    "Qualita' dell'immobile 79/100",
+    "Qualita' dell'immobile 72/100",
     "Prezzo di zona non confrontabile",
     "Foto: medie"
    ],
-   "url": "https://www.subito.it/appartamenti/privato-trilocale-con-2-camere-libero-1-settembre-milano-651150349.htm"
-  },
-  {
-   "priorita": 14,
-   "via": "Via privata Bettino da Trezzo",
-   "civico": "3",
-   "quartiere": "",
-   "zona": "Fascia media urbana",
-   "prezzo": 1150.0,
-   "mq": 51.0,
-   "tipo": "Locazione",
-   "giorni": 1,
-   "telefono": "",
-   "qualitaImmobile": 73,
-   "inserzionista": "privato",
-   "perche": [
-    "Qualita' dell'immobile 73/100",
-    "Prezzo di zona non confrontabile",
-    "Foto: medie"
-   ],
-   "url": "https://www.subito.it/appartamenti/bilocale-51-mq-con-posto-auto-milano-658999550.htm"
+   "url": "https://www.subito.it/appartamenti/bilocale-50-metri-m2-cimiano-milano-660047557.htm"
   },
   {
    "priorita": 8,
@@ -240,7 +174,7 @@
    "prezzo": null,
    "mq": 32.0,
    "tipo": "Locazione",
-   "giorni": 1,
+   "giorni": 2,
    "telefono": "",
    "qualitaImmobile": 50,
    "inserzionista": "privato",
@@ -252,6 +186,26 @@
    "url": "https://www.subito.it/appartamenti/in-zona-crocetta-a-milano-milano-659871400.htm"
   },
   {
+   "priorita": 8,
+   "via": "Via Giuseppe Ripamonti",
+   "civico": "288",
+   "quartiere": "",
+   "zona": "Fascia media urbana",
+   "prezzo": 900.0,
+   "mq": 200.0,
+   "tipo": "Locazione",
+   "giorni": 0,
+   "telefono": "",
+   "qualitaImmobile": 52,
+   "inserzionista": "privato",
+   "perche": [
+    "Prezzo di zona non confrontabile",
+    "Foto: medie",
+    "Provvigione stimata 1.944 €"
+   ],
+   "url": "https://www.subito.it/appartamenti/bilocale-zona-ripamonti-milano-milano-660054806.htm"
+  },
+  {
    "priorita": 4,
    "via": "Via Mambretti",
    "civico": "",
@@ -260,7 +214,7 @@
    "prezzo": 750.0,
    "mq": 17.0,
    "tipo": "Locazione",
-   "giorni": 4,
+   "giorni": 5,
    "telefono": "",
    "qualitaImmobile": 38,
    "inserzionista": "privato",
@@ -272,6 +226,6 @@
    "url": "https://www.subito.it/appartamenti/monolocale-ristrutturato-milano-659186914.htm"
   }
  ],
- "quando": "2026-09-08T09:16:29+00:00",
+ "quando": "2026-09-09T09:19:02+00:00",
  "origine": "GitHub Actions"
 }

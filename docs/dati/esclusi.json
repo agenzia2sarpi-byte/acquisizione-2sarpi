@@ -1,5 +1,5 @@
 {
- "generato": "2026-09-08T09:16:29",
+ "generato": "2026-09-09T09:19:02",
  "esclusi": [
   {
    "id": "esc-20260826095259-1",
@@ -220,17 +220,26 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-08-31",
-   "ricomparse": 0,
+   "ricomparse": 1,
    "impronte": [
-    "url:subito.it/appartamenti/bilocale-milano-zona-niguarda-milano-658301245.htm",
-    "rif:subito:658301245",
-    "tel:206743623",
     "foto:1b003eb0-20b2-4b25-927f-b1a8e8b56050",
-    "foto:b5a2b553-0975-4d1f-8ea9-79f9e8cc581c",
+    "foto:36acdca1-34f1-4bc9-8e84-ab20d71396dc",
     "foto:38c68286-d7c3-4bb1-b3ed-53347d0e941f",
+    "foto:6a6639e4-f213-47bb-80e7-1d47ee17f4d8",
+    "foto:87d211a8-480d-46a3-9a85-88bd1b279f87",
+    "foto:b5a2b553-0975-4d1f-8ea9-79f9e8cc581c",
+    "ind:privata giuseppe ugolini|27|52|ven",
+    "parole:100eur-abitabile-abitativo-affacciato-affitta-agenzie-altamente-ascensore-autonomo-balcone-bilocale-caldaia-calore-camera-canone-cantina-classe-climatizzatori-condominiale-condominiali-contatto-contesto-costruzione-cottura-cucina",
+    "parole:abitabile-affacciato-agenzie-ascensore-autonomo-balcone-bilocale-calore-camera-cantina-classe-climatizzatori-condominiale-contesto-costruzione-cucina-curato-elegante-energetica-livello-recente-riscaldamento-riservato-soggiorno-strada",
+    "rif:subito:658301245",
+    "rif:subito:660049614",
+    "tel:206743623",
     "testo:inuncontestodirecentecostruzioneelegantetranquilloebencuratosiaffittabilocaledi52mqsitoal2pianoconascensoresulpianoincon",
-    "parole:100eur-abitabile-abitativo-affacciato-affitta-agenzie-altamente-ascensore-autonomo-balcone-bilocale-caldaia-calore-camera-canone-cantina-classe-climatizzatori-condominiale-condominiali-contatto-contesto-costruzione-cottura-cucina"
-   ]
+    "testo:inuncontestodirecentecostruzioneelegantetranquilloebencuratosivendebilocaledi52mqsitoal2pianoconascensoresulpianoinconte",
+    "url:subito.it/appartamenti/bilocale-milano-zona-niguarda-milano-658301245.htm",
+    "url:subito.it/appartamenti/bilocale-milano-zona-niguarda-milano-660049614.htm"
+   ],
+   "rivisto": "2026-09-09"
   },
   {
    "id": "esc-20260902092248-9",
@@ -297,7 +306,7 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-09-07",
-   "ricomparse": 1,
+   "ricomparse": 2,
    "impronte": [
     "foto:9b3ac489-4113-4382-b107-8b02fdd9ab74",
     "foto:af193a88-dbfa-41c8-86b9-130b4c698f51",
@@ -309,7 +318,7 @@
     "testo:danovembreaffittobilocalenuovoarredatodicirca50mqall8pianodellazenithtowersconpostoautocopertoprivatoalpianoseminterrato",
     "url:subito.it/appartamenti/bilocale-nuovo-con-posto-auto-e-cantina-milano-659809681.htm"
    ],
-   "rivisto": "2026-09-08"
+   "rivisto": "2026-09-09"
   },
   {
    "id": "esc-20260907181127-12",
@@ -444,17 +453,18 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-09-08",
-   "ricomparse": 0,
+   "ricomparse": 1,
    "impronte": [
-    "url:subito.it/appartamenti/appartamento-moderno-a-15-minuti-dal-centro-milano-659869390.htm",
-    "rif:subito:659869390",
-    "ind:luigi emanuele corvetto||78|ven",
     "foto:32f54226-abf4-4312-b2ae-3e5ee59ec108",
     "foto:dab04ddf-d257-4e1e-9ca9-0b73a9c94f99",
     "foto:f92d23af-6272-46da-908a-4fb2cb4f0ac4",
+    "ind:luigi emanuele corvetto||78|ven",
+    "parole:agenzie-ambiente-ascensore-camera-camere-collegate-colonna-comfort-completamente-composta-condominiale-conduce-convivialita-corvetto-cottura-cucina-dotata-dotato-elegante-essere-frigorifero-funzionale-gialla-giardino-ideale",
+    "rif:subito:659869390",
     "testo:splendidotrilocaleristrutturatodirecenteconduecamerematrimonialiognunaconpropriobagnopostetraampiosoggiornoecucinainmodo",
-    "parole:agenzie-ambiente-ascensore-camera-camere-collegate-colonna-comfort-completamente-composta-condominiale-conduce-convivialita-corvetto-cottura-cucina-dotata-dotato-elegante-essere-frigorifero-funzionale-gialla-giardino-ideale"
-   ]
+    "url:subito.it/appartamenti/appartamento-moderno-a-15-minuti-dal-centro-milano-659869390.htm"
+   ],
+   "rivisto": "2026-09-09"
   },
   {
    "id": "esc-20260908091629-18",
@@ -492,20 +502,96 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-09-08",
-   "ricomparse": 0,
+   "ricomparse": 1,
    "impronte": [
-    "url:subito.it/appartamenti/trilocale-niguarda-milano-651857047.htm",
+    "foto:09285029-e31d-4517-95ce-716858cd6c7d",
+    "foto:45f4c349-2143-45f9-8cda-83ec80b0b35f",
+    "foto:d24d110d-b58c-4c39-bd29-b19a536d1913",
+    "ind:luigi ornato|44|40|loc",
+    "parole:3939256777-appartamento-ascensore-autobus-bicocca-centro-chiamare-collegati-compreso-condominiali-disponibile-grazie-metropolitane-milano-niguarda-ornato-ospedale-riscaldamento-subito-trilocale-universita-vicino",
     "rif:subito:651857047",
     "tel:939256777",
-    "ind:luigi ornato|44|40|loc",
-    "foto:d24d110d-b58c-4c39-bd29-b19a536d1913",
-    "foto:45f4c349-2143-45f9-8cda-83ec80b0b35f",
-    "foto:09285029-e31d-4517-95ce-716858cd6c7d",
     "testo:appartamentositoalterzopianosenzaascensoreinvialuigiornato44vicinoospedaleniguardaeuniversitabicoccacontrameautobuscolle",
-    "parole:3939256777-appartamento-ascensore-autobus-bicocca-centro-chiamare-collegati-compreso-condominiali-disponibile-grazie-metropolitane-milano-niguarda-ornato-ospedale-riscaldamento-subito-trilocale-universita-vicino"
+    "url:subito.it/appartamenti/trilocale-niguarda-milano-651857047.htm"
+   ],
+   "rivisto": "2026-09-09"
+  },
+  {
+   "id": "esc-20260909091902-20",
+   "titolo": "Splendido bilocale completamente ristrutturato",
+   "via": "Via dei Fiordalisi 5",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/splendido-bilocale-completamente-ristrutturato-milano-659952475.htm",
+   "inserzionista": "Daniele",
+   "telefono": "3281682712",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-09",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/splendido-bilocale-completamente-ristrutturato-milano-659952475.htm",
+    "rif:subito:659952475",
+    "tel:281682712",
+    "ind:dei fiordalisi|5|40|loc",
+    "foto:44253b42-e244-4c74-8968-32a6d775fd99",
+    "foto:062b78e2-8519-40d1-9654-9e70893c3378",
+    "foto:83a16f0e-bf04-475c-b5d9-0a029986dcf8",
+    "testo:splendidobilocalecompletamenteristrutturatonel2023arredatoeprontoperessereabitatoomessosubitoaredditoinviadeifiordalisi5",
+    "parole:abitato-acquistare-affrontare-aggiuntivo-antibagno-appartamento-arredata-arredato-arredi-attenzione-bilocale-camera-comfort-completa-completamente-composta-contenere-cucina-distingue-distribuzione-doccia-entrare-eseguita-esposizione-essere"
+   ]
+  },
+  {
+   "id": "esc-20260909091902-21",
+   "titolo": "Ampio bilocale cicino Città studi Argonne",
+   "via": "Via Ortica",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/ampio-bilocale-cicino-citta-studi-argonne-milano-660059226.htm",
+   "inserzionista": "stefania",
+   "telefono": "3283336921",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-09",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/ampio-bilocale-cicino-citta-studi-argonne-milano-660059226.htm",
+    "rif:subito:660059226",
+    "tel:283336921",
+    "ind:ortica||60|loc",
+    "foto:773c3f77-88c6-4758-b9cf-c6e11d9efc21",
+    "foto:03c2784f-52c4-4714-a78c-4a32fc5097ba",
+    "foto:dd098ae9-a0b9-4324-95c0-4931be441b43",
+    "testo:ampioenuovobilocaleconlocalelavanderiaeterrazzavicinocittastudiviaorticadisponibiledasubitofittasiampioappartamentobiloc",
+    "parole:appartamento-arredato-ascensore-balera-bilocale-camera-cassettone-completamente-composto-condizionata-condominio-consumo-cucinotto-disimpegno-disponibile-divano-elettrodomestici-famosa-finestrato-finiture-fittasi-include-infissi-ingresso-lavanderia"
+   ]
+  },
+  {
+   "id": "esc-20260909091902-22",
+   "titolo": "Appartamento Città Studi Milano",
+   "via": "Via San Benigno 4",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/appartamento-citta-studi-milano-milano-660044400.htm",
+   "inserzionista": "Rosina",
+   "telefono": "3386738503",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-09",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/appartamento-citta-studi-milano-milano-660044400.htm",
+    "rif:subito:660044400",
+    "tel:386738503",
+    "ind:san benigno|4|45|loc",
+    "foto:e8c0e6ff-89f7-425b-843d-153d17b82df4",
+    "foto:a2d6426b-740a-4f00-8dde-3ee0aa453546",
+    "foto:a9f03143-3294-4d07-b44c-f9f1a3712289",
+    "testo:soloperstudentistudentesseelavoratoriatempodeterminatoaffittasibilocalenuovositoinviasanbenignozonacittastudilambratequa",
+    "parole:affittasi-argonne-autobus-autonomi-benigno-bilocale-blindata-camera-centralizzato-composto-condizionatori-condominiali-consumo-cucina-determinato-elettriche-elettrico-escluse-giornata-lambrate-lavoratori-mensili-portierato-presenti-previsti"
    ]
   }
  ],
- "conteggio": 19,
- "id": "esclusi-202609080916"
+ "conteggio": 22,
+ "id": "esclusi-202609090919"
 }
