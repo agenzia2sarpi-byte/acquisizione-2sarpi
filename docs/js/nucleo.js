@@ -487,6 +487,15 @@ document.addEventListener("visibilitychange", () => {
   if (document.visibilityState === "visible") controllaVersione();
 });
 
+/* Il guscio del cruscotto sta sul dispositivo, non sulla rete: l'icona nel Dock e quella nella
+   schermata Home aprono senza la schermata bianca dell'attesa. Il radar (dati/) resta fuori
+   dalla cache — quello si vuole sempre vivo. Sta qui e non nelle pagine perche' e' guscio
+   condiviso: tredici copie da tenere allineate sono tredici occasioni di dimenticarne una.
+   L'indirizzo e' relativo apposta: il sito vive in una sottocartella di GitHub Pages. */
+if ("serviceWorker" in navigator) {
+  addEventListener("load", () => { navigator.serviceWorker.register("sw.js").catch(() => {}); });
+}
+
 /* avvio comune: ogni pagina chiama avviaPagina() */
 function avviaPagina(renderFn) {
   controllaVersione();
