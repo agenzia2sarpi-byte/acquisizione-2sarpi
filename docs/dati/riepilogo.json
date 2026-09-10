@@ -1,72 +1,75 @@
 {
  "raccolti": 22,
- "aggiunti": 16,
+ "aggiunti": 18,
  "ribassati": 0,
  "verificati": [],
  "spariti_nuovi": [
-  "https://www.subito.it/appartamenti/bilocale-zona-bocconi-vigentino-milano-659454712.htm",
-  "https://www.subito.it/appartamenti/trilocale-ristrutturato-ed-arredato-milano-mm-zara-milano-659797056.htm",
-  "https://www.subito.it/appartamenti/appartamento-in-viale-bligny-42-milano-659789641.htm",
-  "https://www.subito.it/appartamenti/grazioso-ampio-monolocale-milano-659824293.htm",
-  "https://www.subito.it/appartamenti/bilocale-51-mq-con-posto-auto-milano-658999550.htm",
-  "https://www.subito.it/appartamenti/privato-trilocale-con-2-camere-libero-1-settembre-milano-651150349.htm"
+  "https://www.subito.it/appartamenti/in-zona-crocetta-a-milano-milano-659871400.htm",
+  "https://www.subito.it/appartamenti/stabile-vecchia-milano-milano-659901679.htm",
+  "https://www.subito.it/appartamenti/coinquillina-per-trilocale-a-milano-milano-659900924.htm",
+  "https://www.subito.it/appartamenti/bilocale-zona-ripamonti-milano-milano-660054806.htm",
+  "https://www.subito.it/appartamenti/bilocale-50-metri-m2-cimiano-milano-660047557.htm"
  ],
  "potati": 0,
  "note": [],
- "credito": "1.17 $ consumati su 19.00 $ (il radar si ferma a 17.10 $)",
- "razione": "24 nuovi + 36 verifiche: 15.93 $ da qui al 2026-10-06 (28 giorni)",
- "tolti_dalla_vista": 12,
- "indirizzi_completati": 10,
+ "credito": "1.30 $ consumati su 19.00 $ (il radar si ferma a 17.10 $)",
+ "razione": "24 nuovi + 36 verifiche: 15.80 $ da qui al 2026-10-06 (27 giorni)",
+ "tolti_dalla_vista": 14,
+ "indirizzi_completati": 9,
  "inserzionisti": {
-  "privato": 9,
+  "privato": 10,
   "da verificare": 0,
-  "probabile agenzia": 7
+  "probabile agenzia": 3
  },
  "quartieri_con_mediana": 0,
- "esclusi_nuovi": 3,
- "esclusi_ricomparsi": 4,
+ "esclusi_nuovi": 0,
+ "esclusi_ricomparsi": 3,
  "esclusi_in_archivio": 22,
- "esclusi_elenco": [
-  {
-   "via": "Via dei Fiordalisi 5",
-   "inserzionista": "Daniele",
-   "motivo": "il portale lo classifica come annuncio di agenzia"
-  },
-  {
-   "via": "Via Ortica",
-   "inserzionista": "stefania",
-   "motivo": "il portale lo classifica come annuncio di agenzia"
-  },
-  {
-   "via": "Via San Benigno 4",
-   "inserzionista": "Rosina",
-   "motivo": "il portale lo classifica come annuncio di agenzia"
-  }
- ],
- "nuovi_in_vista": 3,
+ "esclusi_elenco": [],
+ "nuovi_in_vista": 6,
  "da_chiamare": [
   {
-   "priorita": 33,
-   "via": "Via Galeazzo Alessi",
-   "civico": "13",
-   "quartiere": "Conca del Naviglio",
-   "zona": "Semicentro consolidato",
-   "prezzo": 1700.0,
-   "mq": 75.0,
-   "tipo": "Locazione",
+   "priorita": 56,
+   "via": "",
+   "civico": "",
+   "quartiere": "",
+   "zona": "",
+   "prezzo": 1600000.0,
+   "mq": 120.0,
+   "tipo": "Vendita",
    "giorni": 1,
-   "telefono": "3318021219",
-   "qualitaImmobile": 79,
+   "telefono": "3358079505",
+   "qualitaImmobile": 67,
    "inserzionista": "privato",
    "perche": [
-    "Qualita' dell'immobile 79/100",
+    "Provvigione stimata 48.000 €",
+    "Foto: scarse",
+    "Testo: scarno"
+   ],
+   "url": "https://www.subito.it/appartamenti/appartamento-mq-120-capannone-mq-1-000-milano-660061922.htm"
+  },
+  {
+   "priorita": 32,
+   "via": "",
+   "civico": "",
+   "quartiere": "Abbiategrasso",
+   "zona": "Periferia esterna",
+   "prezzo": 1600.0,
+   "mq": 55.0,
+   "tipo": "Locazione",
+   "giorni": 0,
+   "telefono": "3513986753",
+   "qualitaImmobile": 85,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 85/100",
     "Prezzo di zona non confrontabile",
     "Foto: medie"
    ],
-   "url": "https://www.subito.it/appartamenti/stabile-vecchia-milano-milano-659901679.htm"
+   "url": "https://www.subito.it/appartamenti/appartamento-all-inclusive-milano-588348389.htm"
   },
   {
-   "priorita": 29,
+   "priorita": 30,
    "via": "Piazza Firenze",
    "civico": "27",
    "quartiere": "",
@@ -74,7 +77,7 @@
    "prezzo": 253000.0,
    "mq": 55.0,
    "tipo": "Vendita",
-   "giorni": 1,
+   "giorni": 2,
    "telefono": "3933324730",
    "qualitaImmobile": 92,
    "inserzionista": "privato",
@@ -86,26 +89,6 @@
    "url": "https://www.subito.it/appartamenti/bilocale-arredato-zona-greco-milano-659972906.htm"
   },
   {
-   "priorita": 22,
-   "via": "",
-   "civico": "",
-   "quartiere": "",
-   "zona": "",
-   "prezzo": null,
-   "mq": 70.0,
-   "tipo": "Vendita",
-   "giorni": 1,
-   "telefono": "",
-   "qualitaImmobile": 64,
-   "inserzionista": "privato",
-   "perche": [
-    "Foto: scarse",
-    "Testo: scarno",
-    "Prezzo di zona non confrontabile"
-   ],
-   "url": "https://www.subito.it/appartamenti/coinquillina-per-trilocale-a-milano-milano-659900924.htm"
-  },
-  {
    "priorita": 19,
    "via": "",
    "civico": "",
@@ -114,7 +97,7 @@
    "prezzo": 1050.0,
    "mq": 60.0,
    "tipo": "Locazione",
-   "giorni": 1,
+   "giorni": 2,
    "telefono": "",
    "qualitaImmobile": 91,
    "inserzionista": "privato",
@@ -134,7 +117,7 @@
    "prezzo": 1300.0,
    "mq": 60.0,
    "tipo": "Locazione",
-   "giorni": 1,
+   "giorni": 2,
    "telefono": "",
    "qualitaImmobile": 87,
    "inserzionista": "privato",
@@ -146,67 +129,47 @@
    "url": "https://www.subito.it/appartamenti/bilocale-60mq-arredato-m1bande-nere-m4-gelsomi-milano-659113593.htm"
   },
   {
-   "priorita": 13,
-   "via": "",
-   "civico": "",
-   "quartiere": "Cimiano",
+   "priorita": 18,
+   "via": "Via Dante Chiasserini",
+   "civico": "9",
+   "quartiere": "",
    "zona": "Fascia accessibile",
-   "prezzo": 700.0,
-   "mq": 45.0,
+   "prezzo": null,
+   "mq": 85.0,
    "tipo": "Locazione",
-   "giorni": 0,
+   "giorni": 1,
    "telefono": "",
-   "qualitaImmobile": 72,
+   "qualitaImmobile": 97,
    "inserzionista": "privato",
    "perche": [
-    "Qualita' dell'immobile 72/100",
+    "Qualita' dell'immobile 97/100",
     "Prezzo di zona non confrontabile",
     "Foto: medie"
    ],
-   "url": "https://www.subito.it/appartamenti/bilocale-50-metri-m2-cimiano-milano-660047557.htm"
+   "url": "https://www.subito.it/appartamenti/trilocale-a-milano-bovisa-con-box-auto-milano-660111431.htm"
   },
   {
-   "priorita": 8,
+   "priorita": 17,
    "via": "",
    "civico": "",
-   "quartiere": "Crocetta",
-   "zona": "Centro storico e semicentro di pregio",
-   "prezzo": null,
-   "mq": 32.0,
-   "tipo": "Locazione",
-   "giorni": 2,
-   "telefono": "",
-   "qualitaImmobile": 50,
-   "inserzionista": "privato",
-   "perche": [
-    "Prezzo di zona non confrontabile",
-    "Foto: medie",
-    "Testo: medio"
-   ],
-   "url": "https://www.subito.it/appartamenti/in-zona-crocetta-a-milano-milano-659871400.htm"
-  },
-  {
-   "priorita": 8,
-   "via": "Via Giuseppe Ripamonti",
-   "civico": "288",
-   "quartiere": "",
+   "quartiere": "Primaticcio",
    "zona": "Fascia media urbana",
    "prezzo": 900.0,
-   "mq": 200.0,
+   "mq": 40.0,
    "tipo": "Locazione",
-   "giorni": 0,
+   "giorni": 1,
    "telefono": "",
-   "qualitaImmobile": 52,
+   "qualitaImmobile": 86,
    "inserzionista": "privato",
    "perche": [
+    "Qualita' dell'immobile 86/100",
     "Prezzo di zona non confrontabile",
-    "Foto: medie",
-    "Provvigione stimata 1.944 €"
+    "Foto: medie"
    ],
-   "url": "https://www.subito.it/appartamenti/bilocale-zona-ripamonti-milano-milano-660054806.htm"
+   "url": "https://www.subito.it/appartamenti/primaticcio-bilocale-happy-di-40-mq-350-m-m1-milano-660144264.htm"
   },
   {
-   "priorita": 4,
+   "priorita": 5,
    "via": "Via Mambretti",
    "civico": "",
    "quartiere": "Musocco",
@@ -214,7 +177,7 @@
    "prezzo": 750.0,
    "mq": 17.0,
    "tipo": "Locazione",
-   "giorni": 5,
+   "giorni": 6,
    "telefono": "",
    "qualitaImmobile": 38,
    "inserzionista": "privato",
@@ -226,6 +189,6 @@
    "url": "https://www.subito.it/appartamenti/monolocale-ristrutturato-milano-659186914.htm"
   }
  ],
- "quando": "2026-09-09T09:19:02+00:00",
+ "quando": "2026-09-10T09:18:26+00:00",
  "origine": "GitHub Actions"
 }

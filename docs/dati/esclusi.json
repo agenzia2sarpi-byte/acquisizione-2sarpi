@@ -1,5 +1,5 @@
 {
- "generato": "2026-09-09T09:19:02",
+ "generato": "2026-09-10T09:18:26",
  "esclusi": [
   {
    "id": "esc-20260826095259-1",
@@ -220,7 +220,7 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-08-31",
-   "ricomparse": 1,
+   "ricomparse": 2,
    "impronte": [
     "foto:1b003eb0-20b2-4b25-927f-b1a8e8b56050",
     "foto:36acdca1-34f1-4bc9-8e84-ab20d71396dc",
@@ -239,7 +239,7 @@
     "url:subito.it/appartamenti/bilocale-milano-zona-niguarda-milano-658301245.htm",
     "url:subito.it/appartamenti/bilocale-milano-zona-niguarda-milano-660049614.htm"
    ],
-   "rivisto": "2026-09-09"
+   "rivisto": "2026-09-10"
   },
   {
    "id": "esc-20260902092248-9",
@@ -306,7 +306,7 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-09-07",
-   "ricomparse": 2,
+   "ricomparse": 3,
    "impronte": [
     "foto:9b3ac489-4113-4382-b107-8b02fdd9ab74",
     "foto:af193a88-dbfa-41c8-86b9-130b4c698f51",
@@ -318,7 +318,7 @@
     "testo:danovembreaffittobilocalenuovoarredatodicirca50mqall8pianodellazenithtowersconpostoautocopertoprivatoalpianoseminterrato",
     "url:subito.it/appartamenti/bilocale-nuovo-con-posto-auto-e-cantina-milano-659809681.htm"
    ],
-   "rivisto": "2026-09-09"
+   "rivisto": "2026-09-10"
   },
   {
    "id": "esc-20260907181127-12",
@@ -502,7 +502,7 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-09-08",
-   "ricomparse": 1,
+   "ricomparse": 2,
    "impronte": [
     "foto:09285029-e31d-4517-95ce-716858cd6c7d",
     "foto:45f4c349-2143-45f9-8cda-83ec80b0b35f",
@@ -514,7 +514,7 @@
     "testo:appartamentositoalterzopianosenzaascensoreinvialuigiornato44vicinoospedaleniguardaeuniversitabicoccacontrameautobuscolle",
     "url:subito.it/appartamenti/trilocale-niguarda-milano-651857047.htm"
    ],
-   "rivisto": "2026-09-09"
+   "rivisto": "2026-09-10"
   },
   {
    "id": "esc-20260909091902-20",
@@ -593,5 +593,5 @@
   }
  ],
  "conteggio": 22,
- "id": "esclusi-202609090919"
+ "id": "esclusi-202609100918"
 }
