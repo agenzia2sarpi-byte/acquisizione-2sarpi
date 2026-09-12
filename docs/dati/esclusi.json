@@ -1,5 +1,5 @@
 {
- "generato": "2026-09-11T09:16:49",
+ "generato": "2026-09-12T08:57:31",
  "esclusi": [
   {
    "id": "esc-20260826095259-1",
@@ -97,24 +97,29 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-08-31",
-   "ricomparse": 2,
+   "ricomparse": 3,
    "impronte": [
     "foto:1189f217-85eb-487d-bf17-391309f09152",
     "foto:2a222094-84a2-4b13-82ad-5757106bebfe",
     "foto:4c1a068b-87c0-4b8b-9a0a-eea94620099e",
     "foto:4d471171-7d4e-40fc-8a8a-60f1c347fed4",
     "foto:77e72ab1-f50d-4a73-87e5-3f3a23657b5d",
+    "foto:b82b07c6-9ae4-4cdd-9afa-f557e2639c8a",
+    "foto:b83a7ef2-bd85-4b3d-a1a2-6c6e092df1f7",
     "foto:caaf12e7-adc1-4804-9fcd-0b88b5ed430b",
+    "foto:f838d025-2031-4fe1-9b06-6741ed10a879",
     "ind:padova|256|39|loc",
     "parole:2134199-affaccia-affittasi-affitto-agenzie-annuale-arredato-ascensore-balconcino-comodo-composto-comprensivo-condominiali-condominio-corridoio-cortile-crescenzago-cucina-diverse-escluse-esselunga-farmacia-finestra-giorno-immediate",
     "rif:subito:658345859",
     "rif:subito:658923028",
+    "rif:subito:660412801",
     "tel:342134199",
     "testo:soloperstudentiestudentessedal1ottobreaffittasimonolocalezonacrescenzagoarredatoal2pianocompostodaingressozonagiornonott",
+    "url:subito.it/appartamenti/solo-per-studenti-e-studentesse-crescenzago-milano-660412801.htm",
     "url:subito.it/appartamenti/solo-per-studenti-e-studentesse-universitari-milano-658345859.htm",
     "url:subito.it/appartamenti/solo-per-studenti-e-studentesse-universitari-milano-658923028.htm"
    ],
-   "rivisto": "2026-08-31"
+   "rivisto": "2026-09-12"
   },
   {
    "id": "esc-20260831113338-5",
@@ -306,7 +311,7 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-09-07",
-   "ricomparse": 4,
+   "ricomparse": 5,
    "impronte": [
     "foto:9b3ac489-4113-4382-b107-8b02fdd9ab74",
     "foto:af193a88-dbfa-41c8-86b9-130b4c698f51",
@@ -319,7 +324,7 @@
     "testo:danovembreaffittobilocalenuovoarredatodicirca50mqall8pianodellazenithtowersconpostoautocopertoprivatoalpianoseminterrato",
     "url:subito.it/appartamenti/bilocale-nuovo-con-posto-auto-e-cantina-milano-659809681.htm"
    ],
-   "rivisto": "2026-09-11"
+   "rivisto": "2026-09-12"
   },
   {
    "id": "esc-20260907181127-12",
@@ -358,18 +363,26 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-09-07",
-   "ricomparse": 0,
+   "ricomparse": 1,
    "impronte": [
-    "url:subito.it/appartamenti/bilocale-ristrutturato-metro-mm2-milano-milano-659831819.htm",
-    "rif:subito:659831819",
-    "tel:284529836",
-    "ind:palmanova||65|loc",
-    "foto:91536cd3-3459-4475-b2cf-d0ced61fdd76",
-    "foto:f1b30328-7c9f-4f1d-a607-4def9b6a2b28",
+    "foto:19db5520-451e-4b7b-a3b5-5767e69dae0b",
+    "foto:2e3cd0ab-03f6-4ac9-80f3-215828406c81",
     "foto:358622b9-4140-48f8-8351-b8282de4b65c",
+    "foto:91536cd3-3459-4475-b2cf-d0ced61fdd76",
+    "foto:bacf0eba-3662-46e5-9be9-9bb015548203",
+    "foto:f1b30328-7c9f-4f1d-a607-4def9b6a2b28",
+    "ind:palmanova||65|loc",
+    "parole:agenzia-appartamento-appuntamento-arredato-chiamare-climatizzato-comodo-condominiali-condominio-fissare-giovani-mensilita-metropolitana-minima-moderno-nessun-permanenza-professionisti-riscaldamento-signorile-specializzandi-telefono-totale-vicino",
+    "parole:agenzie-arredato-ascensore-astenersi-bilocale-cimiano-comodo-condominiali-condominio-contratto-garanzie-ideale-incluse-interamente-intermediari-libero-maggiori-mensilita-messaggistica-metropolitana-milano-persona-persone-portineria-raffaele",
+    "rif:subito:659831819",
+    "rif:subito:660415540",
+    "tel:284529836",
+    "testo:bilocaleinteramenteliberoidealeperduepersonearredatonuovoconclimaincondominiosignorileconascensoreeserviziodiportineriam",
     "testo:pergiovaniprofessionistiospecializzandimodernoappartamentosuduepianimq65arredatoeclimatizzatocondominiosignorilevicinoal",
-    "parole:agenzia-appartamento-appuntamento-arredato-chiamare-climatizzato-comodo-condominiali-condominio-fissare-giovani-mensilita-metropolitana-minima-moderno-nessun-permanenza-professionisti-riscaldamento-signorile-specializzandi-telefono-totale-vicino"
-   ]
+    "url:subito.it/appartamenti/bilocale-ristrutturato-metro-mm2-milano-milano-659831819.htm",
+    "url:subito.it/appartamenti/bilocale-ristrutturato-zona-citta-studi-m2-milano-milano-660415540.htm"
+   ],
+   "rivisto": "2026-09-12"
   },
   {
    "id": "esc-20260907181150-14",
@@ -503,7 +516,7 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-09-08",
-   "ricomparse": 3,
+   "ricomparse": 4,
    "impronte": [
     "foto:09285029-e31d-4517-95ce-716858cd6c7d",
     "foto:45f4c349-2143-45f9-8cda-83ec80b0b35f",
@@ -515,7 +528,7 @@
     "testo:appartamentositoalterzopianosenzaascensoreinvialuigiornato44vicinoospedaleniguardaeuniversitabicoccacontrameautobuscolle",
     "url:subito.it/appartamenti/trilocale-niguarda-milano-651857047.htm"
    ],
-   "rivisto": "2026-09-11"
+   "rivisto": "2026-09-12"
   },
   {
    "id": "esc-20260909091902-20",
@@ -594,5 +607,5 @@
   }
  ],
  "conteggio": 22,
- "id": "esclusi-202609110916"
+ "id": "esclusi-202609120857"
 }

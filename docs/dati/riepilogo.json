@@ -1,36 +1,33 @@
 {
  "raccolti": 21,
- "aggiunti": 17,
+ "aggiunti": 12,
  "ribassati": 0,
  "verificati": [],
  "spariti_nuovi": [
-  "https://www.subito.it/appartamenti/bilocale-arredato-zona-greco-milano-659972906.htm",
-  "https://www.subito.it/appartamenti/primaticcio-bilocale-happy-di-40-mq-350-m-m1-milano-660144264.htm",
-  "https://www.subito.it/appartamenti/trilocale-a-milano-bovisa-con-box-auto-milano-660111431.htm",
-  "https://www.subito.it/appartamenti/baggio-milano-660104822.htm",
-  "https://www.subito.it/appartamenti/appartamento-mq-120-capannone-mq-1-000-milano-660061922.htm",
-  "https://www.subito.it/appartamenti/appartamento-all-inclusive-milano-588348389.htm"
+  "https://www.subito.it/appartamenti/monolocale-ristrutturato-milano-659186914.htm",
+  "https://www.subito.it/appartamenti/monolocale-milano-660306756.htm",
+  "https://www.subito.it/appartamenti/bilocale-a-milano-per-un-anno-milano-660296235.htm"
  ],
  "potati": 0,
  "note": [],
- "credito": "1.44 $ consumati su 19.00 $ (il radar si ferma a 17.10 $)",
- "razione": "24 nuovi + 36 verifiche: 15.66 $ da qui al 2026-10-06 (26 giorni)",
- "tolti_dalla_vista": 13,
- "indirizzi_completati": 10,
+ "credito": "1.58 $ consumati su 19.00 $ (il radar si ferma a 17.10 $)",
+ "razione": "24 nuovi + 36 verifiche: 15.52 $ da qui al 2026-10-06 (25 giorni)",
+ "tolti_dalla_vista": 9,
+ "indirizzi_completati": 6,
  "inserzionisti": {
   "privato": 12,
   "da verificare": 0,
-  "probabile agenzia": 2
+  "probabile agenzia": 3
  },
  "quartieri_con_mediana": 0,
  "esclusi_nuovi": 0,
- "esclusi_ricomparsi": 2,
+ "esclusi_ricomparsi": 4,
  "esclusi_in_archivio": 22,
  "esclusi_elenco": [],
- "nuovi_in_vista": 8,
+ "nuovi_in_vista": 2,
  "da_chiamare": [
   {
-   "priorita": 34,
+   "priorita": 35,
    "via": "Piazza Agrippa",
    "civico": "",
    "quartiere": "",
@@ -38,7 +35,7 @@
    "prezzo": 425000.0,
    "mq": 90.0,
    "tipo": "Vendita",
-   "giorni": 1,
+   "giorni": 2,
    "telefono": "",
    "qualitaImmobile": 100,
    "inserzionista": "privato",
@@ -50,46 +47,6 @@
    "url": "https://www.subito.it/appartamenti/trilocale-adiacenze-piazza-agrippa-milano-660275293.htm"
   },
   {
-   "priorita": 30,
-   "via": "",
-   "civico": "",
-   "quartiere": "",
-   "zona": "",
-   "prezzo": 1000.0,
-   "mq": 30.0,
-   "tipo": "Locazione",
-   "giorni": 0,
-   "telefono": "3358218367",
-   "qualitaImmobile": 58,
-   "inserzionista": "privato",
-   "perche": [
-    "Testo: scarno",
-    "Prezzo di zona non confrontabile",
-    "Foto: medie"
-   ],
-   "url": "https://www.subito.it/appartamenti/monolocale-milano-660306756.htm"
-  },
-  {
-   "priorita": 28,
-   "via": "Piazzale Carlo Maciachini",
-   "civico": "",
-   "quartiere": "",
-   "zona": "Fascia media urbana",
-   "prezzo": 1100.0,
-   "mq": 65.0,
-   "tipo": "Locazione",
-   "giorni": 0,
-   "telefono": "3402347685",
-   "qualitaImmobile": 64,
-   "inserzionista": "privato",
-   "perche": [
-    "Prezzo di zona non confrontabile",
-    "Foto: medie",
-    "Telefono pubblicato"
-   ],
-   "url": "https://www.subito.it/appartamenti/bilocale-a-milano-per-un-anno-milano-660296235.htm"
-  },
-  {
    "priorita": 26,
    "via": "Via Ulisse Salis",
    "civico": "",
@@ -98,7 +55,7 @@
    "prezzo": 195000.0,
    "mq": 95.0,
    "tipo": "Vendita",
-   "giorni": 0,
+   "giorni": 1,
    "telefono": "3296375445",
    "qualitaImmobile": 87,
    "inserzionista": "privato",
@@ -118,7 +75,7 @@
    "prezzo": 1500.0,
    "mq": 90.0,
    "tipo": "Locazione",
-   "giorni": 1,
+   "giorni": 2,
    "telefono": "",
    "qualitaImmobile": 87,
    "inserzionista": "privato",
@@ -138,7 +95,7 @@
    "prezzo": 850.0,
    "mq": 50.0,
    "tipo": "Locazione",
-   "giorni": 0,
+   "giorni": 1,
    "telefono": "",
    "qualitaImmobile": 84,
    "inserzionista": "privato",
@@ -158,7 +115,7 @@
    "prezzo": 800.0,
    "mq": 25.0,
    "tipo": "Locazione",
-   "giorni": 0,
+   "giorni": 1,
    "telefono": "3922958215",
    "qualitaImmobile": 62,
    "inserzionista": "privato",
@@ -170,7 +127,7 @@
    "url": "https://www.subito.it/appartamenti/monolocale-ristrutturato-milano-659893338.htm"
   },
   {
-   "priorita": 24,
+   "priorita": 25,
    "via": "",
    "civico": "",
    "quartiere": "Bocconi",
@@ -178,7 +135,7 @@
    "prezzo": 1000.0,
    "mq": 64.0,
    "tipo": "Locazione",
-   "giorni": 1,
+   "giorni": 2,
    "telefono": "",
    "qualitaImmobile": 99,
    "inserzionista": "privato",
@@ -198,7 +155,7 @@
    "prezzo": 1050.0,
    "mq": 60.0,
    "tipo": "Locazione",
-   "giorni": 3,
+   "giorni": 4,
    "telefono": "",
    "qualitaImmobile": 91,
    "inserzionista": "privato",
@@ -218,7 +175,7 @@
    "prezzo": 1300.0,
    "mq": 60.0,
    "tipo": "Locazione",
-   "giorni": 3,
+   "giorni": 4,
    "telefono": "",
    "qualitaImmobile": 87,
    "inserzionista": "privato",
@@ -228,8 +185,48 @@
     "Foto: medie"
    ],
    "url": "https://www.subito.it/appartamenti/bilocale-60mq-arredato-m1bande-nere-m4-gelsomi-milano-659113593.htm"
+  },
+  {
+   "priorita": 17,
+   "via": "",
+   "civico": "",
+   "quartiere": "",
+   "zona": "",
+   "prezzo": 65000.0,
+   "mq": 60.0,
+   "tipo": "Vendita",
+   "giorni": 1,
+   "telefono": "",
+   "qualitaImmobile": 74,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 74/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/casetta-con-giardino-lago-maggiore-milano-660326164.htm"
+  },
+  {
+   "priorita": 8,
+   "via": "Viale Tibaldi",
+   "civico": "14",
+   "quartiere": "Conchetta",
+   "zona": "Semicentro consolidato",
+   "prezzo": 975.0,
+   "mq": 45.0,
+   "tipo": "Locazione",
+   "giorni": 0,
+   "telefono": "",
+   "qualitaImmobile": 53,
+   "inserzionista": "privato",
+   "perche": [
+    "Prezzo di zona non confrontabile",
+    "Foto: medie",
+    "Provvigione stimata 2.106 €"
+   ],
+   "url": "https://www.subito.it/appartamenti/bilocal-naba-iulm-bocconi-milano-660411826.htm"
   }
  ],
- "quando": "2026-09-11T09:16:49+00:00",
+ "quando": "2026-09-12T08:57:31+00:00",
  "origine": "GitHub Actions"
 }
