@@ -1,5 +1,5 @@
 {
- "generato": "2026-09-12T08:57:31",
+ "generato": "2026-09-13T09:54:34",
  "esclusi": [
   {
    "id": "esc-20260826095259-1",
@@ -311,7 +311,7 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-09-07",
-   "ricomparse": 5,
+   "ricomparse": 6,
    "impronte": [
     "foto:9b3ac489-4113-4382-b107-8b02fdd9ab74",
     "foto:af193a88-dbfa-41c8-86b9-130b4c698f51",
@@ -324,7 +324,7 @@
     "testo:danovembreaffittobilocalenuovoarredatodicirca50mqall8pianodellazenithtowersconpostoautocopertoprivatoalpianoseminterrato",
     "url:subito.it/appartamenti/bilocale-nuovo-con-posto-auto-e-cantina-milano-659809681.htm"
    ],
-   "rivisto": "2026-09-12"
+   "rivisto": "2026-09-13"
   },
   {
    "id": "esc-20260907181127-12",
@@ -516,7 +516,7 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-09-08",
-   "ricomparse": 4,
+   "ricomparse": 5,
    "impronte": [
     "foto:09285029-e31d-4517-95ce-716858cd6c7d",
     "foto:45f4c349-2143-45f9-8cda-83ec80b0b35f",
@@ -528,7 +528,7 @@
     "testo:appartamentositoalterzopianosenzaascensoreinvialuigiornato44vicinoospedaleniguardaeuniversitabicoccacontrameautobuscolle",
     "url:subito.it/appartamenti/trilocale-niguarda-milano-651857047.htm"
    ],
-   "rivisto": "2026-09-12"
+   "rivisto": "2026-09-13"
   },
   {
    "id": "esc-20260909091902-20",
@@ -604,8 +604,32 @@
     "testo:soloperstudentistudentesseelavoratoriatempodeterminatoaffittasibilocalenuovositoinviasanbenignozonacittastudilambratequa",
     "parole:affittasi-argonne-autobus-autonomi-benigno-bilocale-blindata-camera-centralizzato-composto-condizionatori-condominiali-consumo-cucina-determinato-elettriche-elettrico-escluse-giornata-lambrate-lavoratori-mensili-portierato-presenti-previsti"
    ]
+  },
+  {
+   "id": "esc-20260913095434-23",
+   "titolo": "Ampio bilocale Santa Giulia piano alto",
+   "via": "",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/ampio-bilocale-santa-giulia-piano-alto-milano-638548418.htm",
+   "inserzionista": "Giovanna",
+   "telefono": "3394847597",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-13",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/ampio-bilocale-santa-giulia-piano-alto-milano-638548418.htm",
+    "rif:subito:638548418",
+    "tel:394847597",
+    "foto:49c4f07b-ebd4-4514-87fe-274c7b1de5f0",
+    "foto:4095900f-6ae1-4ad3-854f-7857b772e23d",
+    "foto:2af85506-3c74-42e7-abf1-074c0e25ee60",
+    "testo:ampiobilocaledinuovacostruzionenelquartieresantagiuliarogoredopianoaltoespostoasudestluminososilenziosoarredatoeimbianca",
+    "parole:abitabile-accessoriato-anticipo-appartamento-appuntamenti-arredato-balcone-bilocale-camera-classe-composto-condizionata-condominiale-condominiali-condominio-cortile-costruzione-cucina-custode-dotato-elettrodomestici-energetica-esposto-gialla-giardino"
+   ]
   }
  ],
- "conteggio": 22,
- "id": "esclusi-202609120857"
+ "conteggio": 23,
+ "id": "esclusi-202609130954"
 }
