@@ -1,5 +1,5 @@
 {
- "generato": "2026-09-13T09:54:34",
+ "generato": "2026-09-14T10:13:38",
  "esclusi": [
   {
    "id": "esc-20260826095259-1",
@@ -97,29 +97,34 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-08-31",
-   "ricomparse": 3,
+   "ricomparse": 4,
    "impronte": [
     "foto:1189f217-85eb-487d-bf17-391309f09152",
     "foto:2a222094-84a2-4b13-82ad-5757106bebfe",
+    "foto:39038fa0-30e4-4188-b33b-bc20131785b8",
     "foto:4c1a068b-87c0-4b8b-9a0a-eea94620099e",
     "foto:4d471171-7d4e-40fc-8a8a-60f1c347fed4",
     "foto:77e72ab1-f50d-4a73-87e5-3f3a23657b5d",
+    "foto:b1e1746e-3540-4f95-9ccd-38f9ab9a5b47",
     "foto:b82b07c6-9ae4-4cdd-9afa-f557e2639c8a",
     "foto:b83a7ef2-bd85-4b3d-a1a2-6c6e092df1f7",
     "foto:caaf12e7-adc1-4804-9fcd-0b88b5ed430b",
+    "foto:e4483868-d839-477f-ac26-ed71a0e71680",
     "foto:f838d025-2031-4fe1-9b06-6741ed10a879",
     "ind:padova|256|39|loc",
     "parole:2134199-affaccia-affittasi-affitto-agenzie-annuale-arredato-ascensore-balconcino-comodo-composto-comprensivo-condominiali-condominio-corridoio-cortile-crescenzago-cucina-diverse-escluse-esselunga-farmacia-finestra-giorno-immediate",
     "rif:subito:658345859",
     "rif:subito:658923028",
     "rif:subito:660412801",
+    "rif:subito:660628670",
     "tel:342134199",
     "testo:soloperstudentiestudentessedal1ottobreaffittasimonolocalezonacrescenzagoarredatoal2pianocompostodaingressozonagiornonott",
     "url:subito.it/appartamenti/solo-per-studenti-e-studentesse-crescenzago-milano-660412801.htm",
     "url:subito.it/appartamenti/solo-per-studenti-e-studentesse-universitari-milano-658345859.htm",
-    "url:subito.it/appartamenti/solo-per-studenti-e-studentesse-universitari-milano-658923028.htm"
+    "url:subito.it/appartamenti/solo-per-studenti-e-studentesse-universitari-milano-658923028.htm",
+    "url:subito.it/appartamenti/solo-per-studenti-e-studentesse-universitari-milano-660628670.htm"
    ],
-   "rivisto": "2026-09-12"
+   "rivisto": "2026-09-14"
   },
   {
    "id": "esc-20260831113338-5",
@@ -311,7 +316,7 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-09-07",
-   "ricomparse": 6,
+   "ricomparse": 7,
    "impronte": [
     "foto:9b3ac489-4113-4382-b107-8b02fdd9ab74",
     "foto:af193a88-dbfa-41c8-86b9-130b4c698f51",
@@ -324,7 +329,7 @@
     "testo:danovembreaffittobilocalenuovoarredatodicirca50mqall8pianodellazenithtowersconpostoautocopertoprivatoalpianoseminterrato",
     "url:subito.it/appartamenti/bilocale-nuovo-con-posto-auto-e-cantina-milano-659809681.htm"
    ],
-   "rivisto": "2026-09-13"
+   "rivisto": "2026-09-14"
   },
   {
    "id": "esc-20260907181127-12",
@@ -628,8 +633,77 @@
     "testo:ampiobilocaledinuovacostruzionenelquartieresantagiuliarogoredopianoaltoespostoasudestluminososilenziosoarredatoeimbianca",
     "parole:abitabile-accessoriato-anticipo-appartamento-appuntamenti-arredato-balcone-bilocale-camera-classe-composto-condizionata-condominiale-condominiali-condominio-cortile-costruzione-cucina-custode-dotato-elettrodomestici-energetica-esposto-gialla-giardino"
    ]
+  },
+  {
+   "id": "esc-20260914101338-24",
+   "titolo": "Bilocale 1050, spese escluse, piazza Napoli",
+   "via": "Piazza Napoli",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/bilocale-1050-spese-escluse-piazza-napoli-milano-660513926.htm",
+   "inserzionista": "Elena",
+   "telefono": "",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-14",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/bilocale-1050-spese-escluse-piazza-napoli-milano-660513926.htm",
+    "rif:subito:660513926",
+    "ind:napoli||50|loc",
+    "foto:e8daa657-fe6a-4913-8bd0-39f992c5a5e6",
+    "foto:a0011631-7b9d-4097-bc6a-14fb4c7b716e",
+    "foto:b4b3d5b3-cf2b-44d0-a8d6-30d5d3f4c43a",
+    "testo:affittobilocaledi50mqconsalottoambiacameradalettocucinottobagnoeterrazzoarredatoconcuraesilenziosoa3mindallametrobluferm",
+    "parole:affitto-arredato-bilocale-bolivar-cadorna-camera-centro-condominiali-cucinotto-deposito-escluse-fermata-fermate-portano-rispettivamente-salotto-servitissima-silenzioso-stazione-terrazzo-utenze"
+   ]
+  },
+  {
+   "id": "esc-20260914101338-25",
+   "titolo": "Trilocale zona Lomellina Argonne Città Studi",
+   "via": "Via Lomellina 1",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/trilocale-zona-lomellina-argonne-citta-studi-milano-659715423.htm",
+   "inserzionista": "Antonio",
+   "telefono": "",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-14",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/trilocale-zona-lomellina-argonne-citta-studi-milano-659715423.htm",
+    "rif:subito:659715423",
+    "ind:lomellina|1|78|loc",
+    "foto:7a319566-b11e-42c8-aaf4-68ec4894fbee",
+    "foto:d885cc63-8362-44ae-a62c-f95a24e2aaa0",
+    "foto:531ac6d0-242c-460d-b485-bb9eb8d9b4b8",
+    "testo:trilocaleliberosubitolappartamentomoltospaziososicomponediduecameredalettounlivingconcucinottoconlavastovigliebagnoripos",
+    "parole:affitta-affitto-appartamento-argonne-armadio-arredato-balconcino-camera-camere-cantina-cassettiera-comodissimo-compone-comprensivo-condominiali-corsica-cucinotto-dispone-dotata-ferroviario-forlanini-garanzia-genitori-gettonata-grande"
+   ]
+  },
+  {
+   "id": "esc-20260914101338-26",
+   "titolo": "Bilocale Milano centro",
+   "via": "Via Giuseppe Compagnoni 24",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/bilocale-milano-centro-milano-660655585.htm",
+   "inserzionista": "Gino",
+   "telefono": "",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-14",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/bilocale-milano-centro-milano-660655585.htm",
+    "rif:subito:660655585",
+    "ind:giuseppe compagnoni|24|60|loc",
+    "testo:affittobilocaleviacompagnonizonacentralevicinometrodateonuovacostruzioneincondominioconpalestrapiscinaspaserviziodiguard",
+    "parole:affitto-angolo-arredato-balcone-bilocale-camera-centrale-compagnoni-completamente-comprese-condominiali-condominio-costruzione-cottura-fornito-guardiania-palestra-piscina-referenziati-servizio-soggiorno-vicino"
+   ]
   }
  ],
- "conteggio": 23,
- "id": "esclusi-202609130954"
+ "conteggio": 26,
+ "id": "esclusi-202609141013"
 }

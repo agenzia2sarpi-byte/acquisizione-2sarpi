@@ -1,84 +1,131 @@
 {
- "raccolti": 22,
- "aggiunti": 22,
+ "raccolti": 23,
+ "aggiunti": 19,
  "ribassati": 0,
  "verificati": [],
  "spariti_nuovi": [
-  "https://www.subito.it/appartamenti/bilocale-arredato-milano-649348033.htm",
-  "https://www.subito.it/appartamenti/bilocale-60mq-arredato-m1bande-nere-m4-gelsomi-milano-659113593.htm",
-  "https://www.subito.it/appartamenti/trilocale-milano-romolo-navigli-no-spese-agenzia-milano-660185020.htm",
-  "https://www.subito.it/appartamenti/trilocale-adiacenze-piazza-agrippa-milano-660275293.htm",
-  "https://www.subito.it/appartamenti/apartamento-milano-660266768.htm",
-  "https://www.subito.it/appartamenti/metro-brenta-fondazione-prada-milano-660214049.htm",
-  "https://www.subito.it/appartamenti/appartamento-mq-95-piano-seminterrato-milano-660303976.htm",
-  "https://www.subito.it/appartamenti/bilocale-per-studenti-milano-656196161.htm",
-  "https://www.subito.it/appartamenti/monolocale-ristrutturato-milano-659893338.htm",
-  "https://www.subito.it/appartamenti/casetta-con-giardino-lago-maggiore-milano-660326164.htm",
-  "https://www.subito.it/appartamenti/bilocal-naba-iulm-bocconi-milano-660411826.htm"
+  "https://www.subito.it/appartamenti/appartamento-via-ingegnoli-milano-milano-660486423.htm",
+  "https://www.subito.it/appartamenti/bilocale-in-zona-lambrate-citta-studi-milano-660457934.htm",
+  "https://www.subito.it/appartamenti/ampio-bilocale-metro-brenta-fondazione-prada-milano-660455267.htm",
+  "https://www.subito.it/appartamenti/monolocale-nuovo-con-cucina-separata-milano-660428858.htm",
+  "https://www.subito.it/appartamenti/bilocale-1100-150spese-con-piazza-napoli-milano-660513926.htm",
+  "https://www.subito.it/appartamenti/monolocale-concinino-separato-milano-660537423.htm",
+  "https://www.subito.it/appartamenti/luminosissimo-bilocale-lodovico-il-moro-milano-660040585.htm",
+  "https://www.subito.it/appartamenti/luminoso-bilocale-arredato-contratto-transitorio-milano-660523165.htm"
  ],
  "potati": 0,
  "note": [],
- "credito": "1.72 $ consumati su 19.00 $ (il radar si ferma a 17.10 $)",
- "razione": "24 nuovi + 36 verifiche: 15.38 $ da qui al 2026-10-06 (24 giorni)",
- "tolti_dalla_vista": 18,
+ "credito": "1.89 $ consumati su 19.00 $ (il radar si ferma a 17.10 $)",
+ "razione": "24 nuovi + 36 verifiche: 15.21 $ da qui al 2026-10-06 (23 giorni)",
+ "tolti_dalla_vista": 12,
  "indirizzi_completati": 15,
  "inserzionisti": {
-  "privato": 12,
+  "privato": 15,
   "da verificare": 0,
-  "probabile agenzia": 3
+  "probabile agenzia": 4
  },
  "quartieri_con_mediana": 0,
- "esclusi_nuovi": 1,
+ "esclusi_nuovi": 3,
  "esclusi_ricomparsi": 2,
- "esclusi_in_archivio": 23,
+ "esclusi_in_archivio": 26,
  "esclusi_elenco": [
   {
-   "via": "Ampio bilocale Santa Giulia piano alto",
-   "inserzionista": "Giovanna",
+   "via": "Piazza Napoli",
+   "inserzionista": "Elena",
+   "motivo": "il portale lo classifica come annuncio di agenzia"
+  },
+  {
+   "via": "Via Lomellina 1",
+   "inserzionista": "Antonio",
+   "motivo": "il portale lo classifica come annuncio di agenzia"
+  },
+  {
+   "via": "Via Giuseppe Compagnoni 24",
+   "inserzionista": "Gino",
    "motivo": "il portale lo classifica come annuncio di agenzia"
   }
  ],
- "nuovi_in_vista": 12,
+ "nuovi_in_vista": 10,
  "da_chiamare": [
   {
-   "priorita": 29,
-   "via": "Via Eligio Brigatti",
+   "priorita": 53,
+   "via": "Piazzale Loreto",
    "civico": "",
    "quartiere": "",
-   "zona": "Periferia esterna",
-   "prezzo": 750.0,
-   "mq": 52.0,
-   "tipo": "Locazione",
-   "giorni": 0,
-   "telefono": "3472381023",
-   "qualitaImmobile": 72,
+   "zona": "Fascia media urbana",
+   "prezzo": 430000.0,
+   "mq": 70.0,
+   "tipo": "Vendita",
+   "giorni": 1,
+   "telefono": "3475324199",
+   "qualitaImmobile": 84,
    "inserzionista": "privato",
    "perche": [
-    "Qualita' dell'immobile 72/100",
+    "Prezzo +17% rispetto alla zona (fascia indicativa Fascia media urbana)",
+    "Provvigione stimata 12.900 €",
+    "Qualita' dell'immobile 84/100"
+   ],
+   "url": "https://www.subito.it/appartamenti/bilocale-con-terrazza-milano-660575640.htm"
+  },
+  {
+   "priorita": 33,
+   "via": "Via Marco d'Agrate",
+   "civico": "15",
+   "quartiere": "",
+   "zona": "Fascia media urbana",
+   "prezzo": 1150.0,
+   "mq": 55.0,
+   "tipo": "Locazione",
+   "giorni": 0,
+   "telefono": "3426861668",
+   "qualitaImmobile": 92,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 92/100",
     "Prezzo di zona non confrontabile",
     "Foto: medie"
    ],
-   "url": "https://www.subito.it/appartamenti/luminoso-bilocale-arredato-contratto-transitorio-milano-660523165.htm"
+   "url": "https://www.subito.it/appartamenti/bilocale-a-milano-vicino-fondazione-prada-milano-646502138.htm"
+  },
+  {
+   "priorita": 29,
+   "via": "Via Abano",
+   "civico": "",
+   "quartiere": "",
+   "zona": "Fascia media urbana",
+   "prezzo": 1200.0,
+   "mq": 45.0,
+   "tipo": "Locazione",
+   "giorni": 0,
+   "telefono": "3200670028",
+   "qualitaImmobile": 80,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 80/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/bilocale-50-mq-classe-a-300-m-mm2-lambrate-milano-660636434.htm"
   },
   {
    "priorita": 25,
-   "via": "Via Francesco Ingegnoli",
-   "civico": "2",
-   "quartiere": "",
+   "via": "Corso Buenos Aires",
+   "civico": "",
+   "quartiere": "Nolo",
    "zona": "Fascia media urbana",
-   "prezzo": 295000.0,
-   "mq": 58.0,
-   "tipo": "Vendita",
-   "giorni": 1,
-   "telefono": "",
-   "qualitaImmobile": 94,
+   "prezzo": 1299.0,
+   "mq": 95.0,
+   "tipo": "Locazione",
+   "giorni": 0,
+   "telefono": "3386758979",
+   "qualitaImmobile": 65,
    "inserzionista": "privato",
    "perche": [
-    "Qualita' dell'immobile 94/100",
-    "Provvigione stimata 8.850 €",
-    "Testo: scarno"
+    "Prezzo di zona non confrontabile",
+    "Foto: medie",
+    "Telefono pubblicato"
    ],
-   "url": "https://www.subito.it/appartamenti/appartamento-via-ingegnoli-milano-milano-660486423.htm"
+   "url": "https://www.subito.it/appartamenti/appartamento-a-milano-zona-nolo-milano-653809791.htm"
   },
   {
    "priorita": 24,
@@ -89,7 +136,7 @@
    "prezzo": 800.0,
    "mq": 30.0,
    "tipo": "Locazione",
-   "giorni": 0,
+   "giorni": 1,
    "telefono": "3515926808",
    "qualitaImmobile": 63,
    "inserzionista": "privato",
@@ -101,64 +148,44 @@
    "url": "https://www.subito.it/appartamenti/monolocale-con-terrazzo-fondazione-prada-milano-658756943.htm"
   },
   {
-   "priorita": 20,
-   "via": "",
-   "civico": "",
-   "quartiere": "Brenta",
-   "zona": "Fascia media urbana",
-   "prezzo": 950.0,
-   "mq": 64.0,
+   "priorita": 23,
+   "via": "Piazza Aspromonte",
+   "civico": "43",
+   "quartiere": "",
+   "zona": "Semicentro consolidato",
+   "prezzo": 1800.0,
+   "mq": 80.0,
+   "tipo": "Locazione",
+   "giorni": 0,
+   "telefono": "",
+   "qualitaImmobile": 100,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 100/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/splendido-appartamento-nel-centro-storico-di-milan-milano-660644075.htm"
+  },
+  {
+   "priorita": 22,
+   "via": "Via Pellegrino Rossi",
+   "civico": "52",
+   "quartiere": "",
+   "zona": "Fascia accessibile",
+   "prezzo": 1200.0,
+   "mq": 72.0,
    "tipo": "Locazione",
    "giorni": 1,
    "telefono": "",
-   "qualitaImmobile": 93,
+   "qualitaImmobile": 99,
    "inserzionista": "privato",
    "perche": [
-    "Qualita' dell'immobile 93/100",
+    "Qualita' dell'immobile 99/100",
     "Prezzo di zona non confrontabile",
     "Foto: medie"
    ],
-   "url": "https://www.subito.it/appartamenti/ampio-bilocale-metro-brenta-fondazione-prada-milano-660455267.htm"
-  },
-  {
-   "priorita": 20,
-   "via": "",
-   "civico": "",
-   "quartiere": "Corvetto",
-   "zona": "Periferia esterna",
-   "prezzo": null,
-   "mq": 38.0,
-   "tipo": "Vendita",
-   "giorni": 0,
-   "telefono": "3284165023",
-   "qualitaImmobile": 57,
-   "inserzionista": "privato",
-   "perche": [
-    "Prezzo di zona non confrontabile",
-    "Foto: medie",
-    "Telefono pubblicato"
-   ],
-   "url": "https://www.subito.it/appartamenti/monolocale-concinino-separato-milano-660537423.htm"
-  },
-  {
-   "priorita": 19,
-   "via": "Piazza Napoli",
-   "civico": "7",
-   "quartiere": "Foppette",
-   "zona": "Semicentro consolidato",
-   "prezzo": 1100.0,
-   "mq": 50.0,
-   "tipo": "Locazione",
-   "giorni": 0,
-   "telefono": "",
-   "qualitaImmobile": 80,
-   "inserzionista": "privato",
-   "perche": [
-    "Qualita' dell'immobile 80/100",
-    "Prezzo di zona non confrontabile",
-    "Foto: medie"
-   ],
-   "url": "https://www.subito.it/appartamenti/bilocale-1100-150spese-con-piazza-napoli-milano-660513926.htm"
+   "url": "https://www.subito.it/appartamenti/grande-bilocale-milano-nord-milano-660608835.htm"
   },
   {
    "priorita": 18,
@@ -169,7 +196,7 @@
    "prezzo": 580.0,
    "mq": 22.0,
    "tipo": "Locazione",
-   "giorni": 0,
+   "giorni": 1,
    "telefono": "3496735553",
    "qualitaImmobile": 45,
    "inserzionista": "privato",
@@ -181,24 +208,24 @@
    "url": "https://www.subito.it/appartamenti/ad-politecnico-bovisa-monolocale-su-2-piani-milano-642393336.htm"
   },
   {
-   "priorita": 16,
-   "via": "Via Marco d'Agrate",
-   "civico": "34a",
-   "quartiere": "",
-   "zona": "Fascia media urbana",
-   "prezzo": 880.0,
-   "mq": 34.0,
+   "priorita": 17,
+   "via": "",
+   "civico": "",
+   "quartiere": "Villapizzone",
+   "zona": "Fascia accessibile",
+   "prezzo": 900.0,
+   "mq": 65.0,
    "tipo": "Locazione",
-   "giorni": 1,
+   "giorni": 0,
    "telefono": "",
-   "qualitaImmobile": 81,
+   "qualitaImmobile": 84,
    "inserzionista": "privato",
    "perche": [
-    "Qualita' dell'immobile 81/100",
+    "Qualita' dell'immobile 84/100",
     "Prezzo di zona non confrontabile",
     "Foto: medie"
    ],
-   "url": "https://www.subito.it/appartamenti/monolocale-nuovo-con-cucina-separata-milano-660428858.htm"
+   "url": "https://www.subito.it/appartamenti/bilocale-per-studenti-zona-villapizzone-milano-660649677.htm"
   },
   {
    "priorita": 15,
@@ -209,7 +236,7 @@
    "prezzo": 950.0,
    "mq": 55.0,
    "tipo": "Locazione",
-   "giorni": 0,
+   "giorni": 1,
    "telefono": "",
    "qualitaImmobile": 67,
    "inserzionista": "privato",
@@ -221,6 +248,6 @@
    "url": "https://www.subito.it/appartamenti/citta-studi-bilocale-arredato-per-studenti-milano-660522097.htm"
   }
  ],
- "quando": "2026-09-13T09:54:34+00:00",
+ "quando": "2026-09-14T10:13:38+00:00",
  "origine": "GitHub Actions"
 }
