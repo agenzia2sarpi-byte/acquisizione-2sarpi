@@ -1,5 +1,5 @@
 {
- "generato": "2026-09-14T10:13:38",
+ "generato": "2026-09-15T09:43:07",
  "esclusi": [
   {
    "id": "esc-20260826095259-1",
@@ -97,14 +97,17 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-08-31",
-   "ricomparse": 4,
+   "ricomparse": 5,
    "impronte": [
+    "foto:085cfa6d-9d0e-4a54-805a-9608e2bb0b9b",
     "foto:1189f217-85eb-487d-bf17-391309f09152",
     "foto:2a222094-84a2-4b13-82ad-5757106bebfe",
     "foto:39038fa0-30e4-4188-b33b-bc20131785b8",
     "foto:4c1a068b-87c0-4b8b-9a0a-eea94620099e",
     "foto:4d471171-7d4e-40fc-8a8a-60f1c347fed4",
     "foto:77e72ab1-f50d-4a73-87e5-3f3a23657b5d",
+    "foto:9efc4fd5-155f-4c7b-9088-ef9c96b00e8d",
+    "foto:a7387313-2243-4b8b-b05d-a189414fb9d7",
     "foto:b1e1746e-3540-4f95-9ccd-38f9ab9a5b47",
     "foto:b82b07c6-9ae4-4cdd-9afa-f557e2639c8a",
     "foto:b83a7ef2-bd85-4b3d-a1a2-6c6e092df1f7",
@@ -117,14 +120,17 @@
     "rif:subito:658923028",
     "rif:subito:660412801",
     "rif:subito:660628670",
+    "rif:subito:660778748",
     "tel:342134199",
+    "testo:soloperstudentiestudentesseaffittasimonolocalezonacrescenzagoarredatoal2pianocompostodaingressozonagiornonotteconcucinaa",
     "testo:soloperstudentiestudentessedal1ottobreaffittasimonolocalezonacrescenzagoarredatoal2pianocompostodaingressozonagiornonott",
     "url:subito.it/appartamenti/solo-per-studenti-e-studentesse-crescenzago-milano-660412801.htm",
+    "url:subito.it/appartamenti/solo-per-studenti-e-studentesse-monolocale-milano-660778748.htm",
     "url:subito.it/appartamenti/solo-per-studenti-e-studentesse-universitari-milano-658345859.htm",
     "url:subito.it/appartamenti/solo-per-studenti-e-studentesse-universitari-milano-658923028.htm",
     "url:subito.it/appartamenti/solo-per-studenti-e-studentesse-universitari-milano-660628670.htm"
    ],
-   "rivisto": "2026-09-14"
+   "rivisto": "2026-09-15"
   },
   {
    "id": "esc-20260831113338-5",
@@ -316,7 +322,7 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-09-07",
-   "ricomparse": 7,
+   "ricomparse": 8,
    "impronte": [
     "foto:9b3ac489-4113-4382-b107-8b02fdd9ab74",
     "foto:af193a88-dbfa-41c8-86b9-130b4c698f51",
@@ -329,7 +335,7 @@
     "testo:danovembreaffittobilocalenuovoarredatodicirca50mqall8pianodellazenithtowersconpostoautocopertoprivatoalpianoseminterrato",
     "url:subito.it/appartamenti/bilocale-nuovo-con-posto-auto-e-cantina-milano-659809681.htm"
    ],
-   "rivisto": "2026-09-14"
+   "rivisto": "2026-09-15"
   },
   {
    "id": "esc-20260907181127-12",
@@ -702,8 +708,27 @@
     "testo:affittobilocaleviacompagnonizonacentralevicinometrodateonuovacostruzioneincondominioconpalestrapiscinaspaserviziodiguard",
     "parole:affitto-angolo-arredato-balcone-bilocale-camera-centrale-compagnoni-completamente-comprese-condominiali-condominio-costruzione-cottura-fornito-guardiania-palestra-piscina-referenziati-servizio-soggiorno-vicino"
    ]
+  },
+  {
+   "id": "esc-20260915094307-27",
+   "titolo": "Seminterrato a dergano",
+   "via": "Via Giuseppe Cesare Abba",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/seminterrato-a-dergano-milano-660775279.htm",
+   "inserzionista": "Antonio",
+   "telefono": "",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-15",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/seminterrato-a-dergano-milano-660775279.htm",
+    "rif:subito:660775279",
+    "ind:giuseppe cesare abba||40|loc"
+   ]
   }
  ],
- "conteggio": 26,
- "id": "esclusi-202609141013"
+ "conteggio": 27,
+ "id": "esclusi-202609150943"
 }
