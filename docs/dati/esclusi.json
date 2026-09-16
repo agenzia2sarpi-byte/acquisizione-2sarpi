@@ -1,5 +1,5 @@
 {
- "generato": "2026-09-15T09:43:07",
+ "generato": "2026-09-16T09:36:43",
  "esclusi": [
   {
    "id": "esc-20260826095259-1",
@@ -721,14 +721,40 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-09-15",
+   "ricomparse": 1,
+   "impronte": [
+    "ind:giuseppe cesare abba||40|loc",
+    "rif:subito:660775279",
+    "url:subito.it/appartamenti/seminterrato-a-dergano-milano-660775279.htm"
+   ],
+   "rivisto": "2026-09-16"
+  },
+  {
+   "id": "esc-20260916093643-28",
+   "titolo": "Bilocale arredato",
+   "via": "Via Novara 62",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/bilocale-arredato-milano-660903065.htm",
+   "inserzionista": "andrea",
+   "telefono": "3295495505",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-16",
    "ricomparse": 0,
    "impronte": [
-    "url:subito.it/appartamenti/seminterrato-a-dergano-milano-660775279.htm",
-    "rif:subito:660775279",
-    "ind:giuseppe cesare abba||40|loc"
+    "url:subito.it/appartamenti/bilocale-arredato-milano-660903065.htm",
+    "rif:subito:660903065",
+    "tel:295495505",
+    "ind:novara|62|60|loc",
+    "foto:c3e2cdcd-d167-4b13-b548-a686c15a1df9",
+    "foto:fb6fe86c-8b9a-4290-9701-237228fe1786",
+    "foto:458e2083-d6cc-4fe1-bb50-a180e8404f86",
+    "testo:bilocalearredatoeristrutturatoconsalacucinottocameramatrimonialebagno2balconiparquetrovereserramentialluminioportablinda",
+    "parole:alluminio-arredato-balconi-bilocale-blindata-camera-cucinotto-matrimoniale-parquet-ristrutturato-rovere-serramenti"
    ]
   }
  ],
- "conteggio": 27,
- "id": "esclusi-202609150943"
+ "conteggio": 28,
+ "id": "esclusi-202609160936"
 }
