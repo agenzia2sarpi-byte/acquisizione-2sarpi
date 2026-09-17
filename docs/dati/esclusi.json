@@ -1,5 +1,5 @@
 {
- "generato": "2026-09-16T09:36:43",
+ "generato": "2026-09-17T09:44:57",
  "esclusi": [
   {
    "id": "esc-20260826095259-1",
@@ -753,8 +753,31 @@
     "testo:bilocalearredatoeristrutturatoconsalacucinottocameramatrimonialebagno2balconiparquetrovereserramentialluminioportablinda",
     "parole:alluminio-arredato-balconi-bilocale-blindata-camera-cucinotto-matrimoniale-parquet-ristrutturato-rovere-serramenti"
    ]
+  },
+  {
+   "id": "esc-20260917094457-29",
+   "titolo": "Bilocale nuovo panoramico e arioso a Milano sud",
+   "via": "",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/bilocale-nuovo-panoramico-e-arioso-a-milano-sud-milano-660958554.htm",
+   "inserzionista": "anna",
+   "telefono": "",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-17",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/bilocale-nuovo-panoramico-e-arioso-a-milano-sud-milano-660958554.htm",
+    "rif:subito:660958554",
+    "foto:3f58df8a-8816-4468-969b-1f8fc6d21f1a",
+    "foto:6843f9aa-d32c-4183-8fe8-7e6095946b32",
+    "foto:54d546fb-9ba0-432e-829c-1c9158bed643",
+    "testo:milanoaffittobilocaledi50mqcircaalpianoaltodiunanuovacostruzioneinzonamilanosudsoggiornoconcucinaavistacameradalettobagn",
+    "parole:affitto-bilocale-camera-condizionata-controllata-coppia-costruzione-cucina-esposizione-lavasciuga-lavastoviglie-loggia-meccanica-milano-panoramico-perfetto-piccola-soggiorno-ventilazione-vicino"
+   ]
   }
  ],
- "conteggio": 28,
- "id": "esclusi-202609160936"
+ "conteggio": 29,
+ "id": "esclusi-202609170944"
 }
