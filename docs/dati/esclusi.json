@@ -1,5 +1,5 @@
 {
- "generato": "2026-09-17T09:44:57",
+ "generato": "2026-09-18T09:18:42",
  "esclusi": [
   {
    "id": "esc-20260826095259-1",
@@ -776,8 +776,78 @@
     "testo:milanoaffittobilocaledi50mqcircaalpianoaltodiunanuovacostruzioneinzonamilanosudsoggiornoconcucinaavistacameradalettobagn",
     "parole:affitto-bilocale-camera-condizionata-controllata-coppia-costruzione-cucina-esposizione-lavasciuga-lavastoviglie-loggia-meccanica-milano-panoramico-perfetto-piccola-soggiorno-ventilazione-vicino"
    ]
+  },
+  {
+   "id": "esc-20260918091842-30",
+   "titolo": "Bilocale Milano - permuta su Roma",
+   "via": "Piazza Francesco Durante 11",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/bilocale-milano-permuta-su-roma-milano-661163805.htm",
+   "inserzionista": "Fabio",
+   "telefono": "",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-18",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/bilocale-milano-permuta-su-roma-milano-661163805.htm",
+    "rif:subito:661163805",
+    "ind:francesco durante|11|45|ven",
+    "testo:valutolapermutadelmiograziosobilocaledi45mqsituatoinzonaloretomilanoallinternodiuncontestocuratointipicacasadiringhierai",
+    "parole:aggiunto-appartamento-balcone-ballatoio-bilocale-composto-conguaglio-contattatemi-contesto-curato-diverse-esclusiva-eventuale-favore-grazioso-informazioni-interno-locali-loreto-milano-permuta-permutare-privato-proprieta-ringhiera"
+   ]
+  },
+  {
+   "id": "esc-20260918091842-31",
+   "titolo": "Splendido appartamento nel centro storico di Milan",
+   "via": "Piazza Aspromonte 10",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/splendido-appartamento-nel-centro-storico-di-milan-milano-661180467.htm",
+   "inserzionista": "franco irazzi",
+   "telefono": "",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-18",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/splendido-appartamento-nel-centro-storico-di-milan-milano-661180467.htm",
+    "rif:subito:661180467",
+    "ind:aspromonte|10|80|loc",
+    "foto:8c5110f7-37d7-4002-85e8-48504f9f2114",
+    "foto:754bb9e7-10e9-4c4a-a27b-1ce01cb141fe",
+    "foto:75defa47-14d5-4921-a863-446c5f8c72ae",
+    "testo:questoesclusivoappartamentositrovainunapalazzinadisolitrepianiincittastudipiazzaaspromontedasempreconsideratounquartiere",
+    "parole:abitabile-accesso-affaccia-appartamento-asciugatrice-aspromonte-attrezzata-autonomo-balcone-buenos-camere-capiente-caratterizzato-completamente-composto-considerato-costante-cucina-doccia-doppia-entrambe-esclusivo-esposizione-genere-giardino"
+   ]
+  },
+  {
+   "id": "esc-20260918091842-32",
+   "titolo": "Bilocale +cucina+terrazzo",
+   "via": "Viale Marche 31a",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/bilocale-cucina-terrazzo-milano-659241666.htm",
+   "inserzionista": "giacomo",
+   "telefono": "3939058879",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-18",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/bilocale-cucina-terrazzo-milano-659241666.htm",
+    "rif:subito:659241666",
+    "tel:939058879",
+    "ind:marche|31a|48|loc",
+    "foto:db438c8c-e4c9-4e52-a621-d8ee4bf7e3bf",
+    "foto:efd40b7d-fc7e-4f0d-a7cd-88391c470496",
+    "foto:90ec38aa-1285-429e-91ff-4a762d0d4347",
+    "testo:marche31milanosub709metropolitanam5quadrilocalearredatoeristrutturatodisponibileresidenzialeprimacasastagionaleperperiod",
+    "parole:accordo-affitto-affittuario-appartamento-arredato-autonomo-calore-canone-cauzionale-centrale-completare-comune-concordato-concordatocol-condizioni-condominiali-consumi-contratto-cottura-deposito-disponibile-economiche-elettrico-fermata-freddo"
+   ]
   }
  ],
- "conteggio": 29,
- "id": "esclusi-202609170944"
+ "conteggio": 32,
+ "id": "esclusi-202609180918"
 }
