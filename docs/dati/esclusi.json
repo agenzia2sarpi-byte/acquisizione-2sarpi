@@ -1,5 +1,5 @@
 {
- "generato": "2026-09-18T09:18:42",
+ "generato": "2026-09-19T09:06:02",
  "esclusi": [
   {
    "id": "esc-20260826095259-1",
@@ -834,20 +834,114 @@
    "chi": "radar",
    "tipo": "agenzia",
    "data": "2026-09-18",
-   "ricomparse": 0,
+   "ricomparse": 1,
    "impronte": [
-    "url:subito.it/appartamenti/bilocale-cucina-terrazzo-milano-659241666.htm",
-    "rif:subito:659241666",
-    "tel:939058879",
-    "ind:marche|31a|48|loc",
+    "foto:90ec38aa-1285-429e-91ff-4a762d0d4347",
     "foto:db438c8c-e4c9-4e52-a621-d8ee4bf7e3bf",
     "foto:efd40b7d-fc7e-4f0d-a7cd-88391c470496",
-    "foto:90ec38aa-1285-429e-91ff-4a762d0d4347",
+    "ind:marche|31a|48|loc",
+    "parole:accordo-affitto-affittuario-appartamento-arredato-autonomo-calore-canone-cauzionale-centrale-completare-comune-concordato-concordatocol-condizioni-condominiali-consumi-contratto-cottura-deposito-disponibile-economiche-elettrico-fermata-freddo",
+    "rif:subito:659241666",
+    "tel:939058879",
     "testo:marche31milanosub709metropolitanam5quadrilocalearredatoeristrutturatodisponibileresidenzialeprimacasastagionaleperperiod",
-    "parole:accordo-affitto-affittuario-appartamento-arredato-autonomo-calore-canone-cauzionale-centrale-completare-comune-concordato-concordatocol-condizioni-condominiali-consumi-contratto-cottura-deposito-disponibile-economiche-elettrico-fermata-freddo"
+    "url:subito.it/appartamenti/bilocale-cucina-terrazzo-milano-659241666.htm"
+   ],
+   "rivisto": "2026-09-19"
+  },
+  {
+   "id": "esc-20260919090602-33",
+   "titolo": "700 Euro al mese",
+   "via": "",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/700-euro-al-mese-milano-661264714.htm",
+   "inserzionista": "Marco",
+   "telefono": "3923090303",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-19",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/700-euro-al-mese-milano-661264714.htm",
+    "rif:subito:661264714",
+    "tel:923090303",
+    "testo:cercounbilocaleounbelmonolocaledaaffittarepermeamilanoinzonaovestperinfoscrivetemisuwhatsapp3923090303noperditempo",
+    "parole:3923090303-affittare-bilocale-milano-monolocale-perditempo-scrivetemi-whatsapp"
+   ]
+  },
+  {
+   "id": "esc-20260919090602-34",
+   "titolo": "monolocale Milano vicino zona isola e metro zara",
+   "via": "",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/monolocale-milano-vicino-zona-isola-e-metro-zara-milano-661259372.htm",
+   "inserzionista": "",
+   "telefono": "3287308929",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-19",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/monolocale-milano-vicino-zona-isola-e-metro-zara-milano-661259372.htm",
+    "rif:subito:661259372",
+    "tel:287308929",
+    "foto:31e83c7a-cedb-4e49-bc6c-906c091ae554",
+    "foto:7949a8ed-7687-4a41-92b3-5c00fece2952",
+    "foto:aa79db51-5c09-4341-bf04-2a424ee38b13",
+    "testo:affittoamilanotralafermatametrogiallazaraemaciachinioquellalillamarchevicinoazonaisolamonolocaledicirca30mqsoggiornocone",
+    "parole:10minutidallastazionecentrale-15minutidalduomo-affitto-affittoamilano-appartamento-bagnoconfinestra-boxdocciaelavatrice-canonemensilerichiesto800-carrefouraperto24ore-compresodituttoadeccezionedelleutenze-condominio-contattareinprivato-dalpolitecnicodibovisa-farmacie-lettochediventamatrimoniale-libera-mcdonald-minuti-monolocaledicirca30mq-noagenzie-nocontrattilunghi-oquellalillamarche-ospedaleniguarda-ospedalepiox-palazzoestremamentetranquilloezonaservitissima"
+   ]
+  },
+  {
+   "id": "esc-20260919090602-35",
+   "titolo": "FineViaSavona:ing+Sog+camMat+k+b1000+200",
+   "via": "Via Giacinto Bruzzesi 25",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/fineviasavona-ing-sog-cammat-k-b1000-200-milano-661253888.htm",
+   "inserzionista": "",
+   "telefono": "3247896014",
+   "motivo": "il portale lo classifica come annuncio di agenzia",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-19",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/fineviasavona-ing-sog-cammat-k-b1000-200-milano-661253888.htm",
+    "rif:subito:661253888",
+    "tel:247896014",
+    "ind:giacinto bruzzesi|25|55|loc",
+    "foto:868b10a9-cf06-41bb-bb5e-097908b405cb",
+    "foto:c7e30ec4-d3ae-4d23-8197-d173fce2a2bf",
+    "foto:c9c17e93-84dd-4104-82bc-5a333caa70c9",
+    "testo:finevasavonaviabruzzesi25milanoliberosubitoaffittomiobilocalepenultimatraversaviasavonaviabruzzesi25a150mtmetropolitanal",
+    "parole:1piano-affaccio-affitto-armani-baccano-bellissima-bilocale-bruzzesi-camera-cattolica-condominiali-contratto-cortesia-cortile-cucina-decente-densita-dettaglio-finestrato-finestre-finevasavona-genova-giardini-grande-indicando"
+   ]
+  },
+  {
+   "id": "esc-20260919090602-36",
+   "titolo": "Monolocale ristrutturato in città studi",
+   "via": "",
+   "portale": "subito",
+   "url": "https://www.subito.it/appartamenti/monolocale-ristrutturato-in-citta-studi-milano-661273638.htm",
+   "inserzionista": "",
+   "telefono": "",
+   "motivo": "l'annuncio dichiara l'agenzia («tramite agenzi»)",
+   "chi": "radar",
+   "tipo": "agenzia",
+   "data": "2026-09-19",
+   "ricomparse": 0,
+   "impronte": [
+    "url:subito.it/appartamenti/monolocale-ristrutturato-in-citta-studi-milano-661273638.htm",
+    "rif:subito:661273638",
+    "foto:3f273cf2-341f-4fab-b799-58cf56a72344",
+    "foto:38f56d6b-9fcd-4dc4-8eb3-2b87928e8947",
+    "foto:147752ab-0727-44a0-8c7c-2e91fdb52a96",
+    "testo:offromonolocaleincittastuditramiteagenzia900mensili120dispesecondominialiinclusoriscaldamentoescluseutenzeetariwifilavas",
+    "parole:agenzia-climatizzatore-condominiali-escluse-esterno-incluso-induzione-lavastoviglie-lavatrice-mensili-monolocale-portineria-riscaldamento-supermercato-terrazzo-tramite-utenze"
    ]
   }
  ],
- "conteggio": 32,
- "id": "esclusi-202609180918"
+ "conteggio": 36,
+ "id": "esclusi-202609190906"
 }

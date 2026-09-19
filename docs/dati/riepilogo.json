@@ -1,233 +1,162 @@
 {
  "raccolti": 24,
- "aggiunti": 18,
- "ribassati": 0,
+ "aggiunti": 19,
+ "ribassati": 1,
  "verificati": [],
  "spariti_nuovi": [
-  "https://www.subito.it/appartamenti/ad-politecnico-bovisa-monolocale-su-2-piani-milano-642393336.htm",
-  "https://www.subito.it/appartamenti/bilocale-moderno-con-balcone-70-m²-san-siro-milano-655534826.htm",
-  "https://www.subito.it/appartamenti/ampio-quadrilocale-box-e-cantina-in-centro-milano-milano-660873176.htm",
-  "https://www.subito.it/appartamenti/bilocale-viale-montenero-da-privato-milano-660871346.htm",
-  "https://www.subito.it/appartamenti/casa-indipendente-milano-660863325.htm",
-  "https://www.subito.it/appartamenti/monolocale-zona-maggiolina-vicino-isola-e-centrale-milano-660862154.htm",
-  "https://www.subito.it/appartamenti/monolocale-ben-arredato-milano-660910359.htm",
-  "https://www.subito.it/appartamenti/luminoso-trilocale-ben-distribuito-p-za-bottini-5-milano-661009734.htm",
-  "https://www.subito.it/appartamenti/milano-elegante-loft-a-50-mt-metro-rossa-milano-485841300.htm",
-  "https://www.subito.it/appartamenti/citta-studi-bilocale-con-due-bagni-milano-661053126.htm"
+  "https://www.subito.it/appartamenti/appartamento-a-milano-zona-nolo-milano-653809791.htm",
+  "https://www.subito.it/appartamenti/bilocale-a-milano-vicino-fondazione-prada-milano-646502138.htm",
+  "https://www.subito.it/appartamenti/bilocale-arredato-milano-660787093.htm",
+  "https://www.subito.it/appartamenti/luminoso-appartamento-milano-659955123.htm",
+  "https://www.subito.it/appartamenti/bilocale-corvetto-mm3-gialla-milano-661140518.htm",
+  "https://www.subito.it/appartamenti/bilocale-arredato-in-gambara-con-cantina-milano-661129781.htm",
+  "https://www.subito.it/appartamenti/casa-per-studenti-milano-661127465.htm",
+  "https://www.subito.it/appartamenti/immobile-a-riscatto-milano-661103364.htm",
+  "https://www.subito.it/appartamenti/bilocale-milano-661085303.htm",
+  "https://www.subito.it/appartamenti/appartamento-monolocale-gorla-milano-661176450.htm",
+  "https://www.subito.it/appartamenti/appartamento-monolocale-milano-661176338.htm",
+  "https://www.subito.it/appartamenti/trilocale-porta-venezia-milano-661174652.htm",
+  "https://www.subito.it/appartamenti/bilocale-no-agenzia-con-riscaldamento-a-pavimento-milano-661173752.htm",
+  "https://www.subito.it/appartamenti/monolocale-vicino-alla-metro-gialla-brenta-m3-milano-661172015.htm"
  ],
  "potati": 0,
  "note": [],
- "credito": "2.44 $ consumati su 19.00 $ (il radar si ferma a 17.10 $)",
- "razione": "24 nuovi + 36 verifiche: 14.66 $ da qui al 2026-10-06 (19 giorni)",
- "tolti_dalla_vista": 12,
- "indirizzi_completati": 16,
+ "credito": "2.58 $ consumati su 19.00 $ (il radar si ferma a 17.10 $)",
+ "razione": "24 nuovi + 36 verifiche: 14.52 $ da qui al 2026-10-06 (18 giorni)",
+ "tolti_dalla_vista": 21,
+ "indirizzi_completati": 12,
  "inserzionisti": {
-  "privato": 19,
+  "privato": 12,
   "da verificare": 0,
-  "probabile agenzia": 3
+  "probabile agenzia": 5
  },
  "quartieri_con_mediana": 0,
- "esclusi_nuovi": 3,
- "esclusi_ricomparsi": 0,
- "esclusi_in_archivio": 32,
+ "esclusi_nuovi": 4,
+ "esclusi_ricomparsi": 1,
+ "esclusi_in_archivio": 36,
  "esclusi_elenco": [
   {
-   "via": "Piazza Francesco Durante 11",
-   "inserzionista": "Fabio",
+   "via": "700 Euro al mese",
+   "inserzionista": "Marco",
    "motivo": "il portale lo classifica come annuncio di agenzia"
   },
   {
-   "via": "Piazza Aspromonte 10",
-   "inserzionista": "franco irazzi",
+   "via": "monolocale Milano vicino zona isola e metro zara",
+   "inserzionista": "",
    "motivo": "il portale lo classifica come annuncio di agenzia"
   },
   {
-   "via": "Viale Marche 31a",
-   "inserzionista": "giacomo",
+   "via": "Via Giacinto Bruzzesi 25",
+   "inserzionista": "",
    "motivo": "il portale lo classifica come annuncio di agenzia"
+  },
+  {
+   "via": "Monolocale ristrutturato in città studi",
+   "inserzionista": "",
+   "motivo": "l'annuncio dichiara l'agenzia («tramite agenzi»)"
   }
  ],
- "nuovi_in_vista": 13,
+ "nuovi_in_vista": 7,
  "da_chiamare": [
   {
-   "priorita": 34,
-   "via": "Via Asiago",
-   "civico": "50",
-   "quartiere": "",
-   "zona": "Fascia accessibile",
-   "prezzo": 600.0,
-   "mq": 35.0,
-   "tipo": "Locazione",
-   "giorni": 0,
-   "telefono": "3508902377",
-   "qualitaImmobile": 77,
-   "inserzionista": "privato",
-   "perche": [
-    "Testo: scarno",
-    "Qualita' dell'immobile 77/100",
-    "Prezzo di zona non confrontabile"
-   ],
-   "url": "https://www.subito.it/appartamenti/appartamento-monolocale-gorla-milano-661176450.htm"
-  },
-  {
-   "priorita": 33,
-   "via": "Via Marco d'Agrate",
-   "civico": "15",
-   "quartiere": "",
+   "priorita": 32,
+   "via": "",
+   "civico": "",
+   "quartiere": "Bovisa",
    "zona": "Fascia media urbana",
-   "prezzo": 1150.0,
-   "mq": 55.0,
+   "prezzo": 1200.0,
+   "mq": 70.0,
    "tipo": "Locazione",
-   "giorni": 4,
-   "telefono": "3426861668",
-   "qualitaImmobile": 92,
+   "giorni": 1,
+   "telefono": "3387746524",
+   "qualitaImmobile": 79,
    "inserzionista": "privato",
    "perche": [
-    "Qualita' dell'immobile 92/100",
+    "Qualita' dell'immobile 79/100",
     "Prezzo di zona non confrontabile",
     "Foto: medie"
    ],
-   "url": "https://www.subito.it/appartamenti/bilocale-a-milano-vicino-fondazione-prada-milano-646502138.htm"
+   "url": "https://www.subito.it/appartamenti/appartamento-bovisa-milano-661218922.htm"
   },
   {
-   "priorita": 33,
+   "priorita": 31,
+   "via": "Via Alberata",
+   "civico": "13A",
+   "quartiere": "Parco Lambro - Cimiano",
+   "zona": "Fascia accessibile",
+   "prezzo": 750.0,
+   "mq": 35.0,
+   "tipo": "Locazione",
+   "giorni": 0,
+   "telefono": "3459771517",
+   "qualitaImmobile": 89,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 89/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/monolocale-ristrutturato-a-m2-crescenzago-milano-661274683.htm"
+  },
+  {
+   "priorita": 30,
    "via": "Via Mecenate",
    "civico": "103",
    "quartiere": "",
    "zona": "Fascia accessibile",
-   "prezzo": 249000.0,
+   "prezzo": 235000.0,
    "mq": 60.0,
    "tipo": "Vendita",
-   "giorni": 4,
+   "giorni": 5,
    "telefono": "",
    "qualitaImmobile": 100,
    "inserzionista": "privato",
    "perche": [
     "Qualita' dell'immobile 100/100",
-    "Prezzo +11% rispetto alla zona (fascia indicativa Fascia accessibile)",
-    "Provvigione stimata 7.470 €"
+    "Provvigione stimata 7.050 €",
+    "Foto: medie"
    ],
    "url": "https://www.subito.it/appartamenti/ampio-bilocale-ristrutturato-via-mecenate-103-milano-660728019.htm"
   },
   {
-   "priorita": 32,
-   "via": "Piazza Caiazzo",
-   "civico": "2",
-   "quartiere": "",
-   "zona": "Semicentro consolidato",
-   "prezzo": 2500.0,
-   "mq": 110.0,
-   "tipo": "Locazione",
-   "giorni": 1,
-   "telefono": "3356699479",
-   "qualitaImmobile": 78,
-   "inserzionista": "privato",
-   "perche": [
-    "Qualita' dell'immobile 78/100",
-    "Prezzo di zona non confrontabile",
-    "Foto: medie"
-   ],
-   "url": "https://www.subito.it/appartamenti/luminoso-appartamento-milano-659955123.htm"
-  },
-  {
    "priorita": 29,
-   "via": "Via Carlo Boncompagni",
-   "civico": "94",
-   "quartiere": "Lodi - Corvetto",
-   "zona": "Periferia esterna",
-   "prezzo": 650.0,
-   "mq": 40.0,
-   "tipo": "Locazione",
-   "giorni": 1,
-   "telefono": "3489870360",
-   "qualitaImmobile": 72,
-   "inserzionista": "privato",
-   "perche": [
-    "Qualita' dell'immobile 72/100",
-    "Prezzo di zona non confrontabile",
-    "Foto: medie"
-   ],
-   "url": "https://www.subito.it/appartamenti/bilocale-corvetto-mm3-gialla-milano-661140518.htm"
-  },
-  {
-   "priorita": 29,
-   "via": "Via Farsaglia",
-   "civico": "5a",
-   "quartiere": "",
-   "zona": "Semicentro consolidato",
-   "prezzo": 650.0,
-   "mq": 22.0,
+   "via": "Viale Sarca",
+   "civico": "198",
+   "quartiere": "Borgo Pirelli",
+   "zona": "Fascia accessibile",
+   "prezzo": 1100.0,
+   "mq": 58.0,
    "tipo": "Locazione",
    "giorni": 0,
-   "telefono": "3299598773",
-   "qualitaImmobile": 36,
+   "telefono": "3498330890",
+   "qualitaImmobile": 86,
    "inserzionista": "privato",
    "perche": [
-    "Foto: scarse",
-    "Testo: scarno",
-    "Prezzo di zona non confrontabile"
-   ],
-   "url": "https://www.subito.it/appartamenti/appartamento-monolocale-milano-661176338.htm"
-  },
-  {
-   "priorita": 26,
-   "via": "Corso Buenos Aires",
-   "civico": "",
-   "quartiere": "Nolo",
-   "zona": "Fascia media urbana",
-   "prezzo": 1299.0,
-   "mq": 95.0,
-   "tipo": "Locazione",
-   "giorni": 4,
-   "telefono": "3386758979",
-   "qualitaImmobile": 65,
-   "inserzionista": "privato",
-   "perche": [
+    "Qualita' dell'immobile 86/100",
     "Prezzo di zona non confrontabile",
-    "Foto: medie",
     "Telefono pubblicato"
    ],
-   "url": "https://www.subito.it/appartamenti/appartamento-a-milano-zona-nolo-milano-653809791.htm"
+   "url": "https://www.subito.it/appartamenti/milano-bilocale-viale-sarca-198-milano-milano-621733888.htm"
   },
   {
-   "priorita": 24,
-   "via": "",
-   "civico": "",
+   "priorita": 27,
+   "via": "Piazzale Lodi",
+   "civico": "5",
    "quartiere": "",
-   "zona": "",
-   "prezzo": 500.0,
-   "mq": 60.0,
+   "zona": "Semicentro consolidato",
+   "prezzo": 1200.0,
+   "mq": 63.0,
    "tipo": "Locazione",
    "giorni": 1,
-   "telefono": "",
-   "qualitaImmobile": 87,
+   "telefono": "3331318215",
+   "qualitaImmobile": 79,
    "inserzionista": "privato",
    "perche": [
-    "Qualita' dell'immobile 87/100",
-    "Testo: scarno",
-    "Prezzo di zona non confrontabile"
+    "Qualita' dell'immobile 79/100",
+    "Prezzo di zona non confrontabile",
+    "Telefono pubblicato"
    ],
-   "url": "https://www.subito.it/appartamenti/casa-per-studenti-milano-661127465.htm"
-  },
-  {
-   "priorita": 24,
-   "via": "",
-   "civico": "",
-   "quartiere": "",
-   "zona": "",
-   "prezzo": null,
-   "mq": 65.0,
-   "tipo": "Locazione",
-   "giorni": 1,
-   "telefono": "",
-   "qualitaImmobile": 71,
-   "inserzionista": "privato",
-   "perche": [
-    "Foto: scarse",
-    "Testo: scarno",
-    "Prezzo di zona non confrontabile"
-   ],
-   "url": "https://www.subito.it/appartamenti/immobile-a-riscatto-milano-661103364.htm"
+   "url": "https://www.subito.it/appartamenti/appartamento-per-studenti-piazzale-lodi-milano-milano-661227814.htm"
   },
   {
    "priorita": 23,
@@ -238,7 +167,7 @@
    "prezzo": 160000.0,
    "mq": 20.0,
    "tipo": "Locazione",
-   "giorni": 4,
+   "giorni": 5,
    "telefono": "3395673547",
    "qualitaImmobile": 55,
    "inserzionista": "privato",
@@ -248,8 +177,88 @@
     "Telefono pubblicato"
    ],
    "url": "https://www.subito.it/appartamenti/nuda-proprieta-di-monolocale-arredato-accessoriato-milano-660695940.htm"
+  },
+  {
+   "priorita": 23,
+   "via": "Viale Nazario Sauro",
+   "civico": "5",
+   "quartiere": "Abbadesse",
+   "zona": "Semicentro consolidato",
+   "prezzo": 1500.0,
+   "mq": 65.0,
+   "tipo": "Locazione",
+   "giorni": 2,
+   "telefono": "3474827140",
+   "qualitaImmobile": 53,
+   "inserzionista": "privato",
+   "perche": [
+    "Prezzo di zona non confrontabile",
+    "Foto: medie",
+    "Telefono pubblicato"
+   ],
+   "url": "https://www.subito.it/appartamenti/trilocale-privato-affitta-milano-661138005.htm"
+  },
+  {
+   "priorita": 19,
+   "via": "",
+   "civico": "",
+   "quartiere": "Primaticcio",
+   "zona": "Fascia media urbana",
+   "prezzo": 1000.0,
+   "mq": 35.0,
+   "tipo": "Locazione",
+   "giorni": 1,
+   "telefono": "",
+   "qualitaImmobile": 89,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 89/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/monolocale-con-cucina-separata-di-mq-35-milano-661182506.htm"
+  },
+  {
+   "priorita": 18,
+   "via": "Viale Monza",
+   "civico": "",
+   "quartiere": "Nolo",
+   "zona": "Fascia media urbana",
+   "prezzo": 1290.0,
+   "mq": 85.0,
+   "tipo": "Locazione",
+   "giorni": 0,
+   "telefono": "",
+   "qualitaImmobile": 85,
+   "inserzionista": "privato",
+   "perche": [
+    "Qualita' dell'immobile 85/100",
+    "Prezzo di zona non confrontabile",
+    "Foto: medie"
+   ],
+   "url": "https://www.subito.it/appartamenti/zona-nolo-trilocale-milano-625269082.htm"
+  },
+  {
+   "priorita": 3,
+   "via": "Via Brembo",
+   "civico": "9",
+   "quartiere": "",
+   "zona": "Semicentro consolidato",
+   "prezzo": 870.0,
+   "mq": 25.0,
+   "tipo": "Locazione",
+   "giorni": 0,
+   "telefono": "",
+   "qualitaImmobile": 36,
+   "inserzionista": "privato",
+   "perche": [
+    "Prezzo di zona non confrontabile",
+    "Foto: medie",
+    "Provvigione stimata 1.879 €"
+   ],
+   "url": "https://www.subito.it/appartamenti/monolocale-25mq-zona-bocconi-ied-milano-661290655.htm"
   }
  ],
- "quando": "2026-09-18T09:18:42+00:00",
+ "quando": "2026-09-19T09:06:02+00:00",
  "origine": "GitHub Actions"
 }
